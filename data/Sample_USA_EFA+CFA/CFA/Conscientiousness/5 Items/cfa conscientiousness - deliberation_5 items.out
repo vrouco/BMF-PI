@@ -1,0 +1,482 @@
+Mplus VERSION 7.1
+MUTHEN & MUTHEN
+06/02/2015   1:43 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  DATA:
+  FILE IS  "ARI Data 2009_Conscientiousness CFA Sample.txt";
+  Variable:
+  Names are
+  respid
+  con108
+  con76
+  con77
+  con38
+  con23
+  con85
+  con42
+  con52
+  con110
+  con44
+  con102
+  con56
+  con18
+  con39
+  con33
+  con88
+  con4
+  con83
+  con6
+  con79
+  con109
+  con7
+  con98
+  con74
+  con114
+  con1
+  con19
+  con30
+  con96
+  con103
+  con54
+  con73
+  con26
+  con101
+  con32
+  con50
+  con8
+  con15
+  con93
+  con25
+  con13
+  con5
+  con70
+  con105
+  con2
+  con41
+  con16
+  con67
+  con84
+  con55
+  con10
+  con31
+  con14
+  con68
+  con97
+  con37
+  con87
+  con63
+  con66
+  con86
+  con49
+  con45
+  con91
+  con107
+  con59
+  con11
+  con21
+  con111
+  con34
+  con48
+  con61
+  con29
+  con89
+  con24
+  con100
+  con47
+  con112
+  con82
+  con94
+  con57
+  con90
+  con71
+  con99
+  con28
+  con115
+  con46
+  con36
+  con80
+  con81
+  con72
+  con3
+  con43
+  con116
+  con75
+  con58
+  con64
+  con60
+  con27
+  con113
+  con17
+  con53
+  con35
+  con22
+  con9
+  con104
+  con69
+  con65
+  con95
+  con20
+  con12
+  con51
+  con106
+  con117
+  Filter
+  filter_
+  ;
+
+  USEVARIABLES ARE
+  con25
+  con68
+  con73
+  con102
+  con15
+  ;
+
+  MISSING ARE ALL (-99);
+  categorical are all;
+
+  Model:
+  caution  BY
+  con25
+  con68
+  con73
+  con102
+  con15
+  ;
+
+  savedata:
+  file is c6.txt;
+  save = fscores;
+
+  Analysis:
+  ESTIMATOR IS WLSMV;
+
+  OUTPUT: STDYX MODINDICES(4);
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  2
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         361
+
+Number of dependent variables                                    5
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   CON25       CON68       CON73       CON102      CON15
+
+Continuous latent variables
+   CAUTION
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+
+Input data file(s)
+  ARI Data 2009_Conscientiousness CFA Sample.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              CON25         CON68         CON73         CON102        CON15
+              ________      ________      ________      ________      ________
+ CON25          1.000
+ CON68          1.000         1.000
+ CON73          1.000         1.000         1.000
+ CON102         1.000         1.000         1.000         1.000
+ CON15          1.000         1.000         1.000         1.000         1.000
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    CON25
+      Category 1    0.042       15.000
+      Category 2    0.094       34.000
+      Category 3    0.366      132.000
+      Category 4    0.380      137.000
+      Category 5    0.119       43.000
+    CON68
+      Category 1    0.014        5.000
+      Category 2    0.058       21.000
+      Category 3    0.330      119.000
+      Category 4    0.368      133.000
+      Category 5    0.230       83.000
+    CON73
+      Category 1    0.006        2.000
+      Category 2    0.064       23.000
+      Category 3    0.319      115.000
+      Category 4    0.385      139.000
+      Category 5    0.227       82.000
+    CON102
+      Category 1    0.019        7.000
+      Category 2    0.130       47.000
+      Category 3    0.429      155.000
+      Category 4    0.277      100.000
+      Category 5    0.144       52.000
+    CON15
+      Category 1    0.044       16.000
+      Category 2    0.202       73.000
+      Category 3    0.355      128.000
+      Category 4    0.288      104.000
+      Category 5    0.111       40.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       25
+
+Chi-Square Test of Model Fit
+
+          Value                             12.943*
+          Degrees of Freedom                     5
+          P-Value                           0.0239
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.066
+          90 Percent C.I.                    0.022  0.112
+          Probability RMSEA <= .05           0.227
+
+CFI/TLI
+
+          CFI                                0.981
+          TLI                                0.963
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            438.950
+          Degrees of Freedom                    10
+          P-Value                           0.0000
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              0.520
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ CAUTION  BY
+    CON25              1.000      0.000    999.000    999.000
+    CON68              1.346      0.196      6.881      0.000
+    CON73              1.975      0.256      7.706      0.000
+    CON102             1.644      0.212      7.774      0.000
+    CON15              0.919      0.171      5.381      0.000
+
+ Thresholds
+    CON25$1           -1.733      0.118    -14.664      0.000
+    CON25$2           -1.100      0.083    -13.294      0.000
+    CON25$3            0.003      0.066      0.053      0.958
+    CON25$4            1.179      0.086     13.767      0.000
+    CON68$1           -2.201      0.174    -12.655      0.000
+    CON68$2           -1.461      0.099    -14.735      0.000
+    CON68$3           -0.249      0.067     -3.733      0.000
+    CON68$4            0.739      0.073     10.132      0.000
+    CON73$1           -2.540      0.247    -10.300      0.000
+    CON73$2           -1.481      0.100    -14.763      0.000
+    CON73$3           -0.285      0.067     -4.258      0.000
+    CON73$4            0.748      0.073     10.231      0.000
+    CON102$1          -2.067      0.154    -13.429      0.000
+    CON102$2          -1.038      0.081    -12.872      0.000
+    CON102$3           0.199      0.066      2.998      0.003
+    CON102$4           1.062      0.081     13.043      0.000
+    CON15$1           -1.703      0.116    -14.718      0.000
+    CON15$2           -0.685      0.072     -9.531      0.000
+    CON15$3            0.256      0.067      3.838      0.000
+    CON15$4            1.222      0.087     13.985      0.000
+
+ Variances
+    CAUTION            0.152      0.037      4.130      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ CAUTION  BY
+    CON25              0.390      0.047      8.261      0.000
+    CON68              0.525      0.044     11.916      0.000
+    CON73              0.770      0.040     19.132      0.000
+    CON102             0.641      0.040     15.872      0.000
+    CON15              0.358      0.048      7.442      0.000
+
+ Thresholds
+    CON25$1           -1.733      0.118    -14.664      0.000
+    CON25$2           -1.100      0.083    -13.294      0.000
+    CON25$3            0.003      0.066      0.053      0.958
+    CON25$4            1.179      0.086     13.767      0.000
+    CON68$1           -2.201      0.174    -12.655      0.000
+    CON68$2           -1.461      0.099    -14.735      0.000
+    CON68$3           -0.249      0.067     -3.733      0.000
+    CON68$4            0.739      0.073     10.132      0.000
+    CON73$1           -2.540      0.247    -10.300      0.000
+    CON73$2           -1.481      0.100    -14.763      0.000
+    CON73$3           -0.285      0.067     -4.258      0.000
+    CON73$4            0.748      0.073     10.231      0.000
+    CON102$1          -2.067      0.154    -13.429      0.000
+    CON102$2          -1.038      0.081    -12.872      0.000
+    CON102$3           0.199      0.066      2.998      0.003
+    CON102$4           1.062      0.081     13.043      0.000
+    CON15$1           -1.703      0.116    -14.718      0.000
+    CON15$2           -0.685      0.072     -9.531      0.000
+    CON15$3            0.256      0.067      3.838      0.000
+    CON15$4            1.222      0.087     13.985      0.000
+
+ Variances
+    CAUTION            1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    CON25              0.152      0.037      4.130      0.000      0.848
+    CON68              0.276      0.046      5.958      0.000      0.724
+    CON73              0.593      0.062      9.566      0.000      0.407
+    CON102             0.411      0.052      7.936      0.000      0.589
+    CON15              0.128      0.035      3.721      0.000      0.872
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.411E-03
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     4.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+No modification indices above the minimum value.
+
+
+
+SAMPLE STATISTICS FOR ESTIMATED FACTOR SCORES
+
+
+     SAMPLE STATISTICS
+
+
+           Means
+              CAUTION
+              ________
+ 1             -0.002
+
+
+           Covariances
+              CAUTION
+              ________
+ CAUTION        0.104
+
+
+           Correlations
+              CAUTION
+              ________
+ CAUTION        1.000
+
+
+SAVEDATA INFORMATION
+
+
+  Save file
+    c6.txt
+
+  Order and format of variables
+
+    CON25          F10.3
+    CON68          F10.3
+    CON73          F10.3
+    CON102         F10.3
+    CON15          F10.3
+    CAUTION        F10.3
+
+  Save file format
+    6F10.3
+
+  Save file record length    10000
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    f:\ipip paper\sample_usa\cfa\conscientiousness\5 items\cfa conscientiousness - deliberation_5 it
+
+     Beginning Time:  13:43:55
+        Ending Time:  13:43:55
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

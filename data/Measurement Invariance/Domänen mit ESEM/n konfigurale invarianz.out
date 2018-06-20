@@ -1,0 +1,730 @@
+Mplus VERSION 7.1
+MUTHEN & MUTHEN
+09/18/2015   2:07 PM
+
+INPUT INSTRUCTIONS
+
+
+  DATA:
+   FILE IS  "factorscores_combined.txt";
+
+  VARIABLE:
+   NAMES ARE
+  VPN
+  A1
+  A2
+  A3
+  A4
+  A5
+  A6
+  A7
+  A8
+  C1
+  C2
+  C3
+  C4
+  C5
+  C6
+  C7
+  C8
+  C9
+  E1
+  E2
+  E3
+  E4
+  E5
+  E6
+  E7
+  E8
+  E9
+  N1
+  N2
+  N3
+  N4
+  N5
+  N6
+  N7
+  O1
+  O2
+  O3
+  O4
+  O5
+  O6
+  O7
+  O8
+  O9
+  Dataset
+  ;
+
+
+   USEVARIABLES ARE
+  N1
+  N2
+  N3
+  N4
+  N5
+  N6
+  N7
+  ;
+
+  Grouping is Dataset (0 = US 1 = German);
+
+  MISSING ARE ALL (-99);
+
+  MODEL:
+
+  N by  N1
+  N2
+  N3
+  N4
+  N5
+  N6
+  N7;
+  [N@0];
+
+  Model German:
+  ;
+
+  Model US:
+  ;
+
+  N by
+  N1
+  N2
+  N3
+  N4
+  N5
+  N6
+  N7;
+
+  [N1
+  N2
+  N3
+  N4
+  N5
+  N6
+  N7];
+
+  ANALYSIS:
+   ESTIMATOR IS ML;
+   Iterations are 10000;
+
+   OUTPUT: STDYX MODINDICES(4);
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group US                                                    387
+   Group GERMAN                                                361
+   Total sample size                                           748
+
+Number of dependent variables                                    7
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Continuous
+   N1          N2          N3          N4          N5          N6
+   N7
+
+Continuous latent variables
+   N
+
+Variables with special functions
+
+  Grouping variable     DATASET
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                 10000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  factorscores_combined.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+   Group US
+     Number of missing data patterns             1
+
+   Group GERMAN
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR US
+
+
+           Covariance Coverage
+              N1            N2            N3            N4            N5
+              ________      ________      ________      ________      ________
+ N1             1.000
+ N2             1.000         1.000
+ N3             1.000         1.000         1.000
+ N4             1.000         1.000         1.000         1.000
+ N5             1.000         1.000         1.000         1.000         1.000
+ N6             1.000         1.000         1.000         1.000         1.000
+ N7             1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              N6            N7
+              ________      ________
+ N6             1.000
+ N7             1.000         1.000
+
+
+     PROPORTION OF DATA PRESENT FOR GERMAN
+
+
+           Covariance Coverage
+              N1            N2            N3            N4            N5
+              ________      ________      ________      ________      ________
+ N1             1.000
+ N2             1.000         1.000
+ N3             1.000         1.000         1.000
+ N4             1.000         1.000         1.000         1.000
+ N5             1.000         1.000         1.000         1.000         1.000
+ N6             1.000         1.000         1.000         1.000         1.000
+ N7             1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              N6            N7
+              ________      ________
+ N6             1.000
+ N7             1.000         1.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+     THE STANDARD ERRORS OF THE MODEL PARAMETER ESTIMATES COULD NOT BE
+     COMPUTED.  THE MODEL MAY NOT BE IDENTIFIED.  CHECK YOUR MODEL.
+     PROBLEM INVOLVING PARAMETER 22.
+
+     THE CONDITION NUMBER IS      -0.146D-06.
+
+
+
+MODEL RESULTS
+
+                    Estimate
+
+Group US
+
+ N        BY
+    N1                 0.432
+    N2                 0.648
+    N3                 0.663
+    N4                -0.401
+    N5                 0.377
+    N6                 0.461
+    N7                 0.329
+
+ Means
+    N                  0.000
+
+ Intercepts
+    N1                 0.006
+    N2                 0.014
+    N3                 0.001
+    N4                -0.003
+    N5                 0.003
+    N6                 0.002
+    N7                 0.002
+
+ Variances
+    N                  0.612
+
+ Residual Variances
+    N1                 0.515
+    N2                 0.272
+    N3                 0.092
+    N4                 0.326
+    N5                 0.130
+    N6                 0.245
+    N7                 0.075
+
+Group GERMAN
+
+ N        BY
+    N1                 1.000
+    N2                 1.299
+    N3                 1.429
+    N4                -0.892
+    N5                 0.989
+    N6                 1.186
+    N7                 0.930
+
+ Means
+    N                  0.000
+
+ Intercepts
+    N1                 0.002
+    N2                 0.011
+    N3                 0.000
+    N4                 0.001
+    N5                 0.003
+    N6                 0.007
+    N7                 0.001
+
+ Variances
+    N                  0.124
+
+ Residual Variances
+    N1                 0.368
+    N2                 0.172
+    N3                 0.171
+    N4                 0.398
+    N5                 0.131
+    N6                 0.324
+    N7                 0.186
+
+
+STANDARDIZED MODEL RESULTS
+
+                      StdYX
+                    Estimate
+
+Group US
+
+ N        BY
+    N1                 0.426
+    N2                 0.698
+    N3                 0.864
+    N4                -0.482
+    N5                 0.634
+    N6                 0.589
+    N7                 0.686
+
+ Means
+    N                  0.000
+
+ Intercepts
+    N1                 0.007
+    N2                 0.019
+    N3                 0.001
+    N4                -0.004
+    N5                 0.006
+    N6                 0.003
+    N7                 0.005
+
+ Variances
+    N                  1.000
+
+ Residual Variances
+    N1                 0.818
+    N2                 0.513
+    N3                 0.254
+    N4                 0.768
+    N5                 0.598
+    N6                 0.652
+    N7                 0.529
+
+Group GERMAN
+
+ N        BY
+    N1                 0.503
+    N2                 0.742
+    N3                 0.773
+    N4                -0.446
+    N5                 0.694
+    N6                 0.592
+    N7                 0.606
+
+ Means
+    N                  0.000
+
+ Intercepts
+    N1                 0.003
+    N2                 0.017
+    N3                 0.000
+    N4                 0.001
+    N5                 0.006
+    N6                 0.010
+    N7                 0.002
+
+ Variances
+    N                  1.000
+
+ Residual Variances
+    N1                 0.747
+    N2                 0.450
+    N3                 0.403
+    N4                 0.801
+    N5                 0.518
+    N6                 0.649
+    N7                 0.633
+
+
+MODEL COMMAND WITH FINAL ESTIMATES USED AS STARTING VALUES
+
+     n BY n1;
+     n BY n2;
+     n BY n3;
+     n BY n4;
+     n BY n5;
+     n BY n6;
+     n BY n7;
+
+  MODEL US:
+
+     n BY n1*0.43222;
+     n BY n2*0.64845;
+     n BY n3*0.66349;
+     n BY n4*-0.40067;
+     n BY n5*0.37730;
+     n BY n6*0.46144;
+     n BY n7*0.32938;
+
+     [ n1*0.00580 ];
+     [ n2*0.01390 ];
+     [ n3*0.00059 ];
+     [ n4*-0.00255 ];
+     [ n5*0.00266 ];
+     [ n6*0.00169 ];
+     [ n7*0.00193 ];
+     [ n@0 ];
+
+     n1*0.51488;
+     n2*0.27152;
+     n3*0.09186;
+     n4*0.32558;
+     n5*0.12980;
+     n6*0.24485;
+     n7*0.07468;
+     n*0.61243;
+
+  MODEL GERMAN:
+
+     n BY n1@1;
+     n BY n2*1.29910;
+     n BY n3*1.42851;
+     n BY n4*-0.89165;
+     n BY n5*0.98869;
+     n BY n6*1.18561;
+     n BY n7*0.93044;
+
+     [ n1*0.00238 ];
+     [ n2*0.01077 ];
+     [ n3*-0.00026 ];
+     [ n4*0.00092 ];
+     [ n5*0.00303 ];
+     [ n6*0.00703 ];
+     [ n7*0.00119 ];
+     [ n@0 ];
+
+     n1*0.36769;
+     n2*0.17158;
+     n3*0.17113;
+     n4*0.39803;
+     n5*0.13058;
+     n6*0.32357;
+     n7*0.18585;
+     n*0.12431;
+
+
+
+TECHNICAL 1 OUTPUT
+
+
+     PARAMETER SPECIFICATION FOR US
+
+
+           NU
+              N1            N2            N3            N4            N5
+              ________      ________      ________      ________      ________
+      1           1             2             3             4             5
+
+
+           NU
+              N6            N7
+              ________      ________
+      1           6             7
+
+
+           LAMBDA
+              N
+              ________
+ N1                 8
+ N2                 9
+ N3                10
+ N4                11
+ N5                12
+ N6                13
+ N7                14
+
+
+           THETA
+              N1            N2            N3            N4            N5
+              ________      ________      ________      ________      ________
+ N1                15
+ N2                 0            16
+ N3                 0             0            17
+ N4                 0             0             0            18
+ N5                 0             0             0             0            19
+ N6                 0             0             0             0             0
+ N7                 0             0             0             0             0
+
+
+           THETA
+              N6            N7
+              ________      ________
+ N6                20
+ N7                 0            21
+
+
+           ALPHA
+              N
+              ________
+      1           0
+
+
+           BETA
+              N
+              ________
+ N                  0
+
+
+           PSI
+              N
+              ________
+ N                 22
+
+
+     PARAMETER SPECIFICATION FOR GERMAN
+
+
+           NU
+              N1            N2            N3            N4            N5
+              ________      ________      ________      ________      ________
+      1          23            24            25            26            27
+
+
+           NU
+              N6            N7
+              ________      ________
+      1          28            29
+
+
+           LAMBDA
+              N
+              ________
+ N1                 0
+ N2                30
+ N3                31
+ N4                32
+ N5                33
+ N6                34
+ N7                35
+
+
+           THETA
+              N1            N2            N3            N4            N5
+              ________      ________      ________      ________      ________
+ N1                36
+ N2                 0            37
+ N3                 0             0            38
+ N4                 0             0             0            39
+ N5                 0             0             0             0            40
+ N6                 0             0             0             0             0
+ N7                 0             0             0             0             0
+
+
+           THETA
+              N6            N7
+              ________      ________
+ N6                41
+ N7                 0            42
+
+
+           ALPHA
+              N
+              ________
+      1           0
+
+
+           BETA
+              N
+              ________
+ N                  0
+
+
+           PSI
+              N
+              ________
+ N                 43
+
+
+     STARTING VALUES FOR US
+
+
+           NU
+              N1            N2            N3            N4            N5
+              ________      ________      ________      ________      ________
+      1         0.006         0.014         0.001        -0.003         0.003
+
+
+           NU
+              N6            N7
+              ________      ________
+      1         0.002         0.002
+
+
+           LAMBDA
+              N
+              ________
+ N1             0.402
+ N2             0.456
+ N3             0.489
+ N4            -0.329
+ N5             0.262
+ N6             0.431
+ N7             0.254
+
+
+           THETA
+              N1            N2            N3            N4            N5
+              ________      ________      ________      ________      ________
+ N1             0.315
+ N2             0.000         0.265
+ N3             0.000         0.000         0.181
+ N4             0.000         0.000         0.000         0.212
+ N5             0.000         0.000         0.000         0.000         0.109
+ N6             0.000         0.000         0.000         0.000         0.000
+ N7             0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              N6            N7
+              ________      ________
+ N6             0.188
+ N7             0.000         0.071
+
+
+           ALPHA
+              N
+              ________
+      1         0.000
+
+
+           BETA
+              N
+              ________
+ N              0.000
+
+
+           PSI
+              N
+              ________
+ N              0.050
+
+
+     STARTING VALUES FOR GERMAN
+
+
+           NU
+              N1            N2            N3            N4            N5
+              ________      ________      ________      ________      ________
+      1         0.006         0.014         0.001        -0.003         0.003
+
+
+           NU
+              N6            N7
+              ________      ________
+      1         0.002         0.002
+
+
+           LAMBDA
+              N
+              ________
+ N1             1.000
+ N2             1.261
+ N3             1.391
+ N4            -0.941
+ N5             0.986
+ N6             1.174
+ N7             0.931
+
+
+           THETA
+              N1            N2            N3            N4            N5
+              ________      ________      ________      ________      ________
+ N1             0.315
+ N2             0.000         0.265
+ N3             0.000         0.000         0.181
+ N4             0.000         0.000         0.000         0.212
+ N5             0.000         0.000         0.000         0.000         0.109
+ N6             0.000         0.000         0.000         0.000         0.000
+ N7             0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              N6            N7
+              ________      ________
+ N6             0.188
+ N7             0.000         0.071
+
+
+           ALPHA
+              N
+              ________
+      1         0.000
+
+
+           BETA
+              N
+              ________
+ N              0.000
+
+
+           PSI
+              N
+              ________
+ N              0.050
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    f:\ipip paper\messinvarianz\domänen mit esem\n konfigurale invarianz.dgm
+
+     Beginning Time:  14:07:10
+        Ending Time:  14:07:10
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

@@ -1,0 +1,397 @@
+Mplus VERSION 5.2
+MUTHEN & MUTHEN
+01/20/2012   2:55 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  DATA:
+  FILE IS  "ARI Data 2009_Agreeableness CFA Sample.txt";
+  Variable:
+  Names are
+  respid
+  agree5
+  agree51
+  agree21
+  agree84
+  agree35
+  agree15
+  agree93
+  agree67
+  agree34
+  agree25
+  agree44
+  agree64
+  agree31
+  agree45
+  agree26
+  agree52
+  agree14
+  agree20
+  agree6
+  agree92
+  agree77
+  agree3
+  agree17
+  agree19
+  agree13
+  agree27
+  agree105
+  agree95
+  agree104
+  agree57
+  agree85
+  agree97
+  agree110
+  agree61
+  agree94
+  agree107
+  agree30
+  agree40
+  agree32
+  agree50
+  agree90
+  agree63
+  agree60
+  agree23
+  agree1
+  agree58
+  agree101
+  agree46
+  agree87
+  agree98
+  agree37
+  agree62
+  agree39
+  agree83
+  agree53
+  agree65
+  agree103
+  agree91
+  agree4
+  agree42
+  agree18
+  agree96
+  agree106
+  agree55
+  agree86
+  agree72
+  agree22
+  agree79
+  agree33
+  agree70
+  agree109
+  agree78
+  agree100
+  agree71
+  agree89
+  agree76
+  agree75
+  agree11
+  agree56
+  agree12
+  agree49
+  agree16
+  agree108
+  agree43
+  agree7
+  agree2
+  agree88
+  agree41
+  agree38
+  agree99
+  agree69
+  agree36
+  agree80
+  agree8
+  agree66
+  agree54
+  agree24
+  agree82
+  agree74
+  agree73
+  agree10
+  agree59
+  Filter
+  filter_
+  ;
+
+  USEVARIABLES ARE
+  agree93
+  agree55
+  agree100
+  agree75
+  ;
+
+  MISSING ARE ALL (-99);
+  categorical are all;
+
+  Model:
+  altruis BY
+  agree93
+  agree55
+  agree100
+  agree75
+  ;
+
+
+  Analysis:
+  ESTIMATOR IS WLSMV;
+
+  OUTPUT: STDYX MODINDICES(4);
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  2
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         361
+
+Number of dependent variables                                    4
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   AGREE93     AGREE55     AGREE100    AGREE75
+
+Continuous latent variables
+   ALTRUIS
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+
+Input data file(s)
+  ARI Data 2009_Agreeableness CFA Sample.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              AGREE93       AGREE55       AGREE100      AGREE75
+              ________      ________      ________      ________
+ AGREE93        1.000
+ AGREE55        1.000         1.000
+ AGREE100       1.000         1.000         1.000
+ AGREE75        1.000         1.000         1.000         1.000
+
+
+SUMMARY OF CATEGORICAL DATA PROPORTIONS
+
+    AGREE93
+      Category 1    0.014
+      Category 2    0.080
+      Category 3    0.407
+      Category 4    0.330
+      Category 5    0.169
+    AGREE55
+      Category 1    0.233
+      Category 2    0.429
+      Category 3    0.235
+      Category 4    0.086
+      Category 5    0.017
+    AGREE100
+      Category 1    0.066
+      Category 2    0.188
+      Category 3    0.391
+      Category 4    0.258
+      Category 5    0.097
+    AGREE75
+      Category 1    0.044
+      Category 2    0.136
+      Category 3    0.222
+      Category 4    0.255
+      Category 5    0.343
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+TESTS OF MODEL FIT
+
+Chi-Square Test of Model Fit
+
+          Value                              0.355*
+          Degrees of Freedom                     2**
+          P-Value                           0.8372
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference tests.  MLM, MLR and WLSM chi-square difference
+    testing is described in the Mplus Technical Appendices at www.statmodel.com.
+    See chi-square difference testing in the index of the Mplus User's Guide.
+
+**  The degrees of freedom for MLMV, ULSMV and WLSMV are estimated according to
+    a formula given in the Mplus Technical Appendices at www.statmodel.com.
+    See degrees of freedom in the index of the Mplus User's Guide.
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            122.434
+          Degrees of Freedom                     5
+          P-Value                           0.0000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.035
+
+Number of Free Parameters                       20
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              0.108
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ ALTRUIS  BY
+    AGREE93            1.000      0.000    999.000    999.000
+    AGREE55            0.243      0.109      2.223      0.026
+    AGREE100           0.850      0.154      5.505      0.000
+    AGREE75            1.001      0.179      5.580      0.000
+
+ Thresholds
+    AGREE93$1         -2.201      0.174    -12.655      0.000
+    AGREE93$2         -1.315      0.092    -14.371      0.000
+    AGREE93$3          0.003      0.066      0.053      0.958
+    AGREE93$4          0.958      0.078     12.247      0.000
+    AGREE55$1         -0.730      0.073    -10.032      0.000
+    AGREE55$2          0.418      0.068      6.139      0.000
+    AGREE55$3          1.267      0.089     14.187      0.000
+    AGREE55$4          2.129      0.163     13.086      0.000
+    AGREE100$1        -1.503      0.102    -14.786      0.000
+    AGREE100$2        -0.659      0.071     -9.228      0.000
+    AGREE100$3         0.373      0.068      5.513      0.000
+    AGREE100$4         1.299      0.091     14.312      0.000
+    AGREE75$1         -1.703      0.116    -14.718      0.000
+    AGREE75$2         -0.915      0.077    -11.877      0.000
+    AGREE75$3         -0.249      0.067     -3.733      0.000
+    AGREE75$4          0.403      0.068      5.930      0.000
+
+ Variances
+    ALTRUIS            0.364      0.081      4.469      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ ALTRUIS  BY
+    AGREE93            0.603      0.067      8.938      0.000
+    AGREE55            0.146      0.064      2.297      0.022
+    AGREE100           0.512      0.065      7.943      0.000
+    AGREE75            0.604      0.065      9.350      0.000
+
+ Thresholds
+    AGREE93$1         -2.201      0.174    -12.655      0.000
+    AGREE93$2         -1.315      0.092    -14.371      0.000
+    AGREE93$3          0.003      0.066      0.053      0.958
+    AGREE93$4          0.958      0.078     12.247      0.000
+    AGREE55$1         -0.730      0.073    -10.032      0.000
+    AGREE55$2          0.418      0.068      6.139      0.000
+    AGREE55$3          1.267      0.089     14.187      0.000
+    AGREE55$4          2.129      0.163     13.086      0.000
+    AGREE100$1        -1.503      0.102    -14.786      0.000
+    AGREE100$2        -0.659      0.071     -9.228      0.000
+    AGREE100$3         0.373      0.068      5.513      0.000
+    AGREE100$4         1.299      0.091     14.312      0.000
+    AGREE75$1         -1.703      0.116    -14.718      0.000
+    AGREE75$2         -0.915      0.077    -11.877      0.000
+    AGREE75$3         -0.249      0.067     -3.733      0.000
+    AGREE75$4          0.403      0.068      5.930      0.000
+
+ Variances
+    ALTRUIS            1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    AGREE93            0.364      0.081      4.469      0.000      0.636
+    AGREE55            0.021      0.019      1.149      0.251      0.979
+    AGREE100           0.263      0.066      3.972      0.000      0.737
+    AGREE75            0.365      0.078      4.675      0.000      0.635
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.112E-01
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     4.000
+
+                            M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+No modification indices above the minimum value.
+
+
+
+     Beginning Time:  14:55:10
+        Ending Time:  14:55:10
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2008 Muthen & Muthen

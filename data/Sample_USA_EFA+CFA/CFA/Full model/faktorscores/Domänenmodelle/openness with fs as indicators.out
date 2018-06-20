@@ -1,0 +1,382 @@
+Mplus VERSION 7.1
+MUTHEN & MUTHEN
+06/04/2015   3:53 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  DATA:
+  FILE IS  "factorscores_CFA.txt";
+  Variable:
+  Names are
+  VPN
+  A1
+  A2
+  A3
+  A4
+  A5
+  A6
+  A7
+  A8
+  C1
+  C2
+  C3
+  C4
+  C5
+  C6
+  C7
+  C8
+  C9
+  E1
+  E2
+  E3
+  E4
+  E5
+  E6
+  E7
+  E8
+  E9
+  N1
+  N2
+  N3
+  N4
+  N5
+  N6
+  N7
+  O1
+  O2
+  O3
+  O4
+  O5
+  O6
+  O7
+  O8
+  O9
+  ;
+
+  USEVARIABLES ARE
+  O1
+  O2
+  O3
+  O4
+  O5
+  O6
+  O7
+  O8
+  O9
+
+  ;
+
+  MISSING ARE ALL (-99);
+
+  Model:
+
+  open by
+  O1
+  O2
+  O3
+  O4
+  O5
+  O6
+  O7
+  O8
+  O9
+  ;
+
+
+
+
+
+  Analysis:
+  ESTIMATOR IS ML;
+  iterations = 10000;
+
+  OUTPUT: STDYX MODINDICES(4);
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         361
+
+Number of dependent variables                                    9
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Continuous
+   O1          O2          O3          O4          O5          O6
+   O7          O8          O9
+
+Continuous latent variables
+   OPEN
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                 10000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  factorscores_CFA.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              O1            O2            O3            O4            O5
+              ________      ________      ________      ________      ________
+ O1             1.000
+ O2             1.000         1.000
+ O3             1.000         1.000         1.000
+ O4             1.000         1.000         1.000         1.000
+ O5             1.000         1.000         1.000         1.000         1.000
+ O6             1.000         1.000         1.000         1.000         1.000
+ O7             1.000         1.000         1.000         1.000         1.000
+ O8             1.000         1.000         1.000         1.000         1.000
+ O9             1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              O6            O7            O8            O9
+              ________      ________      ________      ________
+ O6             1.000
+ O7             1.000         1.000
+ O8             1.000         1.000         1.000
+ O9             1.000         1.000         1.000         1.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       27
+
+Loglikelihood
+
+          H0 Value                       -2822.477
+          H1 Value                       -2758.308
+
+Information Criteria
+
+          Akaike (AIC)                    5698.953
+          Bayesian (BIC)                  5803.953
+          Sample-Size Adjusted BIC        5718.295
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                            128.338
+          Degrees of Freedom                    27
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.102
+          90 Percent C.I.                    0.085  0.120
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.913
+          TLI                                0.884
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1196.259
+          Degrees of Freedom                    36
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.050
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ OPEN     BY
+    O1                 1.000      0.000    999.000    999.000
+    O2                 1.281      0.128      9.984      0.000
+    O3                 1.232      0.100     12.329      0.000
+    O4                 1.176      0.148      7.952      0.000
+    O5                 1.305      0.136      9.582      0.000
+    O6                 1.477      0.122     12.067      0.000
+    O7                 1.916      0.153     12.515      0.000
+    O8                 0.533      0.117      4.561      0.000
+    O9                 1.342      0.129     10.370      0.000
+
+ Intercepts
+    O1                 0.002      0.027      0.073      0.942
+    O2                -0.029      0.037     -0.798      0.425
+    O3                -0.002      0.029     -0.053      0.958
+    O4                -0.004      0.044     -0.084      0.933
+    O5                -0.003      0.040     -0.081      0.935
+    O6                -0.001      0.034     -0.038      0.970
+    O7                -0.019      0.041     -0.474      0.636
+    O8                 0.000      0.036     -0.005      0.996
+    O9                -0.008      0.038     -0.207      0.836
+
+ Variances
+    OPEN               0.113      0.017      6.547      0.000
+
+ Residual Variances
+    O1                 0.155      0.013     12.062      0.000
+    O2                 0.306      0.025     12.256      0.000
+    O3                 0.124      0.011     10.745      0.000
+    O4                 0.544      0.042     12.910      0.000
+    O5                 0.379      0.030     12.512      0.000
+    O6                 0.175      0.016     10.940      0.000
+    O7                 0.197      0.021      9.467      0.000
+    O8                 0.438      0.033     13.305      0.000
+    O9                 0.315      0.026     12.226      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ OPEN     BY
+    O1                 0.649      0.035     18.754      0.000
+    O2                 0.613      0.037     16.584      0.000
+    O3                 0.762      0.027     28.302      0.000
+    O4                 0.472      0.045     10.583      0.000
+    O5                 0.580      0.039     14.972      0.000
+    O6                 0.765      0.026     29.186      0.000
+    O7                 0.823      0.022     36.702      0.000
+    O8                 0.261      0.052      4.971      0.000
+    O9                 0.626      0.036     17.377      0.000
+
+ Intercepts
+    O1                 0.004      0.053      0.073      0.942
+    O2                -0.042      0.053     -0.798      0.425
+    O3                -0.003      0.053     -0.053      0.958
+    O4                -0.004      0.053     -0.084      0.933
+    O5                -0.004      0.053     -0.081      0.935
+    O6                -0.002      0.053     -0.038      0.970
+    O7                -0.025      0.053     -0.474      0.636
+    O8                 0.000      0.053     -0.005      0.996
+    O9                -0.011      0.053     -0.207      0.836
+
+ Variances
+    OPEN               1.000      0.000    999.000    999.000
+
+ Residual Variances
+    O1                 0.579      0.045     12.917      0.000
+    O2                 0.624      0.045     13.757      0.000
+    O3                 0.420      0.041     10.232      0.000
+    O4                 0.777      0.042     18.491      0.000
+    O5                 0.664      0.045     14.790      0.000
+    O6                 0.416      0.040     10.374      0.000
+    O7                 0.322      0.037      8.728      0.000
+    O8                 0.932      0.027     34.036      0.000
+    O9                 0.608      0.045     13.497      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    O1                 0.421      0.045      9.377      0.000
+    O2                 0.376      0.045      8.292      0.000
+    O3                 0.580      0.041     14.151      0.000
+    O4                 0.223      0.042      5.292      0.000
+    O5                 0.336      0.045      7.486      0.000
+    O6                 0.584      0.040     14.593      0.000
+    O7                 0.678      0.037     18.351      0.000
+    O8                 0.068      0.027      2.486      0.013
+    O9                 0.392      0.045      8.688      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.122E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates may not be included.  To include these, request
+MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     4.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+WITH Statements
+
+O3       WITH O1                  18.089     0.037      0.037        0.271
+O3       WITH O2                  10.005    -0.039     -0.039       -0.198
+O4       WITH O1                   5.136    -0.037     -0.037       -0.129
+O4       WITH O2                   8.719    -0.068     -0.068       -0.166
+O5       WITH O4                  30.096     0.139      0.139        0.306
+O7       WITH O1                   5.586    -0.029     -0.029       -0.164
+O7       WITH O2                  26.953     0.087      0.087        0.353
+O7       WITH O3                   6.053    -0.030     -0.030       -0.193
+O8       WITH O2                   4.406     0.042      0.042        0.116
+O9       WITH O2                  11.624    -0.061     -0.061       -0.198
+O9       WITH O3                  10.891     0.041      0.041        0.208
+O9       WITH O5                   7.034    -0.053     -0.053       -0.153
+O9       WITH O8                   4.862    -0.045     -0.045       -0.122
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    f:\ipip paper\sample_usa\cfa\gesamtmodell\faktorscores\domänenmodelle\openness with fs as indica
+
+     Beginning Time:  15:53:54
+        Ending Time:  15:53:54
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

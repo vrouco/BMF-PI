@@ -1,0 +1,155 @@
+VERSION 1.1.0
+INPUT
+TITLE:
+
+
+DATA:
+FILE IS  "extraversion CFA Sample.txt";
+VARIABLE:
+Names are
+respid
+e174
+e327
+e276
+e197
+e58
+e294
+e4
+e166
+e316
+e131
+e228
+e98
+e290
+e288
+e196
+e32
+e123
+e102
+e125
+e112
+e103
+e60
+e306
+e182
+e235
+e40
+e95
+e19
+e242
+e259
+e231
+e164
+e341
+e245
+e28
+e217
+e280
+e238
+e229
+e56
+e311
+e80
+e257
+e49
+e130
+e304
+e255
+e286
+e329
+e24
+e335
+e83
+e208
+e260
+e315
+e29
+e277
+e31
+e139
+e220
+e142
+e34
+e84
+e216
+e124
+e274
+e219
+e57
+e30
+e158
+e99
+e214
+e207
+e132
+e232
+e241
+e55
+e322
+e118
+e233
+e191
+Filter
+filter_
+;
+USEVARIABLES ARE
+e34
+e315
+e219
+e322
+e55
+;
+categorical are all;
+MISSING ARE ALL (-99);
+ANALYSIS:
+ESTIMATOR IS WLSMV;
+OUTPUT:
+ STDYX MODINDICES(1);
+SAVEDATA:
+file is e7.txt;
+save = fscores;
+MODEL:
+humor  BY
+e34
+e315
+e219
+e322
+e55
+;
+INPUT_END
+2
+2
+0
+2
+WLSMV
+1
+GENERAL
+0
+5
+1
+0
+e34 e315 e219 e322 e55 humor
+1
+-1 -1 -1 -1 -1 0
+0
+1
+humor
+e34 e315 e219 e322 e55
+1 1 humor e34    1.000    0.000
+1 1 humor e315    1.149    0.063
+1 1 humor e219    0.964    0.054
+1 1 humor e322    0.770    0.057
+1 1 humor e55    0.807    0.058
+5 1 humor    0.567    0.047
+11 1 humor e34    0.753    0.031
+11 1 humor e315    0.865    0.027
+11 1 humor e219    0.726    0.034
+11 1 humor e322    0.579    0.038
+11 1 humor e55    0.608    0.039
+15 1 humor    1.000    0.000
+31 1 humor e34    0.753    0.031
+31 1 humor e315    0.865    0.027
+31 1 humor e219    0.726    0.034
+31 1 humor e322    0.579    0.038
+31 1 humor e55    0.608    0.039
+35 1 humor    1.000    0.000

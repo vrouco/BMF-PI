@@ -1,0 +1,690 @@
+Mplus VERSION 7.1
+MUTHEN & MUTHEN
+09/18/2015   1:39 PM
+
+INPUT INSTRUCTIONS
+
+
+  DATA:
+   FILE IS  "factorscores_combined.txt";
+
+  VARIABLE:
+   NAMES ARE
+  VPN
+  A1
+  A2
+  A3
+  A4
+  A5
+  A6
+  A7
+  A8
+  C1
+  C2
+  C3
+  C4
+  C5
+  C6
+  C7
+  C8
+  C9
+  E1
+  E2
+  E3
+  E4
+  E5
+  E6
+  E7
+  E8
+  E9
+  N1
+  N2
+  N3
+  N4
+  N5
+  N6
+  N7
+  O1
+  O2
+  O3
+  O4
+  O5
+  O6
+  O7
+  O8
+  O9
+  Dataset
+  ;
+
+
+   USEVARIABLES ARE
+  A1
+  A2
+  A3
+  A6
+  A7
+  A8
+  ;
+
+  Grouping is Dataset (0 = US 1 = German);
+
+  MISSING ARE ALL (-99);
+
+  MODEL:
+
+  A by  A1
+  A2
+  A3
+  A6
+  A7
+  A8;
+  [A@0];
+
+  Model German:
+  ;
+
+  Model US:
+  ;
+
+  A by
+  A1
+  A2
+  A3
+  A6
+  A7
+  A8;
+
+  [A1
+  A2
+  A3
+  A6
+  A7
+  A8];
+
+  ANALYSIS:
+   ESTIMATOR IS ML;
+   Iterations are 10000;
+
+   OUTPUT: STDYX MODINDICES(4);
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group US                                                    387
+   Group GERMAN                                                361
+   Total sample size                                           748
+
+Number of dependent variables                                    6
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Continuous
+   A1          A2          A3          A6          A7          A8
+
+Continuous latent variables
+   A
+
+Variables with special functions
+
+  Grouping variable     DATASET
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                 10000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  factorscores_combined.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+   Group US
+     Number of missing data patterns             1
+
+   Group GERMAN
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR US
+
+
+           Covariance Coverage
+              A1            A2            A3            A6            A7
+              ________      ________      ________      ________      ________
+ A1             1.000
+ A2             1.000         1.000
+ A3             1.000         1.000         1.000
+ A6             1.000         1.000         1.000         1.000
+ A7             1.000         1.000         1.000         1.000         1.000
+ A8             1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              A8
+              ________
+ A8             1.000
+
+
+     PROPORTION OF DATA PRESENT FOR GERMAN
+
+
+           Covariance Coverage
+              A1            A2            A3            A6            A7
+              ________      ________      ________      ________      ________
+ A1             1.000
+ A2             1.000         1.000
+ A3             1.000         1.000         1.000
+ A6             1.000         1.000         1.000         1.000
+ A7             1.000         1.000         1.000         1.000         1.000
+ A8             1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              A8
+              ________
+ A8             1.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+     THE STANDARD ERRORS OF THE MODEL PARAMETER ESTIMATES COULD NOT BE
+     COMPUTED.  THE MODEL MAY NOT BE IDENTIFIED.  CHECK YOUR MODEL.
+     PROBLEM INVOLVING PARAMETER 19.
+
+     THE CONDITION NUMBER IS      -0.478D-07.
+
+
+
+MODEL RESULTS
+
+                    Estimate
+
+Group US
+
+ A        BY
+    A1                 0.366
+    A2                -0.640
+    A3                -0.513
+    A6                 0.180
+    A7                -0.530
+    A8                 0.229
+
+ Means
+    A                  0.000
+
+ Intercepts
+    A1                -0.013
+    A2                 0.020
+    A3                 0.003
+    A6                -0.004
+    A7                 0.003
+    A8                 0.000
+
+ Variances
+    A                  0.557
+
+ Residual Variances
+    A1                 0.182
+    A2                 0.143
+    A3                 0.199
+    A6                 0.457
+    A7                 0.134
+    A8                 0.131
+
+Group GERMAN
+
+ A        BY
+    A1                 1.000
+    A2                -1.408
+    A3                -1.082
+    A6                 0.688
+    A7                -1.165
+    A8                 0.668
+
+ Means
+    A                  0.000
+
+ Intercepts
+    A1                -0.005
+    A2                 0.013
+    A3                 0.001
+    A6                -0.004
+    A7                 0.003
+    A8                -0.002
+
+ Variances
+    A                  0.106
+
+ Residual Variances
+    A1                 0.240
+    A2                 0.073
+    A3                 0.279
+    A6                 0.456
+    A7                 0.183
+    A8                 0.153
+
+
+STANDARDIZED MODEL RESULTS
+
+                      StdYX
+                    Estimate
+
+Group US
+
+ A        BY
+    A1                 0.539
+    A2                -0.783
+    A3                -0.652
+    A6                 0.195
+    A7                -0.734
+    A8                 0.426
+
+ Means
+    A                  0.000
+
+ Intercepts
+    A1                -0.025
+    A2                 0.032
+    A3                 0.005
+    A6                -0.006
+    A7                 0.005
+    A8                -0.001
+
+ Variances
+    A                  1.000
+
+ Residual Variances
+    A1                 0.709
+    A2                 0.386
+    A3                 0.575
+    A6                 0.962
+    A7                 0.461
+    A8                 0.818
+
+Group GERMAN
+
+ A        BY
+    A1                 0.553
+    A2                -0.861
+    A3                -0.555
+    A6                 0.315
+    A7                -0.664
+    A8                 0.486
+
+ Means
+    A                  0.000
+
+ Intercepts
+    A1                -0.009
+    A2                 0.024
+    A3                 0.001
+    A6                -0.006
+    A7                 0.005
+    A8                -0.004
+
+ Variances
+    A                  1.000
+
+ Residual Variances
+    A1                 0.694
+    A2                 0.259
+    A3                 0.692
+    A6                 0.901
+    A7                 0.559
+    A8                 0.764
+
+
+MODEL COMMAND WITH FINAL ESTIMATES USED AS STARTING VALUES
+
+     a BY a1;
+     a BY a2;
+     a BY a3;
+     a BY a6;
+     a BY a7;
+     a BY a8;
+
+  MODEL US:
+
+     a BY a1*0.36550;
+     a BY a2*-0.63978;
+     a BY a3*-0.51347;
+     a BY a6*0.18015;
+     a BY a7*-0.53031;
+     a BY a8*0.22894;
+
+     [ a1*-0.01269 ];
+     [ a2*0.01950 ];
+     [ a3*0.00298 ];
+     [ a6*-0.00427 ];
+     [ a7*0.00279 ];
+     [ a8*-0.00029 ];
+     [ a@0 ];
+
+     a1*0.18157;
+     a2*0.14338;
+     a3*0.19891;
+     a6*0.45683;
+     a7*0.13389;
+     a8*0.13142;
+     a*0.55687;
+
+  MODEL GERMAN:
+
+     a BY a1@1;
+     a BY a2*-1.40806;
+     a BY a3*-1.08191;
+     a BY a6*0.68825;
+     a BY a7*-1.16508;
+     a BY a8*0.66787;
+
+     [ a1*-0.00540 ];
+     [ a2*0.01272 ];
+     [ a3*0.00059 ];
+     [ a6*-0.00423 ];
+     [ a7*0.00273 ];
+     [ a8*-0.00199 ];
+     [ a@0 ];
+
+     a1*0.24018;
+     a2*0.07332;
+     a3*0.27859;
+     a6*0.45579;
+     a7*0.18251;
+     a8*0.15311;
+     a*0.10604;
+
+
+
+TECHNICAL 1 OUTPUT
+
+
+     PARAMETER SPECIFICATION FOR US
+
+
+           NU
+              A1            A2            A3            A6            A7
+              ________      ________      ________      ________      ________
+      1           1             2             3             4             5
+
+
+           NU
+              A8
+              ________
+      1           6
+
+
+           LAMBDA
+              A
+              ________
+ A1                 7
+ A2                 8
+ A3                 9
+ A6                10
+ A7                11
+ A8                12
+
+
+           THETA
+              A1            A2            A3            A6            A7
+              ________      ________      ________      ________      ________
+ A1                13
+ A2                 0            14
+ A3                 0             0            15
+ A6                 0             0             0            16
+ A7                 0             0             0             0            17
+ A8                 0             0             0             0             0
+
+
+           THETA
+              A8
+              ________
+ A8                18
+
+
+           ALPHA
+              A
+              ________
+      1           0
+
+
+           BETA
+              A
+              ________
+ A                  0
+
+
+           PSI
+              A
+              ________
+ A                 19
+
+
+     PARAMETER SPECIFICATION FOR GERMAN
+
+
+           NU
+              A1            A2            A3            A6            A7
+              ________      ________      ________      ________      ________
+      1          20            21            22            23            24
+
+
+           NU
+              A8
+              ________
+      1          25
+
+
+           LAMBDA
+              A
+              ________
+ A1                 0
+ A2                26
+ A3                27
+ A6                28
+ A7                29
+ A8                30
+
+
+           THETA
+              A1            A2            A3            A6            A7
+              ________      ________      ________      ________      ________
+ A1                31
+ A2                 0            32
+ A3                 0             0            33
+ A6                 0             0             0            34
+ A7                 0             0             0             0            35
+ A8                 0             0             0             0             0
+
+
+           THETA
+              A8
+              ________
+ A8                36
+
+
+           ALPHA
+              A
+              ________
+      1           0
+
+
+           BETA
+              A
+              ________
+ A                  0
+
+
+           PSI
+              A
+              ________
+ A                 37
+
+
+     STARTING VALUES FOR US
+
+
+           NU
+              A1            A2            A3            A6            A7
+              ________      ________      ________      ________      ________
+      1        -0.013         0.020         0.003        -0.004         0.003
+
+
+           NU
+              A8
+              ________
+      1         0.000
+
+
+           LAMBDA
+              A
+              ________
+ A1             0.314
+ A2            -0.507
+ A3            -0.359
+ A6             0.171
+ A7            -0.340
+ A8             0.165
+
+
+           THETA
+              A1            A2            A3            A6            A7
+              ________      ________      ________      ________      ________
+ A1             0.128
+ A2             0.000         0.186
+ A3             0.000         0.000         0.173
+ A6             0.000         0.000         0.000         0.238
+ A7             0.000         0.000         0.000         0.000         0.146
+ A8             0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              A8
+              ________
+ A8             0.081
+
+
+           ALPHA
+              A
+              ________
+      1         0.000
+
+
+           BETA
+              A
+              ________
+ A              0.000
+
+
+           PSI
+              A
+              ________
+ A              0.050
+
+
+     STARTING VALUES FOR GERMAN
+
+
+           NU
+              A1            A2            A3            A6            A7
+              ________      ________      ________      ________      ________
+      1        -0.013         0.020         0.003        -0.004         0.003
+
+
+           NU
+              A8
+              ________
+      1         0.000
+
+
+           LAMBDA
+              A
+              ________
+ A1             1.000
+ A2            -0.783
+ A3            -0.562
+ A6             0.756
+ A7            -0.577
+ A8             0.597
+
+
+           THETA
+              A1            A2            A3            A6            A7
+              ________      ________      ________      ________      ________
+ A1             0.128
+ A2             0.000         0.186
+ A3             0.000         0.000         0.173
+ A6             0.000         0.000         0.000         0.238
+ A7             0.000         0.000         0.000         0.000         0.146
+ A8             0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              A8
+              ________
+ A8             0.081
+
+
+           ALPHA
+              A
+              ________
+      1         0.000
+
+
+           BETA
+              A
+              ________
+ A              0.000
+
+
+           PSI
+              A
+              ________
+ A              0.050
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    f:\ipip paper\messinvarianz\domänen mit esem\a konfigurale invarianz.dgm
+
+     Beginning Time:  13:39:59
+        Ending Time:  13:40:00
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

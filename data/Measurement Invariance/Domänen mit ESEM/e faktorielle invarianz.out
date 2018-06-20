@@ -1,0 +1,558 @@
+Mplus VERSION 7.1
+MUTHEN & MUTHEN
+09/18/2015   2:04 PM
+
+INPUT INSTRUCTIONS
+
+
+  DATA:
+   FILE IS  "factorscores_combined.txt";
+
+  VARIABLE:
+   NAMES ARE
+  VPN
+  A1
+  A2
+  A3
+  A4
+  A5
+  A6
+  A7
+  A8
+  C1
+  C2
+  C3
+  C4
+  C5
+  C6
+  C7
+  C8
+  C9
+  E1
+  E2
+  E3
+  E4
+  E5
+  E6
+  E7
+  E8
+  E9
+  N1
+  N2
+  N3
+  N4
+  N5
+  N6
+  N7
+  O1
+  O2
+  O3
+  O4
+  O5
+  O6
+  O7
+  O8
+  O9
+  Dataset
+  ;
+
+
+   USEVARIABLES ARE
+  E1
+  E3
+  E4
+  E5
+  E6
+  E7
+  E8
+  E9
+  ;
+
+  Grouping is Dataset (0 = US 1 = German);
+
+  MISSING ARE ALL (-99);
+
+  MODEL:
+
+  E by E1
+  E3
+  E4
+  E5
+  E6
+  E7
+  E8
+  E9;
+  [E@0];
+
+  Model German:
+  ;
+
+  Model US:
+  ;
+
+
+
+  [E1
+  E3
+  E4
+  E5
+  E6
+  E7
+  E8
+  E9];
+
+  ANALYSIS:
+   ESTIMATOR IS ML;
+   Iterations are 10000;
+
+   OUTPUT: STDYX MODINDICES(4);
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group US                                                    387
+   Group GERMAN                                                361
+   Total sample size                                           748
+
+Number of dependent variables                                    8
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Continuous
+   E1          E3          E4          E5          E6          E7
+   E8          E9
+
+Continuous latent variables
+   E
+
+Variables with special functions
+
+  Grouping variable     DATASET
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                 10000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  factorscores_combined.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+   Group US
+     Number of missing data patterns             1
+
+   Group GERMAN
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR US
+
+
+           Covariance Coverage
+              E1            E3            E4            E5            E6
+              ________      ________      ________      ________      ________
+ E1             1.000
+ E3             1.000         1.000
+ E4             1.000         1.000         1.000
+ E5             1.000         1.000         1.000         1.000
+ E6             1.000         1.000         1.000         1.000         1.000
+ E7             1.000         1.000         1.000         1.000         1.000
+ E8             1.000         1.000         1.000         1.000         1.000
+ E9             1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              E7            E8            E9
+              ________      ________      ________
+ E7             1.000
+ E8             1.000         1.000
+ E9             1.000         1.000         1.000
+
+
+     PROPORTION OF DATA PRESENT FOR GERMAN
+
+
+           Covariance Coverage
+              E1            E3            E4            E5            E6
+              ________      ________      ________      ________      ________
+ E1             1.000
+ E3             1.000         1.000
+ E4             1.000         1.000         1.000
+ E5             1.000         1.000         1.000         1.000
+ E6             1.000         1.000         1.000         1.000         1.000
+ E7             1.000         1.000         1.000         1.000         1.000
+ E8             1.000         1.000         1.000         1.000         1.000
+ E9             1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              E7            E8            E9
+              ________      ________      ________
+ E7             1.000
+ E8             1.000         1.000
+ E9             1.000         1.000         1.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       41
+
+Loglikelihood
+
+          H0 Value                       -5474.557
+          H1 Value                       -5329.550
+
+Information Criteria
+
+          Akaike (AIC)                   11031.115
+          Bayesian (BIC)                 11220.428
+          Sample-Size Adjusted BIC       11090.238
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                            290.015
+          Degrees of Freedom                    47
+          P-Value                           0.0000
+
+Chi-Square Contribution From Each Group
+
+          US                               154.921
+          GERMAN                           135.094
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.118
+          90 Percent C.I.                    0.105  0.131
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.846
+          TLI                                0.816
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1630.187
+          Degrees of Freedom                    56
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.070
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group US
+
+ E        BY
+    E1                 1.000      0.000    999.000    999.000
+    E3                 0.641      0.059     10.813      0.000
+    E4                -0.881      0.063    -13.884      0.000
+    E5                -0.614      0.053    -11.534      0.000
+    E6                -1.023      0.062    -16.579      0.000
+    E7                -0.807      0.061    -13.266      0.000
+    E8                -1.027      0.059    -17.386      0.000
+    E9                -0.779      0.065    -11.905      0.000
+
+ Means
+    E                  0.000      0.000    999.000    999.000
+
+ Intercepts
+    E1                 0.001      0.033      0.041      0.967
+    E3                -0.004      0.034     -0.119      0.905
+    E4                -0.011      0.037     -0.294      0.769
+    E5                 0.003      0.037      0.090      0.928
+    E6                -0.001      0.035     -0.019      0.985
+    E7                -0.004      0.035     -0.108      0.914
+    E8                -0.002      0.040     -0.045      0.964
+    E9                -0.005      0.042     -0.118      0.906
+
+ Variances
+    E                  0.211      0.024      8.672      0.000
+
+ Residual Variances
+    E1                 0.211      0.020     10.424      0.000
+    E3                 0.359      0.027     13.073      0.000
+    E4                 0.376      0.030     12.549      0.000
+    E5                 0.455      0.034     13.210      0.000
+    E6                 0.243      0.022     10.994      0.000
+    E7                 0.327      0.026     12.426      0.000
+    E8                 0.393      0.032     12.182      0.000
+    E9                 0.552      0.042     13.184      0.000
+
+Group GERMAN
+
+ E        BY
+    E1                 1.000      0.000    999.000    999.000
+    E3                 0.641      0.059     10.813      0.000
+    E4                -0.881      0.063    -13.884      0.000
+    E5                -0.614      0.053    -11.534      0.000
+    E6                -1.023      0.062    -16.579      0.000
+    E7                -0.807      0.061    -13.266      0.000
+    E8                -1.027      0.059    -17.386      0.000
+    E9                -0.779      0.065    -11.905      0.000
+
+ Means
+    E                  0.000      0.000    999.000    999.000
+
+ Intercepts
+    E1                 0.003      0.029      0.091      0.928
+    E3                -0.001      0.036     -0.026      0.979
+    E4                -0.014      0.035     -0.397      0.692
+    E5                 0.000      0.028     -0.005      0.996
+    E6                -0.003      0.038     -0.081      0.935
+    E7                -0.013      0.035     -0.358      0.720
+    E8                -0.003      0.032     -0.106      0.916
+    E9                -0.003      0.035     -0.092      0.927
+
+ Variances
+    E                  0.199      0.021      9.675      0.000
+
+ Residual Variances
+    E1                 0.098      0.011      9.056      0.000
+    E3                 0.397      0.031     12.983      0.000
+    E4                 0.291      0.024     12.046      0.000
+    E5                 0.207      0.016     12.705      0.000
+    E6                 0.307      0.026     11.864      0.000
+    E7                 0.325      0.026     12.599      0.000
+    E8                 0.152      0.015     10.149      0.000
+    E9                 0.326      0.026     12.445      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group US
+
+ E        BY
+    E1                 0.708      0.030     23.651      0.000
+    E3                 0.441      0.038     11.569      0.000
+    E4                -0.551      0.033    -16.930      0.000
+    E5                -0.386      0.034    -11.240      0.000
+    E6                -0.691      0.029    -23.451      0.000
+    E7                -0.544      0.035    -15.380      0.000
+    E8                -0.602      0.029    -20.725      0.000
+    E9                -0.435      0.033    -13.022      0.000
+
+ Means
+    E                  0.000      0.000    999.000    999.000
+
+ Intercepts
+    E1                 0.002      0.051      0.041      0.967
+    E3                -0.006      0.051     -0.119      0.905
+    E4                -0.015      0.051     -0.294      0.769
+    E5                 0.005      0.051      0.090      0.928
+    E6                -0.001      0.051     -0.019      0.985
+    E7                -0.005      0.051     -0.108      0.914
+    E8                -0.002      0.051     -0.045      0.964
+    E9                -0.006      0.051     -0.118      0.906
+
+ Variances
+    E                  1.000      0.000    999.000    999.000
+
+ Residual Variances
+    E1                 0.499      0.042     11.795      0.000
+    E3                 0.805      0.034     23.933      0.000
+    E4                 0.696      0.036     19.408      0.000
+    E5                 0.851      0.026     32.122      0.000
+    E6                 0.523      0.041     12.851      0.000
+    E7                 0.704      0.039     18.281      0.000
+    E8                 0.638      0.035     18.252      0.000
+    E9                 0.811      0.029     27.969      0.000
+
+Group GERMAN
+
+ E        BY
+    E1                 0.819      0.022     37.360      0.000
+    E3                 0.413      0.036     11.421      0.000
+    E4                -0.589      0.035    -16.913      0.000
+    E5                -0.515      0.037    -14.073      0.000
+    E6                -0.636      0.031    -20.370      0.000
+    E7                -0.534      0.034    -15.854      0.000
+    E8                -0.761      0.027    -27.886      0.000
+    E9                -0.520      0.038    -13.599      0.000
+
+ Means
+    E                  0.000      0.000    999.000    999.000
+
+ Intercepts
+    E1                 0.005      0.053      0.091      0.928
+    E3                -0.001      0.053     -0.026      0.979
+    E4                -0.021      0.053     -0.397      0.692
+    E5                 0.000      0.053     -0.005      0.996
+    E6                -0.004      0.053     -0.081      0.935
+    E7                -0.019      0.053     -0.358      0.720
+    E8                -0.006      0.053     -0.106      0.916
+    E9                -0.005      0.053     -0.092      0.927
+
+ Variances
+    E                  1.000      0.000    999.000    999.000
+
+ Residual Variances
+    E1                 0.330      0.036      9.202      0.000
+    E3                 0.829      0.030     27.754      0.000
+    E4                 0.653      0.041     15.938      0.000
+    E5                 0.734      0.038     19.464      0.000
+    E6                 0.596      0.040     15.007      0.000
+    E7                 0.715      0.036     19.887      0.000
+    E8                 0.421      0.042     10.128      0.000
+    E9                 0.730      0.040     18.352      0.000
+
+
+R-SQUARE
+
+Group US
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    E1                 0.501      0.042     11.825      0.000
+    E3                 0.195      0.034      5.785      0.000
+    E4                 0.304      0.036      8.465      0.000
+    E5                 0.149      0.026      5.620      0.000
+    E6                 0.477      0.041     11.726      0.000
+    E7                 0.296      0.039      7.690      0.000
+    E8                 0.362      0.035     10.363      0.000
+    E9                 0.189      0.029      6.511      0.000
+
+Group GERMAN
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    E1                 0.670      0.036     18.680      0.000
+    E3                 0.171      0.030      5.711      0.000
+    E4                 0.347      0.041      8.456      0.000
+    E5                 0.266      0.038      7.036      0.000
+    E6                 0.404      0.040     10.185      0.000
+    E7                 0.285      0.036      7.927      0.000
+    E8                 0.579      0.042     13.943      0.000
+    E9                 0.270      0.040      6.800      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.106E-01
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates may not be included.  To include these, request
+MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     4.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+Group US
+
+
+BY Statements
+
+E        BY E1                     8.290     0.257      0.118        0.182
+E        BY E5                     6.883    -0.186     -0.086       -0.117
+
+WITH Statements
+
+E3       WITH E1                   8.541     0.049      0.049        0.179
+E5       WITH E4                   8.806    -0.067     -0.067       -0.163
+E6       WITH E1                   7.716    -0.046     -0.046       -0.204
+E6       WITH E4                   8.627    -0.056     -0.056       -0.185
+E6       WITH E5                  12.818     0.070      0.070        0.211
+E7       WITH E3                  26.754     0.099      0.099        0.287
+E7       WITH E4                   6.606     0.052      0.052        0.147
+E8       WITH E1                   8.814     0.057      0.057        0.197
+E8       WITH E3                   6.104    -0.053     -0.053       -0.140
+E8       WITH E7                   5.292     0.048      0.048        0.135
+E9       WITH E4                  21.627     0.118      0.118        0.258
+E9       WITH E6                  31.401    -0.123     -0.123       -0.336
+E9       WITH E7                   4.370    -0.049     -0.049       -0.116
+
+Group GERMAN
+
+
+BY Statements
+
+E        BY E1                     8.290    -0.257     -0.115       -0.211
+E        BY E5                     6.881     0.091      0.040        0.076
+
+WITH Statements
+
+E3       WITH E1                  14.798     0.050      0.050        0.256
+E4       WITH E1                   8.648     0.036      0.036        0.212
+E4       WITH E3                   5.109     0.043      0.043        0.127
+E5       WITH E3                  27.996     0.084      0.084        0.293
+E6       WITH E5                   6.810     0.038      0.038        0.152
+E7       WITH E3                  20.272     0.090      0.090        0.250
+E7       WITH E4                   4.458     0.037      0.037        0.121
+E7       WITH E5                   5.406     0.034      0.034        0.131
+E8       WITH E3                   4.301    -0.031     -0.031       -0.128
+E8       WITH E4                   4.778     0.030      0.030        0.143
+E9       WITH E4                  35.464     0.105      0.105        0.341
+E9       WITH E8                   6.259    -0.035     -0.035       -0.159
+
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    f:\ipip paper\messinvarianz\domänen mit esem\e faktorielle invarianz.dgm
+
+     Beginning Time:  14:04:15
+        Ending Time:  14:04:16
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

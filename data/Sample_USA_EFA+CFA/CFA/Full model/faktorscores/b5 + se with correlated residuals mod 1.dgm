@@ -1,0 +1,472 @@
+VERSION 1.1.0
+INPUT
+TITLE:
+
+
+DATA:
+FILE IS  "factorscores_CFA.txt";
+VARIABLE:
+Names are
+VPN
+A1
+A2
+A3
+A4
+A5
+A6
+A7
+A8
+C1
+C2
+C3
+C4
+C5
+C6
+C7
+C8
+C9
+E1
+E2
+E3
+E4
+E5
+E6
+E7
+E8
+E9
+N1
+N2
+N3
+N4
+N5
+N6
+N7
+O1
+O2
+O3
+O4
+O5
+O6
+O7
+O8
+O9
+;
+USEVARIABLES ARE
+A1
+A2
+A3
+A4
+A5
+A6
+A7
+A8
+C1
+C2
+C3
+C4
+C5
+C6
+C7
+C8
+C9
+E1
+E2
+E3
+E4
+E5
+E6
+E7
+E8
+E9
+N1
+N2
+N3
+N4
+N5
+N6
+N7
+O1
+O2
+O3
+O4
+O5
+O6
+O7
+O8
+O9
+;
+MISSING ARE ALL (-99);
+ANALYSIS:
+ESTIMATOR IS ML;
+iterations = 10000;
+OUTPUT:
+ STDYX MODINDICES(4);
+MODEL:
+agree by
+A1
+A2
+A3
+A4
+A5
+A6
+A7
+A8
+;
+consc by
+C1
+C2
+C3
+C4
+C5
+C6
+C7
+C8
+C9
+;
+extra by
+E1
+E2
+E3
+E4
+E5
+E6
+E7
+E8
+E9;
+neuro by
+N1
+N2
+N3
+N4
+N5
+N6
+N7
+;
+open by
+O1
+O2
+O3
+O4
+O5
+O6
+O7
+O8
+O9
+;
+se by agree consc extra neuro open;
+E5 WITH C1 ;
+INPUT_END
+1
+1
+0
+1
+ML
+1
+GENERAL
+0
+42
+6
+0
+a1 a2 a3 a4 a5 a6 a7 a8 c1 c2 c3 c4 c5 c6 c7 c8 c9 e1 e2 e3 e4 e5 e6 e7 e8 e9 n1 n2 n3 n4 n5 n6 n7 o1 o2 o3 o4 o5 o6 o7 o8 o9 agree consc extra neuro open se
+2
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 0
+0
+5
+agree
+a1 a2 a3 a4 a5 a6 a7 a8
+consc
+c1 c2 c3 c4 c5 c6 c7 c8 c9
+extra
+e1 e2 e3 e4 e5 e6 e7 e8 e9
+neuro
+n1 n2 n3 n4 n5 n6 n7
+open
+o1 o2 o3 o4 o5 o6 o7 o8 o9
+1 1 agree a1    1.000
+1 1 agree a2   -1.578
+1 1 agree a3   -1.293
+1 1 agree a4   -0.344
+1 1 agree a5   -0.619
+1 1 agree a6    0.659
+1 1 agree a7   -1.336
+1 1 agree a8    0.664
+1 1 consc c1    1.000
+1 1 consc c2   -2.741
+1 1 consc c3   -0.819
+1 1 consc c4    2.878
+1 1 consc c5    3.314
+1 1 consc c6    1.168
+1 1 consc c7   -1.586
+1 1 consc c8    1.421
+1 1 consc c9    1.233
+1 1 extra e1    1.000
+1 1 extra e2   -0.320
+1 1 extra e3    0.642
+1 1 extra e4   -1.038
+1 1 extra e5   -0.426
+1 1 extra e6   -1.134
+1 1 extra e7   -0.821
+1 1 extra e8   -1.126
+1 1 extra e9   -0.948
+1 1 neuro n1    1.000
+1 1 neuro n2    1.310
+1 1 neuro n3    1.314
+1 1 neuro n4   -0.859
+1 1 neuro n5    1.033
+1 1 neuro n6    1.019
+1 1 neuro n7    0.881
+1 1 open o1    1.000
+1 1 open o2    1.323
+1 1 open o3    1.259
+1 1 open o4    1.196
+1 1 open o5    1.351
+1 1 open o6    1.515
+1 1 open o7    1.971
+1 1 open o8    0.562
+1 1 open o9    1.352
+1 1 se agree    1.000
+1 1 se consc    0.189
+1 1 se extra   -0.236
+1 1 se neuro    2.426
+1 1 se open   -0.272
+2 1 e5 c1    0.248
+4 1 a1    0.252
+4 1 a2    0.071
+4 1 a3    0.275
+4 1 a4    0.150
+4 1 a5    0.197
+4 1 a6    0.485
+4 1 a7    0.190
+4 1 a8    0.162
+4 1 c1    0.614
+4 1 c2    0.398
+4 1 c3    0.160
+4 1 c4    0.279
+4 1 c5    0.111
+4 1 c6    0.062
+4 1 c7    0.304
+4 1 c8    0.271
+4 1 c9    0.102
+4 1 e1    0.106
+4 1 e2    0.458
+4 1 e3    0.398
+4 1 e4    0.236
+4 1 e5    0.213
+4 1 e6    0.305
+4 1 e7    0.312
+4 1 e8    0.153
+4 1 e9    0.316
+4 1 n1    0.348
+4 1 n2    0.150
+4 1 n3    0.196
+4 1 n4    0.392
+4 1 n5    0.115
+4 1 n6    0.393
+4 1 n7    0.174
+4 1 o1    0.158
+4 1 o2    0.285
+4 1 o3    0.130
+4 1 o4    0.540
+4 1 o5    0.378
+4 1 o6    0.179
+4 1 o7    0.173
+4 1 o8    0.437
+4 1 o9    0.309
+4 1 agree    0.111
+4 1 consc    0.031
+4 1 extra    0.182
+4 1 neuro    0.263
+4 1 open    0.111
+5 1 se   -0.024
+11 1 agree a1    0.507
+11 1 agree a2   -0.869
+11 1 agree a3   -0.589
+11 1 agree a4   -0.254
+11 1 agree a5   -0.380
+11 1 agree a6    0.269
+11 1 agree a7   -0.671
+11 1 agree a8    0.439
+11 1 consc c1    0.218
+11 1 consc c2   -0.605
+11 1 consc c3   -0.336
+11 1 consc c4    0.690
+11 1 consc c5    0.867
+11 1 consc c6    0.633
+11 1 consc c7   -0.449
+11 1 consc c8    0.431
+11 1 consc c9    0.560
+11 1 extra e1    0.793
+11 1 extra e2   -0.197
+11 1 extra e3    0.397
+11 1 extra e4   -0.672
+11 1 extra e5   -0.365
+11 1 extra e6   -0.657
+11 1 extra e7   -0.530
+11 1 extra e8   -0.774
+11 1 extra e9   -0.583
+11 1 neuro n1    0.512
+11 1 neuro n2    0.766
+11 1 neuro n3    0.723
+11 1 neuro n4   -0.435
+11 1 neuro n5    0.731
+11 1 neuro n6    0.497
+11 1 neuro n7    0.596
+11 1 open o1    0.640
+11 1 open o2    0.634
+11 1 open o3    0.756
+11 1 open o4    0.474
+11 1 open o5    0.588
+11 1 open o6    0.764
+11 1 open o7    0.843
+11 1 open o8    0.271
+11 1 open o9    0.627
+11 1 se agree  999.000
+11 1 se consc  999.000
+11 1 se extra  999.000
+11 1 se neuro  999.000
+11 1 se open  999.000
+12 1 e5 c1    0.685
+14 1 a1    0.743
+14 1 a2    0.245
+14 1 a3    0.653
+14 1 a4    0.936
+14 1 a5    0.855
+14 1 a6    0.928
+14 1 a7    0.550
+14 1 a8    0.808
+14 1 c1    0.953
+14 1 c2    0.635
+14 1 c3    0.887
+14 1 c4    0.524
+14 1 c5    0.249
+14 1 c6    0.600
+14 1 c7    0.798
+14 1 c8    0.814
+14 1 c9    0.687
+14 1 e1    0.371
+14 1 e2    0.961
+14 1 e3    0.843
+14 1 e4    0.548
+14 1 e5    0.867
+14 1 e6    0.568
+14 1 e7    0.719
+14 1 e8    0.400
+14 1 e9    0.661
+14 1 n1    0.738
+14 1 n2    0.413
+14 1 n3    0.478
+14 1 n4    0.811
+14 1 n5    0.466
+14 1 n6    0.753
+14 1 n7    0.645
+14 1 o1    0.590
+14 1 o2    0.598
+14 1 o3    0.428
+14 1 o4    0.775
+14 1 o5    0.655
+14 1 o6    0.416
+14 1 o7    0.289
+14 1 o8    0.927
+14 1 o9    0.607
+14 1 agree    1.272
+14 1 consc    1.028
+14 1 extra    1.007
+14 1 neuro    2.127
+14 1 open    1.016
+15 1 se  999.000
+31 1 agree a1    0.295
+31 1 agree a2   -0.466
+31 1 agree a3   -0.382
+31 1 agree a4   -0.101
+31 1 agree a5   -0.183
+31 1 agree a6    0.195
+31 1 agree a7   -0.395
+31 1 agree a8    0.196
+31 1 consc c1    0.175
+31 1 consc c2   -0.479
+31 1 consc c3   -0.143
+31 1 consc c4    0.503
+31 1 consc c5    0.579
+31 1 consc c6    0.204
+31 1 consc c7   -0.277
+31 1 consc c8    0.248
+31 1 consc c9    0.215
+31 1 extra e1    0.425
+31 1 extra e2   -0.136
+31 1 extra e3    0.273
+31 1 extra e4   -0.441
+31 1 extra e5   -0.181
+31 1 extra e6   -0.481
+31 1 extra e7   -0.349
+31 1 extra e8   -0.478
+31 1 extra e9   -0.403
+31 1 neuro n1    0.352
+31 1 neuro n2    0.461
+31 1 neuro n3    0.462
+31 1 neuro n4   -0.302
+31 1 neuro n5    0.364
+31 1 neuro n6    0.359
+31 1 neuro n7    0.310
+31 1 open o1    0.331
+31 1 open o2    0.438
+31 1 open o3    0.416
+31 1 open o4    0.396
+31 1 open o5    0.447
+31 1 open o6    0.501
+31 1 open o7    0.652
+31 1 open o8    0.186
+31 1 open o9    0.447
+31 1 se agree  999.000
+31 1 se consc  999.000
+31 1 se extra  999.000
+31 1 se neuro  999.000
+31 1 se open  999.000
+32 1 e5 c1    0.248
+34 1 a1    0.252
+34 1 a2    0.071
+34 1 a3    0.275
+34 1 a4    0.150
+34 1 a5    0.197
+34 1 a6    0.485
+34 1 a7    0.190
+34 1 a8    0.162
+34 1 c1    0.614
+34 1 c2    0.398
+34 1 c3    0.160
+34 1 c4    0.279
+34 1 c5    0.111
+34 1 c6    0.062
+34 1 c7    0.304
+34 1 c8    0.271
+34 1 c9    0.102
+34 1 e1    0.106
+34 1 e2    0.458
+34 1 e3    0.398
+34 1 e4    0.236
+34 1 e5    0.213
+34 1 e6    0.305
+34 1 e7    0.312
+34 1 e8    0.153
+34 1 e9    0.316
+34 1 n1    0.348
+34 1 n2    0.150
+34 1 n3    0.196
+34 1 n4    0.392
+34 1 n5    0.115
+34 1 n6    0.393
+34 1 n7    0.174
+34 1 o1    0.158
+34 1 o2    0.285
+34 1 o3    0.130
+34 1 o4    0.540
+34 1 o5    0.378
+34 1 o6    0.179
+34 1 o7    0.173
+34 1 o8    0.437
+34 1 o9    0.309
+34 1 agree    1.272
+34 1 consc    1.028
+34 1 extra    1.007
+34 1 neuro    2.127
+34 1 open    1.016
+35 1 se  999.000

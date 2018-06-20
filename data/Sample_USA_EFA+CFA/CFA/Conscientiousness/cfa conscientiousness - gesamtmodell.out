@@ -1,0 +1,403 @@
+Mplus VERSION 7.1
+MUTHEN & MUTHEN
+04/15/2015   1:23 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  DATA:
+  FILE IS  "ARI Data 2009_Conscientiousness CFA Sample.txt";
+  Variable:
+  Names are
+  respid
+  con108
+  con76
+  con77
+  con38
+  con23
+  con85
+  con42
+  con52
+  con110
+  con44
+  con102
+  con56
+  con18
+  con39
+  con33
+  con88
+  con4
+  con83
+  con6
+  con79
+  con109
+  con7
+  con98
+  con74
+  con114
+  con1
+  con19
+  con30
+  con96
+  con103
+  con54
+  con73
+  con26
+  con101
+  con32
+  con50
+  con8
+  con15
+  con93
+  con25
+  con13
+  con5
+  con70
+  con105
+  con2
+  con41
+  con16
+  con67
+  con84
+  con55
+  con10
+  con31
+  con14
+  con68
+  con97
+  con37
+  con87
+  con63
+  con66
+  con86
+  con49
+  con45
+  con91
+  con107
+  con59
+  con11
+  con21
+  con111
+  con34
+  con48
+  con61
+  con29
+  con89
+  con24
+  con100
+  con47
+  con112
+  con82
+  con94
+  con57
+  con90
+  con71
+  con99
+  con28
+  con115
+  con46
+  con36
+  con80
+  con81
+  con72
+  con3
+  con43
+  con116
+  con75
+  con58
+  con64
+  con60
+  con27
+  con113
+  con17
+  con53
+  con35
+  con22
+  con9
+  con104
+  con69
+  con65
+  con95
+  con20
+  con12
+  con51
+  con106
+  con117
+  Filter
+  filter_
+  ;
+
+  USEVARIABLES ARE
+  con110
+  con105
+  con29
+  con106
+  con93
+  con25
+  con31
+  con104
+  con68
+  con73
+  con102
+  con30
+  con15
+  con103
+  con42
+  con18
+  con19
+  con41
+  con1
+  con114
+  con4
+  con39
+  con23
+  con33
+  con88
+  con10
+  con94
+  con34
+  con2
+  con9
+  con70
+  con55
+  con89
+  con95
+  con17
+  con74
+  con112
+  con96
+  con44
+  con26
+  con49
+  con90
+  con76
+  con61
+  con80
+  con16
+  con35
+  con59
+  con79
+  con7
+  con21
+  con67
+  con60
+  con71
+  con101
+  con50
+  con52
+  con77
+  con8
+  con14
+  con66
+  con111
+  con58
+  con116
+  con115
+  con56
+  con5
+  con57
+  con54
+  con65
+  con11
+  con20
+  con97
+  con22
+  con45
+  con100
+  con91
+  con64
+  con37
+  con69
+  con46
+  con63
+  con113
+  con75
+  con32
+  con28
+  con109
+  con53
+  con3
+  con48
+  con117
+  con47
+  con108
+  con87
+  con81
+  con27
+  con24
+  con38
+  con36
+  con98
+  con107
+  con72
+  con51
+  con82
+  con6
+  con43
+  con85
+  con99
+  ;
+
+  MISSING ARE ALL (-99);
+  categorical are all;
+
+  Model:
+  control  BY
+  con110
+  con105
+  con29
+  con106
+  con93
+  ;
+
+  caution  BY
+  con25
+  con31
+  con104
+  con68
+  con73
+  con102
+  con30
+  con15
+  con103
+  con42
+  con18
+  con19
+  con41
+  ;
+
+  goal  BY
+  con1
+  con114
+  con4
+  con39
+  con23
+  con33
+  con88
+  ;
+
+  lackofc  BY
+  con10
+  con94
+  con34
+  con2
+  con9
+  con70
+  con55
+  con89
+  con95
+  con17
+  con74
+  con112
+  con96
+  con44
+  con26
+  con49
+  con90
+  con76
+  con61
+  con80
+  con16
+  con35
+  ;
+
+  order  BY
+  con59
+  con79
+  con7
+  con21
+  con67
+  con60
+  con71
+  con101
+  con50
+  ;
+
+  perserv  BY
+  con52
+  con77
+  con8
+  con14
+  con66
+  con111
+  con58
+  con116
+  ;
+
+  prload  BY
+  con115
+  con56
+  con5
+  con57
+  con54
+  con65
+  con11
+  ;
+
+  procras  BY
+  con20
+  con97
+  con22
+  con45
+  con100
+  con91
+  ;
+
+  taskpl  BY
+  con64
+  con37
+  con69
+  con46
+  con63
+  con113
+  con75
+  con32
+  con28
+  con109
+  con53
+  con3
+  con48
+  con117
+  con47
+  con108
+  con87
+  con81
+  con27
+  con24
+  con38
+  con36
+  con98
+  con107
+  con72
+  con51
+  con82
+  con6
+  con43
+  con85
+  con99
+  ;
+
+  conscient BY control caution goal lackofc order perserv prload procras taskpl
+  ;
+
+
+  Analysis:
+  ESTIMATOR IS WLSMV;
+
+  OUTPUT: STDYX MODINDICES(4)NOSERROR;
+
+
+
+*** WARNING in OUTPUT command
+  MODINDICES option is not available when NOSERROR is requested.
+  Request for MODINDICES is ignored.
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  2
+   2 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+

@@ -1,0 +1,357 @@
+Mplus VERSION 7.1
+MUTHEN & MUTHEN
+06/04/2015   3:52 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  DATA:
+  FILE IS  "factorscores_CFA.txt";
+  Variable:
+  Names are
+  VPN
+  A1
+  A2
+  A3
+  A4
+  A5
+  A6
+  A7
+  A8
+  C1
+  C2
+  C3
+  C4
+  C5
+  C6
+  C7
+  C8
+  C9
+  E1
+  E2
+  E3
+  E4
+  E5
+  E6
+  E7
+  E8
+  E9
+  N1
+  N2
+  N3
+  N4
+  N5
+  N6
+  N7
+  O1
+  O2
+  O3
+  O4
+  O5
+  O6
+  O7
+  O8
+  O9
+  ;
+
+  USEVARIABLES ARE
+  N1
+  N2
+  N3
+  N4
+  N5
+  N6
+  N7
+
+  ;
+
+  MISSING ARE ALL (-99);
+
+  Model:
+
+  neuro by
+  N1
+  N2
+  N3
+  N4
+  N5
+  N6
+  N7
+  ;
+
+
+
+
+
+  Analysis:
+  ESTIMATOR IS ML;
+  iterations = 10000;
+
+  OUTPUT: STDYX MODINDICES(4);
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         361
+
+Number of dependent variables                                    7
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Continuous
+   N1          N2          N3          N4          N5          N6
+   N7
+
+Continuous latent variables
+   NEURO
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                 10000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  factorscores_CFA.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              N1            N2            N3            N4            N5
+              ________      ________      ________      ________      ________
+ N1             1.000
+ N2             1.000         1.000
+ N3             1.000         1.000         1.000
+ N4             1.000         1.000         1.000         1.000
+ N5             1.000         1.000         1.000         1.000         1.000
+ N6             1.000         1.000         1.000         1.000         1.000
+ N7             1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              N6            N7
+              ________      ________
+ N6             1.000
+ N7             1.000         1.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       21
+
+Loglikelihood
+
+          H0 Value                       -2060.488
+          H1 Value                       -2021.934
+
+Information Criteria
+
+          Akaike (AIC)                    4162.975
+          Bayesian (BIC)                  4244.642
+          Sample-Size Adjusted BIC        4178.019
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             77.108
+          Degrees of Freedom                    14
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.112
+          90 Percent C.I.                    0.088  0.137
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.916
+          TLI                                0.874
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            770.332
+          Degrees of Freedom                    21
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.045
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ NEURO    BY
+    N1                 1.000      0.000    999.000    999.000
+    N2                 1.299      0.149      8.712      0.000
+    N3                 1.428      0.162      8.830      0.000
+    N4                -0.892      0.137     -6.521      0.000
+    N5                 0.989      0.116      8.529      0.000
+    N6                 1.186      0.152      7.809      0.000
+    N7                 0.930      0.117      7.927      0.000
+
+ Intercepts
+    N1                 0.002      0.037      0.064      0.949
+    N2                 0.011      0.033      0.331      0.740
+    N3                 0.000      0.034     -0.008      0.994
+    N4                 0.001      0.037      0.025      0.980
+    N5                 0.003      0.026      0.115      0.909
+    N6                 0.007      0.037      0.189      0.850
+    N7                 0.001      0.029      0.042      0.967
+
+ Variances
+    NEURO              0.124      0.026      4.700      0.000
+
+ Residual Variances
+    N1                 0.368      0.029     12.565      0.000
+    N2                 0.172      0.017     10.057      0.000
+    N3                 0.171      0.018      9.391      0.000
+    N4                 0.398      0.031     12.765      0.000
+    N5                 0.131      0.012     10.727      0.000
+    N6                 0.324      0.027     11.814      0.000
+    N7                 0.186      0.016     11.890      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ NEURO    BY
+    N1                 0.503      0.045     11.279      0.000
+    N2                 0.742      0.031     23.931      0.000
+    N3                 0.773      0.029     26.605      0.000
+    N4                -0.446      0.048     -9.384      0.000
+    N5                 0.694      0.034     20.197      0.000
+    N6                 0.592      0.041     14.550      0.000
+    N7                 0.606      0.039     15.479      0.000
+
+ Intercepts
+    N1                 0.003      0.053      0.064      0.949
+    N2                 0.017      0.053      0.331      0.740
+    N3                 0.000      0.053     -0.008      0.994
+    N4                 0.001      0.053      0.025      0.980
+    N5                 0.006      0.053      0.115      0.909
+    N6                 0.010      0.053      0.189      0.850
+    N7                 0.002      0.053      0.042      0.967
+
+ Variances
+    NEURO              1.000      0.000    999.000    999.000
+
+ Residual Variances
+    N1                 0.747      0.045     16.682      0.000
+    N2                 0.450      0.046      9.786      0.000
+    N3                 0.403      0.045      8.975      0.000
+    N4                 0.801      0.042     18.896      0.000
+    N5                 0.518      0.048     10.852      0.000
+    N6                 0.649      0.048     13.472      0.000
+    N7                 0.633      0.047     13.367      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    N1                 0.253      0.045      5.640      0.000
+    N2                 0.550      0.046     11.965      0.000
+    N3                 0.597      0.045     13.303      0.000
+    N4                 0.199      0.042      4.692      0.000
+    N5                 0.482      0.048     10.098      0.000
+    N6                 0.351      0.048      7.275      0.000
+    N7                 0.367      0.047      7.739      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.139E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates may not be included.  To include these, request
+MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     4.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+WITH Statements
+
+N4       WITH N3                   6.418     0.043      0.043        0.166
+N5       WITH N2                  20.624     0.051      0.051        0.339
+N5       WITH N3                   8.065    -0.034     -0.034       -0.226
+N5       WITH N4                   5.647    -0.033     -0.033       -0.144
+N6       WITH N2                  18.697    -0.069     -0.069       -0.292
+N6       WITH N3                  11.894     0.057      0.057        0.244
+N6       WITH N4                   8.378    -0.060     -0.060       -0.166
+N6       WITH N5                  15.203    -0.051     -0.051       -0.249
+N7       WITH N4                   6.525     0.040      0.040        0.147
+N7       WITH N6                   8.248     0.042      0.042        0.173
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    f:\ipip paper\sample_usa\cfa\gesamtmodell\faktorscores\domänenmodelle\neuroticism with fs as ind
+
+     Beginning Time:  15:52:49
+        Ending Time:  15:52:50
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

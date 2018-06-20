@@ -1,0 +1,338 @@
+VERSION 1.1.0
+INPUT
+TITLE:
+
+
+DATA:
+FILE IS  "ARI Data 2009_Agreeableness CFA Sample.txt";
+VARIABLE:
+Names are
+respid
+agree5
+agree51
+agree21
+agree84
+agree35
+agree15
+agree93
+agree67
+agree34
+agree25
+agree44
+agree64
+agree31
+agree45
+agree26
+agree52
+agree14
+agree20
+agree6
+agree92
+agree77
+agree3
+agree17
+agree19
+agree13
+agree27
+agree105
+agree95
+agree104
+agree57
+agree85
+agree97
+agree110
+agree61
+agree94
+agree107
+agree30
+agree40
+agree32
+agree50
+agree90
+agree63
+agree60
+agree23
+agree1
+agree58
+agree101
+agree46
+agree87
+agree98
+agree37
+agree62
+agree39
+agree83
+agree53
+agree65
+agree103
+agree91
+agree4
+agree42
+agree18
+agree96
+agree106
+agree55
+agree86
+agree72
+agree22
+agree79
+agree33
+agree70
+agree109
+agree78
+agree100
+agree71
+agree89
+agree76
+agree75
+agree11
+agree56
+agree12
+agree49
+agree16
+agree108
+agree43
+agree7
+agree2
+agree88
+agree41
+agree38
+agree99
+agree69
+agree36
+agree80
+agree8
+agree66
+agree54
+agree24
+agree82
+agree74
+agree73
+agree10
+agree59
+Filter
+filter_
+;
+USEVARIABLES ARE
+AGREE8
+AGREE2
+AGREE82
+AGREE87
+AGREE53
+AGREE72
+AGREE62
+AGREE73
+AGREE40
+AGREE4
+AGREE74
+AGREE54
+AGREE89
+AGREE18
+AGREE101
+AGREE63
+AGREE65
+AGREE1
+AGREE15
+AGREE51
+AGREE41
+AGREE76
+AGREE7
+AGREE59
+AGREE110
+AGREE85
+AGREE20
+AGREE27
+AGREE21
+AGREE38
+AGREE46
+AGREE5
+AGREE19
+AGREE11
+AGREE94
+AGREE88
+AGREE108
+AGREE3
+;
+MISSING ARE ALL (-99);
+categorical are all;
+ANALYSIS:
+ESTIMATOR IS WLSMV;
+OUTPUT:
+ STDYX MODINDICES(4);
+MODEL:
+appreci BY
+AGREE8
+AGREE2
+AGREE82
+AGREE87
+AGREE53
+AGREE72
+AGREE62
+AGREE73
+AGREE40
+AGREE4
+AGREE74
+AGREE54
+AGREE89
+AGREE18
+AGREE101
+AGREE63
+AGREE65
+AGREE1
+AGREE15
+AGREE51
+AGREE41
+AGREE76
+AGREE7
+AGREE59
+AGREE110
+AGREE85
+AGREE20
+AGREE27
+AGREE21
+AGREE38
+AGREE46
+AGREE5
+AGREE19
+AGREE11
+AGREE94
+AGREE88
+AGREE108
+AGREE3
+;
+INPUT_END
+2
+2
+0
+2
+WLSMV
+1
+GENERAL
+0
+38
+1
+0
+agree8 agree2 agree82 agree87 agree53 agree72 agree62 agree73 agree40 agree4 agree74 agree54 agree89 agree18 agree101 agree63 agree65 agree1 agree15 agree51 agree41 agree76 agree7 agree59 agree110 agree85 agree20 agree27 agree21 agree38 agree46 agree5 agree19 agree11 agree94 agree88 agree108 agree3 appreci
+1
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 0
+0
+1
+appreci
+agree8 agree2 agree82 agree87 agree53 agree72 agree62 agree73 agree40 agree4 agree74 agree54 agree89 agree18 agree101 agree63 agree65 agree1 agree15 agree51 agree41 agree76 agree7 agree59 agree110 agree85 agree20 agree27 agree21 agree38 agree46 agree5 agree19 agree11 agree94 agree88 agree108 agree3
+1 1 appreci agree8    1.000    0.000
+1 1 appreci agree2    0.883    0.041
+1 1 appreci agree82    0.777    0.044
+1 1 appreci agree87    0.943    0.042
+1 1 appreci agree53    0.871    0.046
+1 1 appreci agree72    1.044    0.039
+1 1 appreci agree62    0.952    0.044
+1 1 appreci agree73    0.974    0.038
+1 1 appreci agree40    0.867    0.048
+1 1 appreci agree4    0.925    0.043
+1 1 appreci agree74    0.907    0.043
+1 1 appreci agree54    0.717    0.060
+1 1 appreci agree89    0.897    0.045
+1 1 appreci agree18    0.791    0.050
+1 1 appreci agree101    0.826    0.042
+1 1 appreci agree63    0.971    0.041
+1 1 appreci agree65    0.837    0.043
+1 1 appreci agree1    0.873    0.043
+1 1 appreci agree15    0.790    0.044
+1 1 appreci agree51    0.882    0.043
+1 1 appreci agree41    0.789    0.054
+1 1 appreci agree76    0.628    0.051
+1 1 appreci agree7    0.758    0.051
+1 1 appreci agree59    0.714    0.052
+1 1 appreci agree110    0.920    0.050
+1 1 appreci agree85    0.778    0.057
+1 1 appreci agree20    0.743    0.049
+1 1 appreci agree27    0.711    0.054
+1 1 appreci agree21    0.581    0.053
+1 1 appreci agree38    0.442    0.057
+1 1 appreci agree46   -0.786    0.046
+1 1 appreci agree5    0.906    0.053
+1 1 appreci agree19    0.573    0.056
+1 1 appreci agree11    0.474    0.057
+1 1 appreci agree94    0.817    0.047
+1 1 appreci agree88   -0.620    0.058
+1 1 appreci agree108    0.526    0.059
+1 1 appreci agree3    0.671    0.051
+5 1 appreci    0.573    0.036
+11 1 appreci agree8    0.757    0.024
+11 1 appreci agree2    0.669    0.030
+11 1 appreci agree82    0.588    0.033
+11 1 appreci agree87    0.714    0.029
+11 1 appreci agree53    0.659    0.031
+11 1 appreci agree72    0.791    0.025
+11 1 appreci agree62    0.720    0.030
+11 1 appreci agree73    0.737    0.026
+11 1 appreci agree40    0.656    0.032
+11 1 appreci agree4    0.700    0.029
+11 1 appreci agree74    0.687    0.029
+11 1 appreci agree54    0.543    0.044
+11 1 appreci agree89    0.679    0.030
+11 1 appreci agree18    0.599    0.035
+11 1 appreci agree101    0.625    0.031
+11 1 appreci agree63    0.735    0.028
+11 1 appreci agree65    0.634    0.030
+11 1 appreci agree1    0.661    0.030
+11 1 appreci agree15    0.598    0.034
+11 1 appreci agree51    0.668    0.031
+11 1 appreci agree41    0.597    0.039
+11 1 appreci agree76    0.475    0.039
+11 1 appreci agree7    0.574    0.036
+11 1 appreci agree59    0.541    0.037
+11 1 appreci agree110    0.696    0.029
+11 1 appreci agree85    0.589    0.038
+11 1 appreci agree20    0.562    0.034
+11 1 appreci agree27    0.538    0.041
+11 1 appreci agree21    0.440    0.040
+11 1 appreci agree38    0.334    0.043
+11 1 appreci agree46   -0.595    0.034
+11 1 appreci agree5    0.686    0.032
+11 1 appreci agree19    0.434    0.042
+11 1 appreci agree11    0.359    0.042
+11 1 appreci agree94    0.619    0.033
+11 1 appreci agree88   -0.469    0.043
+11 1 appreci agree108    0.398    0.044
+11 1 appreci agree3    0.508    0.036
+15 1 appreci    1.000    0.000
+31 1 appreci agree8    0.757    0.024
+31 1 appreci agree2    0.669    0.030
+31 1 appreci agree82    0.588    0.033
+31 1 appreci agree87    0.714    0.029
+31 1 appreci agree53    0.659    0.031
+31 1 appreci agree72    0.791    0.025
+31 1 appreci agree62    0.720    0.030
+31 1 appreci agree73    0.737    0.026
+31 1 appreci agree40    0.656    0.032
+31 1 appreci agree4    0.700    0.029
+31 1 appreci agree74    0.687    0.029
+31 1 appreci agree54    0.543    0.044
+31 1 appreci agree89    0.679    0.030
+31 1 appreci agree18    0.599    0.035
+31 1 appreci agree101    0.625    0.031
+31 1 appreci agree63    0.735    0.028
+31 1 appreci agree65    0.634    0.030
+31 1 appreci agree1    0.661    0.030
+31 1 appreci agree15    0.598    0.034
+31 1 appreci agree51    0.668    0.031
+31 1 appreci agree41    0.597    0.039
+31 1 appreci agree76    0.475    0.039
+31 1 appreci agree7    0.574    0.036
+31 1 appreci agree59    0.541    0.037
+31 1 appreci agree110    0.696    0.029
+31 1 appreci agree85    0.589    0.038
+31 1 appreci agree20    0.562    0.034
+31 1 appreci agree27    0.538    0.041
+31 1 appreci agree21    0.440    0.040
+31 1 appreci agree38    0.334    0.043
+31 1 appreci agree46   -0.595    0.034
+31 1 appreci agree5    0.686    0.032
+31 1 appreci agree19    0.434    0.042
+31 1 appreci agree11    0.359    0.042
+31 1 appreci agree94    0.619    0.033
+31 1 appreci agree88   -0.469    0.043
+31 1 appreci agree108    0.398    0.044
+31 1 appreci agree3    0.508    0.036
+35 1 appreci    1.000    0.000
