@@ -1,0 +1,429 @@
+VERSION 1.1.0
+INPUT
+TITLE:
+
+
+DATA:
+FILE IS  "extraversion CFA Sample.txt";
+VARIABLE:
+Names are
+respid
+e174
+e327
+e276
+e197
+e58
+e294
+e4
+e166
+e316
+e131
+e228
+e98
+e290
+e288
+e196
+e32
+e123
+e102
+e125
+e112
+e103
+e60
+e306
+e182
+e235
+e40
+e95
+e19
+e242
+e259
+e231
+e164
+e341
+e245
+e28
+e217
+e280
+e238
+e229
+e56
+e311
+e80
+e257
+e49
+e130
+e304
+e255
+e286
+e329
+e24
+e335
+e83
+e208
+e260
+e315
+e29
+e277
+e31
+e139
+e220
+e142
+e34
+e84
+e216
+e124
+e274
+e219
+e57
+e30
+e158
+e99
+e214
+e207
+e132
+e232
+e241
+e55
+e322
+e118
+e233
+e191
+Filter
+filter_
+;
+USEVARIABLES ARE
+e238
+e311
+e49
+e56
+e95
+e166
+e208
+e80
+e304
+e216
+e235
+e84
+e98
+e34
+e315
+e219
+e322
+e55
+e229
+e228
+e233
+e182
+e130
+e257
+e118
+e112
+e125
+e158
+e280
+e103
+e60
+e4
+e214
+e40
+e294
+e255
+e124
+e142
+e99
+e123
+e29
+e341
+e28
+;
+categorical are all;
+MISSING ARE ALL (-99);
+ANALYSIS:
+ESTIMATOR IS WLSMV;
+OUTPUT:
+ STDYX MODINDICES(1);
+MODEL:
+activi  BY
+e238
+e311
+e49
+;
+assert  BY
+e56
+e95
+e166
+e208
+e80
+;
+emotio  BY
+e304
+e216
+e235
+e84
+e98
+;
+humor  BY
+e34
+e315
+e219
+e322
+e55
+;
+posemo  BY
+e229
+e228
+e233
+e182
+e130
+;
+reclus  BY
+e257
+e118
+e112
+e125
+e158
+;
+sensat  BY
+e280
+e103
+e60
+e4
+e214
+;
+shy  BY
+e40
+e294
+e255
+e124
+e142
+;
+social  BY
+e99
+e123
+e29
+e341
+e28
+;
+extra BY activi assert emotio humor posemo reclus sensat shy social;
+INPUT_END
+2
+2
+0
+2
+WLSMV
+1
+GENERAL
+0
+43
+10
+0
+e238 e311 e49 e56 e95 e166 e208 e80 e304 e216 e235 e84 e98 e34 e315 e219 e322 e55 e229 e228 e233 e182 e130 e257 e118 e112 e125 e158 e280 e103 e60 e4 e214 e40 e294 e255 e124 e142 e99 e123 e29 e341 e28 activi assert emotio humor posemo reclus sensat shy social extra
+2
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 1 1 1 1 1 1 1 1 1 0
+0
+9
+activi
+e238 e311 e49
+assert
+e56 e95 e166 e208 e80
+emotio
+e304 e216 e235 e84 e98
+humor
+e34 e315 e219 e322 e55
+posemo
+e229 e228 e233 e182 e130
+reclus
+e257 e118 e112 e125 e158
+sensat
+e280 e103 e60 e4 e214
+shy
+e40 e294 e255 e124 e142
+social
+e99 e123 e29 e341 e28
+1 1 activi e238    1.000    0.000
+1 1 activi e311   -0.415    0.067
+1 1 activi e49    0.976    0.056
+1 1 assert e56    1.000    0.000
+1 1 assert e95    2.075    0.285
+1 1 assert e166    1.555    0.217
+1 1 assert e208    0.795    0.132
+1 1 assert e80    1.248    0.182
+1 1 emotio e304    1.000    0.000
+1 1 emotio e216    0.495    0.056
+1 1 emotio e235    1.052    0.052
+1 1 emotio e84    0.237    0.066
+1 1 emotio e98    0.542    0.067
+1 1 humor e34    1.000    0.000
+1 1 humor e315    1.032    0.060
+1 1 humor e219    1.040    0.073
+1 1 humor e322    0.756    0.064
+1 1 humor e55    0.754    0.072
+1 1 posemo e229    1.000    0.000
+1 1 posemo e228    0.902    0.060
+1 1 posemo e233    1.091    0.065
+1 1 posemo e182    1.090    0.073
+1 1 posemo e130    0.746    0.068
+1 1 reclus e257    1.000    0.000
+1 1 reclus e118    0.695    0.068
+1 1 reclus e112    0.532    0.078
+1 1 reclus e125    0.674    0.094
+1 1 reclus e158    0.660    0.089
+1 1 sensat e280    1.000    0.000
+1 1 sensat e103    1.053    0.100
+1 1 sensat e60   -0.815    0.085
+1 1 sensat e4    1.454    0.145
+1 1 sensat e214    1.012    0.135
+1 1 shy e40    1.000    0.000
+1 1 shy e294   -1.511    0.121
+1 1 shy e255    0.479    0.100
+1 1 shy e124   -1.456    0.118
+1 1 shy e142    0.658    0.104
+1 1 social e99    1.000    0.000
+1 1 social e123    0.732    0.071
+1 1 social e29    0.707    0.080
+1 1 social e341    1.215    0.082
+1 1 social e28    0.954    0.081
+1 1 extra activi    1.000    0.000
+1 1 extra assert    0.526    0.081
+1 1 extra emotio    1.168    0.084
+1 1 extra humor    0.842    0.077
+1 1 extra posemo    0.948    0.071
+1 1 extra reclus   -0.751    0.087
+1 1 extra sensat    0.403    0.062
+1 1 extra shy   -0.866    0.083
+1 1 extra social    1.047    0.087
+4 1 activi    0.423    0.054
+4 1 assert    0.083    0.021
+4 1 emotio    0.177    0.030
+4 1 humor    0.368    0.043
+4 1 posemo    0.239    0.028
+4 1 reclus    0.503    0.062
+4 1 sensat    0.302    0.043
+4 1 shy    0.063    0.016
+4 1 social    0.075    0.020
+5 1 extra    0.321    0.040
+11 1 activi e238    0.863    0.032
+11 1 activi e311   -0.358    0.055
+11 1 activi e49    0.842    0.030
+11 1 assert e56    0.414    0.052
+11 1 assert e95    0.860    0.044
+11 1 assert e166    0.644    0.042
+11 1 assert e208    0.329    0.051
+11 1 assert e80    0.517    0.046
+11 1 emotio e304    0.784    0.028
+11 1 emotio e216    0.388    0.046
+11 1 emotio e235    0.825    0.028
+11 1 emotio e84    0.186    0.052
+11 1 emotio e98    0.425    0.051
+11 1 humor e34    0.772    0.035
+11 1 humor e315    0.797    0.032
+11 1 humor e219    0.803    0.037
+11 1 humor e322    0.584    0.044
+11 1 humor e55    0.582    0.046
+11 1 posemo e229    0.726    0.032
+11 1 posemo e228    0.655    0.036
+11 1 posemo e233    0.793    0.037
+11 1 posemo e182    0.792    0.040
+11 1 posemo e130    0.542    0.045
+11 1 reclus e257    0.827    0.043
+11 1 reclus e118    0.575    0.045
+11 1 reclus e112    0.440    0.056
+11 1 reclus e125    0.558    0.064
+11 1 reclus e158    0.546    0.063
+11 1 sensat e280    0.595    0.043
+11 1 sensat e103    0.627    0.043
+11 1 sensat e60   -0.485    0.049
+11 1 sensat e4    0.866    0.050
+11 1 sensat e214    0.603    0.063
+11 1 shy e40    0.552    0.041
+11 1 shy e294   -0.833    0.027
+11 1 shy e255    0.264    0.052
+11 1 shy e124   -0.803    0.030
+11 1 shy e142    0.363    0.050
+11 1 social e99    0.653    0.038
+11 1 social e123    0.478    0.042
+11 1 social e29    0.462    0.046
+11 1 social e341    0.794    0.027
+11 1 social e28    0.623    0.038
+11 1 extra activi    0.657    0.039
+11 1 extra assert    0.719    0.039
+11 1 extra emotio    0.844    0.026
+11 1 extra humor    0.619    0.038
+11 1 extra posemo    0.740    0.030
+11 1 extra reclus   -0.515    0.042
+11 1 extra sensat    0.384    0.046
+11 1 extra shy   -0.890    0.026
+11 1 extra social    0.908    0.023
+14 1 activi    0.568    0.051
+14 1 assert    0.483    0.057
+14 1 emotio    0.288    0.044
+14 1 humor    0.617    0.047
+14 1 posemo    0.453    0.044
+14 1 reclus    0.735    0.044
+14 1 sensat    0.852    0.035
+14 1 shy    0.208    0.047
+14 1 social    0.175    0.042
+15 1 extra    1.000    0.000
+31 1 activi e238    0.863    0.032
+31 1 activi e311   -0.358    0.055
+31 1 activi e49    0.842    0.030
+31 1 assert e56    0.414    0.052
+31 1 assert e95    0.860    0.044
+31 1 assert e166    0.644    0.042
+31 1 assert e208    0.329    0.051
+31 1 assert e80    0.517    0.046
+31 1 emotio e304    0.784    0.028
+31 1 emotio e216    0.388    0.046
+31 1 emotio e235    0.825    0.028
+31 1 emotio e84    0.186    0.052
+31 1 emotio e98    0.425    0.051
+31 1 humor e34    0.772    0.035
+31 1 humor e315    0.797    0.032
+31 1 humor e219    0.803    0.037
+31 1 humor e322    0.584    0.044
+31 1 humor e55    0.582    0.046
+31 1 posemo e229    0.726    0.032
+31 1 posemo e228    0.655    0.036
+31 1 posemo e233    0.793    0.037
+31 1 posemo e182    0.792    0.040
+31 1 posemo e130    0.542    0.045
+31 1 reclus e257    0.827    0.043
+31 1 reclus e118    0.575    0.045
+31 1 reclus e112    0.440    0.056
+31 1 reclus e125    0.558    0.064
+31 1 reclus e158    0.546    0.063
+31 1 sensat e280    0.595    0.043
+31 1 sensat e103    0.627    0.043
+31 1 sensat e60   -0.485    0.049
+31 1 sensat e4    0.866    0.050
+31 1 sensat e214    0.603    0.063
+31 1 shy e40    0.552    0.041
+31 1 shy e294   -0.833    0.027
+31 1 shy e255    0.264    0.052
+31 1 shy e124   -0.803    0.030
+31 1 shy e142    0.363    0.050
+31 1 social e99    0.653    0.038
+31 1 social e123    0.478    0.042
+31 1 social e29    0.462    0.046
+31 1 social e341    0.794    0.027
+31 1 social e28    0.623    0.038
+31 1 extra activi    0.657    0.039
+31 1 extra assert    0.719    0.039
+31 1 extra emotio    0.844    0.026
+31 1 extra humor    0.619    0.038
+31 1 extra posemo    0.740    0.030
+31 1 extra reclus   -0.515    0.042
+31 1 extra sensat    0.384    0.046
+31 1 extra shy   -0.890    0.026
+31 1 extra social    0.908    0.023
+34 1 activi    0.568    0.051
+34 1 assert    0.483    0.057
+34 1 emotio    0.288    0.044
+34 1 humor    0.617    0.047
+34 1 posemo    0.453    0.044
+34 1 reclus    0.735    0.044
+34 1 sensat    0.852    0.035
+34 1 shy    0.208    0.047
+34 1 social    0.175    0.042
+35 1 extra    1.000    0.000

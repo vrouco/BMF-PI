@@ -1,0 +1,769 @@
+Mplus VERSION 7.1
+MUTHEN & MUTHEN
+09/18/2015   2:12 PM
+
+INPUT INSTRUCTIONS
+
+
+  DATA:
+   FILE IS  "factorscores_combined.txt";
+
+  VARIABLE:
+   NAMES ARE
+  VPN
+  A1
+  A2
+  A3
+  A4
+  A5
+  A6
+  A7
+  A8
+  C1
+  C2
+  C3
+  C4
+  C5
+  C6
+  C7
+  C8
+  C9
+  E1
+  E2
+  E3
+  E4
+  E5
+  E6
+  E7
+  E8
+  E9
+  N1
+  N2
+  N3
+  N4
+  N5
+  N6
+  N7
+  O1
+  O2
+  O3
+  O4
+  O5
+  O6
+  O7
+  O8
+  O9
+  Dataset
+  ;
+
+
+   USEVARIABLES ARE
+  O1
+  O2
+  O3
+  O4
+  O5
+  O6
+  O7
+  O9
+  ;
+
+  Grouping is Dataset (0 = US 1 = German);
+
+  MISSING ARE ALL (-99);
+
+  MODEL:
+
+  O by  O1
+  O2
+  O3
+  O4
+  O5
+  O6
+  O7
+  O9;
+  [O@0];
+
+  Model German:
+  ;
+
+  Model US:
+  ;
+
+  O by
+  O1
+  O2
+  O3
+  O4
+  O5
+  O6
+  O7
+  O9;
+
+  [O1
+  O2
+  O3
+  O4
+  O5
+  O6
+  O7
+  O9];
+
+  ANALYSIS:
+   ESTIMATOR IS ML;
+   Iterations are 10000;
+
+   OUTPUT: STDYX MODINDICES(4);
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group US                                                    387
+   Group GERMAN                                                361
+   Total sample size                                           748
+
+Number of dependent variables                                    8
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Continuous
+   O1          O2          O3          O4          O5          O6
+   O7          O9
+
+Continuous latent variables
+   O
+
+Variables with special functions
+
+  Grouping variable     DATASET
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                 10000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  factorscores_combined.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+   Group US
+     Number of missing data patterns             1
+
+   Group GERMAN
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR US
+
+
+           Covariance Coverage
+              O1            O2            O3            O4            O5
+              ________      ________      ________      ________      ________
+ O1             1.000
+ O2             1.000         1.000
+ O3             1.000         1.000         1.000
+ O4             1.000         1.000         1.000         1.000
+ O5             1.000         1.000         1.000         1.000         1.000
+ O6             1.000         1.000         1.000         1.000         1.000
+ O7             1.000         1.000         1.000         1.000         1.000
+ O9             1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              O6            O7            O9
+              ________      ________      ________
+ O6             1.000
+ O7             1.000         1.000
+ O9             1.000         1.000         1.000
+
+
+     PROPORTION OF DATA PRESENT FOR GERMAN
+
+
+           Covariance Coverage
+              O1            O2            O3            O4            O5
+              ________      ________      ________      ________      ________
+ O1             1.000
+ O2             1.000         1.000
+ O3             1.000         1.000         1.000
+ O4             1.000         1.000         1.000         1.000
+ O5             1.000         1.000         1.000         1.000         1.000
+ O6             1.000         1.000         1.000         1.000         1.000
+ O7             1.000         1.000         1.000         1.000         1.000
+ O9             1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              O6            O7            O9
+              ________      ________      ________
+ O6             1.000
+ O7             1.000         1.000
+ O9             1.000         1.000         1.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+     THE STANDARD ERRORS OF THE MODEL PARAMETER ESTIMATES COULD NOT BE
+     COMPUTED.  THE MODEL MAY NOT BE IDENTIFIED.  CHECK YOUR MODEL.
+     PROBLEM INVOLVING PARAMETER 25.
+
+     THE CONDITION NUMBER IS      -0.106D-11.
+
+
+
+MODEL RESULTS
+
+                    Estimate
+
+Group US
+
+ O        BY
+    O1                 0.319
+    O2                 0.506
+    O3                 0.436
+    O4                 0.569
+    O5                 0.525
+    O6                 0.530
+    O7                 0.722
+    O9                 0.440
+
+ Means
+    O                  0.000
+
+ Intercepts
+    O1                -0.002
+    O2                -0.061
+    O3                -0.003
+    O4                -0.023
+    O5                -0.005
+    O6                -0.004
+    O7                -0.013
+    O9                -0.015
+
+ Variances
+    O                  0.690
+
+ Residual Variances
+    O1                 0.229
+    O2                 0.454
+    O3                 0.277
+    O4                 0.492
+    O5                 0.323
+    O6                 0.252
+    O7                 0.192
+    O9                 0.590
+
+Group GERMAN
+
+ O        BY
+    O1                 1.000
+    O2                 1.263
+    O3                 1.228
+    O4                 1.166
+    O5                 1.291
+    O6                 1.471
+    O7                 1.898
+    O9                 1.344
+
+ Means
+    O                  0.000
+
+ Intercepts
+    O1                 0.002
+    O2                -0.029
+    O3                -0.002
+    O4                -0.004
+    O5                -0.003
+    O6                -0.001
+    O7                -0.019
+    O9                -0.008
+
+ Variances
+    O                  0.114
+
+ Residual Variances
+    O1                 0.154
+    O2                 0.309
+    O3                 0.123
+    O4                 0.545
+    O5                 0.381
+    O6                 0.174
+    O7                 0.200
+    O9                 0.312
+
+
+STANDARDIZED MODEL RESULTS
+
+                      StdYX
+                    Estimate
+
+Group US
+
+ O        BY
+    O1                 0.484
+    O2                 0.529
+    O3                 0.567
+    O4                 0.559
+    O5                 0.609
+    O6                 0.660
+    O7                 0.807
+    O9                 0.429
+
+ Means
+    O                  0.000
+
+ Intercepts
+    O1                -0.003
+    O2                -0.076
+    O3                -0.004
+    O4                -0.027
+    O5                -0.007
+    O6                -0.006
+    O7                -0.017
+    O9                -0.017
+
+ Variances
+    O                  1.000
+
+ Residual Variances
+    O1                 0.766
+    O2                 0.720
+    O3                 0.678
+    O4                 0.688
+    O5                 0.629
+    O6                 0.565
+    O7                 0.348
+    O9                 0.816
+
+Group GERMAN
+
+ O        BY
+    O1                 0.652
+    O2                 0.609
+    O3                 0.764
+    O4                 0.470
+    O5                 0.577
+    O6                 0.766
+    O7                 0.820
+    O9                 0.630
+
+ Means
+    O                  0.000
+
+ Intercepts
+    O1                 0.004
+    O2                -0.042
+    O3                -0.003
+    O4                -0.004
+    O5                -0.004
+    O6                -0.002
+    O7                -0.025
+    O9                -0.011
+
+ Variances
+    O                  1.000
+
+ Residual Variances
+    O1                 0.574
+    O2                 0.630
+    O3                 0.417
+    O4                 0.779
+    O5                 0.667
+    O6                 0.414
+    O7                 0.328
+    O9                 0.603
+
+
+MODEL COMMAND WITH FINAL ESTIMATES USED AS STARTING VALUES
+
+     o BY o1;
+     o BY o2;
+     o BY o3;
+     o BY o4;
+     o BY o5;
+     o BY o6;
+     o BY o7;
+     o BY o9;
+
+  MODEL US:
+
+     o BY o1*0.31858;
+     o BY o2*0.50568;
+     o BY o3*0.43634;
+     o BY o4*0.56932;
+     o BY o5*0.52535;
+     o BY o6*0.53006;
+     o BY o7*0.72177;
+     o BY o9*0.43957;
+
+     [ o1*-0.00154 ];
+     [ o2*-0.06072 ];
+     [ o3*-0.00265 ];
+     [ o4*-0.02273 ];
+     [ o5*-0.00479 ];
+     [ o6*-0.00396 ];
+     [ o7*-0.01281 ];
+     [ o9*-0.01455 ];
+     [ o@0 ];
+
+     o1*0.22905;
+     o2*0.45416;
+     o3*0.27678;
+     o4*0.49233;
+     o5*0.32265;
+     o6*0.25174;
+     o7*0.19185;
+     o9*0.59011;
+     o*0.69004;
+
+  MODEL GERMAN:
+
+     o BY o1@1;
+     o BY o2*1.26321;
+     o BY o3*1.22773;
+     o BY o4*1.16580;
+     o BY o5*1.29128;
+     o BY o6*1.47089;
+     o BY o7*1.89762;
+     o BY o9*1.34377;
+
+     [ o1*0.00199 ];
+     [ o2*-0.02944 ];
+     [ o3*-0.00151 ];
+     [ o4*-0.00369 ];
+     [ o5*-0.00324 ];
+     [ o6*-0.00128 ];
+     [ o7*-0.01948 ];
+     [ o9*-0.00784 ];
+     [ o@0 ];
+
+     o1*0.15371;
+     o2*0.30916;
+     o3*0.12266;
+     o4*0.54468;
+     o5*0.38089;
+     o6*0.17387;
+     o7*0.19986;
+     o9*0.31186;
+     o*0.11394;
+
+
+
+TECHNICAL 1 OUTPUT
+
+
+     PARAMETER SPECIFICATION FOR US
+
+
+           NU
+              O1            O2            O3            O4            O5
+              ________      ________      ________      ________      ________
+      1           1             2             3             4             5
+
+
+           NU
+              O6            O7            O9
+              ________      ________      ________
+      1           6             7             8
+
+
+           LAMBDA
+              O
+              ________
+ O1                 9
+ O2                10
+ O3                11
+ O4                12
+ O5                13
+ O6                14
+ O7                15
+ O9                16
+
+
+           THETA
+              O1            O2            O3            O4            O5
+              ________      ________      ________      ________      ________
+ O1                17
+ O2                 0            18
+ O3                 0             0            19
+ O4                 0             0             0            20
+ O5                 0             0             0             0            21
+ O6                 0             0             0             0             0
+ O7                 0             0             0             0             0
+ O9                 0             0             0             0             0
+
+
+           THETA
+              O6            O7            O9
+              ________      ________      ________
+ O6                22
+ O7                 0            23
+ O9                 0             0            24
+
+
+           ALPHA
+              O
+              ________
+      1           0
+
+
+           BETA
+              O
+              ________
+ O                  0
+
+
+           PSI
+              O
+              ________
+ O                 25
+
+
+     PARAMETER SPECIFICATION FOR GERMAN
+
+
+           NU
+              O1            O2            O3            O4            O5
+              ________      ________      ________      ________      ________
+      1          26            27            28            29            30
+
+
+           NU
+              O6            O7            O9
+              ________      ________      ________
+      1          31            32            33
+
+
+           LAMBDA
+              O
+              ________
+ O1                 0
+ O2                34
+ O3                35
+ O4                36
+ O5                37
+ O6                38
+ O7                39
+ O9                40
+
+
+           THETA
+              O1            O2            O3            O4            O5
+              ________      ________      ________      ________      ________
+ O1                41
+ O2                 0            42
+ O3                 0             0            43
+ O4                 0             0             0            44
+ O5                 0             0             0             0            45
+ O6                 0             0             0             0             0
+ O7                 0             0             0             0             0
+ O9                 0             0             0             0             0
+
+
+           THETA
+              O6            O7            O9
+              ________      ________      ________
+ O6                46
+ O7                 0            47
+ O9                 0             0            48
+
+
+           ALPHA
+              O
+              ________
+      1           0
+
+
+           BETA
+              O
+              ________
+ O                  0
+
+
+           PSI
+              O
+              ________
+ O                 49
+
+
+     STARTING VALUES FOR US
+
+
+           NU
+              O1            O2            O3            O4            O5
+              ________      ________      ________      ________      ________
+      1        -0.002        -0.061        -0.003        -0.023        -0.005
+
+
+           NU
+              O6            O7            O9
+              ________      ________      ________
+      1        -0.004        -0.013        -0.015
+
+
+           LAMBDA
+              O
+              ________
+ O1             0.314
+ O2             0.355
+ O3             0.393
+ O4             0.392
+ O5             0.389
+ O6             0.519
+ O7             0.553
+ O9             0.371
+
+
+           THETA
+              O1            O2            O3            O4            O5
+              ________      ________      ________      ________      ________
+ O1             0.150
+ O2             0.000         0.316
+ O3             0.000         0.000         0.205
+ O4             0.000         0.000         0.000         0.359
+ O5             0.000         0.000         0.000         0.000         0.257
+ O6             0.000         0.000         0.000         0.000         0.000
+ O7             0.000         0.000         0.000         0.000         0.000
+ O9             0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              O6            O7            O9
+              ________      ________      ________
+ O6             0.223
+ O7             0.000         0.276
+ O9             0.000         0.000         0.363
+
+
+           ALPHA
+              O
+              ________
+      1         0.000
+
+
+           BETA
+              O
+              ________
+ O              0.000
+
+
+           PSI
+              O
+              ________
+ O              0.050
+
+
+     STARTING VALUES FOR GERMAN
+
+
+           NU
+              O1            O2            O3            O4            O5
+              ________      ________      ________      ________      ________
+      1        -0.002        -0.061        -0.003        -0.023        -0.005
+
+
+           NU
+              O6            O7            O9
+              ________      ________      ________
+      1        -0.004        -0.013        -0.015
+
+
+           LAMBDA
+              O
+              ________
+ O1             1.000
+ O2             1.115
+ O3             1.231
+ O4             1.097
+ O5             1.122
+ O6             1.341
+ O7             1.723
+ O9             1.286
+
+
+           THETA
+              O1            O2            O3            O4            O5
+              ________      ________      ________      ________      ________
+ O1             0.150
+ O2             0.000         0.316
+ O3             0.000         0.000         0.205
+ O4             0.000         0.000         0.000         0.359
+ O5             0.000         0.000         0.000         0.000         0.257
+ O6             0.000         0.000         0.000         0.000         0.000
+ O7             0.000         0.000         0.000         0.000         0.000
+ O9             0.000         0.000         0.000         0.000         0.000
+
+
+           THETA
+              O6            O7            O9
+              ________      ________      ________
+ O6             0.223
+ O7             0.000         0.276
+ O9             0.000         0.000         0.363
+
+
+           ALPHA
+              O
+              ________
+      1         0.000
+
+
+           BETA
+              O
+              ________
+ O              0.000
+
+
+           PSI
+              O
+              ________
+ O              0.050
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    f:\ipip paper\messinvarianz\domänen mit esem\o konfigurale invarianz.dgm
+
+     Beginning Time:  14:12:35
+        Ending Time:  14:12:35
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

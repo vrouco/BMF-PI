@@ -1,0 +1,385 @@
+Mplus VERSION 7.1
+MUTHEN & MUTHEN
+06/04/2015   4:46 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  DATA:
+  FILE IS  "factorscores_CFA.txt";
+  Variable:
+  Names are
+  VPN
+  A1
+  A2
+  A3
+  A4
+  A5
+  A6
+  A7
+  A8
+  C1
+  C2
+  C3
+  C4
+  C5
+  C6
+  C7
+  C8
+  C9
+  E1
+  E2
+  E3
+  E4
+  E5
+  E6
+  E7
+  E8
+  E9
+  N1
+  N2
+  N3
+  N4
+  N5
+  N6
+  N7
+  O1
+  O2
+  O3
+  O4
+  O5
+  O6
+  O7
+  O8
+  O9
+  ;
+
+  USEVARIABLES ARE
+  A1
+  A2
+  A3
+  A4
+  A5
+  A6
+  A7
+  A8
+
+  ;
+
+  MISSING ARE ALL (-99);
+
+  Model:
+
+  agree by
+  A1
+  A2
+  A3
+  A4
+  A5
+  A6
+  A7
+  A8
+  ;
+
+  A6       WITH A1;
+  A6       WITH A4;
+  A8       WITH A1;
+
+
+
+
+  Analysis:
+  ESTIMATOR IS ML;
+  iterations = 10000;
+
+  OUTPUT: STDYX MODINDICES(4);
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         361
+
+Number of dependent variables                                    8
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Continuous
+   A1          A2          A3          A4          A5          A6
+   A7          A8
+
+Continuous latent variables
+   AGREE
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                 10000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  factorscores_CFA.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              A1            A2            A3            A4            A5
+              ________      ________      ________      ________      ________
+ A1             1.000
+ A2             1.000         1.000
+ A3             1.000         1.000         1.000
+ A4             1.000         1.000         1.000         1.000
+ A5             1.000         1.000         1.000         1.000         1.000
+ A6             1.000         1.000         1.000         1.000         1.000
+ A7             1.000         1.000         1.000         1.000         1.000
+ A8             1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              A6            A7            A8
+              ________      ________      ________
+ A6             1.000
+ A7             1.000         1.000
+ A8             1.000         1.000         1.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       27
+
+Loglikelihood
+
+          H0 Value                       -1990.441
+          H1 Value                       -1926.471
+
+Information Criteria
+
+          Akaike (AIC)                    4034.881
+          Bayesian (BIC)                  4139.881
+          Sample-Size Adjusted BIC        4054.223
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                            127.940
+          Degrees of Freedom                    17
+          P-Value                           0.0000
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.134
+          90 Percent C.I.                    0.113  0.157
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.846
+          TLI                                0.746
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            748.619
+          Degrees of Freedom                    28
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.089
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ AGREE    BY
+    A1                 1.000      0.000    999.000    999.000
+    A2                -1.676      0.187     -8.979      0.000
+    A3                -1.349      0.192     -7.016      0.000
+    A4                -0.314      0.090     -3.490      0.000
+    A5                -0.538      0.111     -4.841      0.000
+    A6                 0.619      0.138      4.503      0.000
+    A7                -1.361      0.180     -7.556      0.000
+    A8                 0.662      0.090      7.391      0.000
+
+ A6       WITH
+    A1                 0.090      0.018      4.953      0.000
+    A4                 0.089      0.014      6.215      0.000
+
+ A8       WITH
+    A1                 0.064      0.012      5.422      0.000
+
+ Intercepts
+    A1                -0.005      0.031     -0.177      0.860
+    A2                 0.013      0.028      0.454      0.650
+    A3                 0.001      0.033      0.018      0.986
+    A4                 0.000      0.021     -0.004      0.997
+    A5                 0.001      0.025      0.020      0.984
+    A6                -0.004      0.037     -0.114      0.909
+    A7                 0.003      0.030      0.091      0.928
+    A8                -0.002      0.024     -0.084      0.933
+
+ Variances
+    AGREE              0.079      0.018      4.460      0.000
+
+ Residual Variances
+    A1                 0.258      0.020     13.135      0.000
+    A2                 0.062      0.017      3.707      0.000
+    A3                 0.259      0.024     11.028      0.000
+    A4                 0.148      0.011     13.253      0.000
+    A5                 0.209      0.016     13.162      0.000
+    A6                 0.462      0.034     13.635      0.000
+    A7                 0.180      0.019      9.655      0.000
+    A8                 0.166      0.013     12.871      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ AGREE    BY
+    A1                 0.484      0.046     10.613      0.000
+    A2                -0.884      0.034    -26.001      0.000
+    A3                -0.597      0.044    -13.603      0.000
+    A4                -0.223      0.057     -3.951      0.000
+    A5                -0.314      0.052     -6.004      0.000
+    A6                 0.248      0.056      4.461      0.000
+    A7                -0.669      0.042    -16.119      0.000
+    A8                 0.416      0.049      8.507      0.000
+
+ A6       WITH
+    A1                 0.260      0.048      5.385      0.000
+    A4                 0.341      0.047      7.267      0.000
+
+ A8       WITH
+    A1                 0.310      0.049      6.299      0.000
+
+ Intercepts
+    A1                -0.009      0.053     -0.177      0.860
+    A2                 0.024      0.053      0.454      0.650
+    A3                 0.001      0.053      0.018      0.986
+    A4                 0.000      0.053     -0.004      0.997
+    A5                 0.001      0.053      0.020      0.984
+    A6                -0.006      0.053     -0.114      0.909
+    A7                 0.005      0.053      0.091      0.928
+    A8                -0.004      0.053     -0.084      0.933
+
+ Variances
+    AGREE              1.000      0.000    999.000    999.000
+
+ Residual Variances
+    A1                 0.765      0.044     17.311      0.000
+    A2                 0.218      0.060      3.630      0.000
+    A3                 0.644      0.052     12.280      0.000
+    A4                 0.950      0.025     37.636      0.000
+    A5                 0.902      0.033     27.494      0.000
+    A6                 0.939      0.028     34.081      0.000
+    A7                 0.552      0.056      9.925      0.000
+    A8                 0.827      0.041     20.371      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    A1                 0.235      0.044      5.306      0.000
+    A2                 0.782      0.060     13.001      0.000
+    A3                 0.356      0.052      6.802      0.000
+    A4                 0.050      0.025      1.975      0.048
+    A5                 0.098      0.033      3.002      0.003
+    A6                 0.061      0.028      2.231      0.026
+    A7                 0.448      0.056      8.059      0.000
+    A8                 0.173      0.041      4.253      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.508E-03
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates may not be included.  To include these, request
+MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     4.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+WITH Statements
+
+A2       WITH A1                   6.154    -0.029     -0.029       -0.232
+A3       WITH A1                  13.386     0.049      0.049        0.190
+A3       WITH A2                   4.441    -0.038     -0.038       -0.300
+A4       WITH A1                   9.011     0.030      0.030        0.154
+A4       WITH A3                  10.077     0.033      0.033        0.168
+A5       WITH A4                   4.622     0.019      0.019        0.108
+A6       WITH A5                   7.617     0.041      0.041        0.133
+A7       WITH A2                  15.889    -0.075     -0.075       -0.709
+A7       WITH A3                  26.323     0.079      0.079        0.365
+A8       WITH A6                  18.852     0.062      0.062        0.223
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    f:\ipip paper\sample_usa\cfa\gesamtmodell\faktorscores\domänenmodelle\agreeableness with fs as i
+
+     Beginning Time:  16:46:21
+        Ending Time:  16:46:22
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

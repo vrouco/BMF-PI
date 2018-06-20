@@ -1,0 +1,96 @@
+
+DATA:
+ FILE IS  "factorscores_combined.txt";
+ 
+VARIABLE:
+ NAMES ARE 
+VPN
+A1
+A2
+A3
+A4
+A5
+A6
+A7
+A8
+C1
+C2
+C3
+C4
+C5
+C6
+C7
+C8
+C9
+E1
+E2
+E3
+E4
+E5
+E6
+E7
+E8
+E9
+N1
+N2
+N3
+N4
+N5
+N6
+N7
+O1
+O2
+O3
+O4
+O5
+O6
+O7
+O8
+O9
+Dataset
+;
+
+
+ USEVARIABLES ARE 
+O1
+O2
+O3
+O4
+O5
+O6
+O7
+O9
+; 
+ 
+Grouping is Dataset (0 = US 1 = German);
+
+MISSING ARE ALL (-99);
+ 
+MODEL:
+
+O by
+O1
+O2
+O3
+O4
+O5
+O6
+O7
+O9;
+
+
+Model German:
+;
+
+Model US:
+;
+
+
+
+
+ 
+ANALYSIS:
+ ESTIMATOR IS ML;
+ Iterations are 10000;
+ 
+ OUTPUT: STDYX MODINDICES(4);

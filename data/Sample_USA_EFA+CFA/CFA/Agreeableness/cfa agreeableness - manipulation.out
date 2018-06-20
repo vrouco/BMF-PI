@@ -1,0 +1,528 @@
+Mplus VERSION 5.2
+MUTHEN & MUTHEN
+01/20/2012   2:24 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  DATA:
+  FILE IS  "ARI Data 2009_Agreeableness CFA Sample.txt";
+  Variable:
+  Names are
+  respid
+  agree5
+  agree51
+  agree21
+  agree84
+  agree35
+  agree15
+  agree93
+  agree67
+  agree34
+  agree25
+  agree44
+  agree64
+  agree31
+  agree45
+  agree26
+  agree52
+  agree14
+  agree20
+  agree6
+  agree92
+  agree77
+  agree3
+  agree17
+  agree19
+  agree13
+  agree27
+  agree105
+  agree95
+  agree104
+  agree57
+  agree85
+  agree97
+  agree110
+  agree61
+  agree94
+  agree107
+  agree30
+  agree40
+  agree32
+  agree50
+  agree90
+  agree63
+  agree60
+  agree23
+  agree1
+  agree58
+  agree101
+  agree46
+  agree87
+  agree98
+  agree37
+  agree62
+  agree39
+  agree83
+  agree53
+  agree65
+  agree103
+  agree91
+  agree4
+  agree42
+  agree18
+  agree96
+  agree106
+  agree55
+  agree86
+  agree72
+  agree22
+  agree79
+  agree33
+  agree70
+  agree109
+  agree78
+  agree100
+  agree71
+  agree89
+  agree76
+  agree75
+  agree11
+  agree56
+  agree12
+  agree49
+  agree16
+  agree108
+  agree43
+  agree7
+  agree2
+  agree88
+  agree41
+  agree38
+  agree99
+  agree69
+  agree36
+  agree80
+  agree8
+  agree66
+  agree54
+  agree24
+  agree82
+  agree74
+  agree73
+  agree10
+  agree59
+  Filter
+  filter_
+  ;
+
+  USEVARIABLES ARE
+  agree56
+  agree86
+  agree70
+  agree71
+  agree99
+  agree43
+  agree42
+  agree103
+  agree22
+  agree66
+  ;
+
+  MISSING ARE ALL (-99);
+  categorical are all;
+
+  Model:
+  manipul BY
+  agree56
+  agree86
+  agree70
+  agree71
+  agree99
+  agree43
+  agree42
+  agree103
+  agree22
+  agree66
+  ;
+
+
+  Analysis:
+  ESTIMATOR IS WLSMV;
+
+  OUTPUT: STDYX MODINDICES(4);
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  2
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         361
+
+Number of dependent variables                                   10
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   AGREE56     AGREE86     AGREE70     AGREE71     AGREE99     AGREE43
+   AGREE42     AGREE103    AGREE22     AGREE66
+
+Continuous latent variables
+   MANIPUL
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+
+Input data file(s)
+  ARI Data 2009_Agreeableness CFA Sample.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              AGREE56       AGREE86       AGREE70       AGREE71       AGREE99
+              ________      ________      ________      ________      ________
+ AGREE56        1.000
+ AGREE86        1.000         1.000
+ AGREE70        1.000         1.000         1.000
+ AGREE71        1.000         1.000         1.000         1.000
+ AGREE99        1.000         1.000         1.000         1.000         1.000
+ AGREE43        1.000         1.000         1.000         1.000         1.000
+ AGREE42        1.000         1.000         1.000         1.000         1.000
+ AGREE103       1.000         1.000         1.000         1.000         1.000
+ AGREE22        1.000         1.000         1.000         1.000         1.000
+ AGREE66        1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              AGREE43       AGREE42       AGREE103      AGREE22       AGREE66
+              ________      ________      ________      ________      ________
+ AGREE43        1.000
+ AGREE42        1.000         1.000
+ AGREE103       1.000         1.000         1.000
+ AGREE22        1.000         1.000         1.000         1.000
+ AGREE66        1.000         1.000         1.000         1.000         1.000
+
+
+SUMMARY OF CATEGORICAL DATA PROPORTIONS
+
+    AGREE56
+      Category 1    0.249
+      Category 2    0.355
+      Category 3    0.260
+      Category 4    0.102
+      Category 5    0.033
+    AGREE86
+      Category 1    0.280
+      Category 2    0.443
+      Category 3    0.199
+      Category 4    0.064
+      Category 5    0.014
+    AGREE70
+      Category 1    0.144
+      Category 2    0.432
+      Category 3    0.258
+      Category 4    0.122
+      Category 5    0.044
+    AGREE71
+      Category 1    0.019
+      Category 2    0.064
+      Category 3    0.241
+      Category 4    0.391
+      Category 5    0.285
+    AGREE99
+      Category 1    0.288
+      Category 2    0.429
+      Category 3    0.186
+      Category 4    0.078
+      Category 5    0.019
+    AGREE43
+      Category 1    0.152
+      Category 2    0.360
+      Category 3    0.269
+      Category 4    0.144
+      Category 5    0.075
+    AGREE42
+      Category 1    0.055
+      Category 2    0.266
+      Category 3    0.338
+      Category 4    0.227
+      Category 5    0.114
+    AGREE103
+      Category 1    0.183
+      Category 2    0.377
+      Category 3    0.316
+      Category 4    0.083
+      Category 5    0.042
+    AGREE22
+      Category 1    0.288
+      Category 2    0.446
+      Category 3    0.199
+      Category 4    0.047
+      Category 5    0.019
+    AGREE66
+      Category 1    0.319
+      Category 2    0.396
+      Category 3    0.191
+      Category 4    0.055
+      Category 5    0.039
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+TESTS OF MODEL FIT
+
+Chi-Square Test of Model Fit
+
+          Value                            125.541*
+          Degrees of Freedom                    24**
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference tests.  MLM, MLR and WLSM chi-square difference
+    testing is described in the Mplus Technical Appendices at www.statmodel.com.
+    See chi-square difference testing in the index of the Mplus User's Guide.
+
+**  The degrees of freedom for MLMV, ULSMV and WLSMV are estimated according to
+    a formula given in the Mplus Technical Appendices at www.statmodel.com.
+    See degrees of freedom in the index of the Mplus User's Guide.
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            821.150
+          Degrees of Freedom                    21
+          P-Value                           0.0000
+
+CFI/TLI
+
+          CFI                                0.873
+          TLI                                0.889
+
+Number of Free Parameters                       50
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.108
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              1.191
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MANIPUL  BY
+    AGREE56            1.000      0.000    999.000    999.000
+    AGREE86            0.859      0.078     10.988      0.000
+    AGREE70            0.926      0.077     12.087      0.000
+    AGREE71           -0.654      0.077     -8.485      0.000
+    AGREE99            1.087      0.085     12.787      0.000
+    AGREE43            0.823      0.078     10.497      0.000
+    AGREE42            0.425      0.090      4.732      0.000
+    AGREE103           0.863      0.079     10.922      0.000
+    AGREE22            0.713      0.085      8.410      0.000
+    AGREE66            0.942      0.081     11.602      0.000
+
+ Thresholds
+    AGREE56$1         -0.677      0.072     -9.430      0.000
+    AGREE56$2          0.263      0.067      3.943      0.000
+    AGREE56$3          1.100      0.083     13.294      0.000
+    AGREE56$4          1.835      0.127     14.406      0.000
+    AGREE86$1         -0.583      0.070     -8.311      0.000
+    AGREE86$2          0.592      0.070      8.413      0.000
+    AGREE86$3          1.422      0.097     14.665      0.000
+    AGREE86$4          2.201      0.174     12.655      0.000
+    AGREE70$1         -1.062      0.081    -13.043      0.000
+    AGREE70$2          0.192      0.066      2.893      0.004
+    AGREE70$3          0.969      0.079     12.338      0.000
+    AGREE70$4          1.703      0.116     14.718      0.000
+    AGREE71$1         -2.067      0.154    -13.429      0.000
+    AGREE71$2         -1.385      0.095    -14.580      0.000
+    AGREE71$3         -0.456      0.069     -6.659      0.000
+    AGREE71$4          0.567      0.070      8.105      0.000
+    AGREE99$1         -0.559      0.070     -8.003      0.000
+    AGREE99$2          0.575      0.070      8.208      0.000
+    AGREE99$3          1.299      0.091     14.312      0.000
+    AGREE99$4          2.067      0.154     13.429      0.000
+    AGREE43$1         -1.026      0.080    -12.784      0.000
+    AGREE43$2          0.031      0.066      0.474      0.636
+    AGREE43$3          0.776      0.074     10.528      0.000
+    AGREE43$4          1.441      0.098     14.702      0.000
+    AGREE42$1         -1.595      0.108    -14.818      0.000
+    AGREE42$2         -0.464      0.069     -6.763      0.000
+    AGREE42$3          0.410      0.068      6.035      0.000
+    AGREE42$4          1.208      0.087     13.914      0.000
+    AGREE103$1        -0.905      0.077    -11.783      0.000
+    AGREE103$2         0.150      0.066      2.262      0.024
+    AGREE103$3         1.152      0.085     13.614      0.000
+    AGREE103$4         1.733      0.118     14.664      0.000
+    AGREE22$1         -0.559      0.070     -8.003      0.000
+    AGREE22$2          0.625      0.071      8.822      0.000
+    AGREE22$3          1.503      0.102     14.786      0.000
+    AGREE22$4          2.067      0.154     13.429      0.000
+    AGREE66$1         -0.472      0.069     -6.866      0.000
+    AGREE66$2          0.567      0.070      8.105      0.000
+    AGREE66$3          1.315      0.092     14.371      0.000
+    AGREE66$4          1.765      0.121     14.596      0.000
+
+ Variances
+    MANIPUL            0.393      0.047      8.347      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ MANIPUL  BY
+    AGREE56            0.627      0.038     16.695      0.000
+    AGREE86            0.538      0.043     12.608      0.000
+    AGREE70            0.581      0.038     15.185      0.000
+    AGREE71           -0.410      0.045     -9.160      0.000
+    AGREE99            0.682      0.036     19.163      0.000
+    AGREE43            0.516      0.042     12.205      0.000
+    AGREE42            0.267      0.057      4.709      0.000
+    AGREE103           0.541      0.042     12.886      0.000
+    AGREE22            0.447      0.046      9.808      0.000
+    AGREE66            0.591      0.041     14.409      0.000
+
+ Thresholds
+    AGREE56$1         -0.677      0.072     -9.430      0.000
+    AGREE56$2          0.263      0.067      3.943      0.000
+    AGREE56$3          1.100      0.083     13.294      0.000
+    AGREE56$4          1.835      0.127     14.406      0.000
+    AGREE86$1         -0.583      0.070     -8.311      0.000
+    AGREE86$2          0.592      0.070      8.413      0.000
+    AGREE86$3          1.422      0.097     14.665      0.000
+    AGREE86$4          2.201      0.174     12.655      0.000
+    AGREE70$1         -1.062      0.081    -13.043      0.000
+    AGREE70$2          0.192      0.066      2.893      0.004
+    AGREE70$3          0.969      0.079     12.338      0.000
+    AGREE70$4          1.703      0.116     14.718      0.000
+    AGREE71$1         -2.067      0.154    -13.429      0.000
+    AGREE71$2         -1.385      0.095    -14.580      0.000
+    AGREE71$3         -0.456      0.069     -6.659      0.000
+    AGREE71$4          0.567      0.070      8.105      0.000
+    AGREE99$1         -0.559      0.070     -8.003      0.000
+    AGREE99$2          0.575      0.070      8.208      0.000
+    AGREE99$3          1.299      0.091     14.312      0.000
+    AGREE99$4          2.067      0.154     13.429      0.000
+    AGREE43$1         -1.026      0.080    -12.784      0.000
+    AGREE43$2          0.031      0.066      0.474      0.636
+    AGREE43$3          0.776      0.074     10.528      0.000
+    AGREE43$4          1.441      0.098     14.702      0.000
+    AGREE42$1         -1.595      0.108    -14.818      0.000
+    AGREE42$2         -0.464      0.069     -6.763      0.000
+    AGREE42$3          0.410      0.068      6.035      0.000
+    AGREE42$4          1.208      0.087     13.914      0.000
+    AGREE103$1        -0.905      0.077    -11.783      0.000
+    AGREE103$2         0.150      0.066      2.262      0.024
+    AGREE103$3         1.152      0.085     13.614      0.000
+    AGREE103$4         1.733      0.118     14.664      0.000
+    AGREE22$1         -0.559      0.070     -8.003      0.000
+    AGREE22$2          0.625      0.071      8.822      0.000
+    AGREE22$3          1.503      0.102     14.786      0.000
+    AGREE22$4          2.067      0.154     13.429      0.000
+    AGREE66$1         -0.472      0.069     -6.866      0.000
+    AGREE66$2          0.567      0.070      8.105      0.000
+    AGREE66$3          1.315      0.092     14.371      0.000
+    AGREE66$4          1.765      0.121     14.596      0.000
+
+ Variances
+    MANIPUL            1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    AGREE56            0.393      0.047      8.347      0.000      0.607
+    AGREE86            0.290      0.046      6.304      0.000      0.710
+    AGREE70            0.337      0.044      7.593      0.000      0.663
+    AGREE71            0.168      0.037      4.580      0.000      0.832
+    AGREE99            0.465      0.049      9.582      0.000      0.535
+    AGREE43            0.267      0.044      6.102      0.000      0.733
+    AGREE42            0.071      0.030      2.354      0.019      0.929
+    AGREE103           0.293      0.045      6.443      0.000      0.707
+    AGREE22            0.200      0.041      4.904      0.000      0.800
+    AGREE66            0.349      0.048      7.205      0.000      0.651
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.352E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     4.000
+
+                            M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+No modification indices above the minimum value.
+
+
+
+     Beginning Time:  14:24:36
+        Ending Time:  14:24:36
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2008 Muthen & Muthen

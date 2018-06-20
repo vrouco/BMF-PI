@@ -1,0 +1,628 @@
+Mplus VERSION 5.2
+MUTHEN & MUTHEN
+07/05/2012   2:53 PM
+
+INPUT INSTRUCTIONS
+
+
+  DATA:
+   FILE IS  "ITS_TQIPIP.txt";
+
+  VARIABLE:
+   NAMES ARE
+  id
+  sex
+  age
+  A1_1
+  A1_2
+  A1_3
+  A1_4
+  A1_5
+  A2_1
+  A2_2
+  A2_3
+  A2_4
+  A2_5
+  A3_1
+  A3_2
+  A3_3
+  A3_4
+  A3_5
+  A4_1
+  A4_2
+  A4_3
+  A4_4
+  A4_5
+  A5_1
+  A5_2
+  A5_3
+  A5_4
+  A5_5
+  A6_1
+  A6_2
+  A6_3
+  A6_4
+  A6_5
+  A7_1
+  A7_2
+  A7_3
+  A7_4
+  A7_5
+  A8_1
+  A8_2
+  A8_3
+  A8_4
+  A8_5
+  C1_1
+  C1_2
+  C1_3
+  C1_4
+  C1_5
+  C2_1
+  C2_2
+  C2_3
+  C2_4
+  C2_5
+  C3_1
+  C3_2
+  C3_3
+  C3_4
+  C3_5
+  C4_1
+  C4_2
+  C4_3
+  C4_4
+  C4_5
+  C5_1
+  C5_2
+  C5_3
+  C5_4
+  C5_5
+  C6_1
+  C6_2
+  C6_3
+  C6_4
+  C6_5
+  C7_1
+  C7_2
+  C7_3
+  C7_4
+  C7_5
+  C8_1
+  C8_2
+  C8_3
+  C8_4
+  C8_5
+  C9_1
+  C9_2
+  C9_3
+  C9_4
+  C9_5
+  E1_1
+  E1_2
+  E1_3
+  E1_4
+  E1_5
+  E2_1
+  E2_2
+  E2_3
+  E2_4
+  E2_5
+  E3_1
+  E3_2
+  E3_3
+  E3_4
+  E3_5
+  E4_1
+  E4_2
+  E4_3
+  E4_4
+  E4_5
+  E5_1
+  E5_2
+  E5_3
+  E5_4
+  E5_5
+  E6_1
+  E6_2
+  E6_3
+  E6_4
+  E6_5
+  E7_1
+  E7_2
+  E7_3
+  E7_4
+  E7_5
+  E8_1
+  E8_2
+  E8_3
+  E8_4
+  E8_5
+  E9_1
+  E9_2
+  E9_3
+  N1_1
+  N1_2
+  N1_3
+  N1_4
+  N1_5
+  N2_1
+  N2_2
+  N2_3
+  N2_4
+  N2_5
+  N3_1
+  N3_2
+  N3_3
+  N3_4
+  N3_5
+  N4_1
+  N4_2
+  N4_3
+  N4_4
+  N4_5
+  N5_1
+  N5_2
+  N5_3
+  N5_4
+  N5_5
+  N6_1
+  N6_2
+  N6_3
+  N6_4
+  N6_5
+  N7_1
+  N7_2
+  N7_3
+  O1_1
+  O1_2
+  O1_3
+  O1_4
+  O1_5
+  O2_1
+  O2_2
+  O2_3
+  O2_4
+  O2_5
+  O3_1
+  O3_2
+  O3_3
+  O3_4
+  O3_5
+  O4_1
+  O4_2
+  O4_3
+  O4_4
+  O4_5
+  O5_1
+  O5_2
+  O5_3
+  O5_4
+  O5_5
+  O6_1
+  O6_2
+  O6_3
+  O6_4
+  O6_5
+  O7_1
+  O7_2
+  O7_3
+  O7_4
+  O7_5
+  O8_1
+  O8_2
+  O8_3
+  O8_4
+  O9_1
+  O9_2
+  O9_4
+  dataset;
+
+   USEVARIABLES ARE
+  E8_1
+  E8_2
+  E8_3
+  E8_4
+  E8_5;
+
+  Grouping is Dataset (0 = German 1 = US);
+
+  MISSING ARE ALL (-99);
+
+  MODEL:
+
+  E8 by E8_1
+  E8_2
+  E8_3
+  E8_4
+  E8_5;
+
+
+  Model German:
+  ;
+
+  Model US:
+  ;
+
+
+
+
+
+  ANALYSIS:
+   ESTIMATOR IS ML;
+   Iterations are 10000;
+
+   OUTPUT: STDYX MODINDICES(4);
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 2
+Number of observations
+   Group GERMAN                                                387
+   Group US                                                    722
+
+Number of dependent variables                                    5
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Continuous
+   E8_1        E8_2        E8_3        E8_4        E8_5
+
+Continuous latent variables
+   E8
+
+Variables with special functions
+
+  Grouping variable     DATASET
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                 10000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  ITS_TQIPIP.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+   Group GERMAN
+     Number of missing data patterns             1
+
+   Group US
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT FOR GERMAN
+
+
+           Covariance Coverage
+              E8_1          E8_2          E8_3          E8_4          E8_5
+              ________      ________      ________      ________      ________
+ E8_1           1.000
+ E8_2           1.000         1.000
+ E8_3           1.000         1.000         1.000
+ E8_4           1.000         1.000         1.000         1.000
+ E8_5           1.000         1.000         1.000         1.000         1.000
+
+
+     PROPORTION OF DATA PRESENT FOR US
+
+
+           Covariance Coverage
+              E8_1          E8_2          E8_3          E8_4          E8_5
+              ________      ________      ________      ________      ________
+ E8_1           1.000
+ E8_2           1.000         1.000
+ E8_3           1.000         1.000         1.000
+ E8_4           1.000         1.000         1.000         1.000
+ E8_5           1.000         1.000         1.000         1.000         1.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+TESTS OF MODEL FIT
+
+Chi-Square Test of Model Fit
+
+          Value                            159.653
+          Degrees of Freedom                    18
+          P-Value                           0.0000
+
+Chi-Square Contributions From Each Group
+
+          GERMAN                            98.433
+          US                                61.221
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1008.787
+          Degrees of Freedom                    20
+          P-Value                           0.0000
+
+CFI/TLI
+
+          CFI                                0.857
+          TLI                                0.841
+
+Loglikelihood
+
+          H0 Value                       -7182.615
+          H1 Value                       -7102.788
+
+Information Criteria
+
+          Number of Free Parameters             22
+          Akaike (AIC)                   14409.230
+          Bayesian (BIC)                 14519.477
+          Sample-Size Adjusted BIC       14449.599
+            (n* = (n + 2) / 24)
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.119
+          90 Percent C.I.                    0.103  0.136
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.086
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group GERMAN
+
+ E8       BY
+    E8_1               1.000      0.000    999.000    999.000
+    E8_2               0.828      0.048     17.417      0.000
+    E8_3               0.735      0.054     13.701      0.000
+    E8_4               0.779      0.054     14.478      0.000
+    E8_5               0.468      0.046     10.137      0.000
+
+ Means
+    E8                 0.000      0.000    999.000    999.000
+
+ Intercepts
+    E8_1               3.462      0.043     81.420      0.000
+    E8_2               3.381      0.039     87.623      0.000
+    E8_3               3.144      0.039     80.684      0.000
+    E8_4               3.345      0.040     83.341      0.000
+    E8_5               3.374      0.032    104.094      0.000
+
+ Variances
+    E8                 0.495      0.055      9.024      0.000
+
+ Residual Variances
+    E8_1               0.274      0.037      7.357      0.000
+    E8_2               0.392      0.037     10.460      0.000
+    E8_3               0.640      0.053     12.189      0.000
+    E8_4               0.705      0.057     12.456      0.000
+    E8_5               0.691      0.053     12.971      0.000
+
+Group US
+
+ E8       BY
+    E8_1               1.000      0.000    999.000    999.000
+    E8_2               0.828      0.048     17.417      0.000
+    E8_3               0.735      0.054     13.701      0.000
+    E8_4               0.779      0.054     14.478      0.000
+    E8_5               0.468      0.046     10.137      0.000
+
+ Means
+    E8                 0.219      0.052      4.213      0.000
+
+ Intercepts
+    E8_1               3.462      0.043     81.420      0.000
+    E8_2               3.381      0.039     87.623      0.000
+    E8_3               3.144      0.039     80.684      0.000
+    E8_4               3.345      0.040     83.341      0.000
+    E8_5               3.374      0.032    104.094      0.000
+
+ Variances
+    E8                 0.535      0.050     10.767      0.000
+
+ Residual Variances
+    E8_1               0.431      0.039     11.113      0.000
+    E8_2               0.645      0.041     15.726      0.000
+    E8_3               0.817      0.049     16.710      0.000
+    E8_4               0.696      0.045     15.340      0.000
+    E8_5               0.672      0.039     17.240      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+Group GERMAN
+
+ E8       BY
+    E8_1               0.802      0.029     27.258      0.000
+    E8_2               0.681      0.033     20.391      0.000
+    E8_3               0.543      0.035     15.700      0.000
+    E8_4               0.547      0.030     18.040      0.000
+    E8_5               0.368      0.033     11.286      0.000
+
+ Means
+    E8                 0.000      0.000    999.000    999.000
+
+ Intercepts
+    E8_1               3.946      0.145     27.228      0.000
+    E8_2               3.952      0.137     28.807      0.000
+    E8_3               3.301      0.119     27.626      0.000
+    E8_4               3.335      0.126     26.495      0.000
+    E8_5               3.773      0.136     27.816      0.000
+
+ Variances
+    E8                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    E8_1               0.357      0.047      7.552      0.000
+    E8_2               0.536      0.046     11.778      0.000
+    E8_3               0.706      0.038     18.806      0.000
+    E8_4               0.701      0.033     21.176      0.000
+    E8_5               0.864      0.024     36.003      0.000
+
+Group US
+
+ E8       BY
+    E8_1               0.744      0.025     29.377      0.000
+    E8_2               0.602      0.025     23.619      0.000
+    E8_3               0.511      0.029     17.486      0.000
+    E8_4               0.564      0.031     17.988      0.000
+    E8_5               0.385      0.034     11.316      0.000
+
+ Means
+    E8                 0.300      0.071      4.200      0.000
+
+ Intercepts
+    E8_1               3.521      0.101     34.741      0.000
+    E8_2               3.361      0.095     35.416      0.000
+    E8_3               2.990      0.085     35.313      0.000
+    E8_4               3.310      0.091     36.247      0.000
+    E8_5               3.798      0.109     34.868      0.000
+
+ Variances
+    E8                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    E8_1               0.446      0.038     11.842      0.000
+    E8_2               0.637      0.031     20.757      0.000
+    E8_3               0.739      0.030     24.722      0.000
+    E8_4               0.682      0.035     19.285      0.000
+    E8_5               0.852      0.026     32.472      0.000
+
+
+R-SQUARE
+
+Group GERMAN
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    E8_1               0.643      0.047     13.629      0.000
+    E8_2               0.464      0.046     10.196      0.000
+    E8_3               0.294      0.038      7.850      0.000
+    E8_4               0.299      0.033      9.020      0.000
+    E8_5               0.136      0.024      5.643      0.000
+
+Group US
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    E8_1               0.554      0.038     14.689      0.000
+    E8_2               0.363      0.031     11.809      0.000
+    E8_3               0.261      0.030      8.743      0.000
+    E8_4               0.318      0.035      8.994      0.000
+    E8_5               0.148      0.026      5.658      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.151E-01
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates may not be included.  To include these, request
+MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     4.000
+
+                            M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+Group GERMAN
+
+
+BY Statements
+
+E8       BY E8_2           16.126     0.202      0.142        0.166
+E8       BY E8_4           18.419    -0.263     -0.185       -0.184
+E8       BY E8_5           20.373    -0.258     -0.182       -0.203
+
+WITH Statements
+
+E8_2     WITH E8_1         39.732     0.227      0.227        0.694
+E8_4     WITH E8_1          7.461    -0.102     -0.102       -0.231
+E8_4     WITH E8_2          5.385    -0.081     -0.081       -0.153
+E8_5     WITH E8_1          6.831    -0.082     -0.082       -0.189
+E8_5     WITH E8_2         11.666    -0.106     -0.106       -0.204
+E8_5     WITH E8_3          6.438     0.093      0.093        0.140
+
+Means/Intercepts/Thresholds
+
+[ E8_3     ]                8.805     0.086      0.086        0.090
+[ E8_5     ]               50.607    -0.234     -0.234       -0.262
+
+Group US
+
+
+BY Statements
+
+E8       BY E8_2           16.128    -0.153     -0.112       -0.111
+E8       BY E8_4           18.421     0.149      0.109        0.108
+E8       BY E8_5           20.374     0.133      0.097        0.109
+
+WITH Statements
+
+E8_3     WITH E8_1          4.168    -0.072     -0.072       -0.122
+E8_4     WITH E8_2          5.304    -0.077     -0.077       -0.114
+E8_4     WITH E8_3          4.285     0.071      0.071        0.094
+E8_5     WITH E8_1          6.039    -0.071     -0.071       -0.131
+E8_5     WITH E8_3          5.529     0.072      0.072        0.097
+E8_5     WITH E8_4         17.809     0.123      0.123        0.180
+
+Means/Intercepts/Thresholds
+
+[ E8_3     ]                8.807    -0.084     -0.084       -0.080
+[ E8_5     ]               50.609     0.152      0.152        0.171
+
+
+
+     Beginning Time:  14:53:44
+        Ending Time:  14:53:44
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2008 Muthen & Muthen

@@ -1,0 +1,637 @@
+Mplus VERSION 7.1
+MUTHEN & MUTHEN
+06/10/2015   3:10 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  DATA:
+  FILE IS  "IQIPIP_ohne_Leervaribalen_ohne notes.txt";
+  Variable:
+  Names are
+  PCODE
+  SEX
+  AGE
+  AGEMON
+  EDLEV
+  KBZ
+  FORM
+  VERSION
+  SERIAL
+  SOURCE
+  AWCODE
+  DATE
+  TIME1
+  TIME2
+  IDNO
+  DEVICE
+  CANCEL
+  MERGE
+  N1
+  N2
+  N3
+  N4
+  N5
+  N6
+  N7
+  E1
+  E2
+  E3
+  E4
+  E5
+  E6
+  E7
+  E8
+  E9
+  O1
+  O2
+  O3
+  O4
+  O5
+  O6
+  O7
+  O8
+  O9
+  A1
+  A2
+  A3
+  A4
+  A5
+  A6
+  A7
+  A8
+  C1
+  C2
+  C3
+  C4
+  C5
+  C6
+  C7
+  C8
+  C9
+  A
+  N
+  E
+  O
+  C
+  N1_1
+  E1_1
+  O1_1
+  A1_1
+  C1_1
+  N1_2
+  E1_2
+  O1_2
+  A1_2
+  C1_2
+  N1_3
+  E1_3
+  O1_3
+  A1_3
+  C1_3
+  N1_4
+  E1_4
+  O1_4
+  A1_4
+  C1_4
+  N1_5
+  E1_5
+  O1_5
+  A1_5
+  C1_5
+  N2_1
+  E2_1
+  O2_1
+  A2_1
+  C2_1
+  N2_2
+  E2_2
+  O2_2
+  A2_2
+  C2_2
+  N2_3
+  E2_3
+  O2_3
+  A2_3
+  C2_3
+  N2_4
+  E2_4
+  O2_4
+  A2_4
+  C2_4
+  N2_5
+  E2_5
+  O2_5
+  A2_5
+  C2_5
+  N3_1
+  E3_1
+  O3_1
+  A3_1
+  C3_1
+  N3_2
+  E3_2
+  O3_2
+  A3_2
+  C3_2
+  N3_3
+  E3_3
+  O3_3
+  A3_3
+  C3_3
+  N3_4
+  E3_4
+  O3_4
+  A3_4
+  C3_4
+  N3_5
+  E3_5
+  O3_5
+  A3_5
+  C3_5
+  N4_1
+  E4_1
+  O4_1
+  A4_1
+  C4_1
+  N4_2
+  E4_2
+  O4_2
+  A4_2
+  C4_2
+  N4_3
+  E4_3
+  O4_3
+  A4_3
+  C4_3
+  N4_4
+  E4_4
+  O4_4
+  A4_4
+  C4_4
+  N4_5
+  E4_5
+  O4_5
+  A4_5
+  C4_5
+  N5_1
+  E5_1
+  O5_1
+  A5_1
+  C5_1
+  N5_2
+  E5_2
+  O5_2
+  A5_2
+  C5_2
+  N5_3
+  E5_3
+  O5_3
+  A5_3
+  C5_3
+  N5_4
+  E5_4
+  O5_4
+  A5_4
+  C5_4
+  N5_5
+  E5_5
+  O5_5
+  A5_5
+  C5_5
+  N6_1
+  E6_1
+  O6_1
+  A6_1
+  C6_1
+  N6_2
+  E6_2
+  O6_2
+  A6_2
+  C6_2
+  N6_3
+  E6_3
+  O6_3
+  A6_3
+  C6_3
+  N6_4
+  E6_4
+  O6_4
+  A6_4
+  C6_4
+  N6_5
+  E6_5
+  O6_5
+  A6_5
+  C6_5
+  N7_1
+  E7_1
+  O7_1
+  A7_1
+  C7_1
+  N7_2
+  E7_2
+  O7_2
+  A7_2
+  C7_2
+  N7_3
+  E7_3
+  O7_3
+  A7_3
+  C7_3
+  N7_4
+  E7_4
+  O7_4
+  A7_4
+  C7_4
+  N7_5
+  E7_5
+  O7_5
+  A7_5
+  C7_5
+  E8_1
+  O8_1
+  A8_1
+  C8_1
+  E8_2
+  O8_2
+  A8_2
+  C8_2
+  E8_3
+  O8_3
+  A8_3
+  C8_3
+  E8_4
+  O8_4
+  A8_4
+  C8_4
+  E8_5
+  O8_5
+  A8_5
+  C8_5
+  E9_1
+  O9_1
+  C9_1
+  E9_2
+  O9_2
+  C9_2
+  E9_3
+  O9_3
+  C9_3
+  E9_4
+  O9_4
+  C9_4
+  E9_5
+  O9_5
+  C9_5
+  ;
+
+  USEVARIABLES ARE
+  A4_1
+  A4_2
+  A4_3
+  A4_4
+  A4_5
+  ;
+
+  MISSING ARE ALL (-99);
+  categorical are all;
+
+  Model:
+  Bedgemoch BY
+  A4_1
+  A4_2
+  A4_3
+  A4_4
+  A4_5
+  ;
+
+  Savedata:
+    file is a4.txt;
+    save = fscores;
+
+  Analysis:
+  ESTIMATOR IS WLSMV;
+
+  OUTPUT: STDYX MODINDICES(4);
+
+
+
+INPUT READING TERMINATED NORMALLY
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         387
+
+Number of dependent variables                                    5
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   A4_1        A4_2        A4_3        A4_4        A4_5
+
+Continuous latent variables
+   BEDGEMOC
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+
+Input data file(s)
+  IQIPIP_ohne_Leervaribalen_ohne notes.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              A4_1          A4_2          A4_3          A4_4          A4_5
+              ________      ________      ________      ________      ________
+ A4_1           1.000
+ A4_2           1.000         1.000
+ A4_3           1.000         1.000         1.000
+ A4_4           1.000         1.000         1.000         1.000
+ A4_5           1.000         1.000         1.000         1.000         1.000
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    A4_1
+      Category 1    0.003        1.000
+      Category 2    0.028       11.000
+      Category 3    0.243       94.000
+      Category 4    0.496      192.000
+      Category 5    0.230       89.000
+    A4_2
+      Category 1    0.119       46.000
+      Category 2    0.339      131.000
+      Category 3    0.411      159.000
+      Category 4    0.124       48.000
+      Category 5    0.008        3.000
+    A4_3
+      Category 1    0.191       74.000
+      Category 2    0.326      126.000
+      Category 3    0.346      134.000
+      Category 4    0.129       50.000
+      Category 5    0.008        3.000
+    A4_4
+      Category 1    0.155       60.000
+      Category 2    0.444      172.000
+      Category 3    0.274      106.000
+      Category 4    0.124       48.000
+      Category 5    0.003        1.000
+    A4_5
+      Category 1    0.289      112.000
+      Category 2    0.364      141.000
+      Category 3    0.261      101.000
+      Category 4    0.080       31.000
+      Category 5    0.005        2.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       25
+
+Chi-Square Test of Model Fit
+
+          Value                             20.642*
+          Degrees of Freedom                     5
+          P-Value                           0.0009
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.090
+          90 Percent C.I.                    0.052  0.132
+          Probability RMSEA <= .05           0.043
+
+CFI/TLI
+
+          CFI                                0.951
+          TLI                                0.903
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            331.753
+          Degrees of Freedom                    10
+          P-Value                           0.0000
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              0.686
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ BEDGEMOC BY
+    A4_1               1.000      0.000    999.000    999.000
+    A4_2               3.164      0.951      3.329      0.001
+    A4_3               3.290      0.961      3.423      0.001
+    A4_4               1.885      0.598      3.151      0.002
+    A4_5               1.713      0.536      3.196      0.001
+
+ Thresholds
+    A4_1$1            -2.796      0.323     -8.665      0.000
+    A4_1$2            -1.866      0.126    -14.811      0.000
+    A4_1$3            -0.601      0.068     -8.830      0.000
+    A4_1$4             0.739      0.070     10.488      0.000
+    A4_2$1            -1.181      0.083    -14.261      0.000
+    A4_2$2            -0.107      0.064     -1.677      0.094
+    A4_2$3             1.118      0.081     13.885      0.000
+    A4_2$4             2.420      0.209     11.575      0.000
+    A4_3$1            -0.873      0.073    -11.903      0.000
+    A4_3$2             0.042      0.064      0.661      0.509
+    A4_3$3             1.094      0.080     13.727      0.000
+    A4_3$4             2.420      0.209     11.575      0.000
+    A4_4$1            -1.015      0.077    -13.149      0.000
+    A4_4$2             0.252      0.064      3.910      0.000
+    A4_4$3             1.143      0.081     14.039      0.000
+    A4_4$4             2.796      0.323      8.665      0.000
+    A4_5$1            -0.555      0.067     -8.235      0.000
+    A4_5$2             0.395      0.066      6.033      0.000
+    A4_5$3             1.370      0.091     15.057      0.000
+    A4_5$4             2.564      0.245     10.477      0.000
+
+ Variances
+    BEDGEMOCH          0.047      0.027      1.731      0.083
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ BEDGEMOC BY
+    A4_1               0.217      0.063      3.462      0.001
+    A4_2               0.687      0.049     14.043      0.000
+    A4_3               0.714      0.051     14.052      0.000
+    A4_4               0.409      0.052      7.827      0.000
+    A4_5               0.372      0.054      6.926      0.000
+
+ Thresholds
+    A4_1$1            -2.796      0.323     -8.665      0.000
+    A4_1$2            -1.866      0.126    -14.811      0.000
+    A4_1$3            -0.601      0.068     -8.830      0.000
+    A4_1$4             0.739      0.070     10.488      0.000
+    A4_2$1            -1.181      0.083    -14.261      0.000
+    A4_2$2            -0.107      0.064     -1.677      0.094
+    A4_2$3             1.118      0.081     13.885      0.000
+    A4_2$4             2.420      0.209     11.575      0.000
+    A4_3$1            -0.873      0.073    -11.903      0.000
+    A4_3$2             0.042      0.064      0.661      0.509
+    A4_3$3             1.094      0.080     13.727      0.000
+    A4_3$4             2.420      0.209     11.575      0.000
+    A4_4$1            -1.015      0.077    -13.149      0.000
+    A4_4$2             0.252      0.064      3.910      0.000
+    A4_4$3             1.143      0.081     14.039      0.000
+    A4_4$4             2.796      0.323      8.665      0.000
+    A4_5$1            -0.555      0.067     -8.235      0.000
+    A4_5$2             0.395      0.066      6.033      0.000
+    A4_5$3             1.370      0.091     15.057      0.000
+    A4_5$4             2.564      0.245     10.477      0.000
+
+ Variances
+    BEDGEMOCH          1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    A4_1               0.047      0.027      1.731      0.083      0.953
+    A4_2               0.472      0.067      7.022      0.000      0.528
+    A4_3               0.510      0.073      7.026      0.000      0.490
+    A4_4               0.167      0.043      3.913      0.000      0.833
+    A4_5               0.138      0.040      3.463      0.001      0.862
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.888E-05
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     4.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+No modification indices above the minimum value.
+
+
+
+SAMPLE STATISTICS FOR ESTIMATED FACTOR SCORES
+
+
+     SAMPLE STATISTICS
+
+
+           Means
+              BEDGEMOC
+              ________
+ 1              0.000
+
+
+           Covariances
+              BEDGEMOC
+              ________
+ BEDGEMOC       0.031
+
+
+           Correlations
+              BEDGEMOC
+              ________
+ BEDGEMOC       1.000
+
+
+SAVEDATA INFORMATION
+
+
+  Save file
+    a4.txt
+
+  Order and format of variables
+
+    A4_1           F10.3
+    A4_2           F10.3
+    A4_3           F10.3
+    A4_4           F10.3
+    A4_5           F10.3
+    BEDGEMOCH      F10.3
+
+  Save file format
+    6F10.3
+
+  Save file record length    10000
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    f:\ipip paper\sample_deutsch\cfa\verträglichkeit\cfa a4 bedürfnis gemocht zu werden.dgm
+
+     Beginning Time:  15:10:29
+        Ending Time:  15:10:30
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen
