@@ -54,6 +54,7 @@ file.copy(from="/home/victorrouco/Documents/IPIP.bib", to="/home/victorrouco/Des
 ```{r analysis_preferences}
 # Seed for random number generation
 set.seed(42)
+library(here)
 ```
 
 # Introduction
@@ -127,8 +128,14 @@ The sample consisted of 726 American undergraduate students (59.3% male), who pa
 At a first data preparation the data set was randomly split in two equally sized samples. Both samples were matched in relation to missing values, outliers and extreme values. In Sample 1 the mean age was 21.8 years (SD=6.3), in Sample 2 the mean age was 21.5 years (SD=5.6).
 
 ### Measures. 
+
+#### International Personality Item Pool (IPIP)
 Altogether, 525 items from the *International Personality Item Pool* *(IPIP)* were used to measure Neuroticism, Extraversion, Openness (to experience), Agreeableness and Conscientiousness. The IPIP is an open source database of personality items, which was launched in 1996, and contains over 2000 items (L. R. Goldberg et al., 2006).
 Participants were asked to rate themselves on typical behaviors or reactions on a 5-point Likert scale, ranging from 1 (“Not all like me”) to 5 (“Very much like me”).
+
+#### GPA
+
+#### Satisfaction With Life (SWL)
 
 ### Statistical analyses. 
 
@@ -149,12 +156,13 @@ In Table 1 you can see model fits for the chosen facet model for each domain as 
 
 To ensure that each facet is homogeneous and therefore, to reduce the risk of cross domain loadings, items with factor loadings less than .30 were eliminated. This was only done when item content was also judged as being non-central to the domain in question (Ziegler, 2014). 
 
-According to that Agreeableness consists of eight facets after two facets were eliminated due to weakly loading and inconsistent items. The remaining facets are named Appreciation, Integrity, Low competitiveness, Readiness to give feedback, Search for support, Good faith, Genuineness and Altruism. 
+According to that Agreeableness consists of eight facets after two facets were eliminated due to weakly loading and inconsistent items. The remaining facets are named Appreciation, Integrity, Low Competitiveness, Readiness to Give Feedback, Search for Support, Good Faith, Genuineness and Altruism. 
 
 Conscientiousness consists of nine facets after one facet with item factor loadings less than .30 was excluded, which are named: Dominance, Persistence, Self-discipline, Task planning, Goal orientation, Carefulness, Orderliness, Wish to work to capacity and Productivity.
-Extraversion comprises of nine facets, because a new facet (Energy) was added. The original model with eight facets did not explain the physical part of Extraversion very well. The facets are Sociability, Readiness to take risks, Wish for affiliation, Positive attitude, Forcefulness, Communicativeness, Humor, Conviviality and Energy.
 
-Neuroticism (here interpreted in the way of emotional stability) consists of seven facets, because one facet was dropped due to poor interpretability, and was therefore not included in the subsequent analyses. The remaining facets are named Equanimity, Confidence, Carefreeness, Mental balance, Drive, Emotional robustness and Self-attention.
+Extraversion comprises of nine facets, after a new facet (Energy) was added. The original model with eight facets did not explain the physical part of Extraversion very well. The facets are Sociability, Readiness to take risks, Wish for affiliation, Positive attitude, Forcefulness, Communicativeness, Humor, Conviviality and Energy.
+
+Neuroticism (here interpreted in the way of emotional stability) consists of seven facets. One facet was dropped due to poor interpretability, and was therefore not included in the subsequent analyses. The final set of facets are named Equanimity, Confidence, Carefreeness, Mental balance, Drive, Emotional robustness and Self-attention.
 
 Openness to experience comprises of nine facets. One facet was identified as a method factor and eliminated, because it solely contained negatively formulated items and no coherent underlying trait could be identified. Furthermore another facet (Intellect) was added, because the remaining facets lacked an intellectual content. The facets of Openness are named Creativity, Wish for variety, Open-mindedness, Interest in reading, Artistic interests, Wish to analyze, Willingness to learn, Sensitivity and Intellect.
 
@@ -163,6 +171,15 @@ The items to each facet are listed in the appendix (A).
 #### Results of CFA and ESEM. 
 
 All measurement models for the facets were fitting well, results can be found in Table 2.
+
+```{r table3, }
+library(foreign)
+library(lavaan)
+setwd(here("data/Sample_USA_EFA+CFA/CFA/Agreeableness"))
+dataA <- read.spss("ARI Data 2009_Agreeableness CFA Sample.sav", to.data.frame=T)
+
+```
+
 
 The exploratory structural equation model (ESEM) of the final model with all five domains fits well with CFI = .87, RMSEA = .072, SRMR = .036. As you can see in Table 3 nearly all facets load significantly on their intended domain, but sometimes have loadings on other domains also, which are conform with the theory and the facet content.
 
