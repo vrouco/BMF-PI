@@ -83,6 +83,7 @@ There are a number of models that include a facet structure below the five broad
 
 Table 1
 
+
 \setlength\extrarowheight{-2pt}
 
 \begin{table}[ht]
@@ -244,9 +245,6 @@ IPIP-NEO-120 &                        &                      &             &    
              &                        & Cautiousness         & 0.87        &          &             
 \end{tabular}
 \end{table}
-
-
-
 
 
 
