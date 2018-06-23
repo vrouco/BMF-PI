@@ -83,6 +83,167 @@ There are a number of models that include a facet structure below the five broad
 
 Table 1
 
+\setlength\extrarowheight{-2pt}
+
+\begin{table}[ht]
+   \renewcommand\thetable{1.1}
+
+\caption{Some Big Five instruments and their facets}
+\label{my-label}
+\begin{tabular}{llllll}
+
+Taxonomy     & Domains                & Facets                 & Reliability & Validity & No. of items \\
+\midrule
+HEXACO       &                        &                        &             &          & 200,100,60   \\
+             & Humility               & Sincerity              & 0.66        &          &              \\
+             &                        & Fairness               & 0.76        &          &              \\
+             &                        & Greed Avoidance        & 0.81        &          &              \\
+             &                        & Modesty                & 0.68        &          &              \\
+             & Emotionality           & Fearfulness            & 0.7         &          &              \\
+             &                        & Anxiety                & 0.64        &          &              \\
+             &                        & Dependence             & 0.8         &          &              \\
+             &                        & Sentimentality         & 0.7         &          &              \\
+             & Extraversion           & Social Self-Esteem     & 0.67        &          &              \\
+             &                        & Social Boldness        & 0.76        &          &              \\
+             &                        & Sociability            & 0.71        &          &              \\
+             &                        & Liveliness             & 0.76        &          &              \\
+             & Agreeableness          & Forgivingness          & 0.74        &          &              \\
+             &                        & Gentleness             & 0.66        &          &              \\
+             &                        & Flexibility            & 0.61        &          &              \\
+             &                        & Patience               & 0.79        &          &              \\
+             & Conscientiousness      & Organization           & 0.74        &          &              \\
+             &                        & Diligence              & 0.7         &          &              \\
+             &                        & Perfectionism          & 0.69        &          &              \\
+             &                        & Prudence               & 0.69        &          &              \\
+             & Openness               & Aesthetic              & 0.66        &          &              \\
+             &                        & Inquisitiveness        & 0.66        &          &              \\
+             &                        & Creativity             & 0.75        &          &              \\
+             &                        & Unconventionality      & 0.52        &          &              \\
+\end{tabular}
+\end{table}
+
+
+\begin{table}[ht]
+
+   \renewcommand\thetable{2}
+
+\centering
+
+\begin{tabular}{llllll}
+Taxonomy & Domains           & Facets               & Reliability & Validity & No. of items \\
+\midrule
+NEO-PI-r &                   &                      &             &          & 240          \\
+         & Neuroticism       & Anxiety              & 0.78        &          &              \\
+         &                   & Angry Hostility      & 0.75        &          &              \\
+         &                   & Depression           & 0.81        &          &              \\
+         &                   & Self-Consciousness   & 0.68        &          &              \\
+         &                   & Impulsiveness        & 0.7         &          &              \\
+         &                   & Vulnerability        & 0.77        &          &              \\
+         & Extraversion      & Warmth               & 0.73        &          &              \\
+         &                   & Gregariousness       & 0.72        &          &              \\
+         &                   & Assertiveness        & 0.77        &          &              \\
+         &                   & Activity             & 0.63        &          &              \\
+         &                   & Excitement Seeking   & 0.65        &          &              \\
+         &                   & Positive Emotions    & 0.73        &          &              \\
+         & Openness          & Fantasy              & 0.76        &          &              \\
+         &                   & Aesthetics           & 0.76        &          &              \\
+         &                   & Feelings             & 0.66        &          &              \\
+         &                   & Actions              & 0.58        &          &              \\
+         &                   & Ideas                & 0.8         &          &              \\
+         &                   & Values               & 0.67        &          &              \\
+         & Agreeableness     & Trust                & 0.79        &          &              \\
+         &                   & Straightforwardness  & 0.71        &          &              \\
+         &                   & Altruism             & 0.75        &          &              \\
+         &                   & Compliance           & 0.59        &          &              \\
+         &                   & Modesty              & 0.67        &          &              \\
+         &                   & Tender-Mindedness    & 0.56        &          &              \\
+         & Conscientiousness & Competence           & 0.67        &          &              \\
+         &                   & Order                & 0.66        &          &              \\
+         &                   & Dutifulness          & 0.62        &          &              \\
+         &                   & Achievement Striving & 0.67        &          &              \\
+         &                   & Self-Discipline      & 0.75        &          &              \\
+         &                   & Deliberation         & 0.71        &          &             
+\end{tabular}
+\end{table}
+
+
+\begin{table}[1]
+   \renewcommand\thetable{1.3}
+
+\centering
+\caption{Table 1 continues}
+\label{my-label}
+\begin{tabular}{llllll}
+Taxonomy & Domains           & Facets               & Reliability & Validity & No. of items \\
+\midrule
+BFI-2    &                       &                        & *           &          & 60           \\
+         & Extraversion          &                        &             &          &              \\
+         &                       & Sociability            & 0.83        &          &              \\
+         &                       & Assertiveness          & 0.8         &          &              \\
+         &                       & Energy level           & 0.74        &          &              \\
+         & Agreeableness         &                        &             &          &              \\
+         &                       & Compassion             & 0.68        &          &              \\
+         &                       & Respectfulness         & 0.66        &          &              \\
+         &                       & Trust                  & 0.75        &          &              \\
+         & Conscientiousness     &                        &             &          &              \\
+         &                       & Organization           & 0.76        &          &              \\
+         &                       & Productiveness         & 0.74        &          &              \\
+         &                       & Responsability         & 0.68        &          &              \\
+         & Negative Emotionality &                        &             &          &              \\
+         &                       & Anxiety                & 0.79        &          &              \\
+         &                       & Depression             & 0.74        &          &              \\
+         &                       & Emotional Volatility   & 0.7         &          &              \\
+         & Open-mindedness       &                        &             &          &              \\
+         &                       & Intellectual curiosity & 0.78        &          &              \\
+         &                       & Aesthetic Sensitivity  & 0.67        &          &              \\
+         &                       & Creative Imagination   & 0.67        &          &             
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[1]
+   \renewcommand\thetable{1.4}
+
+\centering
+\caption{Table 1 continues}
+\label{my-label}
+\begin{tabular}{llllll}
+Taxonomy & Domains           & Facets               & Reliability & Validity & No. of items \\
+\midrule
+IPIP-NEO-120 &                        &                      &             &          & 120          \\
+             & Neuroticism            & Anxiety              & 0.78        &          &              \\
+             &                        & Anger                & 0.87        &          &              \\
+             &                        & Depression           & 0.85        &          &              \\
+             &                        & Self-Consciousness   & 0.74        &          &              \\
+             &                        & Inmoderation         & 0.72        &          &              \\
+             &                        & Vulnerability        & 0.76        &          &              \\
+             & Extraversion           & Friendliness         & 0.81        &          &              \\
+             &                        & Gregariousness       & 0.79        &          &              \\
+             &                        & Assertiveness        & 0.85        &          &              \\
+             &                        & Activity Level       & 0.71        &          &              \\
+             &                        & Excitement Seeking   & 0.77        &          &              \\
+             &                        & Cheerfulness         & 0.8         &          &              \\
+             & Openness to Experience & Imagination          & 0.83        &          &              \\
+             &                        & Artistic interests   & 0.76        &          &              \\
+             &                        & Emotionality         & 0.69        &          &              \\
+             &                        & Adventurousness      & 0.72        &          &              \\
+             &                        & Intellect            & 0.75        &          &              \\
+             &                        & Liberalism           & 0.64        &          &              \\
+             & Agreeableness          & Trust                & 0.86        &          &              \\
+             &                        & Morality             & 0.76        &          &              \\
+             &                        & Altruism             & 0.76        &          &              \\
+             &                        & Cooperation          & 0.73        &          &              \\
+             &                        & Modesty              & 0.76        &          &              \\
+             &                        & Sympathy             & 0.72        &          &              \\
+             & Conscientiousness      & Self-Efficacy        & 0.63        &          &              \\
+             &                        & Orderliness          & 0.83        &          &              \\
+             &                        & Dutifulness          & 0.69        &          &              \\
+             &                        & Achievement-striving & 0.8         &          &              \\
+             &                        & Self-Discipline      & 0.73        &          &              \\
+             &                        & Cautiousness         & 0.87        &          &             
+\end{tabular}
+\end{table}
 
 
 
