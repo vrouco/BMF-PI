@@ -103,7 +103,7 @@ Personality disorders are steadily shifting from a categorical definition into a
 
 This paradigm shift in clinical assessment of personality has led to the construction of the Personality Disorder Inventory (PID-5; Krueger, Derringer, Markon, Watson, & Skodol, 2013), a 25-facet and five-dimension self-report inventory, with an informant-report version (Markon, Quilty, Bagby, & Krueger, 2013). The big five dimensions mirror the Big Five domains, although with a focus on the maladaptative end of the continuum,: I) Detachment (Big Five’s introversion), II) Antagonism (absence of Big Five’s Agreeableness), III) Disinhibition (absence of Big Five’s Conscientiousness), IV) Negative affect (Big Five’s Neuroticism) and  V) Psychoticism (Absence of Big Five’s Openness). The PID-5 has shown satisfying evidences of criterion validity (...summary). However, the limited number of facets on the PID-5 has already raised some concerns due to the low reliability when studying developmental phenomena of personality disorders (Clercq et al., 2014)`, and may also limit the capacity of portraying vivid personality profiles which are suitable for explanatory purposes in the clinical domain.
 
-In line with what has been stated previously for academic achievement, the examination of facets may result in an enhancement of the specificity of assessment when looking at the nature of PDs [@Clark2005; @SamuelWidiger2008]. This improvement of specificity resulted in a predictive gain ranging from 3% to 16% when comparing facets to domains predicting PD in the @ClarkReynolds2001 study. Furthermore, the use of facets may be of extreme utility for those PD whose personality profile is less clear at the domain level. As @SaulsmanPage2004 point out, Schizotypal and Obsessive-Compulsive disorders are examples of PD which are not well covered by Big Five domains. A reason for it may be found in a pattern inconsistency of facets within the same dimension or in a lack of coverage for essential characteristics of the PD. For example, aberrant cognitions are essential characteristics of schizotypal disorder and are not covered by some instrument’s facets like the NEO-PI-R [@SaulsmanPage2004; @SamuelWidiger2008]. Likewise, the expected high scores on warmth and low scores on assertiveness could mask the effects of extraversion when predicting Dependent Personality Disorder, following the theoretical correspondence between PD and Big Five facets proposed by @Widiger1994.
+In line with what has been stated previously for academic achievement, the examination of facets may result in an enhancement of the specificity of assessment when looking at the nature of PDs [@Clark2005; @SamuelWidiger2008]. This improvement of specificity resulted in a predictive gain ranging from 3% to 16% when comparing facets to domains predicting PD in the @ClarkReynolds2001 study. Furthermore, the use of facets may be of extreme utility for those PD whose personality profile is less clear at the domain level. As @SaulsmanPage2004 point out, Schizotypal and Obsessive-Compulsive disorders are examples of PD which are not well covered by Big Five domains. A reason for it may be found in a pattern inconsistency of facets within the same dimension or in a lack of coverage for essential characteristics of the PD. For example, aberrant cognitions are essential characteristics of schizotypal disorder and are not covered by some instrument’s facets like the NEO-PI-R [@SaulsmanPage2004; @SamuelWidiger2008]. Likewise, the expected high scores on warmth and low scores on assertiveness could mask the effects of extraversion when predicting Dependent Personality Disorder, following the theoretical correspondence between PD and Big Five facets proposed by @Widiger1994. Moreover, the PID-5 has prompted the elaboration of a number of Five Factor Model Personality Disorders (FFMPD) scales to maximize the facet coverage in relation to specific PDs [@Bagby2018].
 
 Facet analysis and dedicated Big Five questionnaires have been used to solve issues like those mentioned in the last paragraph. We propose to base such research on a broader facet basis. To this end we suggest a general instrument to cover a broad number of facets which could aim for fine grained assessments. 
 
@@ -142,7 +142,7 @@ This measures academic achievement.
 ### Satisfaction With Life (SWL)
 Scale of satisfaction with life
 
-## 2.1.3. Statistical analyses. 
+## 2.1.3. Procedure
 
 ### EFA with subsample 1
 To determine the number of possible facets per domain Velicer’s (1976) Minimum Average Partial (MAP) method and Horn’s (1965) parallel analysis (PA) method were employed for every domain. Based on these results an exploratory factor analysis was calculated for each domain via Mplus using a geomin rotation (Quelle) and a maximum likelihood estimator (ML). The decision for the preferred number of facets per domain was based partly on comparing model fits (CFI, RMSEA, SRMR). More importantly though was the interpretability of the facet solution. After all facet solutions of other personality measures were looked at to compare it to the found facet structure. If there were important parts missing to present the domain with regards to content, new facets would be added afterwards.
@@ -155,7 +155,7 @@ To examine the nomological structure of the facets and domains to external const
 
 ## 2.2. Results
 
-### Results of the EFA
+### Results of EFA
 In Table 1 you can see model fits for the chosen facet model for each domain as well as Eigenvalues and results from MAP and PA test.
 
 To ensure that each facet is homogeneous and therefore, to reduce the risk of cross domain loadings, items with factor loadings less than .30 were eliminated. This was only done when item content was also judged as being non-central to the domain in question (Ziegler, 2014). 
@@ -190,37 +190,36 @@ The exploratory structural equation model (ESEM) of the final model with all fiv
 
 # Study 2 – German Translation
 
-### Participants.
+## Methods
+
+### Participants
 The representative sample consisted of 387 German speakers (49.1% male) with a mean age of 45.6 years (SD=17.5).
 
-### Measures. 
+### Measures
 The five items per facet derived from Study 1 were translated and back-translated by bilingual experts, creating a German version of the measure used there.
 
-### Statistical analyses. 
+## Procedure
 
-#### Step 1 – Examining the structure. 
+### Step 1 – Examining the structure. 
 To check the facet structure Study 1 delivered, multiple confirmatory factor analyses were calculated via Mplus following an analogue procedure to Study 1. First, measurement models were estimated for all facets, estimator was WLSMV. Model fit was determined based on the guide lines as before. In a final model, all five domain structural models were integrated using again exploratory structural equation modeling (ESEM).
 
-#### Step 2 – Testing for measurement invariance. 
+### Step 2 – Testing for measurement invariance. 
 In a next step, measurement invariance between German and US samples was examined. We followed the procedure suggested by Sass (2011) and tested configural, factorial and strong factorial invariance. The cutoffs suggested by Chen (2007) were applied to compare model fits. According to this configural measurement invariance can be assumed when the same item is associated with the same factor in each domain, while the factor loadings can differ. If the factor loadings of each item would not differ between the samples, factorial measurement invariance can be assumed. Strong factorial measurement invariance can be assumed when on top of that the intercepts of each item are equal. 
 The limit to factorial measurement invariance was set to $\Delta$ CFI < .01, $\Delta$ RMSEA < .015 and $\Delta$ SRMR < .03, at which the limit to strong factorial measurement invariance was set to $\Delta$ CFI < .01, $\Delta$ RMSEA < .015, $\Delta$ SRMR < .01 (Chen, 2007).
 
 
+## Results
 
-# Results
-
-## Study 1 – Construction with an US-American sample
-
-## Study 2 – German Translation
-
-### Results of the CFA. 
+### Results of CFA 
 The measurement models of the American sample were replicated for the reduced number of item per facet. Model fits can be seen in Table 4. The ESEM with all five domains fits well with CFI = .82, RMSEA = .078, SRMR = .044. Table 5 shows the ESEM factor loadings for the German sample. All facets load significantly on their intended domain but can have loadings on other domains as well.
 
-## Study 3 – Testing for measurement invariance
+## Results of MI
 
 For analyzing the measurement invariance the latest facet model structure (with additional facets) was taken. The results are shown in Table 6.
 Configural measurement invariance is assumed for the facets Appreciation of others, Superiority/Grandiosity, Need to be liked, Crybabiness, Manipulation, Altruism (facets of Agreeableness), Perseverance, Task Planning, Goal-orientation/Achievement striving, Preferred Load, Procrastination (facets of Conscientiousness), Assertiveness, Sociability/Gregariousness, Activity (facets of Extraversion), Irritability, Self-serving Attention (facets of Neuroticism), Self-attributed Inginuity, Openness to actions and activities, Openmindedness/Judgement, Love of Learning, Openness to feelings and Intellect (facets of Openness).
+
 Factorial measurement invariance is assumed for the facets Meanness, Trust (facets of Agreeableness), Control of others, Lack of (Self-) Control, Deliberation/Caution, Lack of Tidiness/Order (facets of Conscientiousness), Sensation Seeking, Reclusiveness, Emotionality, Humor (facets of Extraversion), Depression, Anxiety, Self-assuredness, Lethargia, Sentimentality (facets of Neuroticism), Openness to reading, Openness to arts and Need for cognition (facets of Openness).
+
 The only facet with strong factorial measurement invariance is Shyness, a facet of Extraversion
 
 
