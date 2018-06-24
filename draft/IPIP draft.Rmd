@@ -62,17 +62,17 @@ set.seed(42)
 library(here)
 ```
 
-# Introduction
+# 1. Introduction
 
-## Short history and relevance of the Big 5 
+## 1.1. Short history and relevance of the Big Five 
 
 Over the last decades, the Five Factor Model as well as the Big Five model have become widely accepted models for describing general attributes of personality. Often the terms are even used synonymously, which is why we will refer to the Big Five from here on. The Big Five is a hierarchical model which describes human individual differences in personality at the dispositional level: one of the most basic, universal, biologically-influenced and stable layers of human inter-individual differences in behavior, cognition and feeling [@McAdams2006a]. Its hierarchical nature is relevant to acknowledge behavior from the most specific (nuances), to the most broad differences in temperament and character (dimensions), through a varying number of mid-level personality characteristics called facets. Most of the research concerning criterion validity of the Big Five inventories has focused on the covariation between the Big Five dimensions and relevant external outcomes. However, specific dispositional characteristics captured on the facet level might be of extreme utility to provide more complex descriptions of individuality and to predict life outcomes to a major extent [@Paunonen2001; @Lounsbury2002; @Ziegler2014]. Unfortunately, the number and nature of the facets below the Big Five and being measured by different personality instruments is far from being consensual. In fact, different facet level models have been proposed (XXXX). One potential reason for this could be that  many facet level models were developed after a questionnaire version without such a level had been published. Thus, the facets were developed as an elaboration. While this has many theoretical advantages it also has the disadvantage of potentially limiting the search space of possible facets. In this work we aim at maximizing this search space and present a personality questionnaire which is broad at the facet level, open-access, and measurement invariant across two different cultures. 
 
-## A short history of the FFM / Big Five
+## 1.2. A short history of the Big Five
 
 Francis Galton proposed the fundamental lexical hypothesis as a ground from where to describe interpersonal differences in personality. The hypothesis states that every apprehended characteristic in the realm of personality should have its place in the natural language, a corollary derived from this first statement is that the essential features must represent a unique word in the lexical universe of this language. Galton himself (1884), and later Allport and Odbert (1936) and still later Norman (1967) used English dictionaries for a systematic collection of all adjectives which could be related to human personality characteristics. Using exploratory factor analyses on self- and other ratings five broad factors could repeatedly be extracted from the data. These efforts were also replicated in different languages, such as in German (Klages,…), Baumgartner,… 
 
- Cattell was one of the first researchers who systematically applied exploratory factor analysis in order to explore personality structure. He inspected the correlation structure of the items in the word lists of his predecessors, finding 16 personality oblique factors, including one factor specifically for intelligence, these factors form the 16-PF. These 16 factors were the primary factors in a hierarchical structure for Cattell (coetany to L.L. Thurstone and undoubtedly influenced by him). Cattell himself viewed personality as a hierarchical structure, containing three layers (Cattell, 1956). The second order factors resemble the Big Five dimensions (Digman, 1990).
+Cattell was one of the first researchers who systematically applied exploratory factor analysis in order to explore personality structure. He inspected the correlation structure of the items in the word lists of his predecessors, finding 16 personality oblique factors, including one factor specifically for intelligence, these factors form the 16-PF. These 16 factors were the primary factors in a hierarchical structure for Cattell (coetany to L.L. Thurstone and undoubtedly influenced by him). Cattell himself viewed personality as a hierarchical structure, containing three layers (Cattell, 1956). The second order factors resemble the Big Five dimensions (Digman, 1990).
  
 Different researchers followed Cattell in the study of dispositional traits of personality. One of the most influential models was Eysenck‘s Big Three. Grounded on a strong biological basis, Eysenck‘s theory supposed a link between temperament and personality. Its structural proposal concerned at first two big factors, named Neuroticism vs. Emotional stability and Extraversion vs. Introversion. These two dimensions were later  joined by a third factor that Eysenck  called Psychoticism. This label was criticized by others who suggested that a more appropriate term would be psychopathy (Digman, 1990). Eysenck‘s big two are still „alive“ today in the Big Five, and his third factor, psychoticism, can be operationalized as two dimensions of the Big Five: Agreeableness (or …) and Conscientiousness (or ….).
 
@@ -82,7 +82,7 @@ One of the most important features of the Big Five is the fact that it could be 
 
 The Big Five has proven to be a valid theoretical and empirical model to predict relevant life outcomes. Research such as Ozer and Benet-Martinez (2006) or Roberts; Kuncel; Shiner; Caspi & Goldberg ( 2007) has shown that scores for the Five Dimensions (and their related facets) are able to explain outcomes such as Academic and work performance, health, personality disorders, political attitudes and many more. The empirical findings linking Big Five measures to life outcomes have reinforced the concurrent validity of the test scores interpretations. At the same time, the broad nature of the domains has spurned research into the more fine-grained lower order structure of facets.
 
-## Facet Structures 
+## 1.3. Facet Structures 
 
 There are a number of models that include a facet structure below the five broad domains. The most widely known model is the one suggested by Costa and McCrae (XXX). Other popular models have been suggested for the Big Five Inventory 2 (BFI-2, Soto & John, 2017), the IPIP (JRP paper), and the HEXACO model (XXX), which assumes six broad domains. Table 1 gives an overview of these different models listing their facets per domain as well as some information regarding their psychometric properties. 
 
@@ -97,26 +97,24 @@ Furthermore, there is a large corpus of research which points towards facets as 
 As described above, facet measures often yield scores that have stronger test-criterion correlations than their respective domain scores (e.g., Ziegler et al., 2012; …). However, facet scores have also been shown to be related to personality disorders. Thus, the combination of a higher fidelity along with the potential clinical relevance of facet scores might open up unique advantages for clinical research. 
 
 
-## The FFM / Big Five and Personality Disorders
+## 1.4. The Big Five and Personality Disorders
 
 Personality disorders are steadily shifting from a categorical definition into a continua conceptualization within the clinical realm. This process is not new for personality science history, as the subject itself moved from a qualitatively distinct set of definitions, called types, into a subset of continuous domains in which both normality and extreme tendencies were moving along, named traits. In fact, the new version of the Diagnostic and Statistical Manual of mental disorders, DSM- V, now proposes two different ways of assessing personality disorders: 1) A descriptive model of personality disorders in section II which mimics the former model of assessing personality disorders and; 2) A novel trait model that follows research on the personality scientific domain (In section III), which conceptualizes personality disorders as extreme tendencies located in the continuum of the Big Five domains and facets (American Psychiatric Association, 2013; Widiger & Mullins-Sweatt, 2009)
 
 This paradigm shift in clinical assessment of personality has led to the construction of the Personality Disorder Inventory (PID-5; Krueger, Derringer, Markon, Watson, & Skodol, 2013), a 25-facet and five-dimension self-report inventory, with an informant-report version (Markon, Quilty, Bagby, & Krueger, 2013). The big five dimensions mirror the Big Five domains, although with a focus on the maladaptative end of the continuum,: I) Detachment (Big Five’s introversion), II) Antagonism (absence of Big Five’s Agreeableness), III) Disinhibition (absence of Big Five’s Conscientiousness), IV) Negative affect (Big Five’s Neuroticism) and  V) Psychoticism (Absence of Big Five’s Openness). The PID-5 has shown satisfying evidences of criterion validity (...summary). However, the limited number of facets on the PID-5 has already raised some concerns due to the low reliability when studying developmental phenomena of personality disorders (Clercq et al., 2014)`, and may also limit the capacity of portraying vivid personality profiles which are suitable for explanatory purposes in the clinical domain.
 
-(Link facets to PD: Clark-Reynolds, Samuel-Widiger, Clark, Saulsman-Page, Kristian-Krueger. )
-
 In line with what has been stated previously for academic achievement, the examination of facets may result in an enhancement of the specificity of assessment when looking at the nature of PDs [@Clark2005; @SamuelWidiger2008]. This improvement of specificity resulted in a predictive gain ranging from 3% to 16% when comparing facets to domains predicting PD in the @ClarkReynolds2001 study. Furthermore, the use of facets may be of extreme utility for those PD whose personality profile is less clear at the domain level. As @SaulsmanPage2004 point out, Schizotypal and Obsessive-Compulsive disorders are examples of PD which are not well covered by Big Five domains. A reason for it may be found in a pattern inconsistency of facets within the same dimension or in a lack of coverage for essential characteristics of the PD. For example, aberrant cognitions are essential characteristics of schizotypal disorder and are not covered by some instrument’s facets like the NEO-PI-R [@SaulsmanPage2004; @SamuelWidiger2008]. Likewise, the expected high scores on warmth and low scores on assertiveness could mask the effects of extraversion when predicting Dependent Personality Disorder, following the theoretical correspondence between PD and Big Five facets proposed by @Widiger1994.
 
 Facet analysis and dedicated Big Five questionnaires have been used to solve issues like those mentioned in the last paragraph. We propose to base such research on a broader facet basis. To this end we suggest a general instrument to cover a broad number of facets which could aim for fine grained assessments. 
 
-## This study
+## 1.5. This study
 
 We present in this paper an instrument for personality assessment which aims to cover the need for an internationally usable, open source, and differentiated measure at the facet level. Two studies are presented, for each one inspects the factor structure of the instrument in a different sample drawn from a different culture (American vs. German). Measurement invariance across samples will be examined. Internal consistency and test-criterion correlations will be estimated for all scores. To sum up, the aim for this research project was to provide an instrument that can be used in non-clinical but also in clinical research which emphasizes the facet level of the Big Five. 
 
 
 
 
-# Methods
+# 2. Study 1 - US-American Sample
 
 ```{r, comment=F, message=F, warning=F}
 
@@ -124,39 +122,40 @@ We present in this paper an instrument for personality assessment which aims to 
 ```
 
 
-## Study 1 - US-American Sample
+## 2.1. Methods
 
 
-#### Participants
+### 2.1.1. Participants
 The sample consisted of 726 American undergraduate students (59.3% male) who participated voluntarily. The mean age was 21.6 years (SD=5.9). Students were emailed a link to a computerized assessment battery that included the IPIP items as well as several other tests not reported in this paper.
 
 At a first data preparation the data set was randomly split in two equally sized samples. Both samples were matched in relation to missing values, outliers and extreme values. In Sample 1 the mean age was 21.8 years (SD=6.3), in Sample 2 the mean age was 21.5 years (SD=5.6).
 
-### Measures. 
+## 2.1.2. Measures. 
 
-#### International Personality Item Pool (IPIP)
+### International Personality Item Pool (IPIP)
 Altogether, 525 items from the *International Personality Item Pool* *(IPIP)* were used to measure Neuroticism, Extraversion, Openness (to experience), Agreeableness and Conscientiousness. The IPIP is an open source database of personality items, which was launched in 1996, and contains over 2000 items (L. R. Goldberg et al., 2006).
 Participants were asked to rate themselves on typical behaviors or reactions on a 5-point Likert scale, ranging from 1 (“Not all like me”) to 5 (“Very much like me”).
 
-#### GPA
+### GPA
+This measures academic achievement.
 
-#### Satisfaction With Life (SWL)
+### Satisfaction With Life (SWL)
+Scale of satisfaction with life
 
-### Statistical analyses. 
+## 2.1.3. Statistical analyses. 
 
-#### EFA with subsample 1.
+### EFA with subsample 1
 To determine the number of possible facets per domain Velicer’s (1976) Minimum Average Partial (MAP) method and Horn’s (1965) parallel analysis (PA) method were employed for every domain. Based on these results an exploratory factor analysis was calculated for each domain via Mplus using a geomin rotation (Quelle) and a maximum likelihood estimator (ML). The decision for the preferred number of facets per domain was based partly on comparing model fits (CFI, RMSEA, SRMR). More importantly though was the interpretability of the facet solution. After all facet solutions of other personality measures were looked at to compare it to the found facet structure. If there were important parts missing to present the domain with regards to content, new facets would be added afterwards.
 
-#### CFA and ESEM with subsample 2. 
+### CFA and ESEM with subsample 2
 To confirm the structure of facets the EFAs delivered, multiple confirmatory factor analyses were calculated via Mplus. In a first step measurement models were estimated for each of the facets. To obtain balance between the facets, the items were reduced to five per facet based on item content and loading pattern in a second step, afterwards the estimations for the measurement models on facet levels were repeated. For both steps estimators were WLSMV (weighted least squares adjusted for means and variances). Aim was to ensure an optimal breadth and sufficient reliability. In a final model, all five domain structural models were integrated using exploratory structural equation modeling (ESEM) (Asparouhov & Muthén, 2009). Marsh et al. (2010) could show that ESEM fits personality data better and results in substantially more differentiated factors than it would using CFA, while using an EFA measurement model with rotations in a structural equation model. All facets were able to load on all domains. If there would show up facets that do not significantly load on the intended domain, this facets would get eliminated subsequently. The estimators used were ML (maximum likelihood), factor scores were used as indicators and the rotation was oblique (using Geomin). Model fit was determined based on the guide lines by Hu and Bentler (1999) as well as Beauducel and Wittmann (2005). Consequently, to consider a good fit of a proposed model, the Comparative Fit Index (CFI) should be at or over .95, the standardized root mean squared residual (SRMR) smaller than .08 and the root mean square error of approximation (RMSEA) smaller than .06. 
 
-#### Criterion validity evidence 
+### Criterion validity evidence 
 To examine the nomological structure of the facets and domains to external constructs like life satisfaction and education, correlations and multiple regression were computed. 
 
-### Results
+## 2.2. Results
 
-#### Results of the EFA
-
+### Results of the EFA
 In Table 1 you can see model fits for the chosen facet model for each domain as well as Eigenvalues and results from MAP and PA test.
 
 To ensure that each facet is homogeneous and therefore, to reduce the risk of cross domain loadings, items with factor loadings less than .30 were eliminated. This was only done when item content was also judged as being non-central to the domain in question (Ziegler, 2014). 
@@ -173,7 +172,7 @@ Openness to experience comprises of nine facets. One facet was identified as a m
 
 The items to each facet are listed in the appendix (A).
 
-#### Results of CFA and ESEM. 
+### Results of CFA and ESEM. 
 
 All measurement models for the facets were fitting well, results can be found in Table 2.
 
@@ -189,7 +188,7 @@ library(lavaan)
 The exploratory structural equation model (ESEM) of the final model with all five domains fits well with CFI = .87, RMSEA = .072, SRMR = .036. As you can see in Table 3 nearly all facets load significantly on their intended domain, but sometimes have loadings on other domains also, which are conform with the theory and the facet content.
 
 
-## Study 2 – German Translation
+# Study 2 – German Translation
 
 ### Participants.
 The representative sample consisted of 387 German speakers (49.1% male) with a mean age of 45.6 years (SD=17.5).

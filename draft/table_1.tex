@@ -1,0 +1,233 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={Test},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{Test}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{}
+    \preauthor{}\postauthor{}
+    \date{}
+    \predate{}\postdate{}
+  
+-\textbackslash{}begin\{document\}
+-\usepackage[hmargin=2.5cm,vmargin=1.5cm]{geometry}
+-\usepackage{longtable}
+
+\begin{document}
+\maketitle
+
+\setlength\LTleft{-0.8in}
+\setlength\LTright{-0.8in}
+
+\textbackslash{}begin\{center\}
+
+\begin{longtable}{@{\extracolsep{\fill}}*5{l}}
+
+\caption{A simple longtable example}\\
+
+\textbf{taxonomy} & \textbf{domains} & \textbf{facets} & \textbf{reliability*} & \textbf{validity} \\
+\hline
+\endfirsthead
+\multicolumn{5}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+
+\textbf{taxonomy} & \textbf{domains} & \textbf{facets} & \textbf{reliability (no of items)} & \textbf{validity} \\
+\hline
+\endhead
+\hline \multicolumn{6}{r}{\textit{Continued on next page}} \\
+\endfoot
+\endlastfoot
+
+
+         HEXACO&                    &                        &             &     ya sabes que si nena di que si    \\
+             & Humility           & Sincerity              & 0.66        &         \\
+             &                    & Fairness               & 0.76        &         \\
+             &                    & Greed Avoidance        & 0.81        &         \\
+             &                    & Modesty                & 0.68        &         \\
+             & Emotionality       & Fearfulness            & 0.7         &         \\
+             &                    & Anxiety                & 0.64        &         \\
+             &                    & Dependence             & 0.8         &         \\
+             &                    & Sentimentality         & 0.7         &         \\
+             & Extraversion       & Social Self-Esteem     & 0.67        &         \\
+             &                    & Social Boldness        & 0.76        &         \\
+             &                    & Sociability            & 0.71        &         \\
+             &                    & Liveliness             & 0.76        &         \\
+             & Agreeableness      & Forgivingness          & 0.74        &         \\
+             &                    & Gentleness             & 0.66        &         \\
+             &                    & Flexibility            & 0.61        &         \\
+             &                    & Patience               & 0.79        &         \\
+             & Conscientiousness  & Organization           & 0.74        &         \\
+             &                    & Diligence              & 0.7         &         \\
+             &                    & Perfectionism          & 0.69        &         \\
+             &                    & Prudence               & 0.69        &         \\
+             & Openness           & Aesthetic              & 0.66        &         \\
+             &                    & Inquisitiveness        & 0.66        &         \\
+             &                    & Creativity             & 0.75        &         \\
+             &                    & Unconventionality      & 0.52        &         \\[1cm]
+             
+
+         NEO-PI-r     &      &                      &             &         \\
+         & Neuroticism       & Anxiety              & 0.78        &         \\
+         &                   & Angry Hostility      & 0.75        &         \\
+         &                   & Depression           & 0.81        &         \\
+         &                   & Self-Consciousness   & 0.68        &         \\
+         &                   & Impulsiveness        & 0.7         &         \\
+         &                   & Vulnerability        & 0.77        &         \\
+         & Extraversion      & Warmth               & 0.73        &         \\
+         &                   & Gregariousness       & 0.72        &         \\
+         &                   & Assertiveness        & 0.77        &         \\
+         &                   & Activity             & 0.63        &         \\
+         &                   & Excitement Seeking   & 0.65        &         \\
+         &                   & Positive Emotions    & 0.73        &         \\
+         & Openness          & Fantasy              & 0.76        &         \\
+         &                   & Aesthetics           & 0.76        &         \\
+         &                   & Feelings             & 0.66        &         \\
+         &                   & Actions              & 0.58        &         \\
+         &                   & Ideas                & 0.8         &         \\
+         &                   & Values               & 0.67        &         \\
+         & Agreeableness     & Trust                & 0.79        &         \\
+         &                   & Straightforwardness  & 0.71        &         \\
+         &                   & Altruism             & 0.75        &         \\
+         &                   & Compliance           & 0.59        &         \\
+         &                   & Modesty              & 0.67        &         \\
+         &                   & Tender-Mindedness    & 0.56        &         \\
+         & Conscientiousness & Competence           & 0.67        &         \\
+         &                   & Order                & 0.66        &         \\
+         &                   & Dutifulness          & 0.62        &         \\
+         &                   & Achievement Striving & 0.67        &         \\
+         &                   & Self-Discipline      & 0.75        &         \\
+         &                   & Deliberation         & 0.71        &         \\[1cm]    
+\pagebreak
+
+
+BFI-2    &                       &                        & *           &        \\
+         & Extraversion          &                        &             &         \\
+         &                       & Sociability            & 0.83        &         \\
+         &                       & Assertiveness          & 0.8         &         \\
+         &                       & Energy level           & 0.74        &         \\
+         & Agreeableness         &                        &             &         \\
+         &                       & Compassion             & 0.68        &         \\
+         &                       & Respectfulness         & 0.66        &         \\
+         &                       & Trust                  & 0.75        &         \\
+         & Conscientiousness     &                        &             &         \\
+         &                       & Organization           & 0.76        &         \\
+         &                       & Productiveness         & 0.74        &         \\
+         &                       & Responsability         & 0.68        &         \\
+         & Negative Emotionality &                        &             &         \\
+         &                       & Anxiety                & 0.79        &         \\
+         &                       & Depression             & 0.74        &         \\
+         &                       & Emotional Volatility   & 0.7         &         \\
+         & Open-mindedness       &                        &             &         \\
+         &                       & Intellectual curiosity & 0.78        &         \\
+         &                       & Aesthetic Sensitivity  & 0.67        &         \\
+         &                       & Creative Imagination   & 0.67        &         \\[1cm]    
+
+         
+        IPIP-NEO-120 &                        &                      &             &   \\
+             & Neuroticism            & Anxiety              & 0.78        &         \\
+             &                        & Anger                & 0.87        &         \\
+             &                        & Depression           & 0.85        &         \\
+             &                        & Self-Consciousness   & 0.74        &         \\
+             &                        & Inmoderation         & 0.72        &         \\
+             &                        & Vulnerability        & 0.76        &         \\
+             & Extraversion           & Friendliness         & 0.81        &         \\
+             &                        & Gregariousness       & 0.79        &         \\
+             &                        & Assertiveness        & 0.85        &         \\
+             &                        & Activity Level       & 0.71        &         \\
+             &                        & Excitement Seeking   & 0.77        &         \\
+             &                        & Cheerfulness         & 0.8         &         \\
+             & Openness to Experience & Imagination          & 0.83        &         \\
+             &                        & Artistic interests   & 0.76        &         \\
+             &                        & Emotionality         & 0.69        &         \\
+             &                        & Adventurousness      & 0.72        &         \\
+             &                        & Intellect            & 0.75        &         \\
+             &                        & Liberalism           & 0.64        &         \\
+             & Agreeableness          & Trust                & 0.86        &         \\
+             &                        & Morality             & 0.76        &         \\
+             &                        & Altruism             & 0.76        &         \\
+             &                        & Cooperation          & 0.73        &         \\
+             &                        & Modesty              & 0.76        &         \\
+             &                        & Sympathy             & 0.72        &         \\
+             & Conscientiousness      & Self-Efficacy        & 0.63        &         \\
+             &                        & Orderliness          & 0.83        &         \\
+             &                        & Dutifulness          & 0.69        &         \\
+             &                        & Achievement-striving & 0.8         &         \\
+             &                        & Self-Discipline      & 0.73        &         \\
+             &                        & Cautiousness         & 0.87        &          \\            
+\end{longtable}
+
+\textbackslash{}end\{document\}
+
+
+\end{document}
