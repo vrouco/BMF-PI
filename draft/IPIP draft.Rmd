@@ -86,11 +86,9 @@ The Big Five has proven to be a valid theoretical and empirical model to predict
 
 There are a number of models that include a facet structure below the five broad domains. The most widely known model is the one suggested by Costa and McCrae (XXX). Other popular models have been suggested for the Big Five Inventory 2 (BFI-2, Soto & John, 2017), the IPIP (JRP paper), and the HEXACO model (XXX), which assumes six broad domains. Table 1 gives an overview of these different models listing their facets per domain as well as some information regarding their psychometric properties. 
 
-Table 1
+table 1
 
-
-
-As can be seen in the table, there is no consensus at the facet level between the different Big Five questionnaires (look for overlaps & few words about the table?)
+As shown in table 1, there are many different possibilities of facets forming the domains. However, there is still a degree of overlap on the facets covered by the different instruments. @SotoJohn2009  inspected the convergences between the NEO-PI-R and the first version of the BFI, suggesting that two constructs per domain were measured at the facet level by both inventories. The constructs defined by @SotoJohn2009 were: Assertiveness and Activity for Extraversion; Altruism and Compliance for Agreeableness; Order and Self-Discipline for Conscientiousness; Anxiety and Depression for Neuroticism; and Aesthetics and Ideas for Openness. The convergence holds for the four instruments listed in table 1, as these ten constructs are covered within the facets for every instrument. Some of the constructs are explicitly covered at the facet level (e.g. Anxiety); meanwhile others are mainly covered though the four instruments, although sometimes implicitly (e.g. Liveliness in HEXACO resembles the “core” construct Activity, present in all other instruments). The reverse is not always true, not every facet within the four instruments is covered by the constructs proposed by Soto & John (2008). As an example we find Self-Consciousness, a Neuroticism facet defined by the NEO-PI-R and the IPIP-NEO-120, which is clearly tapping at a construct different from Anxiety or Depression.
 
 The nomological network commonly assumed in Big Five questionnaires is drawn from nuances through facets to domains, from more specific to more general. Relying in domains to explain and predict behavior can benefit from ease of interpretability. However, optimal predictions for specific contexts can be enhanced if a more specific set of traits is used. On the other hand, using nuances to predict behavior might yield even stronger predictive ability (Seeboth & Mottus, 2018), but as the number of predictors grows the interpretations become more complex. Facets are on a middle ground between nuances and domains, in a compromise between specificity and sensitivity in the bandwidth-fidelity dilemma. This narrow aggregation both satisfies the specificity of predictions to concrete situations and environments and also enhances the ease of interpretability when summarizing individual personality characteristics. 
 
@@ -229,13 +227,11 @@ The only facet with strong factorial measurement invariance is Shyness, a facet 
 
 
 
-
-
-
 \newpage
 ```{r render_appendix, include=FALSE}
 render_appendix("appendix.Rmd")
 ```
+
 
 # References
 ```{r create_r-references}
