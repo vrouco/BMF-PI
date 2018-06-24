@@ -176,7 +176,7 @@ The items to each facet are listed in the appendix (A).
 
 All measurement models for the facets were fitting well, results can be found in Table 2.
 
-```{r table3, }
+```{r table3}
 library(foreign)
 library(lavaan)
 # setwd(here("data/Sample_USA_EFA+CFA/CFA/Agreeableness"))
