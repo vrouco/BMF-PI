@@ -1,0 +1,489 @@
+Mplus VERSION 7.1
+MUTHEN & MUTHEN
+06/02/2015   2:11 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  DATA:
+  FILE IS  "ARI Data 2009_Neuroticism CFA sample.txt";
+  Variable:
+  Names are
+  respid
+  n40
+  n57
+  n28
+  n25
+  n53
+  n113
+  n44
+  n83
+  n51
+  n127
+  n61
+  n32
+  n156
+  n63
+  n118
+  n147
+  n46
+  n71
+  n49
+  n84
+  n104
+  n141
+  n128
+  n43
+  n119
+  n30
+  n38
+  n11
+  n16
+  n93
+  n102
+  n112
+  n136
+  n22
+  n131
+  n135
+  n8
+  n24
+  n54
+  n89
+  n158
+  n140
+  n96
+  n31
+  n111
+  n10
+  n152
+  n68
+  n77
+  n149
+  n100
+  n29
+  n125
+  n9
+  n14
+  n121
+  n13
+  n91
+  n122
+  n105
+  n115
+  n17
+  n80
+  n23
+  n148
+  n67
+  n5
+  n109
+  n34
+  n4
+  n120
+  n60
+  n124
+  n18
+  n137
+  n2
+  n65
+  n151
+  n117
+  n1
+  n37
+  n154
+  n87
+  n45
+  n86
+  n130
+  n110
+  n85
+  n143
+  n56
+  n36
+  n66
+  n134
+  n50
+  n114
+  n47
+  n52
+  n98
+  n15
+  n58
+  n70
+  n59
+  n75
+  n116
+  n35
+  n88
+  n79
+  n69
+  n82
+  n144
+  n157
+  n55
+  n138
+  n73
+  n33
+  n90
+  n107
+  n81
+  Filter
+  filter_
+  ;
+
+  USEVARIABLES ARE
+  n61
+  n87
+  n86
+  n111
+  n117
+  ;
+
+  MISSING ARE ALL (-99);
+  categorical are all;
+
+  Model:
+
+  letharg by	
+  n61
+  n87
+  n86
+  n111
+  n117
+  ;
+
+  Savedata:
+  file is n5.txt;
+  save = fscores;
+
+  Analysis:
+  ESTIMATOR IS WLSMV;
+
+  OUTPUT: STDYX MODINDICES(4)
+  ;
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  2
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         361
+
+Number of dependent variables                                    5
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   N61         N87         N86         N111        N117
+
+Continuous latent variables
+   LETHARG
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+
+Input data file(s)
+  ARI Data 2009_Neuroticism CFA sample.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              N61           N87           N86           N111          N117
+              ________      ________      ________      ________      ________
+ N61            1.000
+ N87            1.000         1.000
+ N86            1.000         1.000         1.000
+ N111           1.000         1.000         1.000         1.000
+ N117           1.000         1.000         1.000         1.000         1.000
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    N61
+      Category 1    0.108       39.000
+      Category 2    0.324      117.000
+      Category 3    0.393      142.000
+      Category 4    0.122       44.000
+      Category 5    0.053       19.000
+    N87
+      Category 1    0.235       85.000
+      Category 2    0.335      121.000
+      Category 3    0.249       90.000
+      Category 4    0.105       38.000
+      Category 5    0.075       27.000
+    N86
+      Category 1    0.299      108.000
+      Category 2    0.474      171.000
+      Category 3    0.155       56.000
+      Category 4    0.053       19.000
+      Category 5    0.019        7.000
+    N111
+      Category 1    0.274       99.000
+      Category 2    0.432      156.000
+      Category 3    0.211       76.000
+      Category 4    0.066       24.000
+      Category 5    0.017        6.000
+    N117
+      Category 1    0.108       39.000
+      Category 2    0.247       89.000
+      Category 3    0.277      100.000
+      Category 4    0.205       74.000
+      Category 5    0.163       59.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       25
+
+Chi-Square Test of Model Fit
+
+          Value                             13.208*
+          Degrees of Freedom                     5
+          P-Value                           0.0215
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.067
+          90 Percent C.I.                    0.024  0.113
+          Probability RMSEA <= .05           0.215
+
+CFI/TLI
+
+          CFI                                0.985
+          TLI                                0.971
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            572.642
+          Degrees of Freedom                    10
+          P-Value                           0.0000
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              0.523
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ LETHARG  BY
+    N61                1.000      0.000    999.000    999.000
+    N87                0.911      0.097      9.365      0.000
+    N86                1.241      0.128      9.667      0.000
+    N111               1.160      0.105     11.022      0.000
+    N117              -0.228      0.094     -2.429      0.015
+
+ Thresholds
+    N61$1             -1.237      0.088    -14.054      0.000
+    N61$2             -0.171      0.066     -2.578      0.010
+    N61$3              0.936      0.078     12.063      0.000
+    N61$4              1.620      0.109     14.807      0.000
+    N87$1             -0.721      0.073     -9.932      0.000
+    N87$2              0.178      0.066      2.683      0.007
+    N87$3              0.915      0.077     11.877      0.000
+    N87$4              1.441      0.098     14.702      0.000
+    N86$1             -0.527      0.069     -7.591      0.000
+    N86$2              0.748      0.073     10.231      0.000
+    N86$3              1.461      0.099     14.735      0.000
+    N86$4              2.067      0.154     13.429      0.000
+    N111$1            -0.600      0.070     -8.515      0.000
+    N111$2             0.543      0.070      7.797      0.000
+    N111$3             1.385      0.095     14.580      0.000
+    N111$4             2.129      0.163     13.086      0.000
+    N117$1            -1.237      0.088    -14.054      0.000
+    N117$2            -0.373      0.068     -5.513      0.000
+    N117$3             0.336      0.067      4.991      0.000
+    N117$4             0.980      0.079     12.429      0.000
+
+ Variances
+    LETHARG            0.363      0.054      6.716      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ LETHARG  BY
+    N61                0.602      0.045     13.432      0.000
+    N87                0.549      0.042     12.931      0.000
+    N86                0.747      0.043     17.415      0.000
+    N111               0.698      0.040     17.273      0.000
+    N117              -0.137      0.055     -2.498      0.012
+
+ Thresholds
+    N61$1             -1.237      0.088    -14.054      0.000
+    N61$2             -0.171      0.066     -2.578      0.010
+    N61$3              0.936      0.078     12.063      0.000
+    N61$4              1.620      0.109     14.807      0.000
+    N87$1             -0.721      0.073     -9.932      0.000
+    N87$2              0.178      0.066      2.683      0.007
+    N87$3              0.915      0.077     11.877      0.000
+    N87$4              1.441      0.098     14.702      0.000
+    N86$1             -0.527      0.069     -7.591      0.000
+    N86$2              0.748      0.073     10.231      0.000
+    N86$3              1.461      0.099     14.735      0.000
+    N86$4              2.067      0.154     13.429      0.000
+    N111$1            -0.600      0.070     -8.515      0.000
+    N111$2             0.543      0.070      7.797      0.000
+    N111$3             1.385      0.095     14.580      0.000
+    N111$4             2.129      0.163     13.086      0.000
+    N117$1            -1.237      0.088    -14.054      0.000
+    N117$2            -0.373      0.068     -5.513      0.000
+    N117$3             0.336      0.067      4.991      0.000
+    N117$4             0.980      0.079     12.429      0.000
+
+ Variances
+    LETHARG            1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    N61                0.363      0.054      6.716      0.000      0.637
+    N87                0.301      0.047      6.465      0.000      0.699
+    N86                0.558      0.064      8.707      0.000      0.442
+    N111               0.488      0.056      8.636      0.000      0.512
+    N117               0.019      0.015      1.249      0.212      0.981
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.720E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     4.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+No modification indices above the minimum value.
+
+
+
+SAMPLE STATISTICS FOR ESTIMATED FACTOR SCORES
+
+
+     SAMPLE STATISTICS
+
+
+           Means
+              LETHARG
+              ________
+ 1              0.003
+
+
+           Covariances
+              LETHARG
+              ________
+ LETHARG        0.252
+
+
+           Correlations
+              LETHARG
+              ________
+ LETHARG        1.000
+
+
+SAVEDATA INFORMATION
+
+
+  Save file
+    n5.txt
+
+  Order and format of variables
+
+    N61            F10.3
+    N87            F10.3
+    N86            F10.3
+    N111           F10.3
+    N117           F10.3
+    LETHARG        F10.3
+
+  Save file format
+    6F10.3
+
+  Save file record length    10000
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    f:\ipip paper\sample_usa\cfa\neuroticism\5 items\cfa neuroticism - lethargia_5 items.dgm
+
+     Beginning Time:  14:11:33
+        Ending Time:  14:11:33
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

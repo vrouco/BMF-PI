@@ -1,0 +1,565 @@
+Mplus VERSION 5.2
+MUTHEN & MUTHEN
+01/20/2012   1:48 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  DATA:
+  FILE IS  "ARI Data 2009_Openness CFA Sample.txt";
+  Variable:
+  Names are
+  respid
+  open145
+  open42
+  open10
+  open15
+  open134
+  open900
+  open109
+  open88
+  open46
+  open1
+  open99
+  open11
+  open116
+  open4
+  open112
+  open40
+  open9
+  open13
+  open118
+  open121
+  open151
+  open90
+  open5
+  open87
+  open30
+  open146
+  open43
+  open139
+  open3
+  open48
+  open22
+  open125
+  open60
+  open32
+  open49
+  open12
+  open106
+  open96
+  open111
+  open130
+  open133
+  open19
+  open104
+  open135
+  open80
+  open143
+  open115
+  open59
+  open78
+  open75
+  open102
+  open107
+  open76
+  open94
+  open71
+  open7
+  open44
+  open21
+  open105
+  open18
+  open113
+  open148
+  open64
+  open50
+  open89
+  open110
+  open152
+  open129
+  open8
+  open53
+  open63
+  open66
+  open27
+  open83
+  open95
+  open70
+  open86
+  open85
+  open136
+  open16
+  open29
+  open25
+  open147
+  open144
+  open72
+  open140
+  open55
+  open61
+  open56
+  open58
+  open901
+  open37
+  open74
+  open91
+  open97
+  open93
+  open67
+  open20
+  open17
+  open127
+  open2
+  open124
+  open114
+  open6
+  open28
+  open92
+  open132
+  open77
+  open45
+  open31
+  open35
+  Filter
+  filter_
+  ;
+
+  USEVARIABLES ARE
+  open93
+  open134
+  open139
+  open129
+  open63
+  open144
+  open104
+  open135
+  open58
+  open145
+  open29
+  ;
+
+
+  MISSING ARE ALL (-99);
+  categorical are all;
+
+  Model:
+  nfcog BY
+  open93
+  open134
+  open139
+  open129
+  open63
+  open144
+  open104
+  open135
+  open58
+  open145
+  open29
+  ;
+
+
+  Analysis:
+  ESTIMATOR IS WLSMV;
+
+  OUTPUT: STDYX MODINDICES(4);
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  2
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         361
+
+Number of dependent variables                                   11
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   OPEN93      OPEN134     OPEN139     OPEN129     OPEN63      OPEN144
+   OPEN104     OPEN135     OPEN58      OPEN145     OPEN29
+
+Continuous latent variables
+   NFCOG
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+
+Input data file(s)
+  ARI Data 2009_Openness CFA Sample.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              OPEN93        OPEN134       OPEN139       OPEN129       OPEN63
+              ________      ________      ________      ________      ________
+ OPEN93         1.000
+ OPEN134        1.000         1.000
+ OPEN139        1.000         1.000         1.000
+ OPEN129        1.000         1.000         1.000         1.000
+ OPEN63         1.000         1.000         1.000         1.000         1.000
+ OPEN144        1.000         1.000         1.000         1.000         1.000
+ OPEN104        1.000         1.000         1.000         1.000         1.000
+ OPEN135        1.000         1.000         1.000         1.000         1.000
+ OPEN58         1.000         1.000         1.000         1.000         1.000
+ OPEN145        1.000         1.000         1.000         1.000         1.000
+ OPEN29         1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              OPEN144       OPEN104       OPEN135       OPEN58        OPEN145
+              ________      ________      ________      ________      ________
+ OPEN144        1.000
+ OPEN104        1.000         1.000
+ OPEN135        1.000         1.000         1.000
+ OPEN58         1.000         1.000         1.000         1.000
+ OPEN145        1.000         1.000         1.000         1.000         1.000
+ OPEN29         1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              OPEN29
+              ________
+ OPEN29         1.000
+
+
+SUMMARY OF CATEGORICAL DATA PROPORTIONS
+
+    OPEN93
+      Category 1    0.030
+      Category 2    0.125
+      Category 3    0.366
+      Category 4    0.296
+      Category 5    0.183
+    OPEN134
+      Category 1    0.039
+      Category 2    0.064
+      Category 3    0.307
+      Category 4    0.277
+      Category 5    0.313
+    OPEN139
+      Category 1    0.025
+      Category 2    0.097
+      Category 3    0.313
+      Category 4    0.355
+      Category 5    0.211
+    OPEN129
+      Category 1    0.014
+      Category 2    0.058
+      Category 3    0.258
+      Category 4    0.402
+      Category 5    0.269
+    OPEN63
+      Category 1    0.166
+      Category 2    0.177
+      Category 3    0.305
+      Category 4    0.188
+      Category 5    0.163
+    OPEN144
+      Category 1    0.011
+      Category 2    0.061
+      Category 3    0.363
+      Category 4    0.393
+      Category 5    0.172
+    OPEN104
+      Category 1    0.025
+      Category 2    0.066
+      Category 3    0.296
+      Category 4    0.338
+      Category 5    0.274
+    OPEN135
+      Category 1    0.044
+      Category 2    0.183
+      Category 3    0.416
+      Category 4    0.247
+      Category 5    0.111
+    OPEN58
+      Category 1    0.019
+      Category 2    0.053
+      Category 3    0.269
+      Category 4    0.277
+      Category 5    0.382
+    OPEN145
+      Category 1    0.003
+      Category 2    0.006
+      Category 3    0.216
+      Category 4    0.418
+      Category 5    0.357
+    OPEN29
+      Category 1    0.008
+      Category 2    0.044
+      Category 3    0.355
+      Category 4    0.413
+      Category 5    0.180
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+TESTS OF MODEL FIT
+
+Chi-Square Test of Model Fit
+
+          Value                            148.326*
+          Degrees of Freedom                    30**
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference tests.  MLM, MLR and WLSM chi-square difference
+    testing is described in the Mplus Technical Appendices at www.statmodel.com.
+    See chi-square difference testing in the index of the Mplus User's Guide.
+
+**  The degrees of freedom for MLMV, ULSMV and WLSMV are estimated according to
+    a formula given in the Mplus Technical Appendices at www.statmodel.com.
+    See degrees of freedom in the index of the Mplus User's Guide.
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1504.473
+          Degrees of Freedom                    18
+          P-Value                           0.0000
+
+CFI/TLI
+
+          CFI                                0.920
+          TLI                                0.952
+
+Number of Free Parameters                       55
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.105
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              1.104
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ NFCOG    BY
+    OPEN93             1.000      0.000    999.000    999.000
+    OPEN134            1.241      0.090     13.792      0.000
+    OPEN139            1.054      0.088     12.018      0.000
+    OPEN129            1.326      0.089     14.953      0.000
+    OPEN63             0.770      0.088      8.766      0.000
+    OPEN144            1.095      0.082     13.379      0.000
+    OPEN104            1.182      0.092     12.901      0.000
+    OPEN135            0.640      0.085      7.516      0.000
+    OPEN58             1.077      0.093     11.545      0.000
+    OPEN145            1.146      0.091     12.644      0.000
+    OPEN29             1.223      0.082     14.843      0.000
+
+ Thresholds
+    OPEN93$1          -1.874      0.131    -14.278      0.000
+    OPEN93$2          -1.015      0.080    -12.697      0.000
+    OPEN93$3           0.052      0.066      0.789      0.430
+    OPEN93$4           0.905      0.077     11.783      0.000
+    OPEN134$1         -1.765      0.121    -14.596      0.000
+    OPEN134$2         -1.267      0.089    -14.187      0.000
+    OPEN134$3         -0.228      0.067     -3.418      0.001
+    OPEN134$4          0.487      0.069      7.074      0.000
+    OPEN139$1         -1.961      0.141    -13.935      0.000
+    OPEN139$2         -1.166      0.085    -13.691      0.000
+    OPEN139$3         -0.164      0.066     -2.473      0.013
+    OPEN139$4          0.805      0.074     10.823      0.000
+    OPEN129$1         -2.201      0.174    -12.655      0.000
+    OPEN129$2         -1.461      0.099    -14.735      0.000
+    OPEN129$3         -0.441      0.068     -6.451      0.000
+    OPEN129$4          0.617      0.071      8.720      0.000
+    OPEN63$1          -0.969      0.079    -12.338      0.000
+    OPEN63$2          -0.403      0.068     -5.930      0.000
+    OPEN63$3           0.380      0.068      5.617      0.000
+    OPEN63$4           0.980      0.079     12.429      0.000
+    OPEN144$1         -2.288      0.189    -12.101      0.000
+    OPEN144$2         -1.461      0.099    -14.735      0.000
+    OPEN144$3         -0.164      0.066     -2.473      0.013
+    OPEN144$4          0.947      0.078     12.155      0.000
+    OPEN104$1         -1.961      0.141    -13.935      0.000
+    OPEN104$2         -1.332      0.092    -14.427      0.000
+    OPEN104$3         -0.285      0.067     -4.258      0.000
+    OPEN104$4          0.600      0.070      8.515      0.000
+    OPEN135$1         -1.703      0.116    -14.718      0.000
+    OPEN135$2         -0.748      0.073    -10.231      0.000
+    OPEN135$3          0.366      0.068      5.409      0.000
+    OPEN135$4          1.222      0.087     13.985      0.000
+    OPEN58$1          -2.067      0.154    -13.429      0.000
+    OPEN58$2          -1.461      0.099    -14.735      0.000
+    OPEN58$3          -0.410      0.068     -6.035      0.000
+    OPEN58$4           0.300      0.067      4.467      0.000
+    OPEN145$1         -2.774      0.325     -8.538      0.000
+    OPEN145$2         -2.395      0.211    -11.361      0.000
+    OPEN145$3         -0.757      0.073    -10.331      0.000
+    OPEN145$4          0.366      0.068      5.409      0.000
+    OPEN29$1          -2.395      0.211    -11.361      0.000
+    OPEN29$2          -1.620      0.109    -14.807      0.000
+    OPEN29$3          -0.235      0.067     -3.523      0.000
+    OPEN29$4           0.915      0.077     11.877      0.000
+
+ Variances
+    NFCOG              0.318      0.040      7.954      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ NFCOG    BY
+    OPEN93             0.564      0.035     15.907      0.000
+    OPEN134            0.700      0.033     21.491      0.000
+    OPEN139            0.595      0.035     17.149      0.000
+    OPEN129            0.748      0.026     28.783      0.000
+    OPEN63             0.435      0.045      9.726      0.000
+    OPEN144            0.617      0.034     18.172      0.000
+    OPEN104            0.666      0.034     19.700      0.000
+    OPEN135            0.361      0.043      8.445      0.000
+    OPEN58             0.608      0.037     16.318      0.000
+    OPEN145            0.647      0.034     18.796      0.000
+    OPEN29             0.690      0.031     22.217      0.000
+
+ Thresholds
+    OPEN93$1          -1.874      0.131    -14.278      0.000
+    OPEN93$2          -1.015      0.080    -12.697      0.000
+    OPEN93$3           0.052      0.066      0.789      0.430
+    OPEN93$4           0.905      0.077     11.783      0.000
+    OPEN134$1         -1.765      0.121    -14.596      0.000
+    OPEN134$2         -1.267      0.089    -14.187      0.000
+    OPEN134$3         -0.228      0.067     -3.418      0.001
+    OPEN134$4          0.487      0.069      7.074      0.000
+    OPEN139$1         -1.961      0.141    -13.935      0.000
+    OPEN139$2         -1.166      0.085    -13.691      0.000
+    OPEN139$3         -0.164      0.066     -2.473      0.013
+    OPEN139$4          0.805      0.074     10.823      0.000
+    OPEN129$1         -2.201      0.174    -12.655      0.000
+    OPEN129$2         -1.461      0.099    -14.735      0.000
+    OPEN129$3         -0.441      0.068     -6.451      0.000
+    OPEN129$4          0.617      0.071      8.720      0.000
+    OPEN63$1          -0.969      0.079    -12.338      0.000
+    OPEN63$2          -0.403      0.068     -5.930      0.000
+    OPEN63$3           0.380      0.068      5.617      0.000
+    OPEN63$4           0.980      0.079     12.429      0.000
+    OPEN144$1         -2.288      0.189    -12.101      0.000
+    OPEN144$2         -1.461      0.099    -14.735      0.000
+    OPEN144$3         -0.164      0.066     -2.473      0.013
+    OPEN144$4          0.947      0.078     12.155      0.000
+    OPEN104$1         -1.961      0.141    -13.935      0.000
+    OPEN104$2         -1.332      0.092    -14.427      0.000
+    OPEN104$3         -0.285      0.067     -4.258      0.000
+    OPEN104$4          0.600      0.070      8.515      0.000
+    OPEN135$1         -1.703      0.116    -14.718      0.000
+    OPEN135$2         -0.748      0.073    -10.231      0.000
+    OPEN135$3          0.366      0.068      5.409      0.000
+    OPEN135$4          1.222      0.087     13.985      0.000
+    OPEN58$1          -2.067      0.154    -13.429      0.000
+    OPEN58$2          -1.461      0.099    -14.735      0.000
+    OPEN58$3          -0.410      0.068     -6.035      0.000
+    OPEN58$4           0.300      0.067      4.467      0.000
+    OPEN145$1         -2.774      0.325     -8.538      0.000
+    OPEN145$2         -2.395      0.211    -11.361      0.000
+    OPEN145$3         -0.757      0.073    -10.331      0.000
+    OPEN145$4          0.366      0.068      5.409      0.000
+    OPEN29$1          -2.395      0.211    -11.361      0.000
+    OPEN29$2          -1.620      0.109    -14.807      0.000
+    OPEN29$3          -0.235      0.067     -3.523      0.000
+    OPEN29$4           0.915      0.077     11.877      0.000
+
+ Variances
+    NFCOG              1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    OPEN93             0.318      0.040      7.954      0.000      0.682
+    OPEN134            0.490      0.046     10.746      0.000      0.510
+    OPEN139            0.354      0.041      8.575      0.000      0.646
+    OPEN129            0.560      0.039     14.391      0.000      0.440
+    OPEN63             0.189      0.039      4.863      0.000      0.811
+    OPEN144            0.381      0.042      9.086      0.000      0.619
+    OPEN104            0.444      0.045      9.850      0.000      0.556
+    OPEN135            0.130      0.031      4.222      0.000      0.870
+    OPEN58             0.369      0.045      8.159      0.000      0.631
+    OPEN145            0.418      0.044      9.398      0.000      0.582
+    OPEN29             0.476      0.043     11.108      0.000      0.524
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.400E-03
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     4.000
+
+                            M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+No modification indices above the minimum value.
+
+
+
+     Beginning Time:  13:48:27
+        Ending Time:  13:48:27
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2008 Muthen & Muthen

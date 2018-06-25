@@ -1,0 +1,185 @@
+VERSION 1.1.0
+INPUT
+TITLE:
+
+
+DATA:
+FILE IS  "ARI Data 2009_Openness CFA Sample.txt";
+VARIABLE:
+Names are
+respid
+open145
+open42
+open10
+open15
+open134
+open900
+open109
+open88
+open46
+open1
+open99
+open11
+open116
+open4
+open112
+open40
+open9
+open13
+open118
+open121
+open151
+open90
+open5
+open87
+open30
+open146
+open43
+open139
+open3
+open48
+open22
+open125
+open60
+open32
+open49
+open12
+open106
+open96
+open111
+open130
+open133
+open19
+open104
+open135
+open80
+open143
+open115
+open59
+open78
+open75
+open102
+open107
+open76
+open94
+open71
+open7
+open44
+open21
+open105
+open18
+open113
+open148
+open64
+open50
+open89
+open110
+open152
+open129
+open8
+open53
+open63
+open66
+open27
+open83
+open95
+open70
+open86
+open85
+open136
+open16
+open29
+open25
+open147
+open144
+open72
+open140
+open55
+open61
+open56
+open58
+open901
+open37
+open74
+open91
+open97
+open93
+open67
+open20
+open17
+open127
+open2
+open124
+open114
+open6
+open28
+open92
+open132
+open77
+open45
+open31
+open35
+Filter
+filter_
+;
+USEVARIABLES ARE
+open19
+open87
+open89
+open130
+open95
+;
+MISSING ARE ALL (-99);
+categorical are all;
+ANALYSIS:
+ESTIMATOR IS WLSMV;
+OUTPUT:
+ STDYX MODINDICES(4);
+SAVEDATA:
+file is o5.txt;
+save = fscores;
+MODEL:
+oarts by
+open19
+open87
+open89
+open130
+open95
+;
+INPUT_END
+2
+2
+0
+2
+WLSMV
+1
+GENERAL
+0
+5
+1
+0
+open19 open87 open89 open130 open95 oarts
+1
+-1 -1 -1 -1 -1 0
+0
+1
+oarts
+open19 open87 open89 open130 open95
+1 1 oarts open19    1.000    0.000
+1 1 oarts open87    1.109    0.047
+1 1 oarts open89    0.817    0.041
+1 1 oarts open130   -0.595    0.049
+1 1 oarts open95    0.662    0.049
+5 1 oarts    0.694    0.040
+11 1 oarts open19    0.833    0.024
+11 1 oarts open87    0.924    0.021
+11 1 oarts open89    0.681    0.032
+11 1 oarts open130   -0.496    0.040
+11 1 oarts open95    0.552    0.040
+15 1 oarts    1.000    0.000
+31 1 oarts open19    0.833    0.024
+31 1 oarts open87    0.924    0.021
+31 1 oarts open89    0.681    0.032
+31 1 oarts open130   -0.496    0.040
+31 1 oarts open95    0.552    0.040
+35 1 oarts    1.000    0.000

@@ -1,0 +1,496 @@
+Mplus VERSION 5.2
+MUTHEN & MUTHEN
+01/20/2012   1:40 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  DATA:
+  FILE IS  "ARI Data 2009_Openness CFA Sample.txt";
+  Variable:
+  Names are
+  respid
+  open145
+  open42
+  open10
+  open15
+  open134
+  open900
+  open109
+  open88
+  open46
+  open1
+  open99
+  open11
+  open116
+  open4
+  open112
+  open40
+  open9
+  open13
+  open118
+  open121
+  open151
+  open90
+  open5
+  open87
+  open30
+  open146
+  open43
+  open139
+  open3
+  open48
+  open22
+  open125
+  open60
+  open32
+  open49
+  open12
+  open106
+  open96
+  open111
+  open130
+  open133
+  open19
+  open104
+  open135
+  open80
+  open143
+  open115
+  open59
+  open78
+  open75
+  open102
+  open107
+  open76
+  open94
+  open71
+  open7
+  open44
+  open21
+  open105
+  open18
+  open113
+  open148
+  open64
+  open50
+  open89
+  open110
+  open152
+  open129
+  open8
+  open53
+  open63
+  open66
+  open27
+  open83
+  open95
+  open70
+  open86
+  open85
+  open136
+  open16
+  open29
+  open25
+  open147
+  open144
+  open72
+  open140
+  open55
+  open61
+  open56
+  open58
+  open901
+  open37
+  open74
+  open91
+  open97
+  open93
+  open67
+  open20
+  open17
+  open127
+  open2
+  open124
+  open114
+  open6
+  open28
+  open92
+  open132
+  open77
+  open45
+  open31
+  open35
+  Filter
+  filter_
+  ;
+
+  USEVARIABLES ARE
+  open87
+  open19
+  open130
+  open89
+  open95
+  open27
+  open8
+  open132
+  ;
+
+
+  MISSING ARE ALL (-99);
+  categorical are all;
+
+  Model:
+  arts BY
+  open87
+  open19
+  open130
+  open89
+  open95
+  open27
+  open8
+  open132
+  ;
+
+
+  Analysis:
+  ESTIMATOR IS WLSMV;
+
+  OUTPUT: STDYX MODINDICES(4);
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  2
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         361
+
+Number of dependent variables                                    8
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   OPEN87      OPEN19      OPEN130     OPEN89      OPEN95      OPEN27
+   OPEN8       OPEN132
+
+Continuous latent variables
+   ARTS
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+
+Input data file(s)
+  ARI Data 2009_Openness CFA Sample.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              OPEN87        OPEN19        OPEN130       OPEN89        OPEN95
+              ________      ________      ________      ________      ________
+ OPEN87         1.000
+ OPEN19         1.000         1.000
+ OPEN130        1.000         1.000         1.000
+ OPEN89         1.000         1.000         1.000         1.000
+ OPEN95         1.000         1.000         1.000         1.000         1.000
+ OPEN27         1.000         1.000         1.000         1.000         1.000
+ OPEN8          1.000         1.000         1.000         1.000         1.000
+ OPEN132        1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              OPEN27        OPEN8         OPEN132
+              ________      ________      ________
+ OPEN27         1.000
+ OPEN8          1.000         1.000
+ OPEN132        1.000         1.000         1.000
+
+
+SUMMARY OF CATEGORICAL DATA PROPORTIONS
+
+    OPEN87
+      Category 1    0.080
+      Category 2    0.205
+      Category 3    0.249
+      Category 4    0.216
+      Category 5    0.249
+    OPEN19
+      Category 1    0.061
+      Category 2    0.158
+      Category 3    0.285
+      Category 4    0.260
+      Category 5    0.235
+    OPEN130
+      Category 1    0.169
+      Category 2    0.296
+      Category 3    0.332
+      Category 4    0.125
+      Category 5    0.078
+    OPEN89
+      Category 1    0.169
+      Category 2    0.208
+      Category 3    0.258
+      Category 4    0.175
+      Category 5    0.191
+    OPEN95
+      Category 1    0.075
+      Category 2    0.166
+      Category 3    0.307
+      Category 4    0.255
+      Category 5    0.197
+    OPEN27
+      Category 1    0.205
+      Category 2    0.316
+      Category 3    0.324
+      Category 4    0.116
+      Category 5    0.039
+    OPEN8
+      Category 1    0.025
+      Category 2    0.116
+      Category 3    0.360
+      Category 4    0.283
+      Category 5    0.216
+    OPEN132
+      Category 1    0.050
+      Category 2    0.213
+      Category 3    0.291
+      Category 4    0.269
+      Category 5    0.177
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+TESTS OF MODEL FIT
+
+Chi-Square Test of Model Fit
+
+          Value                             51.257*
+          Degrees of Freedom                    16**
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference tests.  MLM, MLR and WLSM chi-square difference
+    testing is described in the Mplus Technical Appendices at www.statmodel.com.
+    See chi-square difference testing in the index of the Mplus User's Guide.
+
+**  The degrees of freedom for MLMV, ULSMV and WLSMV are estimated according to
+    a formula given in the Mplus Technical Appendices at www.statmodel.com.
+    See degrees of freedom in the index of the Mplus User's Guide.
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1312.060
+          Degrees of Freedom                    12
+          P-Value                           0.0000
+
+CFI/TLI
+
+          CFI                                0.973
+          TLI                                0.980
+
+Number of Free Parameters                       40
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.078
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              0.748
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ ARTS     BY
+    OPEN87             1.000      0.000    999.000    999.000
+    OPEN19             0.939      0.036     25.887      0.000
+    OPEN130           -0.545      0.046    -11.889      0.000
+    OPEN89             0.765      0.040     19.250      0.000
+    OPEN95             0.602      0.045     13.429      0.000
+    OPEN27             0.300      0.054      5.521      0.000
+    OPEN8              0.609      0.046     13.201      0.000
+    OPEN132            0.346      0.052      6.644      0.000
+
+ Thresholds
+    OPEN87$1          -1.403      0.096    -14.624      0.000
+    OPEN87$2          -0.567      0.070     -8.105      0.000
+    OPEN87$3           0.087      0.066      1.316      0.188
+    OPEN87$4           0.677      0.072      9.430      0.000
+    OPEN19$1          -1.547      0.104    -14.815      0.000
+    OPEN19$2          -0.776      0.074    -10.528      0.000
+    OPEN19$3           0.010      0.066      0.158      0.875
+    OPEN19$4           0.721      0.073      9.932      0.000
+    OPEN130$1         -0.958      0.078    -12.247      0.000
+    OPEN130$2         -0.087      0.066     -1.316      0.188
+    OPEN130$3          0.834      0.075     11.115      0.000
+    OPEN130$4          1.422      0.097     14.665      0.000
+    OPEN89$1          -0.958      0.078    -12.247      0.000
+    OPEN89$2          -0.314      0.067     -4.677      0.000
+    OPEN89$3           0.343      0.067      5.095      0.000
+    OPEN89$4           0.874      0.076     11.499      0.000
+    OPEN95$1          -1.441      0.098    -14.702      0.000
+    OPEN95$2          -0.703      0.072     -9.732      0.000
+    OPEN95$3           0.122      0.066      1.842      0.066
+    OPEN95$4           0.854      0.075     11.308      0.000
+    OPEN27$1          -0.824      0.075    -11.018      0.000
+    OPEN27$2           0.052      0.066      0.789      0.430
+    OPEN27$3           1.015      0.080     12.697      0.000
+    OPEN27$4           1.765      0.121     14.596      0.000
+    OPEN8$1           -1.961      0.141    -13.935      0.000
+    OPEN8$2           -1.075      0.082    -13.128      0.000
+    OPEN8$3            0.003      0.066      0.053      0.958
+    OPEN8$4            0.786      0.074     10.627      0.000
+    OPEN132$1         -1.646      0.111    -14.788      0.000
+    OPEN132$2         -0.634      0.071     -8.923      0.000
+    OPEN132$3          0.136      0.066      2.052      0.040
+    OPEN132$4          0.926      0.077     11.970      0.000
+
+ Variances
+    ARTS               0.816      0.037     22.235      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ ARTS     BY
+    OPEN87             0.903      0.020     44.470      0.000
+    OPEN19             0.848      0.022     37.815      0.000
+    OPEN130           -0.493      0.041    -11.941      0.000
+    OPEN89             0.691      0.032     21.429      0.000
+    OPEN95             0.544      0.040     13.608      0.000
+    OPEN27             0.271      0.049      5.559      0.000
+    OPEN8              0.550      0.040     13.835      0.000
+    OPEN132            0.313      0.047      6.629      0.000
+
+ Thresholds
+    OPEN87$1          -1.403      0.096    -14.624      0.000
+    OPEN87$2          -0.567      0.070     -8.105      0.000
+    OPEN87$3           0.087      0.066      1.316      0.188
+    OPEN87$4           0.677      0.072      9.430      0.000
+    OPEN19$1          -1.547      0.104    -14.815      0.000
+    OPEN19$2          -0.776      0.074    -10.528      0.000
+    OPEN19$3           0.010      0.066      0.158      0.875
+    OPEN19$4           0.721      0.073      9.932      0.000
+    OPEN130$1         -0.958      0.078    -12.247      0.000
+    OPEN130$2         -0.087      0.066     -1.316      0.188
+    OPEN130$3          0.834      0.075     11.115      0.000
+    OPEN130$4          1.422      0.097     14.665      0.000
+    OPEN89$1          -0.958      0.078    -12.247      0.000
+    OPEN89$2          -0.314      0.067     -4.677      0.000
+    OPEN89$3           0.343      0.067      5.095      0.000
+    OPEN89$4           0.874      0.076     11.499      0.000
+    OPEN95$1          -1.441      0.098    -14.702      0.000
+    OPEN95$2          -0.703      0.072     -9.732      0.000
+    OPEN95$3           0.122      0.066      1.842      0.066
+    OPEN95$4           0.854      0.075     11.308      0.000
+    OPEN27$1          -0.824      0.075    -11.018      0.000
+    OPEN27$2           0.052      0.066      0.789      0.430
+    OPEN27$3           1.015      0.080     12.697      0.000
+    OPEN27$4           1.765      0.121     14.596      0.000
+    OPEN8$1           -1.961      0.141    -13.935      0.000
+    OPEN8$2           -1.075      0.082    -13.128      0.000
+    OPEN8$3            0.003      0.066      0.053      0.958
+    OPEN8$4            0.786      0.074     10.627      0.000
+    OPEN132$1         -1.646      0.111    -14.788      0.000
+    OPEN132$2         -0.634      0.071     -8.923      0.000
+    OPEN132$3          0.136      0.066      2.052      0.040
+    OPEN132$4          0.926      0.077     11.970      0.000
+
+ Variances
+    ARTS               1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    OPEN87             0.816      0.037     22.235      0.000      0.184
+    OPEN19             0.719      0.038     18.908      0.000      0.281
+    OPEN130            0.243      0.041      5.970      0.000      0.757
+    OPEN89             0.478      0.045     10.715      0.000      0.522
+    OPEN95             0.296      0.043      6.804      0.000      0.704
+    OPEN27             0.073      0.026      2.779      0.005      0.927
+    OPEN8              0.302      0.044      6.918      0.000      0.698
+    OPEN132            0.098      0.029      3.315      0.001      0.902
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.745E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     4.000
+
+                            M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+No modification indices above the minimum value.
+
+
+
+     Beginning Time:  13:40:32
+        Ending Time:  13:40:33
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2008 Muthen & Muthen

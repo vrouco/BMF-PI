@@ -1,0 +1,391 @@
+Mplus VERSION 7.1
+MUTHEN & MUTHEN
+04/15/2015   1:39 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  DATA:
+  FILE IS  "ARI Data 2009_Openness CFA Sample.txt";
+  Variable:
+  Names are
+  respid
+  open145
+  open42
+  open10
+  open15
+  open134
+  open900
+  open109
+  open88
+  open46
+  open1
+  open99
+  open11
+  open116
+  open4
+  open112
+  open40
+  open9
+  open13
+  open118
+  open121
+  open151
+  open90
+  open5
+  open87
+  open30
+  open146
+  open43
+  open139
+  open3
+  open48
+  open22
+  open125
+  open60
+  open32
+  open49
+  open12
+  open106
+  open96
+  open111
+  open130
+  open133
+  open19
+  open104
+  open135
+  open80
+  open143
+  open115
+  open59
+  open78
+  open75
+  open102
+  open107
+  open76
+  open94
+  open71
+  open7
+  open44
+  open21
+  open105
+  open18
+  open113
+  open148
+  open64
+  open50
+  open89
+  open110
+  open152
+  open129
+  open8
+  open53
+  open63
+  open66
+  open27
+  open83
+  open95
+  open70
+  open86
+  open85
+  open136
+  open16
+  open29
+  open25
+  open147
+  open144
+  open72
+  open140
+  open55
+  open61
+  open56
+  open58
+  open901
+  open37
+  open74
+  open91
+  open97
+  open93
+  open67
+  open20
+  open17
+  open127
+  open2
+  open124
+  open114
+  open6
+  open28
+  open92
+  open132
+  open77
+  open45
+  open31
+  open35
+  Filter
+  filter_
+  ;
+
+  USEVARIABLES ARE
+  open85
+  open111
+  open30
+  ;
+
+  MISSING ARE ALL (-99);
+  categorical are all;
+
+  Model:
+  intelle by
+  open85
+  open111
+  open30
+  ;
+
+  Analysis:
+  ESTIMATOR IS WLSMV;
+
+  OUTPUT: STDYX MODINDICES(4);
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  2
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         361
+
+Number of dependent variables                                    3
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   OPEN85      OPEN111     OPEN30
+
+Continuous latent variables
+   INTELLE
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+
+Input data file(s)
+  ARI Data 2009_Openness CFA Sample.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              OPEN85        OPEN111       OPEN30
+              ________      ________      ________
+ OPEN85         1.000
+ OPEN111        1.000         1.000
+ OPEN30         1.000         1.000         1.000
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    OPEN85
+      Category 1    0.011        4.000
+      Category 2    0.055       20.000
+      Category 3    0.252       91.000
+      Category 4    0.435      157.000
+      Category 5    0.247       89.000
+    OPEN111
+      Category 1    0.003        1.000
+      Category 2    0.061       22.000
+      Category 3    0.332      120.000
+      Category 4    0.413      149.000
+      Category 5    0.191       69.000
+    OPEN30
+      Category 1    0.017        6.000
+      Category 2    0.119       43.000
+      Category 3    0.327      118.000
+      Category 4    0.368      133.000
+      Category 5    0.169       61.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       15
+
+Chi-Square Test of Model Fit
+
+          Value                              0.000*
+          Degrees of Freedom                     0
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.000
+          90 Percent C.I.                    0.000  0.000
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                1.000
+          TLI                                1.000
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1157.441
+          Degrees of Freedom                     3
+          P-Value                           0.0000
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              0.000
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ INTELLE  BY
+    OPEN85             1.000      0.000    999.000    999.000
+    OPEN111            1.069      0.054     19.767      0.000
+    OPEN30             0.820      0.044     18.671      0.000
+
+ Thresholds
+    OPEN85$1          -2.288      0.189    -12.101      0.000
+    OPEN85$2          -1.503      0.102    -14.786      0.000
+    OPEN85$3          -0.472      0.069     -6.866      0.000
+    OPEN85$4           0.685      0.072      9.531      0.000
+    OPEN111$1         -2.774      0.325     -8.538      0.000
+    OPEN111$2         -1.524      0.103    -14.804      0.000
+    OPEN111$3         -0.263      0.067     -3.943      0.000
+    OPEN111$4          0.874      0.076     11.499      0.000
+    OPEN30$1          -2.129      0.163    -13.086      0.000
+    OPEN30$2          -1.100      0.083    -13.294      0.000
+    OPEN30$3          -0.094      0.066     -1.421      0.155
+    OPEN30$4           0.958      0.078     12.247      0.000
+
+ Variances
+    INTELLE            0.671      0.043     15.433      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ INTELLE  BY
+    OPEN85             0.819      0.027     30.867      0.000
+    OPEN111            0.876      0.029     30.319      0.000
+    OPEN30             0.671      0.034     19.801      0.000
+
+ Thresholds
+    OPEN85$1          -2.288      0.189    -12.101      0.000
+    OPEN85$2          -1.503      0.102    -14.786      0.000
+    OPEN85$3          -0.472      0.069     -6.866      0.000
+    OPEN85$4           0.685      0.072      9.531      0.000
+    OPEN111$1         -2.774      0.325     -8.538      0.000
+    OPEN111$2         -1.524      0.103    -14.804      0.000
+    OPEN111$3         -0.263      0.067     -3.943      0.000
+    OPEN111$4          0.874      0.076     11.499      0.000
+    OPEN30$1          -2.129      0.163    -13.086      0.000
+    OPEN30$2          -1.100      0.083    -13.294      0.000
+    OPEN30$3          -0.094      0.066     -1.421      0.155
+    OPEN30$4           0.958      0.078     12.247      0.000
+
+ Variances
+    INTELLE            1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    OPEN85             0.671      0.043     15.433      0.000      0.329
+    OPEN111            0.768      0.051     15.159      0.000      0.232
+    OPEN30             0.451      0.046      9.901      0.000      0.549
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.494E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     4.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+No modification indices above the minimum value.
+
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    f:\ipip paper\sample_usa\cfa\openness\cfa openness - messmodel intellect.dgm
+
+     Beginning Time:  13:39:45
+        Ending Time:  13:39:45
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

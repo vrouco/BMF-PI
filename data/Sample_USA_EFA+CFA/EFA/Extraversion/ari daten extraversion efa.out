@@ -1,0 +1,344 @@
+Mplus VERSION 5.2
+MUTHEN & MUTHEN
+12/08/2011  10:45 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  DATA:
+  FILE IS  "ARI Daten Extraversion EFA.txt";
+  Variable:
+  Names are
+  respid
+  extra174
+  extra327
+  extra276
+  extra197
+  extra58
+  extra294
+  extra4
+  extra166
+  extra316
+  extra131
+  extra228
+  extra98
+  extra290
+  extra288
+  extra196
+  extra32
+  extra123
+  extra102
+  extra125
+  extra112
+  extra103
+  extra60
+  extra306
+  extra182
+  extra235
+  extra40
+  extra95
+  extra19
+  extra242
+  extra259
+  extra231
+  extra164
+  extra341
+  extra245
+  extra28
+  extra217
+  extra280
+  extra238
+  extra229
+  extra56
+  extra311
+  extra80
+  extra257
+  extra49
+  extra130
+  extra304
+  extra255
+  extra286
+  extra329
+  extra24
+  extra335
+  extra83
+  extra208
+  extra260
+  extra315
+  extra29
+  extra277
+  extra31
+  extra139
+  extra220
+  extra142
+  extra34
+  extra84
+  extra216
+  extra124
+  extra274
+  extra219
+  extra57
+  extra30
+  extra158
+  extra99
+  extra214
+  extra207
+  extra132
+  extra232
+  extra241
+  extra55
+  extra322
+  extra118
+  extra233
+  extra191
+  Filter
+  filter_
+  ;
+
+  USEVARIABLES ARE
+  extra174
+  extra327
+  extra276
+  extra197
+  extra58
+  extra294
+  ;
+
+  MISSING ARE ALL (-99);
+
+  Model:
+  l1  BY  extra174  extra327  extra276  extra197  extra58
+      extra294  ;
+
+
+  Analysis:
+
+  OUTPUT: STDYX;
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  4
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         722
+
+Number of dependent variables                                    6
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Continuous
+   EXTRA174    EXTRA327    EXTRA276    EXTRA197    EXTRA58     EXTRA294
+
+Continuous latent variables
+   L1
+
+
+Estimator                                                       ML
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+
+Input data file(s)
+  ARI Daten Extraversion EFA.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              EXTRA174      EXTRA327      EXTRA276      EXTRA197      EXTRA58
+              ________      ________      ________      ________      ________
+ EXTRA174       1.000
+ EXTRA327       1.000         1.000
+ EXTRA276       1.000         1.000         1.000
+ EXTRA197       1.000         1.000         1.000         1.000
+ EXTRA58        1.000         1.000         1.000         1.000         1.000
+ EXTRA294       1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              EXTRA294
+              ________
+ EXTRA294       1.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+TESTS OF MODEL FIT
+
+Chi-Square Test of Model Fit
+
+          Value                             92.509
+          Degrees of Freedom                     9
+          P-Value                           0.0000
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            792.628
+          Degrees of Freedom                    15
+          P-Value                           0.0000
+
+CFI/TLI
+
+          CFI                                0.893
+          TLI                                0.821
+
+Loglikelihood
+
+          H0 Value                       -5652.528
+          H1 Value                       -5606.273
+
+Information Criteria
+
+          Number of Free Parameters             18
+          Akaike (AIC)                   11341.056
+          Bayesian (BIC)                 11423.533
+          Sample-Size Adjusted BIC       11366.377
+            (n* = (n + 2) / 24)
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.113
+          90 Percent C.I.                    0.093  0.135
+          Probability RMSEA <= .05           0.000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.054
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ L1       BY
+    EXTRA174           1.000      0.000    999.000    999.000
+    EXTRA327           1.445      0.141     10.220      0.000
+    EXTRA276          -1.588      0.167     -9.536      0.000
+    EXTRA197           0.290      0.103      2.814      0.005
+    EXTRA58           -1.599      0.150    -10.679      0.000
+    EXTRA294           1.641      0.162     10.126      0.000
+
+ Intercepts
+    EXTRA174           4.066      0.031    131.459      0.000
+    EXTRA327           3.691      0.037    100.007      0.000
+    EXTRA276           2.598      0.040     64.213      0.000
+    EXTRA197           3.501      0.036     97.484      0.000
+    EXTRA58            2.104      0.035     60.653      0.000
+    EXTRA294           3.429      0.038     90.720      0.000
+
+ Variances
+    L1                 0.165      0.028      6.002      0.000
+
+ Residual Variances
+    EXTRA174           0.526      0.031     16.909      0.000
+    EXTRA327           0.639      0.041     15.446      0.000
+    EXTRA276           0.765      0.050     15.368      0.000
+    EXTRA197           0.918      0.049     18.895      0.000
+    EXTRA58            0.446      0.035     12.788      0.000
+    EXTRA294           0.587      0.042     13.875      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ L1       BY
+    EXTRA174           0.489      0.035     13.876      0.000
+    EXTRA327           0.592      0.032     18.611      0.000
+    EXTRA276          -0.594      0.032    -18.634      0.000
+    EXTRA197           0.122      0.043      2.843      0.004
+    EXTRA58           -0.697      0.029    -24.370      0.000
+    EXTRA294           0.657      0.030     21.860      0.000
+
+ Intercepts
+    EXTRA174           4.892      0.134     36.505      0.000
+    EXTRA327           3.722      0.105     35.522      0.000
+    EXTRA276           2.390      0.073     32.703      0.000
+    EXTRA197           3.628      0.102     35.405      0.000
+    EXTRA58            2.257      0.070     32.202      0.000
+    EXTRA294           3.376      0.096     35.049      0.000
+
+ Variances
+    L1                 1.000      0.000    999.000    999.000
+
+ Residual Variances
+    EXTRA174           0.761      0.034     22.074      0.000
+    EXTRA327           0.649      0.038     17.243      0.000
+    EXTRA276           0.647      0.038     17.105      0.000
+    EXTRA197           0.985      0.010     93.954      0.000
+    EXTRA58            0.514      0.040     12.868      0.000
+    EXTRA294           0.569      0.039     14.413      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    EXTRA174           0.239      0.034      6.938      0.000
+    EXTRA327           0.351      0.038      9.306      0.000
+    EXTRA276           0.353      0.038      9.317      0.000
+    EXTRA197           0.015      0.010      1.421      0.155
+    EXTRA58            0.486      0.040     12.185      0.000
+    EXTRA294           0.431      0.039     10.930      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.179E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+     Beginning Time:  22:45:25
+        Ending Time:  22:45:26
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2008 Muthen & Muthen
