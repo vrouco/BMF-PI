@@ -1,10 +1,15 @@
+
+create.table3 <- function(){
+
+
 library(here)
 library(foreign)
 library(lavaan)
 domains <- c("Agreeableness", "Conscientiousness", "Extraversion", "Neuroticism", "Openness")
 little <- c("agree", "con", "e", "n", "open")
 
-mytable <- tibble(facets=character(),
+mytable <- tibble(domains=character(),
+                  facets=character(),
                 cfi=as.numeric(NA),
                 rmsea=as.numeric(NA),
                 srmr=as.numeric(NA))
@@ -29,12 +34,20 @@ for(i in 1:5){
     for(j in 1:length(facets)){
       facets[j] <- sub(paste("CFA ",domains[i], " - ", sep=""), "", facets[j])
       facets[j] <- sub("_5 items.inp", "", facets[j])
+      facets[j] <- sub("_3 items.inp", "", facets[j])
     }
   for(j in 1:length(files.here)){
     model <- mplus2lavaan(files.here[j], run = F)$model
-    this.table[j,2:4] <- round(fitMeasures(cfa(model, get(domains[i]), 
+    this.table[j,3:5] <- round(fitMeasures(cfa(model, get(domains[i]), 
                                           ordered=domains[i]), c("cfi", "rmsea", "srmr")), digits=3)
-    this.table[j,1] <- facets[j]
+    this.table[j,2] <- facets[j]
+    this.table[j, 1] <- domains[i]
   }
   mytable <- rbind(mytable, this.table)
 }
+mytable <- mytable[-which(duplicated(mytable)),]
+return(mytable)
+}
+
+
+table3 <- create.table3()
