@@ -156,7 +156,7 @@ To examine the nomological structure of the facets and domains to external const
 ## 2.2. Results
 
 ### Results of EFA
-In Table 1 you can see model fits for the chosen facet model for each domain as well as Eigenvalues and results from MAP and PA test.
+In *Table 2* you can see model fits for the chosen facet model for each domain as well as Eigenvalues and results from MAP and PA test.
 
 To ensure that each facet is homogeneous and therefore, to reduce the risk of cross domain loadings, items with factor loadings less than .30 were eliminated. This was only done when item content was also judged as being non-central to the domain in question (Ziegler, 2014). 
 
@@ -174,7 +174,7 @@ The items to each facet are listed in the appendix (A).
 
 ### Results of CFA and ESEM. 
 
-All measurement models for the facets were fitting well, results can be found in Table 2.
+All measurement models for the facets were fitting well, results can be found in Table 3.
 
 ```{r table3}
 library(foreign)
@@ -185,7 +185,7 @@ library(lavaan)
 ```
 
 
-The exploratory structural equation model (ESEM) of the final model with all five domains fits well with CFI = .87, RMSEA = .072, SRMR = .036. As you can see in Table 3 nearly all facets load significantly on their intended domain, but sometimes have loadings on other domains also, which are conform with the theory and the facet content.
+The exploratory structural equation model (ESEM) of the final model with all five domains fits well with CFI = .87, RMSEA = .072, SRMR = .036. As you can see in Table 4 nearly all facets load significantly on their intended domain, but sometimes have loadings on other domains also, which are conform with the theory and the facet content.
 
 
 # Study 2 – German Translation
