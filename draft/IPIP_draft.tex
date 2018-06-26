@@ -1,5 +1,5 @@
-\documentclass[,man]{apa6}
-\usepackage{lmodern}
+\documentclass[man]{apa6}
+
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
@@ -9,106 +9,139 @@
 \else % if luatex or xelatex
   \ifxetex
     \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
   \else
     \usepackage{fontspec}
   \fi
-  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
 \fi
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
-\IfFileExists{microtype.sty}{%
-\usepackage{microtype}
-\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
-\usepackage{hyperref}
-\hypersetup{unicode=true,
-            pdftitle={A multi-faceted, open source, measure of personality},
-            pdfauthor={Victor Rouco, Anja Cengia, \& Matthias Ziegler},
-            pdfkeywords={keywords},
-            pdfborder={0 0 0},
-            breaklinks=true}
-\urlstyle{same}  % don't use monospace font for urls
-\usepackage{graphicx,grffile}
-\makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
-\setlength{\emergencystretch}{3em}  % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{0}
-% Redefines (sub)paragraphs to behave more like sections
-\ifx\paragraph\undefined\else
-\let\oldparagraph\paragraph
-\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
-\fi
-\ifx\subparagraph\undefined\else
-\let\oldsubparagraph\subparagraph
-\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
-\fi
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
 
-%%% Use protect on footnotes to avoid problems with footnotes in titles
-\let\rmarkdownfootnote\footnote%
-\def\footnote{\protect\rmarkdownfootnote}
-
-
-  \title{A multi-faceted, open source, measure of personality}
-    \author{Victor Rouco\textsuperscript{1,2}, Anja Cengia\textsuperscript{3}, \&
-Matthias Ziegler\textsuperscript{3}}
-    \date{}
-  
-\shorttitle{HU instrument}
-\authornote{Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
-
-Enter author note here.
-
-
-Correspondence concerning this article should be addressed to Victor Rouco, Postal address. E-mail: victorrouco@ub.edu}
-\affiliation{
-\vspace{0.5cm}
-\textsuperscript{1} Universitat de Barcelona\\\textsuperscript{2} Institut de Neurociencies Barcelona\\\textsuperscript{3} Humboldt Universität zu Berlin}
-\abstract{Enter abstract here. Each new line herein must be indented, like this line.
-}
-\keywords{keywords\newline\indent Word count: X}
-\usepackage{csquotes}
-\usepackage{upgreek}
-\captionsetup{font=singlespacing,justification=justified}
-
-\usepackage{longtable}
+% Table formatting
+\usepackage{longtable, booktabs}
 \usepackage{lscape}
-\usepackage{multirow}
-\usepackage{tabularx}
-\usepackage[flushleft]{threeparttable}
-\usepackage{threeparttablex}
+% \usepackage[counterclockwise]{rotating}   % Landscape page setup for large tables
+\usepackage{multirow}		% Table styling
+\usepackage{tabularx}		% Control Column width
+\usepackage[flushleft]{threeparttable}	% Allows for three part tables with a specified notes section
+\usepackage{threeparttablex}            % Lets threeparttable work with longtable
 
-\newenvironment{lltable}{\begin{landscape}\begin{center}\begin{ThreePartTable}}{\end{ThreePartTable}\end{center}\end{landscape}}
+% Create new environments so endfloat can handle them
+% \newenvironment{ltable}
+%   {\begin{landscape}\begin{center}\begin{threeparttable}}
+%   {\end{threeparttable}\end{center}\end{landscape}}
 
+\newenvironment{lltable}
+  {\begin{landscape}\begin{center}\begin{ThreePartTable}}
+  {\end{ThreePartTable}\end{center}\end{landscape}}
+
+  \usepackage{ifthen} % Only add declarations when endfloat package is loaded
+  \ifthenelse{\equal{\string man}{\string man}}{%
+   \DeclareDelayedFloatFlavor{ThreePartTable}{table} % Make endfloat play with longtable
+   % \DeclareDelayedFloatFlavor{ltable}{table} % Make endfloat play with lscape
+   \DeclareDelayedFloatFlavor{lltable}{table} % Make endfloat play with lscape & longtable
+  }{}%
+
+
+
+% The following enables adjusting longtable caption width to table width
+% Solution found at http://golatex.de/longtable-mit-caption-so-breit-wie-die-tabelle-t15767.html
 \makeatletter
 \newcommand\LastLTentrywidth{1em}
 \newlength\longtablewidth
 \setlength{\longtablewidth}{1in}
-\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef1em{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+\newcommand\getlongtablewidth{%
+ \begingroup
+  \ifcsname LT@\roman{LT@tables}\endcsname
+  \global\longtablewidth=0pt
+  \renewcommand\LT@entry[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}%
+  \@nameuse{LT@\roman{LT@tables}}%
+  \fi
+\endgroup}
 
 
-\DeclareDelayedFloatFlavor{ThreePartTable}{table}
-\DeclareDelayedFloatFlavor{lltable}{table}
-\makeatletter
-\renewcommand{\efloat@iwrite}[1]{\immediate\protected@write\csname efloat@post#1\endcsname{}}
-\makeatother
-\usepackage{lineno}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            pdfauthor={},
+            pdftitle={A multi-faceted, open source, measure of personality},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=black,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
 
-\linenumbers
+\setlength{\parindent}{0pt}
+%\setlength{\parskip}{0pt plus 0pt minus 0pt}
+
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+
+
+% Manuscript styling
+\captionsetup{font=singlespacing,justification=justified}
+\usepackage{csquotes}
+\usepackage{upgreek}
+
+ % Line numbering
+  \usepackage{lineno}
+  \linenumbers
+
+
+\usepackage{tikz} % Variable definition to generate author note
+
+% fix for \tightlist problem in pandoc 1.14
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% Essential manuscript parts
+  \title{A multi-faceted, open source, measure of personality}
+
+  \shorttitle{HU instrument}
+
+
+  \author{Victor Rouco\textsuperscript{1,2}, Anja Cengia\textsuperscript{3}, \& Matthias Ziegler\textsuperscript{3}}
+
+  % \def\affdep{{"", "", ""}}%
+  % \def\affcity{{"", "", ""}}%
+
+  \affiliation{
+    \vspace{0.5cm}
+          \textsuperscript{1} Universitat de Barcelona\\
+          \textsuperscript{2} Institut de Neurociencies Barcelona\\
+          \textsuperscript{3} Humboldt Universität zu Berlin  }
+
+  \authornote{
+    Add complete departmental affiliations for each author here. Each new
+    line herein must be indented, like this line.
+    
+    Enter author note here.
+    
+    Correspondence concerning this article should be addressed to Victor
+    Rouco, Postal address. E-mail:
+    \href{mailto:victorrouco@ub.edu}{\nolinkurl{victorrouco@ub.edu}}
+  }
+
+
+  \abstract{Enter abstract here. Each new line herein must be indented, like this
+line.}
+  \keywords{keywords \\
+
+    \indent Word count: X
+  }
+
+
+
+
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[section]
@@ -125,7 +158,12 @@ Correspondence concerning this article should be addressed to Victor Rouco, Post
 \newtheorem*{remark}{Remark}
 \newtheorem*{solution}{Solution}
 \begin{document}
+
 \maketitle
+
+\setcounter{secnumdepth}{0}
+
+
 
 \hypertarget{introduction}{%
 \section{1. Introduction}\label{introduction}}
@@ -262,11 +300,11 @@ table 1
 
 As shown in table 1, there are many different possibilities of facets
 forming the domains. However, there is still a degree of overlap on the
-facets covered by the different instruments. Soto and John (2009)
-inspected the convergences between the NEO-PI-R and the first version of
-the BFI, suggesting that two constructs per domain were measured at the
-facet level by both inventories. The constructs defined by Soto and John
-(2009) were: Assertiveness and Activity for Extraversion; Altruism and
+facets covered by the different instruments. ({\textbf{???}}) inspected
+the convergences between the NEO-PI-R and the first version of the BFI,
+suggesting that two constructs per domain were measured at the facet
+level by both inventories. The constructs defined by ({\textbf{???}})
+were: Assertiveness and Activity for Extraversion; Altruism and
 Compliance for Agreeableness; Order and Self-Discipline for
 Conscientiousness; Anxiety and Depression for Neuroticism; and
 Aesthetics and Ideas for Openness. The convergence holds for the four
@@ -385,7 +423,7 @@ theoretical correspondence between PD and Big Five facets proposed by
 Costa Jr. and Widiger (1994). Moreover, the PID-5 has prompted the
 elaboration of a number of Five Factor Model Personality Disorders
 (FFMPD) scales to maximize the facet coverage in relation to specific
-PDs (Bagby \& Widiger, 2018).
+PDs ({\textbf{???}}).
 
 Facet analysis and dedicated Big Five questionnaires have been used to
 solve issues like those mentioned in the last paragraph. We propose to
@@ -678,13 +716,6 @@ a facet of Extraversion
 \setlength{\leftskip}{0.5in}
 
 \hypertarget{refs}{}
-\leavevmode\hypertarget{ref-Bagby2018}{}%
-Bagby, R. M., \& Widiger, T. A. (2018). Five factor model personality
-disorder scales: An introduction to a special section on assessment of
-maladaptive variants of the five factor model. \emph{Psychological
-Assessment}, \emph{30}(1), 1--9.
-doi:\href{https://doi.org/10.1037/pas0000523}{10.1037/pas0000523}
-
 \leavevmode\hypertarget{ref-Clark2005}{}%
 Clark, L. A. (2005). Temperament as a unifying basis for personality and
 psychopathology. \emph{Journal of Abnormal Psychology}, \emph{114}(4),
@@ -744,13 +775,6 @@ personality disorder empirical literature: A meta-analytic review.
 \emph{Clinical Psychology Review}, \emph{23}(8), 1055--1085.
 doi:\href{https://doi.org/10.1016/j.cpr.2002.09.001}{10.1016/j.cpr.2002.09.001}
 
-\leavevmode\hypertarget{ref-SotoJohn2009}{}%
-Soto, C. J., \& John, O. P. (2009). Ten facet scales for the Big Five
-Inventory: Convergence with NEO PI-R facets, self-peer agreement, and
-discriminant validity. \emph{Journal of Research in Personality},
-\emph{43}(1), 84--90.
-doi:\href{https://doi.org/10.1016/j.jrp.2008.10.002}{10.1016/j.jrp.2008.10.002}
-
 \leavevmode\hypertarget{ref-Ziegler2010}{}%
 Ziegler, M., Danay, E., Schölmerich, F., \& Bühner, M. (2010).
 Predicting Academic Success with the Big 5 Rated from Different Points
@@ -760,18 +784,21 @@ doi:\href{https://doi.org/10.1002/per}{10.1002/per}
 
 \endgroup
 
-\clearpage
-\makeatletter
-\efloat@restorefloats
-\makeatother
 
 
+
+
+  \clearpage
+  \makeatletter
+  \efloat@restorefloats
+  \makeatother
+  
+  
 \begin{appendix}
 \section{}
 Appendix
 
 \includegraphics{IPIP_draft_files/figure-latex/unnamed-chunk-2-1.pdf}
 \end{appendix}
-
 
 \end{document}
