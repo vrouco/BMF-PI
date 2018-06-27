@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 \documentclass[floatsintext,man]{apa6}
 
+=======
+\documentclass[,man]{apa6}
+\usepackage{lmodern}
+>>>>>>> 98a41102a8f7012d4cd590bc8a3a88253a4695a4
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
@@ -9,16 +14,15 @@
 \else % if luatex or xelatex
   \ifxetex
     \usepackage{mathspec}
-    \usepackage{xltxtra,xunicode}
   \else
     \usepackage{fontspec}
   \fi
-  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
-  \newcommand{\euro}{€}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 \fi
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
+<<<<<<< HEAD
 \IfFileExists{microtype.sty}{\usepackage{microtype}}{}
 
 % Table formatting
@@ -67,75 +71,100 @@
 \fi
 \hypersetup{breaklinks=true,
             pdfauthor={},
+=======
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+>>>>>>> 98a41102a8f7012d4cd590bc8a3a88253a4695a4
             pdftitle={A multi-faceted, open source, measure of personality},
-            colorlinks=true,
-            citecolor=blue,
-            urlcolor=blue,
-            linkcolor=black,
-            pdfborder={0 0 0}}
+            pdfauthor={Victor Rouco, Anja Cengia, \& Matthias Ziegler},
+            pdfkeywords={keywords},
+            pdfborder={0 0 0},
+            breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
-
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
 \setlength{\parindent}{0pt}
-%\setlength{\parskip}{0pt plus 0pt minus 0pt}
-
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
-
-
-% Manuscript styling
-\captionsetup{font=singlespacing,justification=justified}
-\usepackage{csquotes}
-\usepackage{upgreek}
-
- % Line numbering
-  \usepackage{lineno}
-  \linenumbers
-
-
-\usepackage{tikz} % Variable definition to generate author note
-
-% fix for \tightlist problem in pandoc 1.14
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
 
-% Essential manuscript parts
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+
   \title{A multi-faceted, open source, measure of personality}
+    \author{Victor Rouco\textsuperscript{1,2}, Anja Cengia\textsuperscript{3}, \&
+Matthias Ziegler\textsuperscript{3}}
+    \date{}
+  
+\shorttitle{HU instrument}
+\authornote{Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
 
-  \shorttitle{HU instrument}
-
-
-  \author{Victor Rouco\textsuperscript{1,2}, Anja Cengia\textsuperscript{3}, \& Matthias Ziegler\textsuperscript{3}}
-
-  % \def\affdep{{"", "", ""}}%
-  % \def\affcity{{"", "", ""}}%
-
-  \affiliation{
-    \vspace{0.5cm}
-          \textsuperscript{1} Universitat de Barcelona\\
-          \textsuperscript{2} Institut de Neurociencies Barcelona\\
-          \textsuperscript{3} Humboldt Universität zu Berlin  }
-
-  \authornote{
-    Add complete departmental affiliations for each author here. Each new
-    line herein must be indented, like this line.
-    
-    Enter author note here.
-    
-    Correspondence concerning this article should be addressed to Victor
-    Rouco, Postal address. E-mail:
-    \href{mailto:victorrouco@ub.edu}{\nolinkurl{victorrouco@ub.edu}}
-  }
+Enter author note here.
 
 
-  \abstract{Enter abstract here. Each new line herein must be indented, like this
-line.}
-  \keywords{keywords \\
+Correspondence concerning this article should be addressed to Victor Rouco, Postal address. E-mail: victorrouco@ub.edu}
+\affiliation{
+\vspace{0.5cm}
+\textsuperscript{1} Universitat de Barcelona\\\textsuperscript{2} Institut de Neurociencies Barcelona\\\textsuperscript{3} Humboldt Universität zu Berlin}
+\abstract{Enter abstract here. Each new line herein must be indented, like this line.
+}
+\keywords{keywords\newline\indent Word count: X}
+\usepackage{csquotes}
+\usepackage{upgreek}
+\captionsetup{font=singlespacing,justification=justified}
 
-    \indent Word count: X
-  }
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage[flushleft]{threeparttable}
+\usepackage{threeparttablex}
+
+\newenvironment{lltable}{\begin{landscape}\begin{center}\begin{ThreePartTable}}{\end{ThreePartTable}\end{center}\end{landscape}}
+
+\makeatletter
+\newcommand\LastLTentrywidth{1em}
+\newlength\longtablewidth
+\setlength{\longtablewidth}{1in}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef1em{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
 
 
+\DeclareDelayedFloatFlavor{ThreePartTable}{table}
+\DeclareDelayedFloatFlavor{lltable}{table}
+\makeatletter
+\renewcommand{\efloat@iwrite}[1]{\immediate\protected@write\csname efloat@post#1\endcsname{}}
+\makeatother
+\usepackage{lineno}
 
-
+\linenumbers
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[section]
@@ -152,12 +181,7 @@ line.}
 \newtheorem*{remark}{Remark}
 \newtheorem*{solution}{Solution}
 \begin{document}
-
 \maketitle
-
-\setcounter{secnumdepth}{0}
-
-
 
 \hypertarget{introduction}{%
 \section{1. Introduction}\label{introduction}}
@@ -793,21 +817,18 @@ doi:\href{https://doi.org/10.1002/per}{10.1002/per}
 
 \endgroup
 
+\clearpage
+\makeatletter
+\efloat@restorefloats
+\makeatother
 
 
-
-
-  \clearpage
-  \makeatletter
-  \efloat@restorefloats
-  \makeatother
-  
-  
 \begin{appendix}
 \section{}
 Appendix
 
 \includegraphics{IPIP_draft_files/figure-latex/unnamed-chunk-2-1.pdf}
 \end{appendix}
+
 
 \end{document}

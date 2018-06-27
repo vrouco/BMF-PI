@@ -1,10 +1,20 @@
 #### EXPLORATORISCHE FAKTORENANALYSE ####
 library(here)
+<<<<<<< HEAD
+library(tidyverse)
+library(readxl)
+#setwd("F:/IPIP Paper/Sample_USA/EFA/MAP_PA")
+# hier bitte Ihren eigenen Pfad eingeben
+
+setwd(here("/data/Sample_USA_EFA+CFA/EFA/MAP_PA"))
+
+=======
 library(readxl)
 setwd(here("data/Sample_USA_EFA+CFA/EFA/MAP_PA"))
 #setwd("F:/IPIP Paper/Sample_USA/EFA/MAP_PA")
 # hier bitte Ihren eigenen Pfad eingeben
 
+>>>>>>> 35359e38ebc39efc75427cb991904e0bf69e6cb1
 agree<-read_excel("ARI Daten Agreeableness EFA.xls")
 consc<-read_excel("conneu.xlsx")
 extra_n<-read.csv("ARI Daten Extraversion EFA.csv", header=TRUE, sep=";")
@@ -36,6 +46,18 @@ vss(consc_items)
 vss(extra_items)
 vss(neuro_items)
 vss(open_items)
+<<<<<<< HEAD
+# VSS complexity 1: per item only one charge on a single factor is allowed, the charge coefficients
+# on other factors are set to zero
+# VSS complexity 2: per item charges are allowed on two factors
+# MAP also recommends a number of factors
+# lower part of output: Values for different factor solutions: smallest MAP and largest VSS value crucial
+
+#### Paralleltestanalyse: Eigenwert, Scree-Test und Parallelanalyse ####
+library(parallel)
+options(mc.cores=3)
+fa.parallel(agree_items, fa="PC")
+=======
 # VSS complexity 1: pro Item ist nur eine Ladung auf einem einzigen Faktor zugelassen, die Ladungskoeffizienten
 # auf anderen Faktoren sind auf Null gesetzt
 # VSS complexity 2: pro Item sind Ladungen auf zwei Faktoren zugelassen
@@ -52,6 +74,7 @@ resolved(fa)
 value(fa)
 
 
+>>>>>>> 35359e38ebc39efc75427cb991904e0bf69e6cb1
 fa.parallel(consc_items, n.iter=1000, fa="PC")
 fa.parallel(extra_items, n.iter=1000, fa="PC")
 fa.parallel(neuro_items, n.iter=1000, fa="PC")
