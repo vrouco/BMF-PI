@@ -28,6 +28,46 @@
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -88,146 +128,17 @@
 \begin{document}
 \maketitle
 
-\setlength\LTleft{-0.8in}
-\setlength\LTright{-0.8in}
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{library}\NormalTok{(knitr)}
+\KeywordTok{Sweave2knitr}\NormalTok{(}\StringTok{"trash.Rnw"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
 
-\textbackslash{}begin\{center\}
-
-\begin{longtable}{@{\extracolsep{\fill}}*5{l}}
-
-\caption{A simple longtable example}\\
-
-\textbf{taxonomy} & \textbf{domains} & \textbf{facets} & \textbf{reliability*} & \textbf{validity} \\
-\hline
-\endfirsthead
-\multicolumn{5}{c}{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
-
-\textbf{taxonomy} & \textbf{domains} & \textbf{facets} & \textbf{reliability (no of items)} & \textbf{validity} \\
-\hline
-\endhead
-\hline \multicolumn{6}{r}{\textit{Continued on next page}} \\
-\endfoot
-\endlastfoot
-
-
-         HEXACO&                    &                        &             &     ya sabes que si nena di que si    \\
-             & Humility           & Sincerity              & 0.66        &         \\
-             &                    & Fairness               & 0.76        &         \\
-             &                    & Greed Avoidance        & 0.81        &         \\
-             &                    & Modesty                & 0.68        &         \\
-             & Emotionality       & Fearfulness            & 0.7         &         \\
-             &                    & Anxiety                & 0.64        &         \\
-             &                    & Dependence             & 0.8         &         \\
-             &                    & Sentimentality         & 0.7         &         \\
-             & Extraversion       & Social Self-Esteem     & 0.67        &         \\
-             &                    & Social Boldness        & 0.76        &         \\
-             &                    & Sociability            & 0.71        &         \\
-             &                    & Liveliness             & 0.76        &         \\
-             & Agreeableness      & Forgivingness          & 0.74        &         \\
-             &                    & Gentleness             & 0.66        &         \\
-             &                    & Flexibility            & 0.61        &         \\
-             &                    & Patience               & 0.79        &         \\
-             & Conscientiousness  & Organization           & 0.74        &         \\
-             &                    & Diligence              & 0.7         &         \\
-             &                    & Perfectionism          & 0.69        &         \\
-             &                    & Prudence               & 0.69        &         \\
-             & Openness           & Aesthetic              & 0.66        &         \\
-             &                    & Inquisitiveness        & 0.66        &         \\
-             &                    & Creativity             & 0.75        &         \\
-             &                    & Unconventionality      & 0.52        &         \\[1cm]
-             
-
-         NEO-PI-r     &      &                      &             &         \\
-         & Neuroticism       & Anxiety              & 0.78        &         \\
-         &                   & Angry Hostility      & 0.75        &         \\
-         &                   & Depression           & 0.81        &         \\
-         &                   & Self-Consciousness   & 0.68        &         \\
-         &                   & Impulsiveness        & 0.7         &         \\
-         &                   & Vulnerability        & 0.77        &         \\
-         & Extraversion      & Warmth               & 0.73        &         \\
-         &                   & Gregariousness       & 0.72        &         \\
-         &                   & Assertiveness        & 0.77        &         \\
-         &                   & Activity             & 0.63        &         \\
-         &                   & Excitement Seeking   & 0.65        &         \\
-         &                   & Positive Emotions    & 0.73        &         \\
-         & Openness          & Fantasy              & 0.76        &         \\
-         &                   & Aesthetics           & 0.76        &         \\
-         &                   & Feelings             & 0.66        &         \\
-         &                   & Actions              & 0.58        &         \\
-         &                   & Ideas                & 0.8         &         \\
-         &                   & Values               & 0.67        &         \\
-         & Agreeableness     & Trust                & 0.79        &         \\
-         &                   & Straightforwardness  & 0.71        &         \\
-         &                   & Altruism             & 0.75        &         \\
-         &                   & Compliance           & 0.59        &         \\
-         &                   & Modesty              & 0.67        &         \\
-         &                   & Tender-Mindedness    & 0.56        &         \\
-         & Conscientiousness & Competence           & 0.67        &         \\
-         &                   & Order                & 0.66        &         \\
-         &                   & Dutifulness          & 0.62        &         \\
-         &                   & Achievement Striving & 0.67        &         \\
-         &                   & Self-Discipline      & 0.75        &         \\
-         &                   & Deliberation         & 0.71        &         \\[1cm]    
-\pagebreak
-
-
-BFI-2    &                       &                        & *           &        \\
-         & Extraversion          &                        &             &         \\
-         &                       & Sociability            & 0.83        &         \\
-         &                       & Assertiveness          & 0.8         &         \\
-         &                       & Energy level           & 0.74        &         \\
-         & Agreeableness         &                        &             &         \\
-         &                       & Compassion             & 0.68        &         \\
-         &                       & Respectfulness         & 0.66        &         \\
-         &                       & Trust                  & 0.75        &         \\
-         & Conscientiousness     &                        &             &         \\
-         &                       & Organization           & 0.76        &         \\
-         &                       & Productiveness         & 0.74        &         \\
-         &                       & Responsability         & 0.68        &         \\
-         & Negative Emotionality &                        &             &         \\
-         &                       & Anxiety                & 0.79        &         \\
-         &                       & Depression             & 0.74        &         \\
-         &                       & Emotional Volatility   & 0.7         &         \\
-         & Open-mindedness       &                        &             &         \\
-         &                       & Intellectual curiosity & 0.78        &         \\
-         &                       & Aesthetic Sensitivity  & 0.67        &         \\
-         &                       & Creative Imagination   & 0.67        &         \\[1cm]    
-
-         
-        IPIP-NEO-120 &                        &                      &             &   \\
-             & Neuroticism            & Anxiety              & 0.78        &         \\
-             &                        & Anger                & 0.87        &         \\
-             &                        & Depression           & 0.85        &         \\
-             &                        & Self-Consciousness   & 0.74        &         \\
-             &                        & Inmoderation         & 0.72        &         \\
-             &                        & Vulnerability        & 0.76        &         \\
-             & Extraversion           & Friendliness         & 0.81        &         \\
-             &                        & Gregariousness       & 0.79        &         \\
-             &                        & Assertiveness        & 0.85        &         \\
-             &                        & Activity Level       & 0.71        &         \\
-             &                        & Excitement Seeking   & 0.77        &         \\
-             &                        & Cheerfulness         & 0.8         &         \\
-             & Openness to Experience & Imagination          & 0.83        &         \\
-             &                        & Artistic interests   & 0.76        &         \\
-             &                        & Emotionality         & 0.69        &         \\
-             &                        & Adventurousness      & 0.72        &         \\
-             &                        & Intellect            & 0.75        &         \\
-             &                        & Liberalism           & 0.64        &         \\
-             & Agreeableness          & Trust                & 0.86        &         \\
-             &                        & Morality             & 0.76        &         \\
-             &                        & Altruism             & 0.76        &         \\
-             &                        & Cooperation          & 0.73        &         \\
-             &                        & Modesty              & 0.76        &         \\
-             &                        & Sympathy             & 0.72        &         \\
-             & Conscientiousness      & Self-Efficacy        & 0.63        &         \\
-             &                        & Orderliness          & 0.83        &         \\
-             &                        & Dutifulness          & 0.69        &         \\
-             &                        & Achievement-striving & 0.8         &         \\
-             &                        & Self-Discipline      & 0.73        &         \\
-             &                        & Cautiousness         & 0.87        &          \\            
-\end{longtable}
-
-\textbackslash{}end\{document\}
+\begin{verbatim}
+## changing \SweaveOpts{} to opts_chunk$set():
+##     * \SweaveOpts{concordance=T}
+\end{verbatim}
 
 
 \end{document}
