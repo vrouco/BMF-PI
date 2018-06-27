@@ -1,3 +1,5 @@
+## @knitr table3
+
 
 create.table3 <- function(){
 
@@ -50,4 +52,4 @@ return(mytable)
 }
 
 
-table3 <- create.table3()
+x <-create.table3()

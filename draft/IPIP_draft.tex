@@ -1,4 +1,4 @@
-\documentclass[man]{apa6}
+\documentclass[floatsintext,man]{apa6}
 
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -39,12 +39,6 @@
   {\begin{landscape}\begin{center}\begin{ThreePartTable}}
   {\end{ThreePartTable}\end{center}\end{landscape}}
 
-  \usepackage{ifthen} % Only add declarations when endfloat package is loaded
-  \ifthenelse{\equal{\string man}{\string man}}{%
-   \DeclareDelayedFloatFlavor{ThreePartTable}{table} % Make endfloat play with longtable
-   % \DeclareDelayedFloatFlavor{ltable}{table} % Make endfloat play with lscape
-   \DeclareDelayedFloatFlavor{lltable}{table} % Make endfloat play with lscape & longtable
-  }{}%
 
 
 
@@ -189,8 +183,8 @@ focused on the covariation between the Big Five dimensions and relevant
 external outcomes. However, specific dispositional characteristics
 captured on the facet level might be of extreme utility to provide more
 complex descriptions of individuality and to predict life outcomes to a
-major extent (John et al., 2014; Lounsbury, Sundstrom, Loveland, \&
-Gibson, 2002; Paunonen \& Ashton, 2001). Unfortunately, the number and
+major extent (Lounsbury, Sundstrom, Loveland, \& Gibson, 2002; Paunonen
+\& Ashton, 2001; Ziegler et al., 2014). Unfortunately, the number and
 nature of the facets below the Big Five and being measured by different
 personality instruments is far from being consensual. In fact, different
 facet level models have been proposed (XXXX). One potential reason for
@@ -300,11 +294,11 @@ table 1
 
 As shown in table 1, there are many different possibilities of facets
 forming the domains. However, there is still a degree of overlap on the
-facets covered by the different instruments. ({\textbf{???}}) inspected
-the convergences between the NEO-PI-R and the first version of the BFI,
-suggesting that two constructs per domain were measured at the facet
-level by both inventories. The constructs defined by ({\textbf{???}})
-were: Assertiveness and Activity for Extraversion; Altruism and
+facets covered by the different instruments. Soto and John (2009)
+inspected the convergences between the NEO-PI-R and the first version of
+the BFI, suggesting that two constructs per domain were measured at the
+facet level by both inventories. The constructs defined by Soto and John
+(2009) were: Assertiveness and Activity for Extraversion; Altruism and
 Compliance for Agreeableness; Order and Self-Discipline for
 Conscientiousness; Anxiety and Depression for Neuroticism; and
 Aesthetics and Ideas for Openness. The convergence holds for the four
@@ -423,7 +417,7 @@ theoretical correspondence between PD and Big Five facets proposed by
 Costa Jr. and Widiger (1994). Moreover, the PID-5 has prompted the
 elaboration of a number of Five Factor Model Personality Disorders
 (FFMPD) scales to maximize the facet coverage in relation to specific
-PDs ({\textbf{???}}).
+PDs (Bagby \& Widiger, 2018).
 
 Facet analysis and dedicated Big Five questionnaires have been used to
 solve issues like those mentioned in the last paragraph. We propose to
@@ -603,13 +597,15 @@ The items to each facet are listed in the appendix (A).
 ESEM.}\label{results-of-cfa-and-esem.}}
 
 All measurement models for the facets were fitting well, results can be
-found in Table 3.
+found in \emph{Table 3}.
+
+Table 3
 
 The exploratory structural equation model (ESEM) of the final model with
 all five domains fits well with CFI = .87, RMSEA = .072, SRMR = .036. As
-you can see in Table 4 nearly all facets load significantly on their
-intended domain, but sometimes have loadings on other domains also,
-which are conform with the theory and the facet content.
+you can see in \emph{Table 4} nearly all facets load significantly on
+their intended domain, but sometimes have loadings on other domains
+also, which are conform with the theory and the facet content.
 
 \hypertarget{study-2-german-translation}{%
 \section{Study 2 -- German
@@ -716,6 +712,13 @@ a facet of Extraversion
 \setlength{\leftskip}{0.5in}
 
 \hypertarget{refs}{}
+\leavevmode\hypertarget{ref-Bagby2018}{}%
+Bagby, R. M., \& Widiger, T. A. (2018). Five factor model personality
+disorder scales: An introduction to a special section on assessment of
+maladaptive variants of the five factor model. \emph{Psychological
+Assessment}, \emph{30}(1), 1--9.
+doi:\href{https://doi.org/10.1037/pas0000523}{10.1037/pas0000523}
+
 \leavevmode\hypertarget{ref-Clark2005}{}%
 Clark, L. A. (2005). Temperament as a unifying basis for personality and
 psychopathology. \emph{Journal of Abnormal Psychology}, \emph{114}(4),
@@ -728,14 +731,6 @@ DSM-III-R and DSM-IV personality disorders with the five-factor model of
 personality. \emph{Personality Disorders and the Five-Factor Model of
 Personality.}, (January), 41--56.
 doi:\href{https://doi.org/10.1037/10140-003}{10.1037/10140-003}
-
-\leavevmode\hypertarget{ref-Ziegler2014}{}%
-John, O. P., Hampson, S. E., Goldberg, L. R., Johnson, J. A., Eber, H.
-W., Hogan, R., \ldots{} Digman, J. M. (2014). The basic level in
-personality - trait hierarchies:Studies of trait use and accessibility
-in different contexts. \emph{Journal of Research in Personality},
-\emph{20}(1), 411--418.
-doi:\href{https://doi.org/10.1016/j.lindif.2013.10.008}{10.1016/j.lindif.2013.10.008}
 
 \leavevmode\hypertarget{ref-Lounsbury2002}{}%
 Lounsbury, J. W., Sundstrom, E., Loveland, J. L., \& Gibson, L. W.
@@ -774,6 +769,20 @@ Saulsman, L. M., \& Page, A. C. (2004). The five-factor model and
 personality disorder empirical literature: A meta-analytic review.
 \emph{Clinical Psychology Review}, \emph{23}(8), 1055--1085.
 doi:\href{https://doi.org/10.1016/j.cpr.2002.09.001}{10.1016/j.cpr.2002.09.001}
+
+\leavevmode\hypertarget{ref-SotoJohn2009}{}%
+Soto, C. J., \& John, O. P. (2009). Ten facet scales for the Big Five
+Inventory: Convergence with NEO PI-R facets, self-peer agreement, and
+discriminant validity. \emph{Journal of Research in Personality},
+\emph{43}(1), 84--90.
+doi:\href{https://doi.org/10.1016/j.jrp.2008.10.002}{10.1016/j.jrp.2008.10.002}
+
+\leavevmode\hypertarget{ref-Ziegler2014}{}%
+Ziegler, M., Bensch, D., Maaß, U., Schult, V., Vogel, M., \& Bühner, M.
+(2014). Big Five facets as predictor of job training performance: The
+role of specific job demands. \emph{Learning and Individual
+Differences}, \emph{29}, 1--7.
+doi:\href{https://doi.org/10.1016/j.lindif.2013.10.008}{10.1016/j.lindif.2013.10.008}
 
 \leavevmode\hypertarget{ref-Ziegler2010}{}%
 Ziegler, M., Danay, E., Schölmerich, F., \& Bühner, M. (2010).

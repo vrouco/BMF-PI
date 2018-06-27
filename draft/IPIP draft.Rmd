@@ -34,7 +34,7 @@ wordcount         : "X"
 
 bibliography      : ["IPIP.bib"]
 
-figsintext        : no
+figsintext        : yes
 figurelist        : no
 tablelist         : no
 footnotelist      : no
@@ -54,12 +54,17 @@ output:
 library("papaja")
 file.copy(from="/home/victorrouco/Documents/IPIP.bib", to="/home/victorrouco/Desktop/IPIP_git/draft/IPIP.bib",
           overwrite=T)#the mendeley .bib file is in /Documents, this export it automatically to the project file
+
+library(here)
+library(tidyverse)
+library(knitr)
+
 ```
 
 ```{r analysis_preferences}
 # Seed for random number generation
 set.seed(42)
-library(here)
+knitr::read_chunk(here::here("table3.R"))
 ```
 
 # 1. Introduction
@@ -174,18 +179,17 @@ The items to each facet are listed in the appendix (A).
 
 ### Results of CFA and ESEM. 
 
-All measurement models for the facets were fitting well, results can be found in Table 3.
+All measurement models for the facets were fitting well, results can be found in *Table 3*.
 
-```{r table3}
-library(foreign)
-library(lavaan)
-# setwd(here("data/Sample_USA_EFA+CFA/CFA/Agreeableness"))
-# dataA <- read.spss("ARI Data 2009_Agreeableness CFA Sample.sav", to.data.frame=T)
+Table 3
 
+```{r table3, warning=F, results='asis'}
+
+print(xtable(x), type = "latex")
 ```
 
 
-The exploratory structural equation model (ESEM) of the final model with all five domains fits well with CFI = .87, RMSEA = .072, SRMR = .036. As you can see in Table 4 nearly all facets load significantly on their intended domain, but sometimes have loadings on other domains also, which are conform with the theory and the facet content.
+The exploratory structural equation model (ESEM) of the final model with all five domains fits well with CFI = .87, RMSEA = .072, SRMR = .036. As you can see in *Table 4* nearly all facets load significantly on their intended domain, but sometimes have loadings on other domains also, which are conform with the theory and the facet content.
 
 
 # Study 2 – German Translation
