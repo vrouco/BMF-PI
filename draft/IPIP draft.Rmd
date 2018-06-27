@@ -58,6 +58,9 @@ file.copy(from="/home/victorrouco/Documents/IPIP.bib", to="/home/victorrouco/Des
 library(here)
 library(tidyverse)
 library(knitr)
+library(xtable)
+
+options(xtable.comment = FALSE)
 
 ```
 
@@ -117,17 +120,19 @@ Facet analysis and dedicated Big Five questionnaires have been used to solve iss
 We present in this paper an instrument for personality assessment which aims to cover the need for an internationally usable, open source, and differentiated measure at the facet level. Two studies are presented, for each one inspects the factor structure of the instrument in a different sample drawn from a different culture (American vs. German). Measurement invariance across samples will be examined. Internal consistency and test-criterion correlations will be estimated for all scores. To sum up, the aim for this research project was to provide an instrument that can be used in non-clinical but also in clinical research which emphasizes the facet level of the Big Five. 
 
 
+# 2. Methods
 
+Two different studies are presented in this work. The first study uses sample drawn from a USA bachellor student population. The aim is to detect and confirm a measurement model that maximizes the facet space of the IPIP instrument. An Exploratory Factor Analysis (EFA) is used to identify the number of facets per domain. A Confirmatory Factor Analysis per facet is modelled in order to confirm the item - facet relationship. Finally, an Exploratory Strucutural Equation Model (ESEM) is fitted to integrate the measurement model of the facets with the dimensions. ESEM is a somewhat novel method which allows the researcher to use Structural Equation Modelling (SEM) without the need of imposing an independent cluster solution, as its common in the CFA procedure. ESEM has gained reputation in the personality field, where the independent cluster model may not capture the complexity of the constructs measured [@Marsh2010]. 
 
-# 2. Study 1 - US-American Sample
+The second sample is drawn again from a graduate student population, albeit based in Germany. The aim for the second study is to replicate the structure found in study one, plus assess the degree of measurement invariance of the proposed model.
+
+## 2. Study 1 - US-American Sample
 
 ```{r, comment=F, message=F, warning=F}
 
 
 ```
 
-
-## 2.1. Methods
 
 
 ### 2.1.1. Participants
@@ -183,9 +188,66 @@ All measurement models for the facets were fitting well, results can be found in
 
 Table 3
 
-```{r table3, warning=F, results='asis'}
+```{r table3, results="asis", warning=F, echo=F, message=F}
+## @knitr table3
 
-print(xtable(x), type = "latex")
+
+create.table3 <- function(){
+
+
+library(here)
+library(foreign)
+library(lavaan)
+library(tidyverse)
+domains <- c("Agreeableness", "Conscientiousness", "Extraversion", "Neuroticism", "Openness")
+little <- c("agree", "con", "e", "n", "open")
+
+mytable <- tibble(Domains=character(),
+                  Facets=character(),
+                cfi=as.numeric(NA),
+                rmsea=as.numeric(NA),
+                srmr=as.numeric(NA))
+
+for(i in 1:5){
+setwd(here(paste("data/Sample_USA_EFA+CFA/CFA/", domains[i], sep="")))
+assign(domains[i], read.spss(list.files()[grep(".sav", list.files())], to.data.frame = T))
+assign(domains[i], as.data.frame(lapply(get(domains[i])[,grep(paste(little[i]), 
+                                                              colnames(get(domains[i])))], ordered)))}
+colnames(Extraversion) <- sub("extra", "e", colnames(Extraversion))
+colnames(Neuroticism) <- sub("neuro", "n", colnames(Neuroticism))
+#agree[,grep("agre", colnames(agree))] <- lapply(agree[,grep("agre", colnames(agree))], ordered)
+
+this.table <- mytable
+for(i in 1:5){
+  setwd(here(paste("data/Sample_USA_EFA+CFA/CFA/", domains[i], "/5 Items", sep="")))
+  files.here <- list.files()
+  files.here <- files.here[grep("inp", files.here)]
+  files.here <- files.here[-grep("Gesamtmodell", files.here)]
+
+  facets <- files.here
+    for(j in 1:length(facets)){
+      facets[j] <- sub(paste("CFA ",domains[i], " - ", sep=""), "", facets[j])
+      facets[j] <- sub("_5 items.inp", "", facets[j])
+      facets[j] <- sub("_3 items.inp", "", facets[j])
+    }
+  for(j in 1:length(files.here)){
+    model <- mplus2lavaan(files.here[j], run = F)$model
+    this.table[j,3:5] <- round(fitMeasures(cfa(model, get(domains[i]), 
+                                          ordered=domains[i]), c("cfi", "rmsea", "srmr")), digits=3)
+    this.table[j,2] <- facets[j]
+    this.table[j, 1] <- domains[i]
+  }
+  mytable <- rbind(mytable, this.table)
+}
+mytable <- mytable[-which(duplicated(mytable)),]
+mytable[which(duplicated(mytable[,"Domains"])),"Domains"]<-""
+return(mytable)
+}
+
+x <-create.table3()
+library(xtable)
+print(xtable(x, caption="Model fit for each facet"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
+
 ```
 
 

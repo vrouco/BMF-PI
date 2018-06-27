@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 \documentclass[floatsintext,man]{apa6}
 
-=======
-\documentclass[,man]{apa6}
-\usepackage{lmodern}
->>>>>>> 98a41102a8f7012d4cd590bc8a3a88253a4695a4
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
@@ -14,15 +9,16 @@
 \else % if luatex or xelatex
   \ifxetex
     \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
   \else
     \usepackage{fontspec}
   \fi
-  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
 \fi
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
-<<<<<<< HEAD
 \IfFileExists{microtype.sty}{\usepackage{microtype}}{}
 
 % Table formatting
@@ -71,100 +67,75 @@
 \fi
 \hypersetup{breaklinks=true,
             pdfauthor={},
-=======
-\IfFileExists{microtype.sty}{%
-\usepackage{microtype}
-\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
-\usepackage{hyperref}
-\hypersetup{unicode=true,
->>>>>>> 98a41102a8f7012d4cd590bc8a3a88253a4695a4
             pdftitle={A multi-faceted, open source, measure of personality},
-            pdfauthor={Victor Rouco, Anja Cengia, \& Matthias Ziegler},
-            pdfkeywords={keywords},
-            pdfborder={0 0 0},
-            breaklinks=true}
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=black,
+            pdfborder={0 0 0}}
 \urlstyle{same}  % don't use monospace font for urls
-\usepackage{graphicx,grffile}
-\makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
+
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
+%\setlength{\parskip}{0pt plus 0pt minus 0pt}
+
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{0}
-% Redefines (sub)paragraphs to behave more like sections
-\ifx\paragraph\undefined\else
-\let\oldparagraph\paragraph
-\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
-\fi
-\ifx\subparagraph\undefined\else
-\let\oldsubparagraph\subparagraph
-\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
-\fi
-
-%%% Use protect on footnotes to avoid problems with footnotes in titles
-\let\rmarkdownfootnote\footnote%
-\def\footnote{\protect\rmarkdownfootnote}
 
 
-  \title{A multi-faceted, open source, measure of personality}
-    \author{Victor Rouco\textsuperscript{1,2}, Anja Cengia\textsuperscript{3}, \&
-Matthias Ziegler\textsuperscript{3}}
-    \date{}
-  
-\shorttitle{HU instrument}
-\authornote{Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
-
-Enter author note here.
-
-
-Correspondence concerning this article should be addressed to Victor Rouco, Postal address. E-mail: victorrouco@ub.edu}
-\affiliation{
-\vspace{0.5cm}
-\textsuperscript{1} Universitat de Barcelona\\\textsuperscript{2} Institut de Neurociencies Barcelona\\\textsuperscript{3} Humboldt Universität zu Berlin}
-\abstract{Enter abstract here. Each new line herein must be indented, like this line.
-}
-\keywords{keywords\newline\indent Word count: X}
+% Manuscript styling
+\captionsetup{font=singlespacing,justification=justified}
 \usepackage{csquotes}
 \usepackage{upgreek}
-\captionsetup{font=singlespacing,justification=justified}
 
-\usepackage{longtable}
-\usepackage{lscape}
-\usepackage{multirow}
-\usepackage{tabularx}
-\usepackage[flushleft]{threeparttable}
-\usepackage{threeparttablex}
-
-\newenvironment{lltable}{\begin{landscape}\begin{center}\begin{ThreePartTable}}{\end{ThreePartTable}\end{center}\end{landscape}}
-
-\makeatletter
-\newcommand\LastLTentrywidth{1em}
-\newlength\longtablewidth
-\setlength{\longtablewidth}{1in}
-\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef1em{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+ % Line numbering
+  \usepackage{lineno}
+  \linenumbers
 
 
-\DeclareDelayedFloatFlavor{ThreePartTable}{table}
-\DeclareDelayedFloatFlavor{lltable}{table}
-\makeatletter
-\renewcommand{\efloat@iwrite}[1]{\immediate\protected@write\csname efloat@post#1\endcsname{}}
-\makeatother
-\usepackage{lineno}
+\usepackage{tikz} % Variable definition to generate author note
 
-\linenumbers
+% fix for \tightlist problem in pandoc 1.14
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% Essential manuscript parts
+  \title{A multi-faceted, open source, measure of personality}
+
+  \shorttitle{HU instrument}
+
+
+  \author{Victor Rouco\textsuperscript{1,2}, Anja Cengia\textsuperscript{3}, \& Matthias Ziegler\textsuperscript{3}}
+
+  % \def\affdep{{"", "", ""}}%
+  % \def\affcity{{"", "", ""}}%
+
+  \affiliation{
+    \vspace{0.5cm}
+          \textsuperscript{1} Universitat de Barcelona\\
+          \textsuperscript{2} Institut de Neurociencies Barcelona\\
+          \textsuperscript{3} Humboldt Universität zu Berlin  }
+
+  \authornote{
+    Add complete departmental affiliations for each author here. Each new
+    line herein must be indented, like this line.
+    
+    Enter author note here.
+    
+    Correspondence concerning this article should be addressed to Victor
+    Rouco, Postal address. E-mail:
+    \href{mailto:victorrouco@ub.edu}{\nolinkurl{victorrouco@ub.edu}}
+  }
+
+
+  \abstract{Enter abstract here. Each new line herein must be indented, like this
+line.}
+  \keywords{keywords \\
+
+    \indent Word count: X
+  }
+
+
+
+
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[section]
@@ -181,7 +152,12 @@ Correspondence concerning this article should be addressed to Victor Rouco, Post
 \newtheorem*{remark}{Remark}
 \newtheorem*{solution}{Solution}
 \begin{document}
+
 \maketitle
+
+\setcounter{secnumdepth}{0}
+
+
 
 \hypertarget{introduction}{%
 \section{1. Introduction}\label{introduction}}
@@ -207,8 +183,8 @@ focused on the covariation between the Big Five dimensions and relevant
 external outcomes. However, specific dispositional characteristics
 captured on the facet level might be of extreme utility to provide more
 complex descriptions of individuality and to predict life outcomes to a
-major extent (Lounsbury, Sundstrom, Loveland, \& Gibson, 2002; Paunonen
-\& Ashton, 2001; Ziegler et al., 2014). Unfortunately, the number and
+major extent (John et al., 2014; Lounsbury, Sundstrom, Loveland, \&
+Gibson, 2002; Paunonen \& Ashton, 2001). Unfortunately, the number and
 nature of the facets below the Big Five and being measured by different
 personality instruments is far from being consensual. In fact, different
 facet level models have been proposed (XXXX). One potential reason for
@@ -463,12 +439,32 @@ scores. To sum up, the aim for this research project was to provide an
 instrument that can be used in non-clinical but also in clinical
 research which emphasizes the facet level of the Big Five.
 
-\hypertarget{study-1---us-american-sample}{%
-\section{2. Study 1 - US-American
-Sample}\label{study-1---us-american-sample}}
-
 \hypertarget{methods}{%
-\subsection{2.1. Methods}\label{methods}}
+\section{2. Methods}\label{methods}}
+
+Two different studies are presented in this work. The first study uses
+sample drawn from a USA bachellor student population. The aim is to
+detect and confirm a measurement model that maximizes the facet space of
+the IPIP instrument. An Exploratory Factor Analysis (EFA) is used to
+identify the number of facets per domain. A Confirmatory Factor Analysis
+per facet is modelled in order to confirm the item - facet relationship.
+Finally, an Exploratory Strucutural Equation Model (ESEM) is fitted to
+integrate the measurement model of the facets with the dimensions. ESEM
+is a somewhat novel method which allows the researcher to use Structural
+Equation Modelling (SEM) without the need of imposing an independent
+cluster solution, as its common in the CFA procedure. ESEM has gained
+reputation in the personality field, where the independent cluster model
+may not capture the complexity of the constructs measured (Marsh et al.,
+2010).
+
+The second sample is drawn again from a graduate student population,
+albeit based in Germany. The aim for the second study is to replicate
+the structure found in study one, plus assess the degree of measurement
+invariance of the proposed model.
+
+\hypertarget{study-1---us-american-sample}{%
+\subsection{2. Study 1 - US-American
+Sample}\label{study-1---us-american-sample}}
 
 \hypertarget{participants}{%
 \subsubsection{2.1.1. Participants}\label{participants}}
@@ -756,12 +752,27 @@ personality. \emph{Personality Disorders and the Five-Factor Model of
 Personality.}, (January), 41--56.
 doi:\href{https://doi.org/10.1037/10140-003}{10.1037/10140-003}
 
+\leavevmode\hypertarget{ref-Ziegler2014}{}%
+John, O. P., Hampson, S. E., Goldberg, L. R., Johnson, J. A., Eber, H.
+W., Hogan, R., \ldots{} Digman, J. M. (2014). The basic level in
+personality - trait hierarchies:Studies of trait use and accessibility
+in different contexts. \emph{Journal of Research in Personality},
+\emph{20}(1), 411--418.
+doi:\href{https://doi.org/10.1016/j.lindif.2013.10.008}{10.1016/j.lindif.2013.10.008}
+
 \leavevmode\hypertarget{ref-Lounsbury2002}{}%
 Lounsbury, J. W., Sundstrom, E., Loveland, J. L., \& Gibson, L. W.
 (2002). Broad versus narrow personality traits in predicting academic
 performance of adolescents. \emph{Learning and Individual Differences},
 \emph{14}(1), 67--77.
 doi:\href{https://doi.org/10.1016/j.lindif.2003.08.001}{10.1016/j.lindif.2003.08.001}
+
+\leavevmode\hypertarget{ref-Marsh2010}{}%
+Marsh, H. W., Lüdtke, O., Muthén, B., Asparouhov, T., Morin, A. J.,
+Trautwein, U., \& Nagengast, B. (2010). A New Look at the Big Five
+Factor Structure Through Exploratory Structural Equation Modeling.
+\emph{Psychological Assessment}, \emph{22}(3), 471--491.
+doi:\href{https://doi.org/10.1037/a0019227}{10.1037/a0019227}
 
 \leavevmode\hypertarget{ref-McAdams2006a}{}%
 McAdams, D. P., \& Pals, J. L. (2006). A new Big Five: Fundamental
@@ -801,13 +812,6 @@ discriminant validity. \emph{Journal of Research in Personality},
 \emph{43}(1), 84--90.
 doi:\href{https://doi.org/10.1016/j.jrp.2008.10.002}{10.1016/j.jrp.2008.10.002}
 
-\leavevmode\hypertarget{ref-Ziegler2014}{}%
-Ziegler, M., Bensch, D., Maaß, U., Schult, V., Vogel, M., \& Bühner, M.
-(2014). Big Five facets as predictor of job training performance: The
-role of specific job demands. \emph{Learning and Individual
-Differences}, \emph{29}, 1--7.
-doi:\href{https://doi.org/10.1016/j.lindif.2013.10.008}{10.1016/j.lindif.2013.10.008}
-
 \leavevmode\hypertarget{ref-Ziegler2010}{}%
 Ziegler, M., Danay, E., Schölmerich, F., \& Bühner, M. (2010).
 Predicting Academic Success with the Big 5 Rated from Different Points
@@ -817,18 +821,21 @@ doi:\href{https://doi.org/10.1002/per}{10.1002/per}
 
 \endgroup
 
-\clearpage
-\makeatletter
-\efloat@restorefloats
-\makeatother
 
 
+
+
+  \clearpage
+  \makeatletter
+  \efloat@restorefloats
+  \makeatother
+  
+  
 \begin{appendix}
 \section{}
 Appendix
 
 \includegraphics{IPIP_draft_files/figure-latex/unnamed-chunk-2-1.pdf}
 \end{appendix}
-
 
 \end{document}

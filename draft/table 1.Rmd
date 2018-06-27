@@ -87,10 +87,11 @@ output: pdf_document
          &                   & Achievement Striving & 0.67        &         \\
          &                   & Self-Discipline      & 0.75        &         \\
          &                   & Deliberation         & 0.71        &         \\[1cm]    
+         
 \pagebreak
 
 
-BFI-2    &                       &                        & *           &        \\
+         BFI-2    &                       &                        & *           &        \\
          & Extraversion          &                        &             &         \\
          &                       & Sociability            & 0.83        &         \\
          &                       & Assertiveness          & 0.8         &         \\
