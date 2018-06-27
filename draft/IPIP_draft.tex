@@ -85,12 +85,22 @@ Correspondence concerning this article should be addressed to Victor Rouco, Post
 \usepackage{upgreek}
 \captionsetup{font=singlespacing,justification=justified}
 
+<<<<<<< HEAD
 \usepackage{longtable}
 \usepackage{lscape}
 \usepackage{multirow}
 \usepackage{tabularx}
 \usepackage[flushleft]{threeparttable}
 \usepackage{threeparttablex}
+=======
+\usepackage[titles]{tocloft}
+\cftpagenumbersoff{table}
+\renewcommand{\cfttabpresnum}{\itshape\tablename\enspace}
+\renewcommand{\cfttabaftersnum}{.\space}
+\setlength{\cfttabindent}{0pt}
+\setlength{\cftafterloftitleskip}{0pt}
+\settowidth{\cfttabnumwidth}{Table 10.\qquad}
+>>>>>>> ae506c3e698a973cdbbb27331775b741a4bea8cd
 
 \newenvironment{lltable}{\begin{landscape}\begin{center}\begin{ThreePartTable}}{\end{ThreePartTable}\end{center}\end{landscape}}
 
@@ -658,8 +668,11 @@ their intended domain, but sometimes have loadings on other domains
 also, which are conform with the theory and the facet content.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 \newpage
 
+=======
+>>>>>>> ae506c3e698a973cdbbb27331775b741a4bea8cd
 =======
 >>>>>>> ae506c3e698a973cdbbb27331775b741a4bea8cd
 Table 4
