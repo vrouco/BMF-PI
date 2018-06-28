@@ -60,7 +60,7 @@ library(tidyverse)
 library(knitr)
 library(xtable)
 
-options(xtable.floating = TRUE, xtable.comment = FALSE)#figsintext yaml option buggy. change xtable floating instead
+options(xtable.floating = T, xtable.comment = FALSE)#figsintext yaml option buggy. change xtable floating instead
 
 ```
 
@@ -123,9 +123,9 @@ We present in this paper an instrument for personality assessment which aims to 
 
 # 2. Methods
 
-Two different studies are presented in this work. The first study uses sample drawn from a USA bachellor student population. The aim is to detect and confirm a measurement model that maximizes the facet space of the IPIP instrument. An Exploratory Factor Analysis (EFA) is used to identify the number of facets per domain. A Confirmatory Factor Analysis per facet is modelled in order to confirm the item - facet relationship. Finally, an Exploratory Strucutural Equation Model (ESEM) is fitted to integrate the measurement model of the facets with the dimensions. ESEM is a somewhat novel method which allows the researcher to use Structural Equation Modelling (SEM) without the need of imposing an independent cluster solution, as its common in the CFA procedure. ESEM has gained reputation in the personality field, where the independent cluster model may not capture the complexity of the constructs measured [@Marsh2010]. 
+Two different studies are presented in this work. The first study uses a sample drawn from a USA bachellor student population. The aim was to detect and confirm a measurement model that maximizes the facet space of the IPIP instrument. An Exploratory Factor Analysis (EFA) was used to identify the number of facets per domain. A Confirmatory Factor Analysis per facet was modelled in order to confirm the item - facet relationship. Finally, an Exploratory Strucutural Equation Model (ESEM) was fitted to integrate the measurement model of the facets with the dimensions. ESEM is a novel method which allows the researcher to use Structural Equation Modelling (SEM) without the need of imposing an independent cluster solution, as its common in the CFA procedure. ESEM has gained reputation in the personality field, where the independent cluster model may not capture the complexity of the constructs measured [@Marsh2010]. 
 
-The second sample is drawn again from a graduate student population, albeit based in Germany. The aim for the second study is to replicate the structure found in study one, plus assess the degree of measurement invariance of the proposed model.
+The second sample was drawn again from a graduate student population, albeit this time based in Germany. The aim for the second study is to replicate the structure found in study one, plus assess the degree of measurement invariance of the proposed model.
 
 ## 2. Study 1 - US-American Sample
 
@@ -138,8 +138,7 @@ The second sample is drawn again from a graduate student population, albeit base
 
 ### 2.1.1. Participants
 The sample consisted of 726 American undergraduate students (59.3% male) who participated voluntarily. The mean age was 21.6 years (SD=5.9). Students were emailed a link to a computerized assessment battery that included the IPIP items as well as several other tests not reported in this paper.
-
-At a first data preparation the data set was randomly split in two equally sized samples. Both samples were matched in relation to missing values, outliers and extreme values. In Sample 1 the mean age was 21.8 years (SD=6.3), in Sample 2 the mean age was 21.5 years (SD=5.6).
+The data set was randomly splitted in two equally sized samples. Both samples were matched in relation to missing values, outliers and extreme values. In Sample 1 the mean age was 21.8 years (SD=6.3), in Sample 2 the mean age was 21.5 years (SD=5.6).
 
 ## 2.1.2. Measures. 
 
@@ -156,10 +155,10 @@ Scale of satisfaction with life
 ## 2.1.3. Procedure
 
 ### EFA with subsample 1
-To determine the number of possible facets per domain Velicer’s (1976) Minimum Average Partial (MAP) method and Horn’s (1965) parallel analysis (PA) method were employed for every domain. Based on these results an exploratory factor analysis was calculated for each domain via Mplus using a geomin rotation (Quelle) and a maximum likelihood estimator (ML). The decision for the preferred number of facets per domain was based partly on comparing model fits (CFI, RMSEA, SRMR). More importantly though was the interpretability of the facet solution. After all facet solutions of other personality measures were looked at to compare it to the found facet structure. If there were important parts missing to present the domain with regards to content, new facets would be added afterwards.
+To determine the number of possible facets per domain Velicer’s (1976) Minimum Average Partial (MAP) method and Horn’s (1965) parallel analysis (PA) were employed for every domain. Based on these results an exploratory factor analysis was calculated for each domain via Mplus using a geomin rotation (Quelle) and a maximum likelihood estimator (ML). The decision for the preferred number of facets per domain was based partly on comparing model fits (CFI, RMSEA, SRMR). More importantly though was the interpretability of the facet solution. After all facet solutions of other personality measures were looked at to compare it to the found facet structure. If there were important parts missing to present the domain with regards to content, new facets would be added afterwards.
 
 ### CFA and ESEM with subsample 2
-To confirm the structure of facets the EFAs delivered, multiple confirmatory factor analyses were calculated via Mplus. In a first step measurement models were estimated for each of the facets. To obtain balance between the facets, the items were reduced to five per facet based on item content and loading pattern in a second step, afterwards the estimations for the measurement models on facet levels were repeated. For both steps estimators were WLSMV (weighted least squares adjusted for means and variances). Aim was to ensure an optimal breadth and sufficient reliability. In a final model, all five domain structural models were integrated using exploratory structural equation modeling (ESEM) (Asparouhov & Muthén, 2009). Marsh et al. (2010) could show that ESEM fits personality data better and results in substantially more differentiated factors than it would using CFA, while using an EFA measurement model with rotations in a structural equation model. All facets were able to load on all domains. If there would show up facets that do not significantly load on the intended domain, this facets would get eliminated subsequently. The estimators used were ML (maximum likelihood), factor scores were used as indicators and the rotation was oblique (using Geomin). Model fit was determined based on the guide lines by Hu and Bentler (1999) as well as Beauducel and Wittmann (2005). Consequently, to consider a good fit of a proposed model, the Comparative Fit Index (CFI) should be at or over .95, the standardized root mean squared residual (SRMR) smaller than .08 and the root mean square error of approximation (RMSEA) smaller than .06. 
+To confirm the structure of facets the EFAs delivered, multiple confirmatory factor analyses were calculated via Mplus. In a first step measurement models were estimated for each of the facets. To obtain balance between the facets, the items were reduced to five per facet based on item content and loading pattern in a second step, afterwards the estimations for the measurement models on facet levels were repeated. For both steps estimators were WLSMV (weighted least squares adjusted for means and variances). Aim was to ensure an optimal breadth and sufficient reliability. In a final model, all five domain structural models were integrated using exploratory structural equation modeling (ESEM) (Asparouhov & Muthén, 2009). Marsh et al. (2010) could show that ESEM fits personality data better and results in substantially more differentiated factors than it would using CFA, while using an EFA measurement model with rotations in a structural equation model. All facets were able to load on all domains. If there would show up facets that do not significantly load on the intended domain, this facets would get eliminated subsequently. The estimators used were ML, factor scores were used as indicators and the rotation was oblique (using Geomin). Model fit was determined based on the guide lines by Hu and Bentler (1999) as well as Beauducel and Wittmann (2005). Consequently, to consider a good fit of a proposed model, the Comparative Fit Index (CFI) should be at or over .95, the standardized root mean squared residual (SRMR) smaller than .08 and the root mean square error of approximation (RMSEA) smaller than .06. 
 
 ### Criterion validity evidence 
 To examine the nomological structure of the facets and domains to external constructs like life satisfaction and education, correlations and multiple regression were computed. 
@@ -168,9 +167,9 @@ To examine the nomological structure of the facets and domains to external const
 
 ### Results of EFA
 In *Table 2* you can see model fits for the chosen facet model for each domain as well as Eigenvalues and results from MAP and PA test.
-To ensure that each facet is homogeneous and therefore, to reduce the risk of cross domain loadings, items with factor loadings less than .30 were eliminated. This was only done when item content was also judged as being non-central to the domain in question (Ziegler, 2014). 
+To ensure the homogeneity of the facets and to reduce the risk of cross domain loadings, items with factor loadings less than .30 were eliminated. This was only done when item content was also judged as being non-central to the domain in question (Ziegler, 2014). 
 
-According to that **Agreeableness** consists of eight facets after two facets were eliminated due to weakly loading and inconsistent items. The remaining facets are named Appreciation, Integrity, Low Competitiveness, Readiness to Give Feedback, Search for Support, Good Faith, Genuineness and Altruism. 
+According to the exploratory model, **Agreeableness** consists of eight facets after two facets were eliminated due to weakly loading and inconsistent items. The remaining facets are named Appreciation, Integrity, Low Competitiveness, Readiness to Give Feedback, Search for Support, Good Faith, Genuineness and Altruism. 
 **Conscientiousness** consists of nine facets after one facet with item factor loadings less than .30 was excluded, they are: Dominance, Persistence, Self-discipline, Task planning, Goal orientation, Carefulness, Orderliness, Wish to work to capacity and Productivity. 
 **Extraversion** is formed by nine facets. A new facet (Energy) was added in order to tap better the physical component of Extraversion, which was missing in the eight facet solution. The facets are Sociability, Readiness to take risks, Wish for affiliation, Positive attitude, Forcefulness, Communicativeness, Humor, Conviviality and Energy.
 **Neuroticism** (interpreted here as emotional stability) consists of seven facets. One facet was dropped due to poor interpretability, and was therefore not included in the subsequent analyses. The final set of facets are named Equanimity, Confidence, Carefreeness, Mental balance, Drive, Emotional robustness and Self-attention.
@@ -180,9 +179,7 @@ The items to each facet are listed in the appendix (A).
 
 
 
-### Results of CFA and ESEM. 
-
-All measurement models for the facets were fitting well, results can be found in *Table 3*.
+### Results of CFA and ESEM. All measurement models for the facets were fitting well, results can be found in *Table 3*.
 
 Table 3
 
@@ -247,15 +244,9 @@ return(mytable)
 table1 <-suppressWarnings(create.table3())
 library(xtable)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-print.xtable(xtable(table1, caption="Model fit for each facet"),include.rownames=FALSE,
-=======
-print(xtable(x, caption="Model fit for each facet"),include.rownames=FALSE,
->>>>>>> ae506c3e698a973cdbbb27331775b741a4bea8cd
-=======
-print(xtable(x, caption="Model fit for each facet"),include.rownames=FALSE,
->>>>>>> ae506c3e698a973cdbbb27331775b741a4bea8cd
+
+
+print(xtable(table1, caption="Model fit for each facet"),include.rownames=FALSE,
       size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
 
 ```
@@ -264,8 +255,6 @@ print(xtable(x, caption="Model fit for each facet"),include.rownames=FALSE,
 
 The exploratory structural equation model (ESEM) of the final model with all five domains fits well with CFI = .87, RMSEA = .072, SRMR = .036. As you can see in *Table 4* nearly all facets load significantly on their intended domain, but sometimes have loadings on other domains also, which are conform with the theory and the facet content.
 
-\newpage
-
 Table 4 
 
 ```{r, results="asis", message=F}
@@ -302,90 +291,14 @@ mytable <- mytable[,c(1,2,3,4,6,5)]
 colnames(mytable) <- c("", "Agreeableness", "Conscientiousness", "Extraversion", "Openness", "Neuroticism")
 
 # print(xtable(mytable, caption="Factor Loadings ESEM"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
-print(xtable(mytable, caption="Model fit for each facet"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
+print(xtable(mytable, caption="ESEM factor scores"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
 ```
 
-Table 4 
+### Criterion vaidity evidence
+Something has to be said here.
 
-```{r, results="asis", message=F}
-require(here)
-library(tidyverse)
-library(xtable)
+## Study 2 – German Sample
 
-setwd(here("data/Sample_USA_EFA+CFA/CFA/Full model/ESEM"))
-
-#let's use the model without three facets, althought the 3 factes out and 3 correlated errors works best
-
-library(MplusAutomation)
-
-this.model <- readModels("esem_all facets on all domains without o8, a5, a4, e2.out")
-mytable <- this.model$parameters$stdyx.standardized
-
-for(i in 1:length(mytable$paramHeader)){
-if(mytable$pval[i]<0.001){
-  mytable$new[i] <- paste(mytable$est[i], "***", sep="")
-}else if(mytable$pval[i]<0.01){
-  mytable$new[i] <- paste(mytable$est[i], "**", sep="")
-}else if(mytable$pval[i]<0.05){
-  mytable$new[i] <- paste(mytable$est[i], "*", sep="")
-}else {mytable$new[i] <- mytable$est[i]}}
-
-mytable <- mytable[,c("paramHeader", "param", "new")]
-mytable <- mytable[1:190, ]#remove all information concerning factor correlations, intercepts, res. variances etc
-
-mytable <- spread(mytable, key="paramHeader", value="new")
-#there must be an error between NEURO.BY and OPEN.BY, they seem to be crossed
-
-mytable <- mytable[,c(1,2,3,4,6,5)]
-
-colnames(mytable) <- c("", "Agreeableness", "Conscientiousness", "Extraversion", "Openness", "Neuroticism")
-
-# print(xtable(mytable, caption="Factor Loadings ESEM"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
-print(xtable(mytable, caption="Model fit for each facet"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
-```
-
-Table 4 
-
-```{r, results="asis", message=F}
-require(here)
-library(tidyverse)
-library(xtable)
-
-setwd(here("data/Sample_USA_EFA+CFA/CFA/Full model/ESEM"))
-
-#let's use the model without three facets, althought the 3 factes out and 3 correlated errors works best
-
-library(MplusAutomation)
-
-this.model <- readModels("esem_all facets on all domains without o8, a5, a4, e2.out")
-mytable <- this.model$parameters$stdyx.standardized
-
-for(i in 1:length(mytable$paramHeader)){
-if(mytable$pval[i]<0.001){
-  mytable$new[i] <- paste(mytable$est[i], "***", sep="")
-}else if(mytable$pval[i]<0.01){
-  mytable$new[i] <- paste(mytable$est[i], "**", sep="")
-}else if(mytable$pval[i]<0.05){
-  mytable$new[i] <- paste(mytable$est[i], "*", sep="")
-}else {mytable$new[i] <- mytable$est[i]}}
-
-mytable <- mytable[,c("paramHeader", "param", "new")]
-mytable <- mytable[1:190, ]#remove all information concerning factor correlations, intercepts, res. variances etc
-
-mytable <- spread(mytable, key="paramHeader", value="new")
-#there must be an error between NEURO.BY and OPEN.BY, they seem to be crossed
-
-mytable <- mytable[,c(1,2,3,4,6,5)]
-
-colnames(mytable) <- c("", "Agreeableness", "Conscientiousness", "Extraversion", "Openness", "Neuroticism")
-
-# print(xtable(mytable, caption="Factor Loadings ESEM"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
-print(xtable(mytable, caption="Model fit for each facet"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
-```
-
-# Study 2 – German Translation
-
-## Methods
 
 ### Participants
 The representative sample consisted of 387 German speakers (49.1% male) with a mean age of 45.6 years (SD=17.5).
@@ -409,7 +322,6 @@ The limit to factorial measurement invariance was set to $\Delta$ CFI < .01, $\D
 The measurement models of the American sample were replicated for the reduced number of item per facet. Model fits can be seen in Table 4. The ESEM with all five domains fits well with CFI = .82, RMSEA = .078, SRMR = .044. Table 5 shows the ESEM factor loadings for the German sample. All facets load significantly on their intended domain but can have loadings on other domains as well.
 
 ## Results of MI
-
 For analyzing the measurement invariance the latest facet model structure (with additional facets) was taken. The results are shown in Table 6.
 Configural measurement invariance is assumed for the facets Appreciation of others, Superiority/Grandiosity, Need to be liked, Crybabiness, Manipulation, Altruism (facets of Agreeableness), Perseverance, Task Planning, Goal-orientation/Achievement striving, Preferred Load, Procrastination (facets of Conscientiousness), Assertiveness, Sociability/Gregariousness, Activity (facets of Extraversion), Irritability, Self-serving Attention (facets of Neuroticism), Self-attributed Inginuity, Openness to actions and activities, Openmindedness/Judgement, Love of Learning, Openness to feelings and Intellect (facets of Openness).
 
@@ -418,6 +330,19 @@ Factorial measurement invariance is assumed for the facets Meanness, Trust (face
 The only facet with strong factorial measurement invariance is Shyness, a facet of Extraversion
 
 
+# Discussion
+
+We have come out to a open access instrument which is valid in two different cultures and maximizes the number of facets measured. 
+
+We cover all the "core" facets proposed by soto and john. We also cover all the facets proposed by the most influential Big Five measures as seen in table 1. In addition we included even more facets.
+
+The evidences for reliability and structural validity are retained. Like most of the Big Five instruments, ours could not survive to the CFA independent cluster model. Even though ESEM has been used to provide structural validity evidence of personality measures recently. Here we show that the standards for a good ESEM model are met. Furthermore the structural validity is robust between two different cultures.
+
+We have collected some criterion validity evidences. Like bla bla bla. Nonetheless the multi - facetted nature of the instrument makes forthcoming evidences for criterion and predictive validity promising.
+
+One limitation is the sample used. Students are not a representative population of society and results may not be generalized. 
+
+Future directions are to provide a tool with the subset of items for public use. Gather community sample, from more cultures and test the extent of the universality of the instrument. And use the instrument to predict important life outcomes so the links between specific behaviors and facets become richer.
 
 
 \newpage
