@@ -12,9 +12,10 @@ little <- c("agree", "con", "e", "n", "open")
 
 mytable <- tibble(domains=character(),
                   facets=character(),
-                cfi=as.numeric(NA),
-                rmsea=as.numeric(NA),
-                srmr=as.numeric(NA))
+                  cfi=as.numeric(NA),
+                  rmsea=as.numeric(NA),
+                  srmr=as.numeric(NA),
+                  items = as.numeric(NA))
 
 for(i in 1:5){
 setwd(here(paste("data/Sample_USA_EFA+CFA/CFA/", domains[i], sep="")))
@@ -44,10 +45,13 @@ for(i in 1:5){
                                           ordered=domains[i]), c("cfi", "rmsea", "srmr")), digits=3)
     this.table[j,2] <- facets[j]
     this.table[j, 1] <- domains[i]
+    this.table[j,6] <- length(fitted(cfa(model, get(domains[i]), 
+                                         ordered=domains[i]))$mean)
   }
   mytable <- rbind(mytable, this.table)
 }
 mytable <- mytable[-which(duplicated(mytable)),]
+mytable$facets <- tolower(mytable$facets)
 return(mytable)
 }
 
