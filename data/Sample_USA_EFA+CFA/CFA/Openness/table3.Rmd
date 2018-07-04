@@ -1,0 +1,20 @@
+---
+title: "Untitled"
+output: pdf_document
+---
+
+```{r setup, echo=F, message=F, warning=F}
+
+table3 <- read.csv("table3.csv", header = T)
+table3 <- table3[,-1]
+library(kableExtra)
+
+
+kable(table3, "latex", align = "l", booktabs = T, linesep="")%>%
+  kable_styling(latex_options = "scale_down") %>%
+  add_header_above(c(" " = 2, "Full items" = 4, "5 items" = 4)) 
+# print(xtable(table1, caption="Model fit for each facet"),include.rownames=FALSE,
+#       size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
+
+```
+

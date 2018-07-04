@@ -1,7 +1,7 @@
 ## @knitr table3
 
 
-create.table3 <- function(){
+create.table3.5items <- function(){
 
 
 library(here)

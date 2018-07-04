@@ -80,8 +80,6 @@ set.seed(42)
 # 1. Introduction
 
 
-## 1.1. Short history and relevance of the Big Five 
-
 Over the last decades, the Five Factor Model as well as the Big Five model have become widely accepted models for describing general attributes of personality. Often the terms are even used synonymously, which is why we will refer to the Big Five from here on. The Big Five is a hierarchical model which describes human individual differences in personality at the dispositional level: one of the most basic, universal, biologically-influenced and stable layers of human inter-individual differences in behavior, cognition and feeling [@McAdams2006a]. Its hierarchical nature is relevant to acknowledge behavior from the most specific (nuances), to the most broad differences in temperament and character (dimensions), through a varying number of mid-level personality characteristics called facets. Most of the research concerning criterion validity of the Big Five inventories has focused on the covariation between the Big Five dimensions and relevant external outcomes. However, specific dispositional characteristics captured on the facet level might be of extreme utility to provide more complex descriptions of individuality and to predict life outcomes to a major extent [@Paunonen2001; @Lounsbury2002; @Ziegler2014]. Unfortunately, the number and nature of the facets below the Big Five and being measured by different personality instruments is far from being consensual. In fact, different facet level models have been proposed (XXXX). One potential reason for this could be that  many facet level models were developed after a questionnaire version without such a level had been published. Thus, the facets were developed as an elaboration. While this has many theoretical advantages it also has the disadvantage of potentially limiting the search space of possible facets. In this work we aim at maximizing this search space and present a personality questionnaire which is broad at the facet level, open-access, and measurement invariant across two different cultures. 
 
 ## 1.2. A short history of the Big Five
@@ -175,8 +173,10 @@ To examine the nomological structure of the facets and domains to external const
 ## 2.2. Results
 
 ### Results of EFA
-In *Table 2* you can see model fits for the chosen facet model for each domain as well as Eigenvalues and results from MAP and PA test.
+In *Table 2* model fits for the chosen facet model for each domain are shown, as well as Eigenvalues and results from MAP and PA test.
 To ensure the homogeneity of the facets and to reduce the risk of cross domain loadings, items with factor loadings less than .30 were eliminated. This was only done when item content was also judged as being non-central to the domain in question (Ziegler, 2014). 
+
+< Table 2 >
 
 According to the exploratory model, **Agreeableness** consists of eight facets after two facets were eliminated due to weakly loading and inconsistent items. The remaining facets are named Appreciation, Integrity, Low Competitiveness, Readiness to Give Feedback, Search for Support, Good Faith, Genuineness and Altruism. 
 **Conscientiousness** consists of nine facets after one facet with item factor loadings less than .30 was excluded, they are: Dominance, Persistence, Self-discipline, Task planning, Goal orientation, Carefulness, Orderliness, Wish to work to capacity and Productivity. 
@@ -188,84 +188,31 @@ The items to each facet are listed in the appendix (A).
 
 
 
-### Results of CFA and ESEM. 
-All measurement models for the facets were fitting well, results can be found in *Table 3*.
+### Results of CFA and ESEM
+All measurement models for the facets were fitting well, results can be found in *Table 3*. In this table both five-item facets and multiple-item facets are presented with their respectve model fit measures. The 5-item facets normally outperform the multiple-item facet versions regarding model fit.
 
-Table 3
+< Table 3 caption="Model fit for each facet")>
 
-
-```{r table3, results="asis", warning=F}
-#  ## @knitr table3
-
-
-create.table3 <- function(){
-
-options(warn=-1)
-
-library(here)
-library(foreign)
-library(lavaan)
-library(tidyverse)
-domains <- c("Agreeableness", "Conscientiousness", "Extraversion", "Neuroticism", "Openness")
-little <- c("agree", "con", "e", "n", "open")
-
-mytable <- tibble(Domains=character(),
-                  Facets=character(),
-                cfi=as.numeric(NA),
-                rmsea=as.numeric(NA),
-                srmr=as.numeric(NA))
-
-for(i in 1:5){
-setwd(here(paste("data/Sample_USA_EFA+CFA/CFA/", domains[i], sep="")))
-assign(domains[i], read.spss(list.files()[grep(".sav", list.files())], to.data.frame = T))
-assign(domains[i], as.data.frame(lapply(get(domains[i])[,grep(paste(little[i]), 
-                                                              colnames(get(domains[i])))], ordered)))}
-colnames(Extraversion) <- sub("extra", "e", colnames(Extraversion))
-colnames(Neuroticism) <- sub("neuro", "n", colnames(Neuroticism))
-#agree[,grep("agre", colnames(agree))] <- lapply(agree[,grep("agre", colnames(agree))], ordered)
-
-this.table <- mytable
-for(i in 1:5){
-  setwd(here(paste("data/Sample_USA_EFA+CFA/CFA/", domains[i], "/5 Items", sep="")))
-  files.here <- list.files()
-  files.here <- files.here[grep("inp", files.here)]
-  files.here <- files.here[-grep("Gesamtmodell", files.here)]
-
-  facets <- files.here
-    for(j in 1:length(facets)){
-      facets[j] <- sub(paste("CFA ",domains[i], " - ", sep=""), "", facets[j])
-      facets[j] <- sub("_5 items.inp", "", facets[j])
-      facets[j] <- sub("_3 items.inp", "", facets[j])
-    }
-  for(j in 1:length(files.here)){
-    model <- mplus2lavaan(files.here[j], run = F)$model
-    this.table[j,3:5] <- round(fitMeasures(cfa(model, get(domains[i]), 
-                                          ordered=domains[i]), c("cfi", "rmsea", "srmr")), digits=3)
-    this.table[j,2] <- facets[j]
-    this.table[j, 1] <- domains[i]
-  }
-  mytable <- rbind(mytable, this.table)
-}
-mytable <- mytable[-which(duplicated(mytable)),]
-mytable[which(duplicated(mytable[,"Domains"])),"Domains"]<-""
-return(mytable)
-}
-
-table1 <-suppressWarnings(create.table3())
-library(xtable)
+```{r, warning=F}
+setwd(here())
+table3 <- read.csv("table3.csv", header = T)
+table3 <- table3[,-1]
+library(kableExtra)
 
 
-
-print(xtable(table1, caption="Model fit for each facet"),include.rownames=FALSE,
-      size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
+kable(table3, "latex", align = "l", booktabs = T, linesep="")%>%
+  kable_styling(latex_options = "scale_down") %>%
+  add_header_above(c(" " = 2, "Full items" = 4, "5 items" = 4)) 
 
 ```
 
 
 
-The exploratory structural equation model (ESEM) of the final model with all five domains fits well with CFI = .87, RMSEA = .072, SRMR = .036. As you can see in *Table 4* nearly all facets load significantly on their intended domain, but sometimes have loadings on other domains also, which are conform with the theory and the facet content.
 
-Table 4 
+
+The exploratory structural equation model (ESEM) of the final model with all five domains fits well with CFI = .87, RMSEA = .072, SRMR = .036. As you can see in *Table 4* nearly all facets load significantly on their intended domain. Some cross loadings can be found as they are plausible with ESEM procedures. However, in any case the number of cross loadings is high nor against the facet content.
+
+< Table 4 caption="ESEM factor scores")> 
 
 ```{r, results="asis", message=F}
 require(here)
@@ -314,8 +261,11 @@ mytable$Openness[31:38] <- paste("\\textbf{",mytable$Openness[31:38], "}", sep="
 print(xtable(mytable, caption="ESEM factor scores"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top",sanitize.text.function=Hmisc::latexTranslate)
 ```
 
-### Criterion vaidity evidence
+### Criterion validity evidence
 
+
+
+< Table 5 caption="Criterion correlations" >
 
 ```{r, results="asis"}
 setwd(here("/data/ETS_IPIP/Korrelationstabellen"))
@@ -352,7 +302,7 @@ The limit to factorial measurement invariance was set to $\Delta$ CFI < .01, $\D
 ### Results of CFA 
 The measurement models of the American sample were replicated for the reduced number of item per facet. Model fits can be seen in Table 4. The ESEM with all five domains fits well with CFI = .82, RMSEA = .078, SRMR = .044. Table 5 shows the ESEM factor loadings for the German sample. All facets load significantly on their intended domain but can have loadings on other domains as well.
 
-## Results of MI
+### Results of MI
 For analyzing the measurement invariance the latest facet model structure (with additional facets) was taken. The results are shown in Table 6.
 Configural measurement invariance is assumed for the facets Appreciation of others, Superiority/Grandiosity, Need to be liked, Crybabiness, Manipulation, Altruism (facets of Agreeableness), Perseverance, Task Planning, Goal-orientation/Achievement striving, Preferred Load, Procrastination (facets of Conscientiousness), Assertiveness, Sociability/Gregariousness, Activity (facets of Extraversion), Irritability, Self-serving Attention (facets of Neuroticism), Self-attributed Inginuity, Openness to actions and activities, Openmindedness/Judgement, Love of Learning, Openness to feelings and Intellect (facets of Openness).
 
