@@ -43,7 +43,11 @@ mask              : no
 floatsintext      : yes
 class             : "man"
 
-
+header-includes:
+   - \usepackage{rotating}
+   - \usepackage{longtable}
+   - \usepackage{changepage}
+   
 output:
   papaja::apa6_pdf:
     includes:
@@ -59,6 +63,9 @@ library(here)
 library(tidyverse)
 library(knitr)
 library(xtable)
+library(readxl)
+library(Hmisc)  #for latexTranslate
+
 
 options(xtable.floating = T, xtable.comment = FALSE)#figsintext yaml option buggy. change xtable floating instead
 
@@ -163,6 +170,19 @@ To confirm the structure of facets the EFAs delivered, multiple confirmatory fac
 ### Criterion validity evidence 
 To examine the nomological structure of the facets and domains to external constructs like life satisfaction and education, correlations and multiple regression were computed. 
 
+```{r, results="asis"}
+setwd(here("/data/ETS_IPIP/Korrelationstabellen"))
+cors <- read_excel("corr_matrix_facetts_r.xlsx", skip = 1)
+colnames(cors)[1] <- "facets"
+
+cors[,-1] <- as.data.frame(sapply(cors[,-1], function(x) ifelse(x >= 0.2 | x <= -0.2, paste("\\textbf{", x, "}", sep=""), x)))
+cors <- as.data.frame(lapply(cors, as.character))
+
+print(xtable(cors, caption="Criterion correlations"),type="latex",include.rownames=F, size="\\fontsize{5.5pt}{4.5pt}\\selectfont", caption.placement = "top", rotate.colnames = TRUE,sanitize.text.function=Hmisc::latexTranslate, floating.environment = "sidewaystable")
+```
+
+
+
 ## 2.2. Results
 
 ### Results of EFA
@@ -179,7 +199,8 @@ The items to each facet are listed in the appendix (A).
 
 
 
-### Results of CFA and ESEM. All measurement models for the facets were fitting well, results can be found in *Table 3*.
+### Results of CFA and ESEM. 
+All measurement models for the facets were fitting well, results can be found in *Table 3*.
 
 Table 3
 
