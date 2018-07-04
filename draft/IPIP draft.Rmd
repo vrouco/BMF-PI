@@ -170,17 +170,6 @@ To confirm the structure of facets the EFAs delivered, multiple confirmatory fac
 ### Criterion validity evidence 
 To examine the nomological structure of the facets and domains to external constructs like life satisfaction and education, correlations and multiple regression were computed. 
 
-```{r, results="asis"}
-setwd(here("/data/ETS_IPIP/Korrelationstabellen"))
-cors <- read_excel("corr_matrix_facetts_r.xlsx", skip = 1)
-colnames(cors)[1] <- "facets"
-
-cors[,-1] <- as.data.frame(sapply(cors[,-1], function(x) ifelse(x >= 0.2 | x <= -0.2, paste("\\textbf{", x, "}", sep=""), x)))
-cors <- as.data.frame(lapply(cors, as.character))
-
-print(xtable(cors, caption="Criterion correlations"),type="latex",include.rownames=F, size="\\fontsize{5.5pt}{4.5pt}\\selectfont", caption.placement = "top", rotate.colnames = TRUE,sanitize.text.function=Hmisc::latexTranslate, floating.environment = "sidewaystable")
-```
-
 
 
 ## 2.2. Results
@@ -299,9 +288,11 @@ if(mytable$pval[i]<0.001){
   mytable$new[i] <- paste(mytable$est[i], "**", sep="")
 }else if(mytable$pval[i]<0.05){
   mytable$new[i] <- paste(mytable$est[i], "*", sep="")
-}else {mytable$new[i] <- mytable$est[i]}}
+}else {mytable$new[i] <- sprintf("%.3f", round(mytable$est[i],3))}}
 
 mytable <- mytable[,c("paramHeader", "param", "new")]
+
+
 mytable <- mytable[1:190, ]#remove all information concerning factor correlations, intercepts, res. variances etc
 
 mytable <- spread(mytable, key="paramHeader", value="new")
@@ -309,14 +300,33 @@ mytable <- spread(mytable, key="paramHeader", value="new")
 
 mytable <- mytable[,c(1,2,3,4,6,5)]
 
-colnames(mytable) <- c("", "Agreeableness", "Conscientiousness", "Extraversion", "Openness", "Neuroticism")
+colnames(mytable) <- c("", "Agreeableness", "Conscientiousness", "Extraversion", "Neuroticism","Openness")
+
+
+
+mytable$Agreeableness[1:6] <- paste("\\textbf{",mytable$Agreeableness[1:6], "}", sep="")
+mytable$Conscientiousness[7:15] <- paste("\\textbf{",mytable$Conscientiousness[7:15], "}", sep="")
+mytable$Extraversion[16:23] <- paste("\\textbf{",mytable$Extraversion[16:23], "}", sep="")
+mytable$Neuroticism[24:30] <- paste("\\textbf{",mytable$Neuroticism[24:30], "}", sep="")
+mytable$Openness[31:38] <- paste("\\textbf{",mytable$Openness[31:38], "}", sep="")
 
 # print(xtable(mytable, caption="Factor Loadings ESEM"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
-print(xtable(mytable, caption="ESEM factor scores"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
+print(xtable(mytable, caption="ESEM factor scores"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top",sanitize.text.function=Hmisc::latexTranslate)
 ```
 
 ### Criterion vaidity evidence
-Something has to be said here.
+
+
+```{r, results="asis"}
+setwd(here("/data/ETS_IPIP/Korrelationstabellen"))
+cors <- read_excel("corr_matrix_facetts_r.xlsx", skip = 1)
+colnames(cors)[1] <- "facets"
+
+cors[,-1] <- as.data.frame(sapply(cors[,-1], function(x) ifelse(x >= 0.2 | x <= -0.2, paste("\\textbf{", x, "}", sep=""), x)))
+cors <- as.data.frame(lapply(cors, as.character))
+
+print(xtable(cors, caption="Criterion correlations"),type="latex",include.rownames=F, size="\\fontsize{5.5pt}{4.5pt}\\selectfont", caption.placement = "top", rotate.colnames = TRUE,sanitize.text.function=Hmisc::latexTranslate, floating.environment = "sidewaystable")
+```
 
 ## Study 2 – German Sample
 
