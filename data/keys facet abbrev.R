@@ -11,6 +11,7 @@ for(i in 1:5){
   files.here <- list.files()
   files.here <- files.here[grep("out", files.here)]
   files.here <- if(any(grep("gesamt", files.here))){files.here[-grep("gesamt", files.here)]}else{files.here}
+  files.here <- if(any(grep("seld", files.here))){files.here[-grep("seld", files.here)]}else{files.here}
   
   facets <- files.here
   for(j in 1:length(facets)){

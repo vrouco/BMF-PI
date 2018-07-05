@@ -58,6 +58,8 @@ create.table3.5items <- function(){
 
 y <-create.table3.5items()
 
+grep(key$facets[1], y$facets, ignore.case = T)
+
 
 create.table3 <- function(){
   
