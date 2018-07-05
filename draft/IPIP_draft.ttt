@@ -2,7 +2,8 @@
 \ifnextchar[{\eatarg}{}
 
 
-\caption{(\#tab:table3 model fits CFA)Model fit for each facet}
+
+\caption{Model fit for each facet}
 \centering
 \resizebox{\linewidth}{!}{
 \begin{tabular}[t]{llllllllll}
