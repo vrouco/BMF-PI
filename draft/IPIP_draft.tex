@@ -92,6 +92,9 @@
 \usepackage{csquotes}
 \usepackage{upgreek}
 
+ % Line numbering
+  \usepackage{lineno}
+  \linenumbers
 
 
 \usepackage{tikz} % Variable definition to generate author note
@@ -299,7 +302,7 @@ which assumes six broad domains. Table 1 gives an overview of these
 different models listing their facets per domain as well as some
 information regarding their psychometric properties.
 
-table 1
+\textless{} Table 1 \textgreater{}
 
 As shown in table 1, there are many different possibilities of facets
 forming the domains. However, there is still a degree of overlap on the
@@ -495,12 +498,12 @@ years (SD=6.3), in Sample 2 the mean age was 21.5 years (SD=5.6).
 (IPIP)}\label{international-personality-item-pool-ipip}}
 
 Altogether, 525 items from the \emph{International Personality Item
-Pool} \emph{(IPIP)} were used to measure Neuroticism, Extraversion,
-Openness (to experience), Agreeableness and Conscientiousness. The IPIP
-is an open source database of personality items, which was launched in
-1996, and contains over 2000 items (Goldberg et al., 2006). Participants
-were asked to rate themselves on typical behaviors or reactions on a
-5-point Likert scale, ranging from 1 (\enquote{Not all like me}) to 5
+Pool} (IPIP) were used to measure Neuroticism, Extraversion, Openness
+(to experience), Agreeableness and Conscientiousness. The IPIP is an
+open source database of personality items, which was launched in 1996,
+and contains over 2000 items (Goldberg et al., 2006). Participants were
+asked to rate themselves on typical behaviors or reactions on a 5-point
+Likert scale, ranging from 1 (\enquote{Not all like me}) to 5
 (\enquote{Very much like me}).
 
 \hypertarget{gpa}{%
@@ -583,7 +586,7 @@ domain loadings, items with factor loadings less than .30 were
 eliminated. This was only done when item content was also judged as
 being non-central to the domain in question (John et al., 2014).
 
-\textless{} Table 2 \textgreater{}
+\textless{} Table 2 here\textgreater{}
 
 According to the exploratory model, \textbf{Agreeableness} consists of
 eight facets after two facets were eliminated due to weakly loading and
@@ -624,12 +627,12 @@ multiple-item facets are presented with their respectve model fit
 measures. The 5-item facets normally outperform the multiple-item facet
 versions regarding model fit.
 
-\textless{} Table 3 caption=\enquote{Model fit for each
+\textless{} Table 3 here caption=\enquote{Model fit for each
 facet})\textgreater{}
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-2}Model fit for each facet}
+\caption{(\#tab:table3 model fits CFA)Model fit for each facet}
 \centering
 \resizebox{\linewidth}{!}{
 \begin{tabular}[t]{llllllllll}
@@ -690,7 +693,8 @@ their intended domain. Some cross loadings can be found as they are
 plausible with ESEM procedures. However, in any case the number of cross
 loadings is high nor against the facet content.
 
-\textless{} Table 4 caption=\enquote{ESEM factor scores})\textgreater{}
+\textless{} Table 4 here caption=\enquote{ESEM factor
+scores})\textgreater{}
 
 \begin{verbatim}
 ## Warning: Missing column names filled in: 'X1' [1], 'X2' [2]
@@ -698,7 +702,7 @@ loadings is high nor against the facet content.
 
 \begin{table}[ht]
 \centering
-\caption{ESEM factor scores} 
+\caption{ESEM factor scores USA sample} 
 \begingroup\fontsize{9.5pt}{9pt}\selectfont
 \begin{tabular}{llllll}
   \hline
@@ -751,7 +755,7 @@ A1 & \textbf{-0.383***} & 0.124 & 0.261*** & 0.095 & 0.446*** \\
 \subsubsection{Criterion validity
 evidence}\label{criterion-validity-evidence-1}}
 
-\textless{} Table 5 caption=\enquote{Criterion correlations}
+\textless{} Table 5 here caption=\enquote{Criterion correlations}
 \textgreater{}
 
 \begin{sidewaystable}[ht]
@@ -816,14 +820,14 @@ sumsA1 & \textbf{-0.21} & \textbf{0.32} & -0.03 & 0.05 & -0.13 & 0.12 & 0.16 & 0
 \subsubsection{Participants}\label{participants-1}}
 
 The representative sample consisted of 387 German speakers (49.1\% male)
-with a mean age of 45.6 years (SD = 17.5).
+with a mean age of 45.6 years (SD = 17.5). (How was the data collected?)
 
 \hypertarget{measures}{%
 \subsubsection{Measures}\label{measures}}
 
 The five items per facet derived from Study 1 were translated and
 back-translated by bilingual experts, creating a German version of the
-measure used there.
+measure used there. The translated items can be found on appendix B.
 
 \hypertarget{procedure-1}{%
 \subsection{Procedure}\label{procedure-1}}
@@ -867,18 +871,20 @@ set to \(\Delta\) CFI \textless{} .01, \(\Delta\) RMSEA \textless{}
 \subsubsection{Results of CFA}\label{results-of-cfa}}
 
 The measurement models of the American sample were replicated for the
-reduced number of item per facet. Model fits can be seen in Table 4. The
+reduced number of item per facet. Model fits can be seen in Table 3. The
 ESEM with all five domains fits well with CFI = .82, RMSEA = .078, SRMR
-= .044. Table 5 shows the ESEM factor loadings for the German sample.
+= .044. Table 6 shows the ESEM factor loadings for the German sample.
 All facets load significantly on their intended domain but can have
 loadings on other domains as well.
+
+\textless{}Table 6 here \textgreater{}
 
 \hypertarget{results-of-mi}{%
 \subsubsection{Results of MI}\label{results-of-mi}}
 
 For analyzing the measurement invariance the latest facet model
 structure (with additional facets) was taken. The results are shown in
-Table 6. Configural measurement invariance is assumed for the facets
+Table 7. Configural measurement invariance is assumed for the facets
 Appreciation of others, Superiority/Grandiosity, Need to be liked,
 Crybabiness, Manipulation, Altruism (facets of Agreeableness),
 Perseverance, Task Planning, Goal-orientation/Achievement striving,
@@ -899,6 +905,8 @@ Openness to arts and Need for cognition (facets of Openness).
 
 The only facet with strong factorial measurement invariance is Shyness,
 a facet of Extraversion
+
+\textless{}Table 7 here\textgreater{}
 
 \hypertarget{discussion}{%
 \section{Discussion}\label{discussion}}
@@ -1197,7 +1205,7 @@ doi:\href{https://doi.org/10.1002/per}{10.1002/per}
 \section{}
 Appendix
 
-\includegraphics{IPIP_draft_files/figure-latex/unnamed-chunk-5-1.pdf}
+\includegraphics{IPIP_draft_files/figure-latex/unnamed-chunk-2-1.pdf}
 \end{appendix}
 
 \end{document}

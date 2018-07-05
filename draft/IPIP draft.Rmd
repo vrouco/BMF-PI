@@ -38,7 +38,7 @@ figsintext        : no
 figurelist        : no
 tablelist         : yes 
 footnotelist      : no
-lineno            : no
+lineno            : yes
 mask              : no
 floatsintext      : no
 class             : "man"
@@ -49,9 +49,7 @@ header-includes:
    - \usepackage{changepage}
    
 output:
-  papaja::apa6_pdf:
-    includes:
-      after_body: "appendix.tex"
+  papaja::apa6_word
 ---
 
 ```{r load_packages, include = FALSE}
@@ -100,13 +98,13 @@ The Big Five has proven to be a valid theoretical and empirical model to predict
 
 There are a number of models that include a facet structure below the five broad domains. The most widely known model is the one suggested by @Costa1995. Other popular models have been suggested for the Big Five Inventory 2 (BFI-2, @SotoJohn2016), the IPIP [@Goldberg2006], and the HEXACO model [@Lee2016], which assumes six broad domains. Table 1 gives an overview of these different models listing their facets per domain as well as some information regarding their psychometric properties. 
 
-table 1
+< Table 1 >
 
 As shown in table 1, there are many different possibilities of facets forming the domains. However, there is still a degree of overlap on the facets covered by the different instruments. @SotoJohn2009  inspected the convergences between the NEO-PI-R and the first version of the BFI, suggesting that two constructs per domain were measured at the facet level by both inventories. The constructs defined by @SotoJohn2009 were: Assertiveness and Activity for Extraversion; Altruism and Compliance for Agreeableness; Order and Self-Discipline for Conscientiousness; Anxiety and Depression for Neuroticism; and Aesthetics and Ideas for Openness. The convergence holds for the four instruments listed in table 1, as these ten constructs are covered within the facets for every instrument. Some of the constructs are explicitly covered at the facet level (e.g. Anxiety); meanwhile others are mainly covered though the four instruments, although sometimes implicitly (e.g. Liveliness in HEXACO resembles the “core” construct Activity, present in all other instruments). The reverse is not always true, not every facet within the four instruments is covered by the constructs proposed by @SotoJohn2009. As an example we find Self-Consciousness, a Neuroticism facet defined by the NEO-PI-R and the IPIP-NEO-120, which is clearly tapping at a construct different from Anxiety or Depression.
 
 The nomological network commonly assumed in Big Five questionnaires is drawn from nuances through facets to domains, from more specific to more general. Relying in domains to explain and predict behavior can benefit from ease of interpretability. However, optimal predictions for specific contexts can be enhanced if a more specific set of traits is used. On the other hand, using nuances to predict behavior might yield even stronger predictive ability [@Seeboth2018], but as the number of predictors grows the interpretations become more complex. Facets are on a middle ground between nuances and domains, in a compromise between specificity and sensitivity in the bandwidth-fidelity dilemma. This narrow aggregation both satisfies the specificity of predictions to concrete situations and environments and also enhances the ease of interpretability when summarizing individual personality characteristics. 
 
-Furthermore, there is a large corpus of research which points towards facets as important criterion predictors showing incremental validity to domains.  For academic achievement, @Paunonen2001 showed that the facets achievement motivation and intellectual curiosity increased the variance accounted for by college students’ grades, above and beyond its respective dimensions: Conscientiousness and Openness to experience. Similarly, @Lounsbury2002 provided evidence regarding the facets work drive and aggression, which added an extra 12% of explained variance over the Big Five domains on 10th grade students’ GPA. @Ziegler2010 showed that better performance in college grades was associated with low gregariousness, excitement seeking and order as well as high activity, openness to ideas and openness to values. Often different facets within the same domain can have effects in opposite directions, partially canceling out the predictive ability when only paying attention to the domain score. This is the case for Openness to ideas vs. Openness to fantasy, as the former is related positively to academic achievement whereas the latter is related negatively [@Ziegler2014], resulting in a potential masking effect on the ability of Openness predicting the academic achievement.
+Furthermore, there is a large corpus of research which points towards facets as important criterion predictors showing incremental validity to domains. For academic achievement, @Paunonen2001 showed that the facets achievement motivation and intellectual curiosity increased the variance accounted for by college students’ grades, above and beyond its respective dimensions: Conscientiousness and Openness to experience. Similarly, @Lounsbury2002 provided evidence regarding the facets work drive and aggression, which added an extra 12% of explained variance over the Big Five domains on 10th grade students’ GPA. @Ziegler2010 showed that better performance in college grades was associated with low gregariousness, excitement seeking and order as well as high activity, openness to ideas and openness to values. Often different facets within the same domain can have effects in opposite directions, partially canceling out the predictive ability when only paying attention to the domain score. This is the case for Openness to ideas vs. Openness to fantasy, as the former is related positively to academic achievement whereas the latter is related negatively [@Ziegler2014], resulting in a potential masking effect on the ability of Openness predicting the academic achievement.
 
 <!-- @Ziegler 2014 is not shown in the bibliography --> 
 
@@ -136,13 +134,6 @@ The second sample was drawn again from a graduate student population, albeit thi
 
 ## 2. Study 1 - US-American Sample
 
-```{r, comment=F, message=F, warning=F}
-
-
-```
-
-
-
 ### 2.1.1. Participants
 The sample consisted of 726 American undergraduate students (59.3% male) who participated voluntarily. The mean age was 21.6 years (SD=5.9). Students were emailed a link to a computerized assessment battery that included the IPIP items as well as several other tests not reported in this paper.
 The data set was randomly splitted in two equally sized samples. Both samples were matched in relation to missing values, outliers and extreme values. In Sample 1 the mean age was 21.8 years (SD=6.3), in Sample 2 the mean age was 21.5 years (SD=5.6).
@@ -150,7 +141,7 @@ The data set was randomly splitted in two equally sized samples. Both samples we
 ## 2.1.2. Measures. 
 
 ### International Personality Item Pool (IPIP)
-Altogether, 525 items from the *International Personality Item Pool* *(IPIP)* were used to measure Neuroticism, Extraversion, Openness (to experience), Agreeableness and Conscientiousness. The IPIP is an open source database of personality items, which was launched in 1996, and contains over 2000 items [@Goldberg2006].
+Altogether, 525 items from the *International Personality Item Pool* (IPIP) were used to measure Neuroticism, Extraversion, Openness (to experience), Agreeableness and Conscientiousness. The IPIP is an open source database of personality items, which was launched in 1996, and contains over 2000 items [@Goldberg2006].
 Participants were asked to rate themselves on typical behaviors or reactions on a 5-point Likert scale, ranging from 1 (“Not all like me”) to 5 (“Very much like me”).
 
 ### GPA
@@ -178,7 +169,7 @@ To examine the nomological structure of the facets and domains to external const
 In *Table 2* model fits for the chosen facet model for each domain are shown, as well as Eigenvalues and results from MAP and PA test.
 To ensure the homogeneity of the facets and to reduce the risk of cross domain loadings, items with factor loadings less than .30 were eliminated. This was only done when item content was also judged as being non-central to the domain in question [@Ziegler2014]. 
 
-< Table 2 >
+< Table 2 here>
 
 According to the exploratory model, **Agreeableness** consists of eight facets after two facets were eliminated due to weakly loading and inconsistent items. The remaining facets are named Appreciation, Integrity, Low Competitiveness, Readiness to Give Feedback, Search for Support, Good Faith, Genuineness and Altruism. 
 **Conscientiousness** consists of nine facets after one facet with item factor loadings less than .30 was excluded, they are: Dominance, Persistence, Self-discipline, Task planning, Goal orientation, Carefulness, Orderliness, Wish to work to capacity and Productivity. 
@@ -193,9 +184,9 @@ The items to each facet are listed in the appendix (A).
 ### Results of CFA and ESEM
 All measurement models for the facets were fitting well, results can be found in *Table 3*. In this table both five-item facets and multiple-item facets are presented with their respectve model fit measures. The 5-item facets normally outperform the multiple-item facet versions regarding model fit.
 
-< Table 3 caption="Model fit for each facet")>
+< Table 3 here caption="Model fit for each facet")>
 
-```{r, warning=F}
+```{r table3 model fits CFA, warning=F}
 setwd(here())
 table3 <- read.csv("table3.csv", header = T)
 table3 <- table3[,-1]
@@ -209,14 +200,11 @@ kable(table3, "latex", align = "l", booktabs = T, linesep="", caption = "Model f
 ```
 
 
-
-
-
 The exploratory structural equation model (ESEM) of the final model with all five domains fits well with CFI = .87, RMSEA = .072, SRMR = .036. As you can see in *Table 4* nearly all facets load significantly on their intended domain. Some cross loadings can be found as they are plausible with ESEM procedures. However, in any case the number of cross loadings is high nor against the facet content.
 
-< Table 4 caption="ESEM factor scores")> 
+< Table 4 here caption="ESEM factor scores")> 
 
-```{r, results="asis", message=F}
+```{r table 4 esem1, results="asis", message=F}
 setwd(here())
 mytable <- read_csv("table4.csv")
 mytable <- mytable[,-1]
@@ -227,14 +215,14 @@ mytable$Neuroticism[24:30] <- paste("\\textbf{",mytable$Neuroticism[24:30], "}",
 mytable$Openness[31:38] <- paste("\\textbf{",mytable$Openness[31:38], "}", sep="")
 
 # print(xtable(mytable, caption="Factor Loadings ESEM"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
-print(xtable(mytable, caption="ESEM factor scores"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top",sanitize.text.function=Hmisc::latexTranslate)
+print(xtable(mytable, caption="ESEM factor scores USA sample"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top",sanitize.text.function=Hmisc::latexTranslate)
 ```
 
 ### Criterion validity evidence
 
 
 
-< Table 5 caption="Criterion correlations" >
+< Table 5 here caption="Criterion correlations" >
 
 ```{r, results="asis"}
 setwd(here("/data/ETS_IPIP/Korrelationstabellen"))
@@ -251,10 +239,10 @@ print(xtable(cors, caption="Criterion correlations"),type="latex",include.rownam
 
 
 ### Participants
-The representative sample consisted of 387 German speakers (49.1% male) with a mean age of 45.6 years (SD = 17.5).
+The representative sample consisted of 387 German speakers (49.1% male) with a mean age of 45.6 years (SD = 17.5). (How was the data collected?)
 
 ### Measures
-The five items per facet derived from Study 1 were translated and back-translated by bilingual experts, creating a German version of the measure used there.
+The five items per facet derived from Study 1 were translated and back-translated by bilingual experts, creating a German version of the measure used there. The translated items can be found on appendix B.
 
 ## Procedure
 
@@ -263,22 +251,25 @@ To check the facet structure Study 1 delivered, multiple confirmatory factor ana
 
 ### Step 2 – Testing for measurement invariance. 
 In a next step, measurement invariance between German and US samples was examined. We followed the procedure suggested by @Sass2011 and tested configural, factorial and strong factorial invariance. The cutoffs suggested by @Chen2007 were applied to compare model fits. According to this configural measurement invariance can be assumed when the same item is associated with the same factor in each domain, while the factor loadings can differ. If the factor loadings of each item would not differ between the samples, factorial measurement invariance can be assumed. Strong factorial measurement invariance can be assumed when on top of that the intercepts of each item are equal. 
-The limit to factorial measurement invariance was set to $\Delta$ CFI < .01, $\Delta$ RMSEA < .015 and $\Delta$ SRMR < .03, at which the limit to strong factorial measurement invariance was set to $\Delta$ CFI < .01, $\Delta$ RMSEA < .015, $\Delta$ SRMR < .01 (Chen, 2007).
+The limit to factorial measurement invariance was set to $\Delta$ CFI < .01, $\Delta$ RMSEA < .015 and $\Delta$ SRMR < .03, at which the limit to strong factorial measurement invariance was set to $\Delta$ CFI < .01, $\Delta$ RMSEA < .015, $\Delta$ SRMR < .01 [@Chen2007].
 
 
 ## Results
 
 ### Results of CFA 
-The measurement models of the American sample were replicated for the reduced number of item per facet. Model fits can be seen in Table 4. The ESEM with all five domains fits well with CFI = .82, RMSEA = .078, SRMR = .044. Table 5 shows the ESEM factor loadings for the German sample. All facets load significantly on their intended domain but can have loadings on other domains as well.
+The measurement models of the American sample were replicated for the reduced number of item per facet. Model fits can be seen in Table 3. The ESEM with all five domains fits well with CFI = .82, RMSEA = .078, SRMR = .044. Table 6 shows the ESEM factor loadings for the German sample. All facets load significantly on their intended domain but can have loadings on other domains as well.
+
+<Table 6 here > 
 
 ### Results of MI
-For analyzing the measurement invariance the latest facet model structure (with additional facets) was taken. The results are shown in Table 6.
+For analyzing the measurement invariance the latest facet model structure (with additional facets) was taken. The results are shown in Table 7.
 Configural measurement invariance is assumed for the facets Appreciation of others, Superiority/Grandiosity, Need to be liked, Crybabiness, Manipulation, Altruism (facets of Agreeableness), Perseverance, Task Planning, Goal-orientation/Achievement striving, Preferred Load, Procrastination (facets of Conscientiousness), Assertiveness, Sociability/Gregariousness, Activity (facets of Extraversion), Irritability, Self-serving Attention (facets of Neuroticism), Self-attributed Inginuity, Openness to actions and activities, Openmindedness/Judgement, Love of Learning, Openness to feelings and Intellect (facets of Openness).
 
 Factorial measurement invariance is assumed for the facets Meanness, Trust (facets of Agreeableness), Control of others, Lack of (Self-) Control, Deliberation/Caution, Lack of Tidiness/Order (facets of Conscientiousness), Sensation Seeking, Reclusiveness, Emotionality, Humor (facets of Extraversion), Depression, Anxiety, Self-assuredness, Lethargia, Sentimentality (facets of Neuroticism), Openness to reading, Openness to arts and Need for cognition (facets of Openness).
 
 The only facet with strong factorial measurement invariance is Shyness, a facet of Extraversion
 
+<Table 7 here>
 
 # Discussion
 
