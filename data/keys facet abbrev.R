@@ -1,4 +1,4 @@
-
+make.key <- function(){
 domains <- c("Agreeableness", "Conscientiousness", "Extraversion", "Neuroticism", "Openness")
 little <- c("agree", "con", "e", "n", "open")
 key <- tibble(domains=character(),
@@ -35,3 +35,18 @@ for(j in 1:length(key$abrev)){
   key[j,1]<-paste(strsplit(sub("cfa ","",key$facets), "")[[j]][1:4], collapse="")
   key[j,3] <- sub(".txt", "", key$abrev[j]) 
 }
+
+key$facets[44] <- "cfa openness - intellect"
+x <- strsplit(key$facets, " ") 
+x <- lapply(x,function(x)sub("sample", "", x))
+x <- lapply(x, function(x)x[x!=""])
+x <- lapply(x, function(x)x[-1:-3])
+x <- lapply(x, function(x)x[x != "-"])
+x <- unlist(lapply(x, paste, collapse=" "))
+key$facets <- x
+key$facets[key$facets=="openness to actions and activities"] <- "openness to action and activity"
+key <- key[-which(duplicated(key$facets)),]
+return(key)
+}
+key <- make.key()
+

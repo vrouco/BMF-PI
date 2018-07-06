@@ -3,14 +3,14 @@ create.table3.5items.DE <- function(){
   
   library(here)
   library(MplusAutomation)
-  
+  library(tidyverse)
   domains <- c("Gewissenhaftigkeit", "Neurotizismus", "Offenheit", "Verträglichkeit", "Extraversion")
   little <- c("con","n", "open","agree", "e")
   
   mytable <- tibble(facets=character(),
                     items = as.numeric(NA),
                     chisq = as.numeric(NA),
-                    pval = as.numeric(NA),
+                    pvalue = as.numeric(NA),
                     cfi=as.numeric(NA),
                     rmsea=as.numeric(NA))
   
