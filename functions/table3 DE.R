@@ -44,3 +44,5 @@ create.table3.5items.DE <- function(){
 }
 
 z <- create.table3.5items.DE()
+
+setwd(here("/functions"))

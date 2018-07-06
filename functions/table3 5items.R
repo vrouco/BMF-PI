@@ -78,3 +78,4 @@ return(mytable)
 
 
 y <-create.table3.5items()
+setwd(here("/functions"))

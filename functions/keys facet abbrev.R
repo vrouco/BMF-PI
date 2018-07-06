@@ -50,3 +50,4 @@ return(key)
 }
 key <- make.key()
 
+setwd(here("/functions"))

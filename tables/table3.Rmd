@@ -1,0 +1,32 @@
+---
+title: "table3"
+output:
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message=F, warning=F)
+library(tidyverse)
+library(here)
+library(readxl)
+library(kableExtra)
+
+```
+
+
+
+```{r table3}
+setwd(here("/tables"))
+table3 <- read_csv("table3.csv")
+
+# table3 <- 
+  kable(table3, "latex", align = "l", booktabs = T, linesep="", caption = "Model fit for each facet")%>%
+  kable_styling(latex_options = "scale_down") %>%
+  add_header_above(c(" " = 1, "Full items" = 5, "5 items" = 5, " " = 5)) %>%
+  add_header_above(c(" " = 1, "USA sample" = 10, "German sample" = 5))
+
+# setwd(here("tables"))
+# kable_as_image(table3, "table3.png")
+
+```

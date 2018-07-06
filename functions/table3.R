@@ -1,3 +1,12 @@
+library(here)
+library(tidyverse)
+
+make.table3 <- function(){
+setwd(here("/functions"))
+  source("table3 5items.R")
+  source("table3 unlimited items.R")
+  source("table3 DE.R")
+  source("keys facet abbrev.R")
 
 #need key, table3DE, table3unlimited & table3-5
 
@@ -19,22 +28,12 @@ y$pvalue <- ifelse(y$pvalue < 0.001, "<.001", y$pvalue)
 
 table3 <- merge(x,y,by=c("facets"), suffixes = c("",""))
 table3 <- merge(table3, z, by="facets", suffixes=c("",""))
+return(table3)
+}
 
-library(kableExtra)
+table3 <- make.table3()
 
-kable(table3) %>%
-  kable_styling("striped") %>%
-  kable_styling(font_size = 7) %>% 
-  add_header_above(c(" " = 1, "Full items" = 5, "5 items" = 5, " " = 5)) %>% 
-  add_header_above(c(" " = 1, "USA sample" = 10, "German sample" = 5))
-
-
-library(kableExtra)
+setwd(here("/tables"))
+#write_excel_csv(x = table3, path = "table3.csv")
 
 
-kable(table3, "latex", align = "c", booktabs = T)%>%
-  kable_styling("striped") %>%
-  kable_styling(font_size = 7) %>% 
-  add_header_above(c(" " = 2, "Full items" = 4, "5 items" = 4))
-# print(xtable(table1, caption="Model fit for each facet"),include.rownames=FALSE,
-#       size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
