@@ -34,13 +34,13 @@ wordcount         : "X"
 
 bibliography      : ["IPIP.bib"]
 
-figsintext        : no
+figsintext        : yes
 figurelist        : no
 tablelist         : yes 
 footnotelist      : no
 lineno            : yes
 mask              : no
-floatsintext      : no
+floatsintext      : yes
 class             : "man"
 
 header-includes:
@@ -49,8 +49,12 @@ header-includes:
    - \usepackage{changepage}
    
 output:
-  papaja::apa6_word
+  papaja::apa6_pdf
 ---
+```{r setups, include=FALSE}
+knitr::opts_chunk$set(echo = F, message=F, warning=F)
+```
+
 
 ```{r load_packages, include = FALSE}
 library("papaja")
@@ -63,6 +67,7 @@ library(knitr)
 library(xtable)
 library(readxl)
 library(Hmisc)  #for latexTranslate
+library(kableExtra)
 
 
 options(xtable.floating = T, xtable.comment = FALSE)#figsintext yaml option buggy. change xtable floating instead
@@ -186,16 +191,14 @@ All measurement models for the facets were fitting well, results can be found in
 
 < Table 3 here caption="Model fit for each facet")>
 
-```{r table3 model fits CFA, warning=F}
-setwd(here())
-table3 <- read.csv("table3.csv", header = T)
-table3 <- table3[,-1]
-library(kableExtra)
-
+```{r table3}
+setwd(here("tables"))
+table3 <- read_csv("table3.csv")
 
 kable(table3, "latex", align = "l", booktabs = T, linesep="", caption = "Model fit for each facet")%>%
   kable_styling(latex_options = "scale_down") %>%
-  add_header_above(c(" " = 2, "Full items" = 4, "5 items" = 4)) 
+  add_header_above(c(" " = 1, "Full items" = 5, "5 items" = 5, " " = 5)) %>%
+  add_header_above(c(" " = 1, "USA sample" = 10, "German sample" = 5))
 
 ```
 
@@ -204,8 +207,8 @@ The exploratory structural equation model (ESEM) of the final model with all fiv
 
 < Table 4 here caption="ESEM factor scores")> 
 
-```{r table 4 esem1, results="asis", message=F}
-setwd(here())
+```{r table 4 esem1, results="asis", message=F, eval=T}
+setwd(here("tables"))
 mytable <- read_csv("table4.csv")
 mytable <- mytable[,-1]
 mytable$Agreeableness[1:6] <- paste("\\textbf{",mytable$Agreeableness[1:6], "}", sep="")
@@ -214,7 +217,11 @@ mytable$Extraversion[16:23] <- paste("\\textbf{",mytable$Extraversion[16:23], "}
 mytable$Neuroticism[24:30] <- paste("\\textbf{",mytable$Neuroticism[24:30], "}", sep="")
 mytable$Openness[31:38] <- paste("\\textbf{",mytable$Openness[31:38], "}", sep="")
 
-# print(xtable(mytable, caption="Factor Loadings ESEM"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
+# kable(mytable, "latex", align = "l", booktabs = T, linesep="", 
+#       caption = "ESEM factor scores USA sample") %>% 
+#   text_spec(format="latex")
+
+ # print(xtable(mytable, caption="Factor Loadings ESEM"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
 print(xtable(mytable, caption="ESEM factor scores USA sample"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top",sanitize.text.function=Hmisc::latexTranslate)
 ```
 
@@ -224,7 +231,7 @@ print(xtable(mytable, caption="ESEM factor scores USA sample"),include.rownames=
 
 < Table 5 here caption="Criterion correlations" >
 
-```{r, results="asis"}
+```{r, results="asis", eval=F}
 setwd(here("/data/ETS_IPIP/Korrelationstabellen"))
 cors <- read_excel("corr_matrix_facetts_r.xlsx", skip = 1)
 colnames(cors)[1] <- "facets"
@@ -273,7 +280,7 @@ The only facet with strong factorial measurement invariance is Shyness, a facet 
 
 # Discussion
 
-We have come out to a open access instrument which is valid in two different cultures and maximizes the number of facets measured. 
+We have presented an open access instrument for personality assessment within the Big Five framework, which showed evidences of factorial validity in two different cultures and maximized the space set of facets encompassed. Furthermore, evidences for external criteria validity were attained  
 
 We cover all the "core" facets proposed by soto and john. We also cover all the facets proposed by the most influential Big Five measures as seen in table 1. In addition we included even more facets.
 
@@ -287,8 +294,21 @@ Future directions are to provide a tool with the subset of items for public use.
 
 
 \newpage
-```{r render_appendix, include=FALSE}
-render_appendix("appendix.Rmd")
+
+```{r appendix A, results="asis", eval=F}
+library(here)
+library(readxl)
+library(tidyverse)
+library(kableExtra)
+setwd(here("tables"))
+key <- read_excel("appendix key.xlsx")
+key$Domain<-ifelse(is.na(key$Domain), " ", key$Domain)
+# key <- sub("\n", "",key$Item)
+# strsplit(key$Item, "\n", fixed=T)
+mutate_all(key,linebreak) %>% 
+  kable(booktabs = T, escape = F, longtable=T, align="l", 
+        linesep = '\\addlinespace', caption="Items of the new measure and their corresponding facets and domains")%>% 
+  kable_styling(latex_options = "repeat_header")
 ```
 
 

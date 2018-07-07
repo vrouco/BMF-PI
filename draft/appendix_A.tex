@@ -1,0 +1,203 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={appendix A},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+
+% Create subtitle command for use in maketitle
+\newcommand{\subtitle}[1]{
+  \posttitle{
+    \begin{center}\large#1\end{center}
+    }
+}
+
+\setlength{\droptitle}{-2em}
+
+  \title{appendix A}
+    \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+    \author{}
+    \preauthor{}\postauthor{}
+    \date{}
+    \predate{}\postdate{}
+  
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage[table]{xcolor}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+
+\begin{document}
+\maketitle
+
+\begin{longtable}[t]{lll}
+\caption{\label{tab:unnamed-chunk-1}Items of the new measure and their corresponding facets and domains}\\
+\toprule
+Domain & Facet & Item\\
+\midrule
+\endfirsthead
+\caption[]{Items of the new measure and their corresponding facets and domains \textit{(continued)}}\\
+\toprule
+Domain & Facet & Item\\
+\midrule
+\endhead
+\
+\endfoot
+\bottomrule
+\endlastfoot
+Agreeableness & A1: Appreciation & \makecell[l]{I acknowledge others’ accomplishments.\\I respect others’ feelings.\\I respect others.\\I am a good listener.\\I am polite to strangers.}\\
+\addlinespace
+ & A2: Integrity & \makecell[l]{I speak ill of others. (-)\\I insult people. (-)\\I do things out of revenge. (-)\\I misuse power. (-)\\I try to avoid doing favors for others. (-)}\\
+\addlinespace
+ & A3: Low competitiveness & \makecell[l]{I would like to have more power than other people. (-)\\I want to control the conversation. (-)\\I tend to brag about my accomplishments. (-)\\I want to be told I am right. (-)\\I see other people as my competitors. (-)}\\
+\addlinespace
+ & A4: Readiness to give feedback & \makecell[l]{I want to be liked.\\I do what others want me to do.\\I change myself to suit others.\\I am afraid of providing criticism.\\I find it necessary to please the people who have power.}\\
+\addlinespace
+ & A5: Search for support & \makecell[l]{I show my sadness.\\I show my fear.\\I show my anger.\\I tend to complain.\\I seek support.}\\
+\addlinespace
+ & A6: Good faith & \makecell[l]{I trust what people say.\\I trust others.\\I believe that others have good intentions.\\I am good at working with a group.\\I feel like a loser if I compromise. (-)}\\
+\addlinespace
+ & A7: Genuineness & \makecell[l]{I lie to get myself out of trouble. (-)\\I respect authority.\\I try to fool others. (-)\\I find it easy to manipulate others. (-)\\I use flattery to get ahead. (-)}\\
+\addlinespace
+ & A8: Altruism & \makecell[l]{I think of others first.\\I let other people take the credit for my work.\\I try to respond with understanding when someone treats me badly.\\I return extra change when a cashier makes a mistake.}\\
+\addlinespace
+Conscientiousness & C1: Dominance & \makecell[l]{I want to be in charge.\\I try to lead others.\\I demand perfection in others.\\I resist authority.\\I try to outdo others.}\\
+\addlinespace
+ & C2: Persistence & \makecell[l]{I give up easily. (-)\\I never give up.\\I am easily discouraged. (-)\\I like to take my time. (-)\\My interests change quickly. (-)}\\
+\addlinespace
+ & C3: Self-discipline & \makecell[l]{I am easily talked into doing silly things. (-)\\I rush into things. (-)\\I act impulsively when something is bothering me. (-)\\I am easily distracted. (-)\\I say inappropriate things. (-)}\\
+\addlinespace
+ & C4: Task planning & \makecell[l]{I do things according to a plan.\\I follow a schedule.\\I make plans and stick to them.\\I want things to proceed according to plan.\\I am always prepared.}\\
+\addlinespace
+ & C5: Goal orientation & \makecell[l]{I accomplish a lot of work.\\I work hard.\\I put little time and effort into my work. (-)\\I am a goal-oriented person.\\I carry out my plans.}\\
+\addlinespace
+ & C6: Carefulness & \makecell[l]{I choose my words with care.\\I look at the facts.\\I make careful choices.\\I avoid mistakes.\\I take precautions.}\\
+\addlinespace
+ & C7: Orderliness & \makecell[l]{I leave a mess in my room. (-)\\I often forget to put things back in their proper place. (-)\\I am continually losing things. (-)\\I can never find anything. (-)\\I make a mess of things. (-)}\\
+\addlinespace
+ & C8: Wish to work to capacity & \makecell[l]{I work too much.\\I have extra time on my hands. (-)\\I am always busy.\\I have too many things to do.\\I am exacting in my work.}\\
+\addlinespace
+ & C9: Productivity & \makecell[l]{I can manage many things at the same time.\\I start tasks right away.\\I can`t wait to get started on a project.\\I finish tasks quickly.\\I stop when work becomes too difficult.}\\
+\addlinespace
+Extraversion & E1: Sociability & \makecell[l]{I am quiet around strangers. (-)\\I start conversations.\\I feel comfortable only with friends. (-)\\I feel comfortable around people.\\I have difficulty showing affection. (-)}\\
+\addlinespace
+ & E2: Readiness to take risks & \makecell[l]{I seek danger.\\I enjoy being reckless.\\I avoid dangerous situations. (-)\\I act wild and crazy.\\I like loud music.}\\
+\addlinespace
+ & E3: Wish for affiliation & \makecell[l]{I prefer to be alone. (-)\\I enjoy spending time by myself. (-)\\I enjoy silence. (-)\\I feel isolated from other people. (-)\\I hold back my opinions. (-)}\\
+\addlinespace
+ & E4: Positive attitude & \makecell[l]{I look forward to each new day.\\I look at the bright side of life.\\I love life.\\I laugh a lot.\\I feel lucky most of the time.}\\
+\addlinespace
+ & E5: Forcefulness & \makecell[l]{I automatically take charge.\\I do most of the talking.\\I know how to convince others.\\I like having authority over others.\\I challenge others’ points of view.}\\
+\addlinespace
+ & E6: Communicativeness & \makecell[l]{I talk a lot.\\I like talking about myself.\\I easily share my feelings with others.\\I love to chat.\\I disclose my intimate thoughts.}\\
+\addlinespace
+ & E7: Humor & \makecell[l]{I am known for my sense of humor.\\I try to add some humor to whatever I do.\\I like to amuse others.\\I try to tease my friends out of their gloomy moods.\\I amuse myself easily.}\\
+\addlinespace
+ & E8: Conviviality & \makecell[l]{I enjoy being part of a group.\\I enjoy teamwork.\\I am good at planning group activities.\\I would enjoy a lot of social interaction.\\I am good at getting people to like me.}\\
+\addlinespace
+ & E9: Energy & \makecell[l]{I maintain high energy throughout the day.\\I tire out quickly. (-)\\I am usually active and full of energy.}\\
+\addlinespace
+Neuroticism & N1: Equanimity & \makecell[l]{I get angry easily. (-)\\I snap at people. (-)\\I get annoyed at the slightest provocation. (-)\\I shout or scream when I'm angry. (-)\\I get upset if others change the way that I have arranged things. (-)}\\
+\addlinespace
+ & N2: Confidence & \makecell[l]{I feel sad. (-)\\I think my life is a failure. (-)\\I have a dark outlook on the future. (-)\\I feel lonely. (-)\\I feel desperate. (-)}\\
+\addlinespace
+ & N3: Carefreeness & \makecell[l]{I worry a lot. (-)\\I often feel tense. (-)\\I am filled with doubts about things. (-)\\I worry about what people think of me. (-)\\I feel fearful. (-)}\\
+\addlinespace
+ & N4: Mental balance & \makecell[l]{I remain calm under pressure.\\I can handle stress well.\\I face danger confidently.\\I readily overcome setbacks.\\I adapt easily to new situations.}\\
+\addlinespace
+ & N5: Drive & \makecell[l]{I feel it hard to get going. (-)\\I hardly know where my life is going. (-)\\I give up easily. (-)\\I let others discourage me. (-)\\I never spend more than I can afford. (-)}\\
+\addlinespace
+ & N6: Emotional robustness & \makecell[l]{I cry easily. (-)\\I get overwhelmed by emotions. (-)\\I need protection. (-)\\I am easily hurt. (-)\\I immediately feel sad when hearing of an unhappy event. (-)}\\
+\addlinespace
+ & N7: Self-attention & \makecell[l]{I need the approval of others. (-)\\I am preoccupied with myself. (-)\\I feel threatened easily. (-)}\\
+\addlinespace
+Openness to experience & O1: Creativity & \makecell[l]{I do unexpected things.\\I know that my ideas sometimes surprise people.\\I pride myself on being original.\\I ask questions that nobody else does.\\I love to think up new ways of doing things.}\\
+\addlinespace
+ & O2: Wish for variety & \makecell[l]{I like to visit new places.\\I like to travel.\\I am excited by many different activities.\\I have been creative during the last year.\\I like concerts.}\\
+\addlinespace
+ & O3: Open-mindedness & \makecell[l]{I am valued by my friends for my good judgment.\\I am valued by others for my objectivity.\\I know how to apply my knowledge.\\I can see different points of view.\\I come up with alternatives.}\\
+\addlinespace
+ & O4: Interest in reading & \makecell[l]{I read a lot.\\I like to read.\\I enjoy discussing books with others.\\I have read the great literary classics.\\I enjoy reading nonfiction.}\\
+\addlinespace
+ & O5: Artistic interests & \makecell[l]{I appreciate all forms of art.\\I like art.\\I like poetry.\\I seldom notice the emotional aspects of paintings and pictures. (-)\\I like to visit museums.}\\
+\addlinespace
+ & O6: Wish to analyze & \makecell[l]{I tend to analyze things.\\I like to speculate about things.\\I seek explanations of things.\\I love to reflect on things.\\I try to understand myself.}\\
+\addlinespace
+ & O7: Willingness to learn & \makecell[l]{I want to increase my knowledge.\\I look forward to the opportunity to learn and grow.\\I find the world a very interesting place.\\I dislike learning. (-)\\I am thrilled when I learn something new.}\\
+\addlinespace
+ & O8: Sensitivity & \makecell[l]{I am open about my feelings.\\I rarely notice my emotional reactions. (-)\\I find it hard to understand why people get emotional. (-)\\I am open about myself to others.}\\
+\addlinespace
+ & O9: Intellect & \makecell[l]{I learn quickly.\\I am quick to understand things.\\I can handle a lot of information.}\\*
+\end{longtable}
+
+
+\end{document}
