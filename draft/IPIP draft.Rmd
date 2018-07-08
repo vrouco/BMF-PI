@@ -101,7 +101,7 @@ The Big Five has proven to be a valid theoretical and empirical model to predict
 
 ## 1.3. Facet Structures 
 
-There are a number of models that include a facet structure below the five broad domains. The most widely known model is the one suggested by @Costa1995. Other popular models have been suggested for the Big Five Inventory 2 (BFI-2, @SotoJohn2016), the IPIP [@Goldberg2006], and the HEXACO model [@Lee2016], which assumes six broad domains. Table 1 gives an overview of these different models listing their facets per domain as well as some information regarding their psychometric properties. 
+There are a number of models that include a facet structure below the five broad domains. The most widely known model is the one suggested by @Costa1995. Other popular models have been suggested for the Big Five Inventory 2 [BFI-2; @SotoJohn2016], the IPIP [@Goldberg2006], and the HEXACO model [@Lee2016], which assumes six broad domains. Table 1 gives an overview of these different models listing their facets per domain as well as some information regarding their psychometric properties. 
 
 < Table 1 >
 
