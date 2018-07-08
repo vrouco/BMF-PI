@@ -29,10 +29,8 @@ author_note: |
 abstract: |
   Enter abstract here. Each new line herein must be indented, like this line.
   
-keywords          : "keywords"
+keywords          : "Big Five, Personality, Facets, IPIP"
 wordcount         : "X"
-
-bibliography      : ["IPIP.bib"]
 
 figsintext        : yes
 figurelist        : no
@@ -47,9 +45,20 @@ header-includes:
    - \usepackage{rotating}
    - \usepackage{longtable}
    - \usepackage{changepage}
+   - \usepackage{setspace}\doublespacing
+   - \usepackage{caption}\captionsetup[table]{belowskip=2pt}
    
-output: 
-  papaja::apa6_pdf
+output:
+  pdf_document:
+    fig_caption: yes
+    number_sections: yes
+
+bibliography      : "IPIP.bib"
+csl: apa.csl
+urlcolor: black
+linkcolor: black
+fontsize: 12pt
+
 ---
 ```{r setups, include=FALSE}
 knitr::opts_chunk$set(echo = F, message=F, warning=F)
@@ -80,12 +89,12 @@ set.seed(42)
 #knitr::read_chunk(here::here("table3.R"))
 ```
 
-# 1. Introduction
+# Introduction
 
 
 Over the last decades, the Five Factor Model as well as the Big Five model have become widely accepted models for describing general attributes of personality. Often the terms are even used synonymously, which is why we will refer to the Big Five from here on. The Big Five is a hierarchical model which describes human individual differences in personality at the dispositional level: one of the most basic, universal, biologically-influenced and stable layers of human inter-individual differences in behavior, cognition and feeling [@McAdams2006a]. Its hierarchical nature is relevant to acknowledge behavior from the most specific (nuances), to the most broad differences in temperament and character (dimensions), through a varying number of mid-level personality characteristics called facets. Most of the research concerning criterion validity of the Big Five inventories has focused on the covariation between the Big Five dimensions and relevant external outcomes. However, specific dispositional characteristics captured on the facet level might be of extreme utility to provide more complex descriptions of individuality and to predict life outcomes to a major extent [@Paunonen2001; @Lounsbury2002; @Ziegler2014]. Unfortunately, the number and nature of the facets below the Big Five and being measured by different personality instruments is far from being consensual. In fact, different facet level models have been proposed (XXXX). One potential reason for this could be that  many facet level models were developed after a questionnaire version without such a level had been published. Thus, the facets were developed as an elaboration. While this has many theoretical advantages it also has the disadvantage of potentially limiting the search space of possible facets. In this work we aim at maximizing this search space and present a personality questionnaire which is broad at the facet level, open-access, and measurement invariant across two different cultures. 
 
-## 1.2. A short history of the Big Five
+## A short history of the Big Five
 
 Francis Galton proposed the fundamental lexical hypothesis as a ground from where to describe interpersonal differences in personality. The hypothesis states that every apprehended characteristic in the realm of personality should have its place in the natural language, a corollary derived from this first statement is that the essential features must represent a unique word in the lexical universe of this language. @Galton1884 himself, and later @AllportOdbert1936 and still later @Norman1967 used English dictionaries for a systematic collection of all adjectives which could be related to human personality characteristics. Using exploratory factor analyses on self- and other ratings five broad factors could repeatedly be extracted from the data. These efforts were also replicated in different languages, such as in German (Klages,…), Baumgartner,… 
 
@@ -99,7 +108,7 @@ One of the most important features of the Big Five is the fact that it could be 
 
 The Big Five has proven to be a valid theoretical and empirical model to predict relevant life outcomes. Research such as @OzerBenet2006 or @Roberts2007a has shown that scores for the Five Dimensions (and their related facets) are able to explain outcomes such as Academic and work performance, health, personality disorders, political attitudes and many more. The empirical findings linking Big Five measures to life outcomes have reinforced the concurrent validity of the test scores interpretations. At the same time, the broad nature of the domains has spurned research into the more fine-grained lower order structure of facets.
 
-## 1.3. Facet Structures 
+## Facet Structures 
 
 There are a number of models that include a facet structure below the five broad domains. The most widely known model is the one suggested by @Costa1995. Other popular models have been suggested for the Big Five Inventory 2 [BFI-2; @SotoJohn2016], the IPIP [@Goldberg2006], and the HEXACO model [@Lee2016], which assumes six broad domains. Table 1 gives an overview of these different models listing their facets per domain as well as some information regarding their psychometric properties. 
 
@@ -116,7 +125,7 @@ Furthermore, there is a large corpus of research which points towards facets as 
 As described above, facet measures often yield scores that have stronger test-criterion correlations than their respective domain scores (e.g., Ziegler et al., 2012; …). However, facet scores have also been shown to be related to personality disorders. Thus, the combination of a higher fidelity along with the potential clinical relevance of facet scores might open up unique advantages for clinical research. 
 
 
-## 1.4. The Big Five and Personality Disorders
+## The Big Five and Personality Disorders
 
 Personality disorders are steadily shifting from a categorical definition into a continua conceptualization within the clinical realm. This process is not new for personality science history, as the subject itself moved from a qualitatively distinct set of definitions, called types, into a subset of continuous domains in which both normality and extreme tendencies were moving along, named traits. In fact, the new version of the Diagnostic and Statistical Manual of mental disorders, DSM- V, now proposes two different ways of assessing personality disorders: 1) A descriptive model of personality disorders in section II which mimics the former model of assessing personality disorders and; 2) A novel trait model that follows research on the personality scientific domain (In section III), which conceptualizes personality disorders as extreme tendencies located in the continuum of the Big Five domains and facets [@APA2013; @WidigerMullins2009]
 
@@ -126,24 +135,24 @@ In line with what has been stated previously for academic achievement, the exami
 
 Facet analysis and dedicated Big Five questionnaires have been used to solve issues like those mentioned in the last paragraph. We propose to base such research on a broader facet basis. To this end we suggest a general instrument to cover a broad number of facets which could aim for fine grained assessments. 
 
-## 1.5. This study
+## This study
 
 We present in this paper an instrument for personality assessment which aims to cover the need for an internationally usable, open source, and differentiated measure at the facet level. Two studies are presented, for each one inspects the factor structure of the instrument in a different sample drawn from a different culture (American vs. German). Measurement invariance across samples will be examined. Internal consistency and test-criterion correlations will be estimated for all scores. To sum up, the aim for this research project was to provide an instrument that can be used in non-clinical but also in clinical research which emphasizes the facet level of the Big Five. 
 
 
-# 2. Methods
+# Methods
 
 Two different studies are presented in this work. The first study uses a sample drawn from a USA bachellor student population. The aim was to detect and confirm a measurement model that maximizes the facet space of the IPIP instrument. An Exploratory Factor Analysis (EFA) was used to identify the number of facets per domain. A Confirmatory Factor Analysis per facet was modelled in order to confirm the item - facet relationship. Finally, an Exploratory Strucutural Equation Model (ESEM) was fitted to integrate the measurement model of the facets with the dimensions. ESEM is a novel method which allows the researcher to use Structural Equation Modelling (SEM) without the need of imposing an independent cluster solution, as its common in the CFA procedure. ESEM has gained reputation in the personality field, where the independent cluster model may not capture the complexity of the constructs measured [@Marsh2010]. 
 
 The second sample was drawn again from a graduate student population, albeit this time based in Germany. The aim for the second study is to replicate the structure found in study one, plus assess the degree of measurement invariance of the proposed model.
 
-## 2. Study 1 - US-American Sample
+## Study 1 - US-American Sample
 
-### 2.1.1. Participants
+### Participants
 The sample consisted of 726 American undergraduate students (59.3% male) who participated voluntarily. The mean age was 21.6 years (SD=5.9). Students were emailed a link to a computerized assessment battery that included the IPIP items as well as several other tests not reported in this paper.
 The data set was randomly splitted in two equally sized samples. Both samples were matched in relation to missing values, outliers and extreme values. In Sample 1 the mean age was 21.8 years (SD=6.3), in Sample 2 the mean age was 21.5 years (SD=5.6).
 
-## 2.1.2. Measures. 
+## Measures. 
 
 ### International Personality Item Pool (IPIP)
 Altogether, 525 items from the *International Personality Item Pool* (IPIP) were used to measure Neuroticism, Extraversion, Openness (to experience), Agreeableness and Conscientiousness. The IPIP is an open source database of personality items, which was launched in 1996, and contains over 2000 items [@Goldberg2006].
@@ -155,7 +164,7 @@ This measures academic achievement.
 ### Satisfaction With Life (SWL)
 Scale of satisfaction with life
 
-## 2.1.3. Procedure
+## Procedure
 
 ### EFA with subsample 1
 To determine the number of possible facets per domain @Velicer1976 Minimum Average Partial (MAP) method and @Horn1965 parallel analysis (PA) were employed for every domain. Based on these results an exploratory factor analysis was calculated for each domain via Mplus using a geomin rotation (Quelle) and a maximum likelihood estimator (ML). The decision for the preferred number of facets per domain was based partly on comparing model fits (CFI, RMSEA, SRMR). More importantly though was the interpretability of the facet solution. After all facet solutions of other personality measures were looked at to compare it to the found facet structure. If there were important parts missing to present the domain with regards to content, new facets would be added afterwards.
@@ -168,7 +177,7 @@ To examine the nomological structure of the facets and domains to external const
 
 
 
-## 2.2. Results
+## Results
 
 ### Results of EFA
 In *Table 2* model fits for the chosen facet model for each domain are shown, as well as Eigenvalues and results from MAP and PA test.
@@ -236,10 +245,13 @@ setwd(here("tables"))
 
 corsabrev <- read_csv("table5abrev.csv")
 
-print(xtable(corsabrev, caption="Criterion correlations"),
-      type="latex",include.rownames=F, size="\\fontsize{5.5pt}{4.5pt}\\selectfont",
-      caption.placement = "top", rotate.colnames = F,
-      sanitize.text.function=Hmisc::latexTranslate)
+corsabrev <- corsabrev[,-1]
+corsabrev$facets <- sub("sums","",corsabrev$facets)
+
+print(xtable(corsabrev, caption=paste("Criterion correlations","\\newline",sep='')),
+      type="latex",include.rownames=F, size="\\fontsize{12pt}{12pt}\\selectfont",
+      caption.placement = "top", rotate.colnames = F, booktabs=T,
+      sanitize.text.function=Hmisc::latexTranslate, scalebox=0.7)
 
 ```
 
@@ -295,8 +307,9 @@ Future directions are to provide a tool with the subset of items for public use.
 
 
 \newpage
+Appendix A
 
-```{r appendix A, results="asis", eval=F}
+```{r appendix A, results="asis", eval=T}
 library(here)
 library(readxl)
 library(tidyverse)
@@ -309,7 +322,13 @@ key$Domain<-ifelse(is.na(key$Domain), " ", key$Domain)
 mutate_all(key,linebreak) %>% 
   kable(booktabs = T, escape = F, longtable=T, align="l", 
         linesep = '\\addlinespace', caption="Items of the new measure and their corresponding facets and domains")%>% 
-  kable_styling(latex_options = "repeat_header")
+  kable_styling(latex_options = "repeat_header") %>% 
+  column_spec(1, width = "8em", bold = F, italic = F) %>% 
+  column_spec(2, width = "8em", bold = F, italic = F) %>% 
+  column_spec(3, width = "22em", bold = F, italic = F)
+
+
+
 ```
 
 
