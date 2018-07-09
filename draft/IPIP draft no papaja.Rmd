@@ -185,6 +185,16 @@ To ensure the homogeneity of the facets and to reduce the risk of cross domain l
 
 < Table 2 here>
 
+```{r}
+setwd(here("tables"))
+table2 <- read_excel("table2.xlsx")
+kable(table2, format = "latex", align = "l", booktabs = T, caption="Results for the EFA on the Big Five domains")%>% 
+  column_spec(1, width = "8em", bold = F, italic = F) %>% 
+  column_spec(2, width = "8em", bold = F, italic = F)
+```
+
+
+
 According to the exploratory model, **Agreeableness** consists of eight facets after two facets were eliminated due to weakly loading and inconsistent items. The remaining facets are named Appreciation, Integrity, Low Competitiveness, Readiness to Give Feedback, Search for Support, Good Faith, Genuineness and Altruism. 
 **Conscientiousness** consists of nine facets after one facet with item factor loadings less than .30 was excluded, they are: Dominance, Persistence, Self-discipline, Task planning, Goal orientation, Carefulness, Orderliness, Wish to work to capacity and Productivity. 
 **Extraversion** is formed by nine facets. A new facet (Energy) was added in order to tap better the physical component of Extraversion, which was missing in the eight facet solution. The facets are Sociability, Readiness to take risks, Wish for affiliation, Positive attitude, Forcefulness, Communicativeness, Humor, Conviviality and Energy.
@@ -203,11 +213,14 @@ All measurement models for the facets were fitting well, results can be found in
 ```{r table3}
 setwd(here("tables"))
 table3 <- read_csv("table3.csv")
+colnames(table3) <- sub("_1", "", colnames(table3))
+colnames(table3) <- sub("_2", "", colnames(table3))
+table3 <- table3[,-12]
 
 kable(table3, "latex", align = "l", booktabs = T, linesep="", caption = "Model fit for each facet")%>%
   kable_styling(latex_options = "scale_down") %>%
-  add_header_above(c(" " = 1, "Full items" = 5, "5 items" = 5, " " = 5)) %>%
-  add_header_above(c(" " = 1, "USA sample" = 10, "German sample" = 5))
+  add_header_above(c(" " = 1, "Full items" = 5, "5 items" = 9)) %>%
+  add_header_above(c(" " = 1, "USA sample" = 10, "German sample" = 4))
 
 ```
 
@@ -278,6 +291,7 @@ The limit to factorial measurement invariance was set to $\Delta$ CFI < .01, $\D
 
 ### Results of CFA 
 The measurement models of the American sample were replicated for the reduced number of item per facet. Model fits can be seen in Table 3. The ESEM with all five domains fits well with CFI = .82, RMSEA = .078, SRMR = .044. Table 6 shows the ESEM factor loadings for the German sample. All facets load significantly on their intended domain but can have loadings on other domains as well.
+
 
 <Table 6 here > 
 
