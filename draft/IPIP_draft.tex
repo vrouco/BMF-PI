@@ -152,6 +152,7 @@ line.}
   \usepackage{rotating}
   \usepackage{longtable}
   \usepackage{changepage}
+  \DeclareDelayedFloatFlavor{foo}{table}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[section]
@@ -302,7 +303,158 @@ six broad domains. Table 1 gives an overview of these different models
 listing their facets per domain as well as some information regarding
 their psychometric properties.
 
+\vspace{5mm}
+
 \textless{} Table 1 \textgreater{}
+
+\begingroup\fontsize{7}{9}\selectfont
+
+\begin{longtable}[t]{>{\raggedright\arraybackslash}p{5em}>{\raggedright\arraybackslash}p{8em}>{\raggedright\arraybackslash}p{8em}>{\raggedright\arraybackslash}p{4em}>{\raggedright\arraybackslash}p{16em}l}
+\caption{\label{tab:unnamed-chunk-1}Different Big Five inventories}\\
+\toprule
+Taxonomy & Domains & Facets & Reliability & Validity & No. of items\\
+\midrule
+\endfirsthead
+\caption[]{\label{tab:unnamed-chunk-1}Different Big Five inventories \textit{(continued)}}\\
+\toprule
+Taxonomy & Domains & Facets & Reliability & Validity & No. of items\\
+\midrule
+\endhead
+\
+\endfoot
+\bottomrule
+\endlastfoot
+ &  &  &  &  & \\
+HEXACO &  &  &  &  & 200,100,60\\
+ & Humility &  & 0.82 & - creativity (Silvia, P., 2011) & \\
+ &  & Sincerity & 0.66 &  & \\
+ &  & Fairness & 0.76 &  & \\
+ &  & Greed Avoidance & 0.81 & - Social Dominance Orientation & \\
+ &  & Modesty & 0.68 & (Leone, L., 2012) & \\
+ & Emotionality &  & 0.84 &  & \\
+ &  & Fearfulness & 0.7 &  & \\
+ &  & Anxiety & 0.64 &  & \\
+ &  & Dependence & 0.8 &  & \\
+ &  & Sentimentality & 0.7 &  & \\
+ & Extraversion &  & 0.85 &  & \\
+ &  & Social Self-Esteem & 0.67 &  & \\
+ &  & Social Boldness & 0.76 &  & \\
+ &  & Sociability & 0.71 &  & \\
+ &  & Liveliness & 0.76 &  & \\
+ & Agreeableness &  & 0.84 &  & \\
+ &  & Forgivingness & 0.74 &  & \\
+ &  & Gentleness & 0.66 &  & \\
+ &  & Flexibility & 0.61 &  & \\
+ &  & Patience & 0.79 &  & \\
+ & Conscientiousness &  & 0.84 &  & \\
+ &  & Organization & 0.74 &  & \\
+ &  & Diligence & 0.7 &  & \\
+ &  & Perfectionism & 0.69 &  & \\
+ &  & Prudence & 0.69 &  & \\
+ & Openness &  & 0.81 & + Creativity (Silvia, p., 2011) & \\
+ &  & Aesthetic & 0.66 & - Right Wing Authoritarism & \\
+ &  & Unconventionality & 0.52 & (Leone, L., 2012) & \\
+ &  & Creativity & 0.75 &  & \\
+ &  & Inquisitiveness & 0.66 &  & \\
+ &  &  &  &  & \\
+NEO-PI-r &  &  &  &  & 240\\
+ & Neuroticism &  & 0.92 &  & \\
+ &  & Anxiety & 0.78 &  & \\
+ &  & Angry Hostility & 0.75 &  & \\
+ &  & Depression & 0.81 &  & \\
+ &  & Self-Consciousness & 0.68 &  & \\
+ &  & Impulsiveness & 0.7 &  & \\
+ &  & Vulnerability & 0.77 &  & \\
+ & Extraversion &  & 0.89 &  & \\
+ &  & Warmth & 0.73 &  & \\
+ &  & Gregariousness & 0.72 &  & \\
+ &  & Assertiveness & 0.77 &  & \\
+ &  & Activity & 0.63 &  & \\
+ &  & Excitement Seeking & 0.65 &  & \\
+ &  & Positive Emotions & 0.73 &  & \\
+ & Openness &  & 0.87 &  & \\
+ &  & Fantasy & 0.76 &  & \\
+ &  & Aesthetics & 0.76 &  & \\
+ &  & Feelings & 0.66 &  & \\
+ &  & Actions & 0.58 &  & \\
+ &  & Ideas & 0.8 &  & \\
+ &  & Values & 0.67 &  & \\
+ & Agreeableness &  & 0.86 &  & \\
+ &  & Trust & 0.79 &  & \\
+ &  & Straightforwardness & 0.71 &  & \\
+ &  & Altruism & 0.75 &  & \\
+ &  & Compliance & 0.59 &  & \\
+ &  & Modesty & 0.67 &  & \\
+ &  & Tender-Mindedness & 0.56 &  & \\
+ & Conscientiousness &  & 0.9 &  & \\
+ &  & Competence & 0.67 &  & \\
+ &  & Order & 0.66 &  & \\
+ &  & Dutifulness & 0.62 &  & \\
+ &  & Achievement Striving & 0.67 &  & \\
+ &  & Self-Discipline & 0.75 &  & \\
+ &  & Deliberation & 0.71 &  & \\
+ &  &  &  &  & \\
+BFI-2 &  &  & * &  & 60\\
+ & Extraversion &  &  &  & \\
+ &  & Sociability & 0.83 &  & \\
+ &  & Assertiveness & 0.8 &  & \\
+ &  & Energy level & 0.74 &  & \\
+ & Agreeableness &  &  &  & \\
+ &  & Compassion & 0.68 &  & \\
+ &  & Respectfulness & 0.66 &  & \\
+ &  & Trust & 0.75 &  & \\
+ & Conscientiousness &  &  &  & \\
+ &  & Organization & 0.76 &  & \\
+ &  & Productiveness & 0.74 &  & \\
+ &  & Responsability & 0.68 &  & \\
+ & Negative Emotionality &  &  &  & \\
+ &  & Anxiety & 0.79 &  & \\
+ &  & Depression & 0.74 &  & \\
+ &  & Emotional Volatility & 0.7 &  & \\
+ & Open-mindedness &  &  &  & \\
+ &  & Intellectual curiosity & 0.78 &  & \\
+ &  & Aesthetic Sensitivity & 0.67 &  & \\
+ &  & Creative Imagination & 0.67 &  & \\
+ &  &  &  &  & \\
+IPIP-NEO-120 &  &  &  &  & 120\\
+ & Neuroticism &  &  &  & \\
+ &  & Anxiety & 0.78 &  & \\
+ &  & Anger & 0.87 &  & \\
+ &  & Depression & 0.85 &  & \\
+ &  & Self-Consciousness & 0.74 &  & \\
+ &  & Inmoderation & 0.72 &  & \\
+ &  & Vulnerability & 0.76 &  & \\
+ & Extraversion &  &  &  & \\
+ &  & Friendliness & 0.81 &  & \\
+ &  & Gregariousness & 0.79 &  & \\
+ &  & Assertiveness & 0.85 &  & \\
+ &  & Activity Level & 0.71 &  & \\
+ &  & Excitement Seeking & 0.77 &  & \\
+ &  & Cheerfulness & 0.8 &  & \\
+ & Openness to Experience &  &  &  & \\
+ &  & Imagination & 0.83 &  & \\
+ &  & Artistic interests & 0.76 &  & \\
+ &  & Emotionality & 0.69 &  & \\
+ &  & Adventurousness & 0.72 &  & \\
+ &  & Intellect & 0.75 &  & \\
+ &  & Liberalism & 0.64 &  & \\
+ & Agreeableness &  &  &  & \\
+ &  & Trust & 0.86 &  & \\
+ &  & Morality & 0.76 &  & \\
+ &  & Altruism & 0.76 &  & \\
+ &  & Cooperation & 0.73 &  & \\
+ &  & Modesty & 0.76 &  & \\
+ &  & Sympathy & 0.72 &  & \\
+ & Conscientiousness &  &  &  & \\
+ &  & Self-Efficacy & 0.63 &  & \\
+ &  & Orderliness & 0.83 &  & \\
+ &  & Dutifulness & 0.69 &  & \\
+ &  & Achievement-striving & 0.8 &  & \\
+ &  & Self-Discipline & 0.73 &  & \\
+ &  & Cautiousness & 0.87 &  & \\*
+\end{longtable}\endgroup{}
+
+\vspace{5mm}
 
 As shown in table 1, there are many different possibilities of facets
 forming the domains. However, there is still a degree of overlap on the
@@ -391,7 +543,7 @@ Mullins-Sweatt, 2009)
 
 This paradigm shift in clinical assessment of personality has led to the
 construction of the Personality Disorder Inventory (PID-5; Krueger,
-Derringer, Markon, Watson, and Skodol (2012)), a 25-facet and
+Derringer, Markon, Watson, \& Skodol, 2012), a 25-facet and
 five-dimension self-report inventory, with an informant-report version
 (Markon, Quilty, Bagby, \& Krueger, 2013). The big five dimensions
 mirror the Big Five domains, although with a focus on the maladaptative
@@ -586,11 +738,13 @@ domain loadings, items with factor loadings less than .30 were
 eliminated. This was only done when item content was also judged as
 being non-central to the domain in question (John et al., 2014).
 
+\vspace{5mm}
+
 \textless{} Table 2 here\textgreater{}
 
 \begin{table}
 
-\caption{\label{tab:unnamed-chunk-1}Results for the EFA on the Big Five domains}
+\caption{\label{tab:unnamed-chunk-2}Results for the EFA on the Big Five domains}
 \centering
 \begin{tabular}[t]{>{\raggedright\arraybackslash}p{8em}>{\raggedright\arraybackslash}p{8em}llllll}
 \toprule
@@ -646,8 +800,12 @@ multiple-item facets are presented with their respectve model fit
 measures. The 5-item facets normally outperform the multiple-item facet
 versions regarding model fit.
 
+\vspace{5mm}
+
 \textless{} Table 3 here caption=\enquote{Model fit for each
 facet})\textgreater{}
+
+\vspace{5mm}
 
 \begin{table}
 
@@ -714,8 +872,12 @@ their intended domain. Some cross loadings can be found as they are
 plausible with ESEM procedures. However, in any case the number of cross
 loadings is high nor against the facet content.
 
+\vspace{5mm}
+
 \textless{} Table 4 here caption=\enquote{ESEM factor
 scores})\textgreater{}
+
+\vspace{5mm}
 
 \begin{table}[ht]
 \centering
@@ -723,7 +885,7 @@ scores})\textgreater{}
 \begingroup\fontsize{9.5pt}{9pt}\selectfont
 \begin{tabular}{llllll}
   \hline
-X2 & Agreeableness & Conscientiousness & Extraversion & Neuroticism & Openness \\ 
+facet & Agreeableness & Conscientiousness & Extraversion & Neuroticism & Openness \\ 
   \hline
 A1 & \textbf{-0.383***} & 0.124 & 0.261*** & 0.095 & 0.446*** \\ 
   A2 & \textbf{0.638***} & -0.218* & -0.181** & 0.130 & -0.099 \\ 
@@ -772,59 +934,63 @@ A1 & \textbf{-0.383***} & 0.124 & 0.261*** & 0.095 & 0.446*** \\
 \subsubsection{Criterion validity
 evidence}\label{criterion-validity-evidence-1}}
 
+\vspace{5mm}
+
 \textless{} Table 5 here caption=\enquote{Criterion correlations}
 \textgreater{}
+
+\vspace{5mm}
 
 \begin{table}[ht]
 \centering
 \caption{Criterion correlations} 
-\begingroup\fontsize{5.5pt}{4.5pt}\selectfont
-\begin{tabular}{rllrlllrl}
+\begingroup\fontsize{9.5pt}{9pt}\selectfont
+\begin{tabular}{llrlllrl}
   \hline
-X1 & facets & lifesat & sattotal & satverb & satquant & gpa\_cc & gpa\_univ & hsgpa \\ 
+facets & lifesat & sattotal & satverb & satquant & gpa\_cc & gpa\_univ & hsgpa \\ 
   \hline
-  1 & sumsA1 & 0.16 & 0.03 & 0.04 & 0.03 & \textbf{-0.21} & -0.03 & -0.13 \\ 
-    2 & sumsA2 & 0.19 & 0.02 & -0.02 & 0.03 & -0.06 & -0.05 & -0.17 \\ 
-    3 & sumsA3 & 0.03 & -0.02 & -0.14 & -0.11 & 0.11 & -0.01 & -0.02 \\ 
-    4 & sumsA4 & -0.05 & 0.08 & 0.13 & 0.1 & \textbf{-0.22} & -0.12 & -0.09 \\ 
-    5 & sumsA5 & -0.18 & -0.06 & 0.03 & -0.1 & -0.03 & 0.02 & 0.03 \\ 
-    6 & sumsA6 & \textbf{0.25} & -0.02 & -0.06 & 0.02 & -0.14 & -0.04 & -0.16 \\ 
-    7 & sumsA7 & 0.12 & -0.05 & -0.15 & -0.15 & -0.03 & -0.01 & -0.17 \\ 
-    8 & sumsA8 & 0.14 & 0.02 & 0.14 & 0.05 & -0.15 & -0.13 & -0.15 \\ 
-    9 & sumsC1 & 0.03 & 0.04 & \textbf{0.21} & 0.19 & -0.09 & -0.03 & -0.06 \\ 
-   10 & sumsC2 & \textbf{0.27} & -0.04 & -0.07 & -0.02 & -0.05 & -0.10 & -0.12 \\ 
-   11 & sumsC3 & 0.19 & -0.06 & -0.05 & -0.03 & 0.06 & -0.06 & -0.13 \\ 
-   12 & sumsC4 & \textbf{0.2} & -0.06 & 0 & -0.02 & -0.18 & -0.07 & -0.17 \\ 
-   13 & sumsC5 & \textbf{0.28} & -0.07 & 0.01 & 0.02 & -0.14 & -0.15 & \textbf{-0.22} \\ 
-   14 & sumsC6 & \textbf{0.23} & 0.00 & 0.09 & 0.1 & -0.15 & -0.01 & -0.16 \\ 
-   15 & sumsC7 & 0.11 & -0.09 & -0.17 & -0.11 & -0.07 & -0.01 & -0.14 \\ 
-   16 & sumsC8 & 0.1 & -0.04 & 0.07 & 0.05 & -0.14 & 0.02 & -0.12 \\ 
-   17 & sumsC9 & \textbf{0.23} & -0.02 & -0.05 & -0.06 & \textbf{-0.25} & -0.08 & -0.13 \\ 
-   18 & sumsE1 & \textbf{0.26} & -0.03 & 0.01 & -0.1 & 0.02 & 0.04 & -0.11 \\ 
-   19 & sumsE2 & 0 & 0.02 & 0.02 & -0.04 & 0.05 & 0.08 & 0.14 \\ 
-   20 & sumsE3 & \textbf{0.2} & -0.12 & -0.15 & -0.16 & 0.12 & 0.00 & -0.06 \\ 
-   21 & sumsE4 & \textbf{0.49} & -0.08 & -0.09 & -0.07 & -0.04 & -0.01 & -0.07 \\ 
-   22 & sumsE5 & 0.09 & -0.05 & 0.11 & 0.03 & -0.04 & 0.03 & -0.01 \\ 
-   23 & sumsE6 & 0.11 & -0.01 & 0.05 & -0.09 & -0.04 & -0.01 & -0.06 \\ 
-   24 & sumsE7 & 0.16 & 0.16 & 0.15 & 0.1 & -0.05 & 0.04 & -0.03 \\ 
-   25 & sumsE8 & \textbf{0.22} & -0.03 & 0.02 & -0.04 & -0.07 & 0.04 & -0.06 \\ 
-   26 & sumsE9 & \textbf{0.25} & -0.05 & -0.03 & -0.02 & -0.09 & -0.04 & -0.06 \\ 
-   27 & sumsN1 & \textbf{0.22} & 0.03 & 0 & 0.02 & 0.07 & -0.09 & -0.11 \\ 
-   28 & sumsN2 & \textbf{0.53} & -0.04 & -0.12 & -0.05 & -0.01 & -0.04 & -0.09 \\ 
-   29 & sumsN3 & \textbf{0.31} & -0.03 & -0.07 & -0.06 & 0.08 & 0.07 & 0.01 \\ 
-   30 & sumsN4 & \textbf{0.25} & 0.10 & 0.13 & 0.14 & -0.02 & 0.01 & -0.03 \\ 
-   31 & sumsN5 & \textbf{0.27} & -0.02 & -0.07 & -0.01 & -0.04 & -0.05 & -0.08 \\ 
-   32 & sumsN6 & 0.18 & 0.01 & 0.01 & 0.07 & 0.19 & 0.03 & 0.06 \\ 
-   33 & sumsN7 & \textbf{0.21} & -0.08 & -0.15 & -0.18 & 0.07 & 0.04 & -0.01 \\ 
-   34 & sumsO1 & 0.06 & 0.01 & 0.02 & -0.06 & -0.15 & 0.03 & 0.01 \\ 
-   35 & sumsO2 & 0.18 & 0.03 & 0.06 & -0.02 & -0.08 & 0.01 & -0.1 \\ 
-   36 & sumsO3 & \textbf{0.22} & -0.04 & 0.05 & 0.03 & \textbf{-0.23} & 0.09 & -0.15 \\ 
-   37 & sumsO4 & 0.07 & 0.13 & \textbf{0.25} & 0.06 & \textbf{-0.24} & -0.05 & -0.16 \\ 
-   38 & sumsO5 & 0.04 & -0.02 & 0.08 & -0.08 & -0.12 & 0.11 & -0.05 \\ 
-   39 & sumsO6 & 0.13 & 0.11 & \textbf{0.24} & 0.17 & \textbf{-0.23} & 0.01 & -0.1 \\ 
-   40 & sumsO7 & \textbf{0.21} & 0.07 & 0.14 & 0.11 & \textbf{-0.2} & -0.04 & -0.1 \\ 
-   41 & sumsO8 & 0.18 & -0.02 & 0.08 & -0.07 & -0.1 & 0.04 & -0.12 \\ 
-   42 & sumsO9 & \textbf{0.24} & 0.16 & \textbf{0.27} & \textbf{0.26} & -0.17 & -0.02 & \textbf{-0.21} \\ 
+A1 & 0.16 & 0.03 & 0.04 & 0.03 & \textbf{-0.21} & -0.03 & -0.13 \\ 
+  A2 & 0.19 & 0.02 & -0.02 & 0.03 & -0.06 & -0.05 & -0.17 \\ 
+  A3 & 0.03 & -0.02 & -0.14 & -0.11 & 0.11 & -0.01 & -0.02 \\ 
+  A4 & -0.05 & 0.08 & 0.13 & 0.1 & \textbf{-0.22} & -0.12 & -0.09 \\ 
+  A5 & -0.18 & -0.06 & 0.03 & -0.1 & -0.03 & 0.02 & 0.03 \\ 
+  A6 & \textbf{0.25} & -0.02 & -0.06 & 0.02 & -0.14 & -0.04 & -0.16 \\ 
+  A7 & 0.12 & -0.05 & -0.15 & -0.15 & -0.03 & -0.01 & -0.17 \\ 
+  A8 & 0.14 & 0.02 & 0.14 & 0.05 & -0.15 & -0.13 & -0.15 \\ 
+  C1 & 0.03 & 0.04 & \textbf{0.21} & 0.19 & -0.09 & -0.03 & -0.06 \\ 
+  C2 & \textbf{0.27} & -0.04 & -0.07 & -0.02 & -0.05 & -0.10 & -0.12 \\ 
+  C3 & 0.19 & -0.06 & -0.05 & -0.03 & 0.06 & -0.06 & -0.13 \\ 
+  C4 & \textbf{0.2} & -0.06 & 0 & -0.02 & -0.18 & -0.07 & -0.17 \\ 
+  C5 & \textbf{0.28} & -0.07 & 0.01 & 0.02 & -0.14 & -0.15 & \textbf{-0.22} \\ 
+  C6 & \textbf{0.23} & 0.00 & 0.09 & 0.1 & -0.15 & -0.01 & -0.16 \\ 
+  C7 & 0.11 & -0.09 & -0.17 & -0.11 & -0.07 & -0.01 & -0.14 \\ 
+  C8 & 0.1 & -0.04 & 0.07 & 0.05 & -0.14 & 0.02 & -0.12 \\ 
+  C9 & \textbf{0.23} & -0.02 & -0.05 & -0.06 & \textbf{-0.25} & -0.08 & -0.13 \\ 
+  E1 & \textbf{0.26} & -0.03 & 0.01 & -0.1 & 0.02 & 0.04 & -0.11 \\ 
+  E2 & 0 & 0.02 & 0.02 & -0.04 & 0.05 & 0.08 & 0.14 \\ 
+  E3 & \textbf{0.2} & -0.12 & -0.15 & -0.16 & 0.12 & 0.00 & -0.06 \\ 
+  E4 & \textbf{0.49} & -0.08 & -0.09 & -0.07 & -0.04 & -0.01 & -0.07 \\ 
+  E5 & 0.09 & -0.05 & 0.11 & 0.03 & -0.04 & 0.03 & -0.01 \\ 
+  E6 & 0.11 & -0.01 & 0.05 & -0.09 & -0.04 & -0.01 & -0.06 \\ 
+  E7 & 0.16 & 0.16 & 0.15 & 0.1 & -0.05 & 0.04 & -0.03 \\ 
+  E8 & \textbf{0.22} & -0.03 & 0.02 & -0.04 & -0.07 & 0.04 & -0.06 \\ 
+  E9 & \textbf{0.25} & -0.05 & -0.03 & -0.02 & -0.09 & -0.04 & -0.06 \\ 
+  N1 & \textbf{0.22} & 0.03 & 0 & 0.02 & 0.07 & -0.09 & -0.11 \\ 
+  N2 & \textbf{0.53} & -0.04 & -0.12 & -0.05 & -0.01 & -0.04 & -0.09 \\ 
+  N3 & \textbf{0.31} & -0.03 & -0.07 & -0.06 & 0.08 & 0.07 & 0.01 \\ 
+  N4 & \textbf{0.25} & 0.10 & 0.13 & 0.14 & -0.02 & 0.01 & -0.03 \\ 
+  N5 & \textbf{0.27} & -0.02 & -0.07 & -0.01 & -0.04 & -0.05 & -0.08 \\ 
+  N6 & 0.18 & 0.01 & 0.01 & 0.07 & 0.19 & 0.03 & 0.06 \\ 
+  N7 & \textbf{0.21} & -0.08 & -0.15 & -0.18 & 0.07 & 0.04 & -0.01 \\ 
+  O1 & 0.06 & 0.01 & 0.02 & -0.06 & -0.15 & 0.03 & 0.01 \\ 
+  O2 & 0.18 & 0.03 & 0.06 & -0.02 & -0.08 & 0.01 & -0.1 \\ 
+  O3 & \textbf{0.22} & -0.04 & 0.05 & 0.03 & \textbf{-0.23} & 0.09 & -0.15 \\ 
+  O4 & 0.07 & 0.13 & \textbf{0.25} & 0.06 & \textbf{-0.24} & -0.05 & -0.16 \\ 
+  O5 & 0.04 & -0.02 & 0.08 & -0.08 & -0.12 & 0.11 & -0.05 \\ 
+  O6 & 0.13 & 0.11 & \textbf{0.24} & 0.17 & \textbf{-0.23} & 0.01 & -0.1 \\ 
+  O7 & \textbf{0.21} & 0.07 & 0.14 & 0.11 & \textbf{-0.2} & -0.04 & -0.1 \\ 
+  O8 & 0.18 & -0.02 & 0.08 & -0.07 & -0.1 & 0.04 & -0.12 \\ 
+  O9 & \textbf{0.24} & 0.16 & \textbf{0.27} & \textbf{0.26} & -0.17 & -0.02 & \textbf{-0.21} \\ 
    \hline
 \end{tabular}
 \endgroup
@@ -894,7 +1060,61 @@ ESEM with all five domains fits well with CFI = .82, RMSEA = .078, SRMR
 All facets load significantly on their intended domain but can have
 loadings on other domains as well.
 
+\begin{table}[ht]
+\centering
+\caption{ESEM factor scores German sample} 
+\begingroup\fontsize{9.5pt}{9pt}\selectfont
+\begin{tabular}{llllll}
+  \hline
+facet & Agreeableness & Conscientiousness & Extraversion & Neuroticism & Openness \\ 
+  \hline
+A1 & \textbf{-0.383***} & 0.124 & 0.261*** & 0.095 & 0.446*** \\ 
+  A2 & \textbf{0.638***} & -0.218* & -0.181** & 0.130 & -0.099 \\ 
+  A3 & \textbf{0.757***} & 0.058 & 0.063 & 0.102 & 0.118 \\ 
+  A6 & \textbf{-0.229***} & 0.007 & 0.407*** & 0.226** & 0.137 \\ 
+  A7 & \textbf{0.635***} & -0.172 & -0.034 & 0.144 & -0.001 \\ 
+  A8 & \textbf{-0.347***} & -0.003 & 0.246*** & 0.132 & 0.334*** \\ 
+  C1 & 0.677*** & \textbf{0.273***} & 0.081 & 0.041 & 0.177 \\ 
+  C2 & 0.033 & \textbf{-0.325**} & -0.203** & 0.457*** & -0.169* \\ 
+  C3 & 0.265*** & \textbf{-0.302*} & 0.096 & 0.533*** & 0.163* \\ 
+  C4 & 0.183* & \textbf{0.816***} & -0.097 & 0.034 & 0.012 \\ 
+  C5 & 0.068 & \textbf{0.681***} & 0.133 & -0.147 & 0.184* \\ 
+  C6 & -0.071 & \textbf{0.585***} & -0.194* & 0.013 & 0.321*** \\ 
+  C7 & 0.032 & \textbf{-0.46***} & 0.045 & 0.364*** & 0.185** \\ 
+  C8 & 0.054 & \textbf{0.35***} & 0.114 & 0.148* & 0.191* \\ 
+  C9 & 0.12* & \textbf{0.4***} & 0.077 & -0.24** & 0.16* \\ 
+  E1 & -0.082 & 0.015 & \textbf{-0.746***} & 0.025 & -0.002 \\ 
+  E3 & 0.045 & 0.078 & \textbf{-0.694***} & 0.029 & 0.456*** \\ 
+  E4 & -0.081 & 0.169* & \textbf{0.547***} & -0.163 & 0.249*** \\ 
+  E5 & 0.6*** & 0.039 & \textbf{0.196***} & -0.007 & 0.398** \\ 
+  E6 & 0.113 & -0.077 & \textbf{0.699***} & 0.36*** & -0.001 \\ 
+  E7 & 0.080 & -0.203** & \textbf{0.289***} & -0.027 & 0.414*** \\ 
+  E8 & 0.048 & 0.012 & \textbf{0.744***} & 0.137 & 0.083 \\ 
+  E9 & 0.106 & 0.042 & \textbf{0.492***} & -0.264*** & 0.110 \\ 
+  N1 & 0.46*** & 0.011 & -0.055 & \textbf{0.389***} & -0.135 \\ 
+  N2 & 0.052 & -0.100 & -0.489*** & \textbf{0.54***} & 0.083 \\ 
+  N3 & 0.003 & 0.144 & -0.243** & \textbf{0.755***} & 0.090 \\ 
+  N4 & 0.204* & -0.013 & 0.064 & \textbf{-0.411***} & 0.537*** \\ 
+  N5 & 0.027 & -0.365** & -0.234** & \textbf{0.587***} & 0.006 \\ 
+  N6 & -0.162 & 0.247* & 0.055 & \textbf{0.729***} & -0.129 \\ 
+  N7 & 0.136* & 0.106 & 0.009 & \textbf{0.629***} & -0.089 \\ 
+  O1 & 0.220 & -0.236*** & -0.014 & -0.158** & \textbf{0.806***} \\ 
+  O2 & -0.184** & 0.121 & 0.284*** & 0.038 & \textbf{0.42***} \\ 
+  O3 & -0.082 & -0.012 & 0.066 & -0.095 & \textbf{0.768***} \\ 
+  O4 & -0.208** & -0.040 & -0.173** & 0.107 & \textbf{0.543***} \\ 
+  O5 & -0.27** & -0.095 & 0.031 & 0.056 & \textbf{0.586***} \\ 
+  O6 & -0.001 & 0.154* & -0.152* & 0.065 & \textbf{0.776***} \\ 
+  O7 & -0.246** & 0.137* & 0.044 & -0.050 & \textbf{0.706***} \\ 
+  O9 & 0.073 & 0.17** & -0.114 & -0.197*** & \textbf{0.623***} \\ 
+   \hline
+\end{tabular}
+\endgroup
+\end{table}
+\vspace{5mm}
+
 \textless{}Table 6 here \textgreater{}
+
+\vspace{5mm}
 
 \hypertarget{results-of-mi}{%
 \subsubsection{Results of MI}\label{results-of-mi}}
@@ -923,7 +1143,53 @@ Openness to arts and Need for cognition (facets of Openness).
 The only facet with strong factorial measurement invariance is Shyness,
 a facet of Extraversion
 
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-5}Measurement invariance}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{llll}
+\toprule
+ & Configural MI & Factorial MI & Strong Factorial MI\\
+\midrule
+Agreeableness & Appreciation & Meanness & Shyness\\
+ & Low Competitiveness & Trust & \\
+ & Crybabiness &  & \\
+ & Manipulation &  & \\
+ & Altruism &  & \\
+ &  &  & \\
+Conscientiousness & Perseverance & Control of others & \\
+ & Task planning & Lack of self-control & \\
+ & Goal-orientation & Deliberation/Caution & \\
+ & Preferred Load & Lack of tidiness & \\
+ & Procrastination &  & \\
+ &  &  & \\
+Extraversion & Assertiveness & Sensation seeking & \\
+ & Sociability & Reclusiveness & \\
+ & Energy & Emotionality & \\
+ &  & Humor & \\
+ &  &  & \\
+Neuroticism & Irritability & Depression & \\
+ & Self-serving attention & Anxiety & \\
+ &  & Self-assuredness & \\
+ &  & Lethargia & \\
+ &  & Sentimentality & \\
+ &  &  & \\
+Openness to Experience & Creativity & Openness to reading & \\
+ & Openness to actions & Openness to arts & \\
+ & Openmindedness & Need for cognition & \\
+ & Love of learning &  & \\
+ & Openness to feelings &  & \\
+ & Intellect &  & \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\vspace{5mm}
+
 \textless{}Table 7 here\textgreater{}
+
+\vspace{5mm}
 
 \hypertarget{discussion}{%
 \section{Discussion}\label{discussion}}

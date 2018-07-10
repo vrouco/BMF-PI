@@ -47,6 +47,7 @@ header-includes:
    - \usepackage{rotating}
    - \usepackage{longtable}
    - \usepackage{changepage}
+   - \DeclareDelayedFloatFlavor{foo}{table}
    
 output: 
   papaja::apa6_pdf
@@ -103,7 +104,31 @@ The Big Five has proven to be a valid theoretical and empirical model to predict
 
 There are a number of models that include a facet structure below the five broad domains. The most widely known model is the one suggested by @Costa1995. Other popular models have been suggested for the Big Five Inventory 2 [BFI-2; @SotoJohn2016], the IPIP [@Goldberg2006], and the HEXACO model [@Lee2016], which assumes six broad domains. Table 1 gives an overview of these different models listing their facets per domain as well as some information regarding their psychometric properties. 
 
+\vspace{5mm}
+
 < Table 1 >
+
+```{r}
+setwd(here("tables"))
+table1 <- read_excel("table1.xlsx")
+
+table1[is.na(table1)]<-""
+
+table1 <- table1[,-3]
+
+kable(table1, "latex", align = "l", booktabs = T, linesep="", caption = "Different Big Five inventories", longtable=T) %>% 
+  column_spec(1, width = "5em", bold = F, italic = F) %>%
+  kable_styling(font_size = 7) %>% 
+  column_spec(2, width = "8em", bold = F, italic = F) %>% 
+  column_spec(3, width = "8em", bold = F, italic = F) %>% 
+  column_spec(4, width = "4em", bold = F, italic = F) %>% 
+  column_spec(5, width = "16em", bold = F, italic = F) %>% 
+  kable_styling(latex_options = "repeat_header")
+  
+```
+
+
+\vspace{5mm}
 
 As shown in table 1, there are many different possibilities of facets forming the domains. However, there is still a degree of overlap on the facets covered by the different instruments. @SotoJohn2009  inspected the convergences between the NEO-PI-R and the first version of the BFI, suggesting that two constructs per domain were measured at the facet level by both inventories. The constructs defined by @SotoJohn2009 were: Assertiveness and Activity for Extraversion; Altruism and Compliance for Agreeableness; Order and Self-Discipline for Conscientiousness; Anxiety and Depression for Neuroticism; and Aesthetics and Ideas for Openness. The convergence holds for the four instruments listed in table 1, as these ten constructs are covered within the facets for every instrument. Some of the constructs are explicitly covered at the facet level (e.g. Anxiety); meanwhile others are mainly covered though the four instruments, although sometimes implicitly (e.g. Liveliness in HEXACO resembles the “core” construct Activity, present in all other instruments). The reverse is not always true, not every facet within the four instruments is covered by the constructs proposed by @SotoJohn2009. As an example we find Self-Consciousness, a Neuroticism facet defined by the NEO-PI-R and the IPIP-NEO-120, which is clearly tapping at a construct different from Anxiety or Depression.
 
@@ -120,7 +145,7 @@ As described above, facet measures often yield scores that have stronger test-cr
 
 Personality disorders are steadily shifting from a categorical definition into a continua conceptualization within the clinical realm. This process is not new for personality science history, as the subject itself moved from a qualitatively distinct set of definitions, called types, into a subset of continuous domains in which both normality and extreme tendencies were moving along, named traits. In fact, the new version of the Diagnostic and Statistical Manual of mental disorders, DSM- V, now proposes two different ways of assessing personality disorders: 1) A descriptive model of personality disorders in section II which mimics the former model of assessing personality disorders and; 2) A novel trait model that follows research on the personality scientific domain (In section III), which conceptualizes personality disorders as extreme tendencies located in the continuum of the Big Five domains and facets [@APA2013; @WidigerMullins2009]
 
-This paradigm shift in clinical assessment of personality has led to the construction of the Personality Disorder Inventory (PID-5; @Krueger2012a), a 25-facet and five-dimension self-report inventory, with an informant-report version [@Markon2013]. The big five dimensions mirror the Big Five domains, although with a focus on the maladaptative end of the continuum,: I) Detachment (Big Five’s introversion), II) Antagonism (absence of Big Five’s Agreeableness), III) Disinhibition (absence of Big Five’s Conscientiousness), IV) Negative affect (Big Five’s Neuroticism) and  V) Psychoticism (Absence of Big Five’s Openness). The PID-5 has shown satisfying evidences of criterion validity (...summary). However, the limited number of facets on the PID-5 has already raised some concerns due to the low reliability when studying developmental phenomena of personality disorders (Clercq et al., 2014)`, and may also limit the capacity of portraying vivid personality profiles which are suitable for explanatory purposes in the clinical domain.
+This paradigm shift in clinical assessment of personality has led to the construction of the Personality Disorder Inventory [PID-5; @Krueger2012a], a 25-facet and five-dimension self-report inventory, with an informant-report version [@Markon2013]. The big five dimensions mirror the Big Five domains, although with a focus on the maladaptative end of the continuum,: I) Detachment (Big Five’s introversion), II) Antagonism (absence of Big Five’s Agreeableness), III) Disinhibition (absence of Big Five’s Conscientiousness), IV) Negative affect (Big Five’s Neuroticism) and  V) Psychoticism (Absence of Big Five’s Openness). The PID-5 has shown satisfying evidences of criterion validity (...summary). However, the limited number of facets on the PID-5 has already raised some concerns due to the low reliability when studying developmental phenomena of personality disorders (Clercq et al., 2014)`, and may also limit the capacity of portraying vivid personality profiles which are suitable for explanatory purposes in the clinical domain.
 
 In line with what has been stated previously for academic achievement, the examination of facets may result in an enhancement of the specificity of assessment when looking at the nature of PDs [@Clark2005; @SamuelWidiger2008]. This improvement of specificity resulted in a predictive gain ranging from 3% to 16% when comparing facets to domains predicting PD in the @ClarkReynolds2001 study. Furthermore, the use of facets may be of extreme utility for those PD whose personality profile is less clear at the domain level. As @SaulsmanPage2004 point out, Schizotypal and Obsessive-Compulsive disorders are examples of PD which are not well covered by Big Five domains. A reason for it may be found in a pattern inconsistency of facets within the same dimension or in a lack of coverage for essential characteristics of the PD. For example, aberrant cognitions are essential characteristics of schizotypal disorder and are not covered by some instrument’s facets like the NEO-PI-R [@SaulsmanPage2004; @SamuelWidiger2008]. Likewise, the expected high scores on warmth and low scores on assertiveness could mask the effects of extraversion when predicting Dependent Personality Disorder, following the theoretical correspondence between PD and Big Five facets proposed by @Widiger1994. Moreover, the PID-5 has prompted the elaboration of a number of Five Factor Model Personality Disorders (FFMPD) scales to maximize the facet coverage in relation to specific PDs [@Bagby2018].
 
@@ -174,6 +199,8 @@ To examine the nomological structure of the facets and domains to external const
 In *Table 2* model fits for the chosen facet model for each domain are shown, as well as Eigenvalues and results from MAP and PA test.
 To ensure the homogeneity of the facets and to reduce the risk of cross domain loadings, items with factor loadings less than .30 were eliminated. This was only done when item content was also judged as being non-central to the domain in question [@Ziegler2014]. 
 
+\vspace{5mm}
+
 < Table 2 here>
 
 ```{r}
@@ -199,7 +226,11 @@ The items to each facet are listed in the appendix (A).
 ### Results of CFA and ESEM
 All measurement models for the facets were fitting well, results can be found in *Table 3*. In this table both five-item facets and multiple-item facets are presented with their respectve model fit measures. The 5-item facets normally outperform the multiple-item facet versions regarding model fit.
 
+\vspace{5mm}
+
 < Table 3 here caption="Model fit for each facet")>
+
+\vspace{5mm}
 
 ```{r table3}
 setwd(here("tables"))
@@ -211,14 +242,19 @@ table3 <- table3[,-12]
 kable(table3, "latex", align = "l", booktabs = T, linesep="", caption = "Model fit for each facet")%>%
   kable_styling(latex_options = "scale_down") %>%
   add_header_above(c(" " = 1, "Full items" = 5, "5 items" = 9)) %>%
-  add_header_above(c(" " = 1, "USA sample" = 10, "German sample" = 4))
+  add_header_above(c(" " = 1, "USA sample" = 10, "German sample" = 4)) #%>% 
+  #kable_as_image()
 
 ```
 
 
 The exploratory structural equation model (ESEM) of the final model with all five domains fits well with CFI = .87, RMSEA = .072, SRMR = .036. As you can see in *Table 4* nearly all facets load significantly on their intended domain. Some cross loadings can be found as they are plausible with ESEM procedures. However, in any case the number of cross loadings is high nor against the facet content.
 
+\vspace{5mm}
+
 < Table 4 here caption="ESEM factor scores")> 
+
+\vspace{5mm}
 
 ```{r table 4 esem1, results="asis", message=F, eval=T}
 setwd(here("tables"))
@@ -229,6 +265,8 @@ mytable$Conscientiousness[7:15] <- paste("\\textbf{",mytable$Conscientiousness[7
 mytable$Extraversion[16:23] <- paste("\\textbf{",mytable$Extraversion[16:23], "}", sep="")
 mytable$Neuroticism[24:30] <- paste("\\textbf{",mytable$Neuroticism[24:30], "}", sep="")
 mytable$Openness[31:38] <- paste("\\textbf{",mytable$Openness[31:38], "}", sep="")
+colnames(mytable)[1]<-"facet"
+
 
 # kable(mytable, "latex", align = "l", booktabs = T, linesep="", 
 #       caption = "ESEM factor scores USA sample") %>% 
@@ -240,17 +278,22 @@ print(xtable(mytable, caption="ESEM factor scores USA sample"),include.rownames=
 
 ### Criterion validity evidence
 
-
+\vspace{5mm}
 
 < Table 5 here caption="Criterion correlations" >
+
+\vspace{5mm}
 
 ```{r, results="asis", eval=T}
 setwd(here("tables"))
 
 corsabrev <- read_csv("table5abrev.csv")
 
+corsabrev <- corsabrev[,-1]
+corsabrev$facets <- sub("sums","",corsabrev$facets)
+
 print(xtable(corsabrev, caption="Criterion correlations"),
-      type="latex",include.rownames=F, size="\\fontsize{5.5pt}{4.5pt}\\selectfont",
+      type="latex",include.rownames=F, size="\\fontsize{9.5pt}{9pt}\\selectfont",
       caption.placement = "top", rotate.colnames = F,
       sanitize.text.function=Hmisc::latexTranslate)
 
@@ -280,7 +323,19 @@ The limit to factorial measurement invariance was set to $\Delta$ CFI < .01, $\D
 ### Results of CFA 
 The measurement models of the American sample were replicated for the reduced number of item per facet. Model fits can be seen in Table 3. The ESEM with all five domains fits well with CFI = .82, RMSEA = .078, SRMR = .044. Table 6 shows the ESEM factor loadings for the German sample. All facets load significantly on their intended domain but can have loadings on other domains as well.
 
+
+```{r, results="asis"}
+setwd(here("tables"))
+table6 <- read_csv("table6.csv")
+colnames(table6)[1]<-"facet"
+print(xtable(mytable, caption="ESEM factor scores German sample"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top",sanitize.text.function=Hmisc::latexTranslate)
+
+```
+\vspace{5mm}
+
 <Table 6 here > 
+
+\vspace{5mm}
 
 ### Results of MI
 For analyzing the measurement invariance the latest facet model structure (with additional facets) was taken. The results are shown in Table 7.
@@ -290,7 +345,22 @@ Factorial measurement invariance is assumed for the facets Meanness, Trust (face
 
 The only facet with strong factorial measurement invariance is Shyness, a facet of Extraversion
 
+
+```{r}
+setwd(here("tables"))
+table7 <- read_excel("table7.xlsx", col_names = T)
+table7[is.na(table7)]<-""
+colnames(table7)[1] <- ""
+
+kable(table7, "latex", align = "l", booktabs = T, linesep="", caption = "Measurement invariance") %>% 
+  kable_styling(latex_options = "scale_down")
+```
+
+\vspace{5mm}
+
 <Table 7 here>
+
+\vspace{5mm}
 
 # Discussion
 

@@ -7,7 +7,7 @@ setwd(here("data/Sample_Deutsch_CFA/CFA/Full model"))
 
 library(MplusAutomation)
 
-this.model <- readModels("esem_all facets on all without o8, a5, a4, e2.out")
+this.model <- readModels("esem_all facets on all  without a4, a5, e2, o8.out")
 
 mytable <- this.model$parameters$stdyx.standardized
 
@@ -40,6 +40,7 @@ mytable$Extraversion[16:23] <- paste("\\textbf{",mytable$Extraversion[16:23], "}
 mytable$Neuroticism[24:30] <- paste("\\textbf{",mytable$Neuroticism[24:30], "}", sep="")
 mytable$Openness[31:38] <- paste("\\textbf{",mytable$Openness[31:38], "}", sep="")
 
-
-print(xtable(mytable),sanitize.text.function=Hmisc::latexTranslate)
+setwd(here("tables"))
+write_csv(mytable, "table6.csv")
+#print(xtable(mytable),sanitize.text.function=Hmisc::latexTranslate)
 
