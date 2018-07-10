@@ -1,5 +1,5 @@
-\documentclass[man]{apa6}
-
+\documentclass[,man]{apa6}
+\usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
@@ -9,137 +9,107 @@
 \else % if luatex or xelatex
   \ifxetex
     \usepackage{mathspec}
-    \usepackage{xltxtra,xunicode}
   \else
     \usepackage{fontspec}
   \fi
-  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
-  \newcommand{\euro}{€}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 \fi
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
-\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={A multi-faceted, open source, measure of personality},
+            pdfauthor={Victor Rouco, Anja Cengia, \& Matthias Ziegler},
+            pdfkeywords={keywords},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
 
-% Table formatting
-\usepackage{longtable, booktabs}
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+
+  \title{A multi-faceted, open source, measure of personality}
+    \author{Victor Rouco\textsuperscript{1,2}, Anja Cengia\textsuperscript{3}, \&
+Matthias Ziegler\textsuperscript{3}}
+    \date{}
+  
+\shorttitle{HU instrument}
+\authornote{Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
+
+Enter author note here.
+
+
+Correspondence concerning this article should be addressed to Victor Rouco, Postal address. E-mail: victorrouco@ub.edu}
+\affiliation{
+\vspace{0.5cm}
+\textsuperscript{1} Universitat de Barcelona\\\textsuperscript{2} Institut de Neurociencies Barcelona\\\textsuperscript{3} Humboldt Universität zu Berlin}
+\abstract{Enter abstract here. Each new line herein must be indented, like this line.
+}
+\keywords{keywords\newline\indent Word count: X}
+\usepackage{csquotes}
+\usepackage{upgreek}
+\captionsetup{font=singlespacing,justification=justified}
+
+\usepackage{longtable}
 \usepackage{lscape}
-% \usepackage[counterclockwise]{rotating}   % Landscape page setup for large tables
-\usepackage{multirow}		% Table styling
-\usepackage{tabularx}		% Control Column width
-\usepackage[flushleft]{threeparttable}	% Allows for three part tables with a specified notes section
-\usepackage{threeparttablex}            % Lets threeparttable work with longtable
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage[flushleft]{threeparttable}
+\usepackage{threeparttablex}
 
-% Create new environments so endfloat can handle them
-% \newenvironment{ltable}
-%   {\begin{landscape}\begin{center}\begin{threeparttable}}
-%   {\end{threeparttable}\end{center}\end{landscape}}
+\newenvironment{lltable}{\begin{landscape}\begin{center}\begin{ThreePartTable}}{\end{ThreePartTable}\end{center}\end{landscape}}
 
-\newenvironment{lltable}
-  {\begin{landscape}\begin{center}\begin{ThreePartTable}}
-  {\end{ThreePartTable}\end{center}\end{landscape}}
-
-  \usepackage{ifthen} % Only add declarations when endfloat package is loaded
-  \ifthenelse{\equal{\string man}{\string man}}{%
-   \DeclareDelayedFloatFlavor{ThreePartTable}{table} % Make endfloat play with longtable
-   % \DeclareDelayedFloatFlavor{ltable}{table} % Make endfloat play with lscape
-   \DeclareDelayedFloatFlavor{lltable}{table} % Make endfloat play with lscape & longtable
-  }{}%
-
-
-
-% The following enables adjusting longtable caption width to table width
-% Solution found at http://golatex.de/longtable-mit-caption-so-breit-wie-die-tabelle-t15767.html
 \makeatletter
 \newcommand\LastLTentrywidth{1em}
 \newlength\longtablewidth
 \setlength{\longtablewidth}{1in}
-\newcommand\getlongtablewidth{%
- \begingroup
-  \ifcsname LT@\roman{LT@tables}\endcsname
-  \global\longtablewidth=0pt
-  \renewcommand\LT@entry[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}%
-  \@nameuse{LT@\roman{LT@tables}}%
-  \fi
-\endgroup}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef1em{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
 
 
-\ifxetex
-  \usepackage[setpagesize=false, % page size defined by xetex
-              unicode=false, % unicode breaks when used with xetex
-              xetex]{hyperref}
-\else
-  \usepackage[unicode=true]{hyperref}
-\fi
-\hypersetup{breaklinks=true,
-            pdfauthor={},
-            pdftitle={A multi-faceted, open source, measure of personality},
-            colorlinks=true,
-            citecolor=blue,
-            urlcolor=blue,
-            linkcolor=black,
-            pdfborder={0 0 0}}
-\urlstyle{same}  % don't use monospace font for urls
+\DeclareDelayedFloatFlavor{ThreePartTable}{table}
+\DeclareDelayedFloatFlavor{lltable}{table}
+\DeclareDelayedFloatFlavor*{longtable}{table}
+\makeatletter
+\renewcommand{\efloat@iwrite}[1]{\immediate\protected@write\csname efloat@post#1\endcsname{}}
+\makeatother
+\usepackage{lineno}
 
-\setlength{\parindent}{0pt}
-%\setlength{\parskip}{0pt plus 0pt minus 0pt}
-
-\setlength{\emergencystretch}{3em}  % prevent overfull lines
-
-
-% Manuscript styling
-\captionsetup{font=singlespacing,justification=justified}
-\usepackage{csquotes}
-\usepackage{upgreek}
-
- % Line numbering
-  \usepackage{lineno}
-  \linenumbers
-
-
-\usepackage{tikz} % Variable definition to generate author note
-
-% fix for \tightlist problem in pandoc 1.14
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-
-% Essential manuscript parts
-  \title{A multi-faceted, open source, measure of personality}
-
-  \shorttitle{HU instrument}
-
-
-  \author{Victor Rouco\textsuperscript{1,2}, Anja Cengia\textsuperscript{3}, \& Matthias Ziegler\textsuperscript{3}}
-
-  % \def\affdep{{"", "", ""}}%
-  % \def\affcity{{"", "", ""}}%
-
-  \affiliation{
-    \vspace{0.5cm}
-          \textsuperscript{1} Universitat de Barcelona\\
-          \textsuperscript{2} Institut de Neurociencies Barcelona\\
-          \textsuperscript{3} Humboldt Universität zu Berlin  }
-
-  \authornote{
-    Add complete departmental affiliations for each author here. Each new
-    line herein must be indented, like this line.
-    
-    Enter author note here.
-    
-    Correspondence concerning this article should be addressed to Victor
-    Rouco, Postal address. E-mail:
-    \href{mailto:victorrouco@ub.edu}{\nolinkurl{victorrouco@ub.edu}}
-  }
-
-
-  \abstract{Enter abstract here. Each new line herein must be indented, like this
-line.}
-  \keywords{keywords \\
-
-    \indent Word count: X
-  }
-
-
+\linenumbers
 \usepackage[titles]{tocloft}
 \cftpagenumbersoff{table}
 \renewcommand{\cfttabpresnum}{\itshape\tablename\enspace}
@@ -147,12 +117,9 @@ line.}
 \setlength{\cfttabindent}{0pt}
 \setlength{\cftafterloftitleskip}{0pt}
 \settowidth{\cfttabnumwidth}{Table 10.\qquad}
-
-
-  \usepackage{rotating}
-  \usepackage{longtable}
-  \usepackage{changepage}
-  \DeclareDelayedFloatFlavor{foo}{table}
+\usepackage{rotating}
+\usepackage{longtable}
+\usepackage{changepage}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Theorem}[section]
@@ -169,12 +136,7 @@ line.}
 \newtheorem*{remark}{Remark}
 \newtheorem*{solution}{Solution}
 \begin{document}
-
 \maketitle
-
-\setcounter{secnumdepth}{0}
-
-
 
 \hypertarget{introduction}{%
 \section{1. Introduction}\label{introduction}}
@@ -196,8 +158,8 @@ focused on the covariation between the Big Five dimensions and relevant
 external outcomes. However, specific dispositional characteristics
 captured on the facet level might be of extreme utility to provide more
 complex descriptions of individuality and to predict life outcomes to a
-major extent (John et al., 2014; Lounsbury, Sundstrom, Loveland, \&
-Gibson, 2002; Paunonen \& Ashton, 2001). Unfortunately, the number and
+major extent (Lounsbury, Sundstrom, Loveland, \& Gibson, 2002; Paunonen
+\& Ashton, 2001; Ziegler et al., 2014). Unfortunately, the number and
 nature of the facets below the Big Five and being measured by different
 personality instruments is far from being consensual. In fact, different
 facet level models have been proposed (XXXX). One potential reason for
@@ -510,9 +472,9 @@ the same domain can have effects in opposite directions, partially
 canceling out the predictive ability when only paying attention to the
 domain score. This is the case for Openness to ideas vs.~Openness to
 fantasy, as the former is related positively to academic achievement
-whereas the latter is related negatively (John et al., 2014), resulting
-in a potential masking effect on the ability of Openness predicting the
-academic achievement.
+whereas the latter is related negatively (Ziegler et al., 2014),
+resulting in a potential masking effect on the ability of Openness
+predicting the academic achievement.
 
 As described above, facet measures often yield scores that have stronger
 test-criterion correlations than their respective domain scores (e.g.,
@@ -736,7 +698,7 @@ are shown, as well as Eigenvalues and results from MAP and PA test. To
 ensure the homogeneity of the facets and to reduce the risk of cross
 domain loadings, items with factor loadings less than .30 were
 eliminated. This was only done when item content was also judged as
-being non-central to the domain in question (John et al., 2014).
+being non-central to the domain in question (Ziegler et al., 2014).
 
 \vspace{5mm}
 
@@ -1332,14 +1294,6 @@ covariance structure analysis: Conventional criteria versus new
 alternatives. \emph{Structural Equation Modeling}, \emph{6}(1), 1--55.
 doi:\href{https://doi.org/10.1080/10705519909540118}{10.1080/10705519909540118}
 
-\leavevmode\hypertarget{ref-Ziegler2014}{}%
-John, O. P., Hampson, S. E., Goldberg, L. R., Johnson, J. A., Eber, H.
-W., Hogan, R., \ldots{} Digman, J. M. (2014). The basic level in
-personality - trait hierarchies:Studies of trait use and accessibility
-in different contexts. \emph{Journal of Research in Personality},
-\emph{20}(1), 411--418.
-doi:\href{https://doi.org/10.1016/j.lindif.2013.10.008}{10.1016/j.lindif.2013.10.008}
-
 \leavevmode\hypertarget{ref-Krueger2012a}{}%
 Krueger, R. F., Derringer, J., Markon, K. E., Watson, D., \& Skodol, A.
 E. (2012). Initial construction of a maladaptive personality trait model
@@ -1465,6 +1419,13 @@ Personality Disorder: A Proposal for DSM-V. \emph{Annual Review of
 Clinical Psychology}, \emph{5}(1), 197--220.
 doi:\href{https://doi.org/10.1146/annurev.clinpsy.032408.153542}{10.1146/annurev.clinpsy.032408.153542}
 
+\leavevmode\hypertarget{ref-Ziegler2014}{}%
+Ziegler, M., Bensch, D., Maaß, U., Schult, V., Vogel, M., \& Bühner, M.
+(2014). Big Five facets as predictor of job training performance: The
+role of specific job demands. \emph{Learning and Individual
+Differences}, \emph{29}, 1--7.
+doi:\href{https://doi.org/10.1016/j.lindif.2013.10.008}{10.1016/j.lindif.2013.10.008}
+
 \leavevmode\hypertarget{ref-Ziegler2010}{}%
 Ziegler, M., Danay, E., Schölmerich, F., \& Bühner, M. (2010).
 Predicting Academic Success with the Big 5 Rated from Different Points
@@ -1474,12 +1435,11 @@ doi:\href{https://doi.org/10.1002/per}{10.1002/per}
 
 \endgroup
 
-
 \clearpage
+
 \renewcommand{\listtablename}{Table captions}
+
 \listoftables
-
-
 
 
 \end{document}

@@ -47,7 +47,6 @@ header-includes:
    - \usepackage{rotating}
    - \usepackage{longtable}
    - \usepackage{changepage}
-   - \DeclareDelayedFloatFlavor{foo}{table}
    
 output: 
   papaja::apa6_pdf
