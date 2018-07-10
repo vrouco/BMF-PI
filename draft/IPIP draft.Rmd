@@ -107,7 +107,7 @@ There are a number of models that include a facet structure below the five broad
 
 < Table 1 >
 
-```{r}
+```{r, eval=F}
 setwd(here("tables"))
 table1 <- read_excel("table1.xlsx")
 

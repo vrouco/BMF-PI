@@ -1,0 +1,61 @@
+---
+title: ' '
+output:
+  pdf_document
+header-includes: \usepackage{booktabs}
+---
+
+
+```{r setup, include=F}
+library(here)
+library(tidyverse)
+library(knitr)
+library(readxl)
+library(kableExtra)
+```
+
+
+
+```{r, warning=F,echo=F, message=F}
+setwd(here("tables"))
+table1 <- read_excel("table1.xlsx")
+table1 <- table1[,-3]
+table1[is.na(table1)]<-" "
+
+  # names(table1)[4] <- paste0(names(table1)[4],
+  #                                    footnote_marker_alphabet(1))
+  # 
+  
+  # kable(table1, "latex", escape=T, align="c") %>%
+  # kable_styling(full_width = F) %>% 
+  #   footnote(symbol = "Footnote Symbol 1; ",
+  #          symbol_title = "Type III: ",
+  #          footnote_as_chunk = T)
+  # 
+
+ kable(table1, "latex",longtable=T, align="l",booktabs=T, caption="Influential instruments of the Big Five at the facet level")%>% 
+   column_spec(5, width = "16em", bold = F, italic = F) %>% 
+   column_spec(1, width = "4em", bold = F, italic = F) %>% 
+   column_spec(2, width = "4em", bold = F, italic = F) %>% 
+   column_spec(3, width = "8em", bold = F, italic = F) %>% 
+   column_spec(4, width = "4em", bold = F, italic = F) %>% 
+   kable_styling(latex_options = "repeat_header")  
+   #kable_styling(full_width = T) %>% 
+   #footnote(c("footnote 1", "footnote 2"), escape=F) 
+  
+  
+# dt_footnote <- dt
+# names(dt_footnote)[2] <- paste0(names(dt_footnote)[2], 
+#                                 footnote_marker_symbol(1))
+# row.names(dt_footnote)[4] <- paste0(row.names(dt_footnote)[4], 
+#                                 footnote_marker_alphabet(1))
+# kable(dt_footnote, align = "c", 
+#       # Remember this escape = F
+#       escape = F) %>%
+#   kable_styling(full_width = F) %>%
+#   footnote(alphabet = "Footnote A; ",
+#            symbol = "Footnote Symbol 1; ",
+#            alphabet_title = "Type II: ", symbol_title = "Type III: ",
+#            footnote_as_chunk = T)
+```
+
