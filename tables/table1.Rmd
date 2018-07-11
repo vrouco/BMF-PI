@@ -33,15 +33,15 @@ table1[is.na(table1)]<-" "
   #          footnote_as_chunk = T)
   # 
 
- kable(table1, "latex",longtable=T, align="l",booktabs=T, caption="Influential instruments of the Big Five at the facet level")%>% 
-   column_spec(5, width = "16em", bold = F, italic = F) %>% 
+ kable(table1, "latex",longtable=T, align="l",linesep="",booktabs=T, caption="Influential instruments of the Big Five at the facet level")%>% 
+   column_spec(5, width = "18em", bold = F, italic = F) %>% 
    column_spec(1, width = "4em", bold = F, italic = F) %>% 
    column_spec(2, width = "4em", bold = F, italic = F) %>% 
    column_spec(3, width = "8em", bold = F, italic = F) %>% 
-   column_spec(4, width = "4em", bold = F, italic = F) %>% 
-   kable_styling(latex_options = "repeat_header")  
+   column_spec(4, width = "6em", bold = F, italic = F) %>% 
+   kable_styling(latex_options = "repeat_header")  %>% 
    #kable_styling(full_width = T) %>% 
-   #footnote(c("footnote 1", "footnote 2"), escape=F) 
+  footnote(c("Reliability: Cronbach's alpha measures, retrieved from references in relibility column", "Validity: criterion (correlation coefficient) and reference. \n The most important criterion per reference has been retrieved in the table, one per direct and one per inverse relations. r > .20 to be included in the table"), escape=T) 
   
   
 # dt_footnote <- dt
