@@ -1,0 +1,38 @@
+---
+output: pdf_document
+---
+
+\pagenumbering{gobble}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message=F, warning=F)
+options(knitr.table.format = "latex")
+library(here)
+library(readxl)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+
+
+```{r, results="asis", eval=T}
+setwd(here("tables"))
+
+corsabrev <- read_csv("table5abrev.csv")
+
+library(dplyr)
+corsabrev %>%
+  mutate_each(funs(cell_spec(., bold=ifelse(. >= .20 | . <= -.20, TRUE, FALSE))), -Facets) %>% 
+  kable("latex",escape=F, booktabs=T, linesep="", align="l",caption="Criterion correlations at the facet level") %>% 
+  landscape(margin = "0cm") %>% 
+  footnote(c("SWLS: Satisfaction With Life Scale.",
+             "GPA: Grade Point Average, 'cc' = full academic career, 'univ' = university, 'hs'= High School.",
+             "SAT: Scholastic Assessment Test, 't' = total, 'r' = reading test, 'm' = math test, 'w' = writing and language test.",
+             "ACT: American College Testing, 't' = total, 'm' = math test, 'r' = reading test, 'w' = writing test, 's' = science test.",
+             "ABS: Absences from school (?), 2 = correlation with 2 absences, 4 = correlation with 4 absences.",
+             "Correlations above |.20| are shown in bold."), threeparttable=T, escape=F)
+
+
+```
+

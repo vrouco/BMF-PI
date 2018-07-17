@@ -1,7 +1,9 @@
-setwd("C:/Users/Annemarie/Dropbox/Arbeit/Diagnostik/Matthias/ETS_IPIP/Datensätze")
-#setwd("/Users/cw/Dropbox/ETS_IPIP/Datensätze")
-library(xlsx)
-dt<-read.xlsx("ETS_regression.xlsx", sheetIndex=1)
+library(here)
+library(readxl)
+setwd(here("data/ETS_IPIP/DatensÃ¤tze"))
+#setwd("/Users/cw/Dropbox/ETS_IPIP/Datens?tze")
+
+dt<-read_excel("ETS_regression.xlsx")
 
 # Missings definieren
 dt$lifesat[dt$lifesat == -77]<- NA
@@ -32,7 +34,7 @@ m2hsn<-lm(hsgpa_num~age+sex+sumsN1+sumsN2+sumsN3+sumsN4+sumsN5+sumsN6+sumsN7, da
 
 
 #anova hsgpa (Vergleich sex+age vs. sex+age+einzelne Facetten jeder Dom?ne)
-anova(m1hs,m2hsa)  #signifikant
+anova(m1hs,m2hsa)  #signifikant-------NO. none is significant
 anova(m1hs,m2hsc)  #signifikant
 anova(m1hs,m2hse)  #signifikant
 anova(m1hs,m2hso)  #signifikant
@@ -50,34 +52,34 @@ m3hs<- lm(hsgpa_num~age+sex+cog15fac1, data=dtnew)
 anova(m1hs,m3hs) #signifikant
 
 
-# R2 hsgpa Facetten (inkremt. Valid. Facetten einer Domäne zu age+sex)
-rm1hs <- summary.lm(m1hs)
-r2m1hs<-rm1hs$"r.squared" 
-r2m1hs
-
-rm3hs <- summary.lm(m3hs)
-r2m3hs<-rm3hs$"r.squared" 
-r2m3hs
-
-rm2hsa <- summary.lm(m2hsa)
-r2m2hsa<-rm2hsa$"r.squared"
-r2m2hsa
-
-rm2hsc <- summary.lm(m2hsc)
-r2m2hsc<-rm2hsc$"r.squared"
-r2m2hsc
-
-rm2hse <- summary.lm(m2hse)
-r2m2hse<-rm2hse$"r.squared"
-r2m2hse
-
-rm2hso <- summary.lm(m2hso)
-r2m2hso<-rm2hso$"r.squared"
-r2m2hso
-
-rm2hsn <- summary.lm(m2hsn)
-r2m2hsn<-rm2hsn$"r.squared"
-r2m2hsn
+# R2 hsgpa Facetten (inkremt. Valid. Facetten einer Dom?ne zu age+sex) NONE is important
+# rm1hs <- summary.lm(m1hs)
+# r2m1hs<-rm1hs$"r.squared" 
+# r2m1hs
+# 
+# rm3hs <- summary.lm(m3hs)
+# r2m3hs<-rm3hs$"r.squared" 
+# r2m3hs
+# 
+# rm2hsa <- summary.lm(m2hsa)
+# r2m2hsa<-rm2hsa$"r.squared"
+# r2m2hsa
+# 
+# rm2hsc <- summary.lm(m2hsc)
+# r2m2hsc<-rm2hsc$"r.squared"
+# r2m2hsc
+# 
+# rm2hse <- summary.lm(m2hse)
+# r2m2hse<-rm2hse$"r.squared"
+# r2m2hse
+# 
+# rm2hso <- summary.lm(m2hso)
+# r2m2hso<-rm2hso$"r.squared"
+# r2m2hso
+# 
+# rm2hsn <- summary.lm(m2hsn)
+# r2m2hsn<-rm2hsn$"r.squared"
+# r2m2hsn
 
 #Delta R? A Facetten
 r2m2hsa-r2m1hs
@@ -108,7 +110,7 @@ m3hsn<-lm(hsgpa_num~age+sex+cog15fac1+sumsN1+sumsN2+sumsN3+sumsN4+sumsN5+sumsN6+
 
 
 #anova hsgpa (Vergleich sex+age+intel. vs. sex+age+intel.+einzelne Facetten jeder Dom?ne)
-anova(m3hs,m3hsa) #signifikant
+anova(m3hs,m3hsa) #signifikant.......NONE sig
 anova(m3hs,m3hsc) #signifikant
 anova(m3hs,m3hse) #signifikant 
 anova(m3hs,m3hso) #signifikant
@@ -116,36 +118,36 @@ anova(m3hs,m3hsn) #signifikant
 
 
 # R? hsgpa Facetten (inkremt. Valid. zu age+sex+intelligence)
-rm3hsa <- summary.lm(m3hsa)
-r2m3hsa<-rm3hsa$"r.squared"
-r2m3hsa
-
-rm3hsc <- summary.lm(m3hsc)
-r2m3hsc<-rm3hsc$"r.squared"
-r2m3hsc
-
-rm3hse <- summary.lm(m3hse)
-r2m3hse<-rm3hse$"r.squared"
-r2m3hse
-
-rm3hso <- summary.lm(m3hso)
-r2m3hso<-rm3hso$"r.squared"
-r2m3hso
-
-rm3hsn <- summary.lm(m3hsn)
-r2m3hsn<-rm3hsn$"r.squared"
-r2m3hsn
-
-#Delta R? A Facetten
-r2m3hsa-r2m3hs
-#Delta R? C Facetten
-r2m3hsc-r2m3hs
-#Delta R? E Facetten
-r2m3hse-r2m3hs
-#Delta R? O Facetten
-r2m3hso-r2m3hs
-#Delta R? N Facetten
-r2m3hsn-r2m3hs
+# rm3hsa <- summary.lm(m3hsa)
+# r2m3hsa<-rm3hsa$"r.squared"
+# r2m3hsa
+# 
+# rm3hsc <- summary.lm(m3hsc)
+# r2m3hsc<-rm3hsc$"r.squared"
+# r2m3hsc
+# 
+# rm3hse <- summary.lm(m3hse)
+# r2m3hse<-rm3hse$"r.squared"
+# r2m3hse
+# 
+# rm3hso <- summary.lm(m3hso)
+# r2m3hso<-rm3hso$"r.squared"
+# r2m3hso
+# 
+# rm3hsn <- summary.lm(m3hsn)
+# r2m3hsn<-rm3hsn$"r.squared"
+# r2m3hsn
+# 
+# #Delta R? A Facetten
+# r2m3hsa-r2m3hs
+# #Delta R? C Facetten
+# r2m3hsc-r2m3hs
+# #Delta R? E Facetten
+# r2m3hse-r2m3hs
+# #Delta R? O Facetten
+# r2m3hso-r2m3hs
+# #Delta R? N Facetten
+# r2m3hsn-r2m3hs
 
 
 #model 4 hsgpa
@@ -164,7 +166,7 @@ m4hsn<-lm(hsgpa_num~age+sex+sumsN, data=dt)
 
 
 #anova hsgpa (Vergl. sex+age vs. sex+age+einzelne Dom?nen)
-anova(m1hs,m4hsa)  #signifikant
+anova(m1hs,m4hsa)  #signifikant...AGAIN
 anova(m1hs,m4hsc)  #signifikant
 anova(m1hs,m4hse)  #nicht signifikant
 anova(m1hs,m4hso)  #signifikant
@@ -172,40 +174,40 @@ anova(m1hs,m4hsn)  #signifikant
 anova(m1hs,m4hs)   #signifikant
 
 # R? hsgpa Dom?nen (inkremt. Valid. einzelne Dom?nen zu age+sex)
-rm4hsa <- summary.lm(m4hsa)
-r2m4hsa<-rm4hsa$"r.squared"
-r2m4hsa
-
-rm4hsc <- summary.lm(m4hsc)
-r2m4hsc<-rm4hsc$"r.squared"
-r2m4hsc
-
-rm4hse <- summary.lm(m4hse)
-r2m4hse<-rm4hse$"r.squared"
-r2m4hse
-
-rm4hso <- summary.lm(m4hso)
-r2m4hso<-rm4hso$"r.squared"
-r2m4hso
-
-rm4hsn <- summary.lm(m4hsn)
-r2m4hsn<-rm4hsn$"r.squared"
-r2m4hsn
-
-rm4hs <- summary.lm(m4hs)
-r2m4hs<-rm4hs$"r.squared"
-r2m4hs
-
-#Delta R? A
-r2m4hsa-r2m1hs
-#Delta R? C
-r2m4hsc-r2m1hs
-#Delta R? O
-r2m4hso-r2m1hs
-#Delta R? N
-r2m4hsn-r2m1hs
-#Delta R? alle Dom?nen
-r2m4hs-r2m1hs
+# rm4hsa <- summary.lm(m4hsa)
+# r2m4hsa<-rm4hsa$"r.squared"
+# r2m4hsa
+# 
+# rm4hsc <- summary.lm(m4hsc)
+# r2m4hsc<-rm4hsc$"r.squared"
+# r2m4hsc
+# 
+# rm4hse <- summary.lm(m4hse)
+# r2m4hse<-rm4hse$"r.squared"
+# r2m4hse
+# 
+# rm4hso <- summary.lm(m4hso)
+# r2m4hso<-rm4hso$"r.squared"
+# r2m4hso
+# 
+# rm4hsn <- summary.lm(m4hsn)
+# r2m4hsn<-rm4hsn$"r.squared"
+# r2m4hsn
+# 
+# rm4hs <- summary.lm(m4hs)
+# r2m4hs<-rm4hs$"r.squared"
+# r2m4hs
+# 
+# #Delta R? A
+# r2m4hsa-r2m1hs
+# #Delta R? C
+# r2m4hsc-r2m1hs
+# #Delta R? O
+# r2m4hso-r2m1hs
+# #Delta R? N
+# r2m4hsn-r2m1hs
+# #Delta R? alle Dom?nen
+# r2m4hs-r2m1hs
 
 #model 5 hsgpa
 m5hs<-lm(hsgpa_num~age+sex+cog15fac1+sumsA+sumsC+sumsE+sumsO+sumsN, data=dt)
@@ -223,7 +225,7 @@ m5hsn<-lm(hsgpa_num~age+sex+cog15fac1+sumsN, data=dt)
 
 #anova hsgpa (Vergleich sex+age+intel. vs. sex+age+intel.+einzelne Dom?nen)
 anova(m3hs,m5hsa) #signifikant
-anova(m3hs,m5hsc) #signifikant
+anova(m3hs,m5hsc) #THIS IS MARGINALLY SIG
 anova(m3hs,m5hse) #nicht signifikant 
 anova(m3hs,m5hso) #nicht signifikant
 anova(m3hs,m5hsn) #signifikant
@@ -282,11 +284,11 @@ m2unio<-lm(gpa_univ~age+sex+sumsO1+sumsO2+sumsO3+sumsO4+sumsO5+sumsO6+sumsO7+sum
 m2unin<-lm(gpa_univ~age+sex+sumsN1+sumsN2+sumsN3+sumsN4+sumsN5+sumsN6+sumsN7, data=dt)
 
 #anova gpa_univ (Vergleich sex+age vs. sex+age+einzelne Facetten jeder Dom?ne)
-anova(m1uni,m2unia)  #signifikant
-anova(m1uni,m2unic)  #signifikant
+anova(m1uni,m2unia)  #THIS IS
+anova(m1uni,m2unic)  #TOO
 anova(m1uni,m2unie)  #nicht signifikant
-anova(m1uni,m2unio)  #signifikant
-anova(m1uni,m2unin)  #signifikant
+anova(m1uni,m2unio)  #ALSO
+anova(m1uni,m2unin)  #ALSO
 
 #Neuer Datensatz ohne Missings bei cog15fac1
 #dtnew<-dt[!is.na(dt$cog15fac1),]
@@ -297,7 +299,7 @@ m3uni<- lm(gpa_univ~age+sex+cog15fac1, data=dtnew)
 
 
 #anova gpa_univ (Vergleich sex+age vs. sex+age+intelligence)
-anova(m1uni,m3uni) #signifikant
+anova(m1uni,m3uni) #YES
 
 
 # R? gpa_univ Facetten (inkremt. Valid. Facetten einer Dom?ne zu age+sex)
@@ -329,15 +331,15 @@ rm2unin <- summary.lm(m2unin)
 r2m2unin<-rm2unin$"r.squared"
 r2m2unin
 
-#Delta R² A Facetten
+#Delta R? A Facetten
 r2m2unia-r2m1uni
-#Delta R² C Facetten
+#Delta R? C Facetten
 r2m2unic-r2m1uni
-#Delta R² O Facetten
+#Delta R? O Facetten
 r2m2unio-r2m1uni
-#Delta R² N Facetten
+#Delta R? N Facetten
 r2m2unin-r2m1uni
-#Delta R² Intelligenz
+#Delta R? Intelligenz
 r2m3uni-r2m1uni
 
 
@@ -362,7 +364,7 @@ anova(m3uni,m3unie) #nicht signifikant
 anova(m3uni,m3unio) #signifikant
 anova(m3uni,m3unin) #signifikant
 
-# R² gpa_univ Facetten (inkremt. Valid. zu intelligence)
+# R? gpa_univ Facetten (inkremt. Valid. zu intelligence)
 rm3unia <- summary.lm(m3unia)
 r2m3unia<-rm3unia$"r.squared"
 r2m3unia
@@ -551,15 +553,15 @@ r2m2ab2a
 
 rm2ab2c <- summary.lm(m2ab2c)
 r2m2ab2c<-rm2ab2c$"r.squared"
-r2m2ab2c
+r2m2ab2c   ##HIGHEST R2
 
 rm2ab2e <- summary.lm(m2ab2e)
 r2m2ab2e<-rm2ab2e$"r.squared"
-r2m2ab2e
+r2m2ab2e   #THIS TOO
 
 rm2ab2o <- summary.lm(m2ab2o)
 r2m2ab2o<-rm2ab2o$"r.squared"
-r2m2ab2o
+r2m2ab2o  #AND THIS
 
 rm2ab2n <- summary.lm(m2ab2n)
 r2m2ab2n<-rm2ab2n$"r.squared"
@@ -643,7 +645,7 @@ anova(m1ab2,m4ab2o)  #nicht signifikant
 anova(m1ab2,m4ab2n)  #nicht signifikant
 anova(m1ab2,m4ab2)   #signifikant
 
-# R² absences2 Dom?nen (inkremt. Valid. einzelne Dom?nen zu age+sex)
+# R? absences2 Dom?nen (inkremt. Valid. einzelne Dom?nen zu age+sex)
 rm4ab2a <- summary.lm(m4ab2a)
 r2m4ab2a<-rm4ab2a$"r.squared"
 r2m4ab2a
@@ -791,7 +793,7 @@ rm2ab4n <- summary.lm(m2ab4n)
 r2m2ab4n<-rm2ab4n$"r.squared"
 r2m2ab4n
 
-#Delta R² A Facetten
+#Delta R? A Facetten
 r2m2ab4a-r2m1ab4
 #Delta R? C Facetten
 r2m2ab4c-r2m1ab4
@@ -937,7 +939,7 @@ anova(m3ab4,m5ab4o) #nicht signifikant
 anova(m3ab4,m5ab4n) #signifikant
 anova(m3ab4,m5ab4)  #signifikant
 
-# R² absences4 Domänen
+# R? absences4 Dom?nen
 rm5ab4a<-summary.lm(m5ab4a)
 r2m5ab4a<-rm5ab4a$"r.squared"
 r2m5ab4a
@@ -962,13 +964,13 @@ rm5ab4<-summary.lm(m5ab4)
 r2m5ab4<-rm5ab4$"r.squared"
 r2m5ab4
 
-#Delta R² A
+#Delta R? A
 r2m5ab4a-r2m3ab4
-#Delta R² C
+#Delta R? C
 r2m5ab4c-r2m3ab4
-#Delta R² N
+#Delta R? N
 r2m5ab4n-r2m3ab4
-#Delta R² alle Domänen
+#Delta R? alle Dom?nen
 r2m5ab4-r2m3ab4
 
 
@@ -1007,7 +1009,7 @@ m3sat<- lm(lifesat~age+sex+cog15fac1, data=dtnew)
 #anova lifesat (Vergleich sex+age vs. sex+age+intelligence)
 anova(m1sat,m3sat) #signifikant
 
-# R² lifesat Facetten (inkremt. Valid. Facetten einer Dom?ne zu age+sex)
+# R? lifesat Facetten (inkremt. Valid. Facetten einer Dom?ne zu age+sex)
 rm1sat <- summary.lm(m1sat)
 r2m1sat<-rm1sat$"r.squared" 
 r2m1sat
@@ -1036,7 +1038,7 @@ rm2satn <- summary.lm(m2satn)
 r2m2satn<-rm2satn$"r.squared"
 r2m2satn
 
-#Delta R² A Facetten
+#Delta R? A Facetten
 r2m2sata-r2m1sat
 #Delta R? C Facetten
 r2m2satc-r2m1sat
@@ -1125,7 +1127,7 @@ anova(m1sat,m4sato)  #signifikant
 anova(m1sat,m4satn)  #signifikant
 anova(m1sat,m4sat)   #signifikant
 
-# R² lifesat Domänen (inkremt. Valid. einzelne Dom?nen zu age+sex)
+# R? lifesat Dom?nen (inkremt. Valid. einzelne Dom?nen zu age+sex)
 rm4sata <- summary.lm(m4sata)
 r2m4sata<-rm4sata$"r.squared"
 r2m4sata
@@ -1185,7 +1187,7 @@ anova(m3sat,m5sato) #signifikant
 anova(m3sat,m5satn) #signifikant
 anova(m3sat,m5sat)  #signifikant
 
-# R² lifesat Domänen
+# R? lifesat Dom?nen
 rm5sata<-summary.lm(m5sata)
 r2m5sata<-rm5sata$"r.squared"
 r2m5sata
@@ -1318,7 +1320,7 @@ anova(m3el2,m3el2e) #nicht signifikant
 anova(m3el2,m3el2o) #signifikant
 anova(m3el2,m3el2n) #nicht signifikant
 
-# R² highedlvl2 Facetten (inkremt. Valid. zu intelligence)
+# R? highedlvl2 Facetten (inkremt. Valid. zu intelligence)
 rm3el2a <- summary.lm(m3el2a)
 r2m3el2a<-rm3el2a$"r.squared"
 r2m3el2a
@@ -1370,7 +1372,7 @@ anova(m1el2,m4el2o)  #signifikant
 anova(m1el2,m4el2n)  #nicht signifikant
 anova(m1el2,m4el2)   #nicht signifikant
 
-# R? highedlvl2 Domänen (inkremt. Valid. einzelne Dom?nen zu age+sex)
+# R? highedlvl2 Dom?nen (inkremt. Valid. einzelne Dom?nen zu age+sex)
 rm4el2a <- summary.lm(m4el2a)
 r2m4el2a<-rm4el2a$"r.squared"
 r2m4el2a
@@ -1421,7 +1423,7 @@ anova(m3el2,m5el2o) #signifikant
 anova(m3el2,m5el2n) #nicht signifikant
 anova(m3el2,m5el2)  #nicht signifikant
 
-# R² highedlvl2 Dom?nen
+# R? highedlvl2 Dom?nen
 rm5el2a<-summary.lm(m5el2a)
 r2m5el2a<-rm5el2a$"r.squared"
 r2m5el2a

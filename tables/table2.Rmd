@@ -1,0 +1,20 @@
+---
+title: ""
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, warning=F, message=F)
+library(here)
+library(readxl)
+library(kableExtra)
+```
+
+```{r}
+setwd(here("tables"))
+table2 <- read_excel("table2.xlsx")
+kable(table2, format = "latex", align = "l", booktabs = T, caption="Results for the EFA on the Big Five domains")%>% 
+  column_spec(1, width = "8em", bold = F, italic = F) %>% 
+  column_spec(2, width = "8em", bold = F, italic = F)
+```
+

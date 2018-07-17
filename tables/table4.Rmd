@@ -1,0 +1,35 @@
+---
+title: ""
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message=F, warning=F)
+library(tidyverse)
+library(here)
+library(readxl)
+library(kableExtra)
+library(xtable)
+library(Hmisc)
+```
+
+```{r, results="asis"}
+setwd(here("tables"))
+mytable <- read_csv("table4.csv")
+mytable <- mytable[,-1]
+mytable$Agreeableness[1:6] <- paste("\\textbf{",mytable$Agreeableness[1:6], "}", sep="")
+mytable$Conscientiousness[7:15] <- paste("\\textbf{",mytable$Conscientiousness[7:15], "}", sep="")
+mytable$Extraversion[16:23] <- paste("\\textbf{",mytable$Extraversion[16:23], "}", sep="")
+mytable$Neuroticism[24:30] <- paste("\\textbf{",mytable$Neuroticism[24:30], "}", sep="")
+mytable$Openness[31:38] <- paste("\\textbf{",mytable$Openness[31:38], "}", sep="")
+colnames(mytable)[1]<-"facet"
+
+
+# kable(mytable, "latex", align = "l", booktabs = T, linesep="", 
+#       caption = "ESEM factor scores USA sample") %>% 
+#   text_spec(format="latex")
+
+ # print(xtable(mytable, caption="Factor Loadings ESEM"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
+print(xtable(mytable, caption="ESEM factor scores USA sample"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top",sanitize.text.function=Hmisc::latexTranslate)
+```
+

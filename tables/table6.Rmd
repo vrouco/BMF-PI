@@ -1,0 +1,22 @@
+---
+title: " "
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message=F, warning=F)
+library(tidyverse)
+library(here)
+library(readxl)
+library(kableExtra)
+library(xtable)
+library(Hmisc)
+```
+
+```{r, results="asis"}
+setwd(here("tables"))
+table6 <- read_csv("table6.csv")
+colnames(table6)[1]<-"facet"
+print(xtable(table6, caption="ESEM factor scores German sample"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top",sanitize.text.function=Hmisc::latexTranslate)
+```
+

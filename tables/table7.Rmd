@@ -1,0 +1,22 @@
+---
+title: ""
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, warning=F, message=F)
+library(here)
+library(readxl)
+library(kableExtra)
+```
+
+```{r}
+setwd(here("tables"))
+table7 <- read_excel("table7.xlsx", col_names = T)
+table7[is.na(table7)]<-""
+colnames(table7)[1] <- ""
+
+kable(table7, "latex", align = "l", booktabs = T, linesep="", caption = "Measurement invariance") %>% 
+  kable_styling(latex_options = "scale_down")
+```
+
