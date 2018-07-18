@@ -98,14 +98,14 @@ Correspondence concerning this article should be addressed to Victor Rouco, Post
 \newcommand\LastLTentrywidth{1em}
 \newlength\longtablewidth
 \setlength{\longtablewidth}{1in}
-\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef1em{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
 
 
 \DeclareDelayedFloatFlavor{ThreePartTable}{table}
 \DeclareDelayedFloatFlavor{lltable}{table}
 \DeclareDelayedFloatFlavor*{longtable}{table}
 \makeatletter
-\renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
+\renewcommand{\efloat@iwrite}[1]{\immediate\protected@write\csname efloat@post#1\endcsname{}}
 \makeatother
 \usepackage{lineno}
 
@@ -215,18 +215,18 @@ psychoticism, can be operationalized as two dimensions of the Big Five:
 Agreeableness (or \ldots{}) and Conscientiousness (or \ldots{}.).
 
 A large number of studies have focused on the problem of personality
-structure resulting in a five factor solution (Fiske (1949); Norman
-(1967); Tupes and Christal (1961); Borgatta (1964)). Possibly the two
-most widely cited works relating to the foundations of the Big Five are
-those by Goldberg et al. (2006) and Costa and McCrae (1995). Goldberg
-can be seen as one of the first who extended research concerning the Big
-Five, while McRae and Costa`s importance rests on popularizing the
-terminology (OCEAN) and the development of one of the most used tools to
-assess personality based on the Big Five: the NEO-PI. The Big Five
-dimensions are labeled as follows: I) Extraversion vs.~Introversion. II)
+structure resulting in a five factor solution (Borgatta, 1964; Fiske,
+1949; Norman, 1967; Tupes \& Christal, 1961). Possibly the two most
+widely cited works relating to the foundations of the Big Five are those
+by Goldberg et al. (2006) and Costa and McCrae (1995). Goldberg can be
+seen as one of the first who extended research concerning the Big Five,
+while McRae and Costa`s importance rests on popularizing the terminology
+(OCEAN) and the development of one of the most used tools to assess
+personality based on the Big Five: the NEO-PI. The Big Five dimensions
+are labeled as follows: I) Extraversion vs.~Introversion. II)
 Agreeableness or Friendliness. III) Conscientiousness or Achievement or
-Will. IV) Emotional Stability vs.~Neuroticism. V) Openness or Intellect
-or Culture.
+Will. IV) Emotional Stability vs.~Neuroticism, and V) Openness or
+Intellect or Culture.
 
 One of the most important features of the Big Five is the fact that it
 could be replicated in different languages. Research is available in
@@ -245,8 +245,8 @@ outcomes.
 The Big Five has proven to be a valid theoretical and empirical model to
 predict relevant life outcomes. Research such as Ozer and Benet-Martínez
 (2006) or Roberts, Kuncel, Shiner, Caspi, and Goldberg (2007) has shown
-that scores for the Five Dimensions (and their related facets) are able
-to explain outcomes such as Academic and work performance, health,
+that scores for the Big Five dimensions (and their related facets) are
+able to explain outcomes such as academic and work performance, health,
 personality disorders, political attitudes and many more. The empirical
 findings linking Big Five measures to life outcomes have reinforced the
 concurrent validity of the test scores interpretations. At the same
@@ -362,15 +362,15 @@ Derringer, Markon, Watson, \& Skodol, 2012), a 25-facet and
 five-dimension self-report inventory, with an informant-report version
 (Markon, Quilty, Bagby, \& Krueger, 2013). The big five dimensions
 mirror the Big Five domains, although with a focus on the maladaptative
-end of the continuum,: I) Detachment (Big Five's introversion), II)
+end of the continuum,: I) Detachment (Big Five's Introversion), II)
 Antagonism (absence of Big Five's Agreeableness), III) Disinhibition
 (absence of Big Five's Conscientiousness), IV) Negative affect (Big
 Five's Neuroticism) and V) Psychoticism (Absence of Big Five's
 Openness). The PID-5 has shown satisfying evidences of criterion
 validity (\ldots{}summary). However, the limited number of facets on the
 PID-5 has already raised some concerns due to the low reliability when
-studying developmental phenomena of personality disorders (Clercq et
-al., 2014)`, and may also limit the capacity of portraying vivid
+studying developmental phenomena of personality disorders
+({\textbf{???}}), and may also limit the capacity of portraying vivid
 personality profiles which are suitable for explanatory purposes in the
 clinical domain.
 
@@ -431,10 +431,10 @@ relationship. Finally, an Exploratory Strucutural Equation Model (ESEM)
 was fitted to integrate the measurement model of the facets with the
 dimensions. ESEM is a novel method which allows the researcher to use
 Structural Equation Modelling (SEM) without the need of imposing an
-independent cluster solution, as its common in the CFA procedure. ESEM
-has gained reputation in the personality field, where the independent
-cluster model may not capture the complexity of the constructs measured
-(Marsh et al., 2010).
+independent cluster solution, as its common in the CFA (Confirmatory
+Factor Analysis) procedure. ESEM has gained reputation in the
+personality field, where the independent cluster model may not capture
+the complexity of the constructs measured (Marsh et al., 2010).
 
 The second sample was drawn again from a graduate student population,
 albeit this time based in Germany. The aim for the second study is to
@@ -506,52 +506,50 @@ subjects. ABS2 ABS4 what are the differences?
 To determine the number of possible facets per domain Velicer (1976)
 Minimum Average Partial (MAP) method and Horn (1965) parallel analysis
 (PA) were employed for every domain. Based on these results an
-exploratory factor analysis was calculated for each domain via Mplus
-using a geomin rotation (Quelle) and a maximum likelihood estimator
-(ML). The decision for the preferred number of facets per domain was
-based partly on comparing model fits (CFI, RMSEA, SRMR). More
-importantly though was the interpretability of the facet solution. After
-all facet solutions of other personality measures were looked at to
-compare it to the found facet structure. If there were important parts
-missing to present the domain with regards to content, new facets would
-be added afterwards.
+Exploratory Factor Analysis (EFA) was calculated for each domain via
+Mplus using a geomin rotation (Quelle) and a Maximum Likelihood
+estimator (ML). The decision for the preferred number of facets per
+domain was based partly on comparing model fits (CFI, RMSEA, SRMR). More
+importantly though was the interpretability of the facet solution. Facet
+solutions of other personality measures were inspected and compared to
+the found facet structure. If there were important parts missing to
+present the domain with regards to content, new facets would be added a
+posteriori.
 
 \hypertarget{cfa-and-esem-with-subsample-2}{%
 \subsubsection{CFA and ESEM with subsample
 2}\label{cfa-and-esem-with-subsample-2}}
 
-To confirm the structure of facets the EFAs delivered, multiple
-confirmatory factor analyses were calculated via Mplus. In a first step
-measurement models were estimated for each of the facets. To obtain
-balance between the facets, the items were reduced to five per facet
-based on item content and loading pattern in a second step, afterwards
-the estimations for the measurement models on facet levels were
-repeated. For both steps estimators were WLSMV (weighted least squares
-adjusted for means and variances). Aim was to ensure an optimal breadth
-and sufficient reliability. In a final model, all five domain structural
-models were integrated using exploratory structural equation modeling
-(ESEM) (Asparouhov \& Muthén, 2009). Marsh et al. (2010) could show that
-ESEM fits personality data better and results in substantially more
-differentiated factors than it would using CFA, while using an EFA
-measurement model with rotations in a structural equation model. All
-facets were able to load on all domains. If there would show up facets
-that do not significantly load on the intended domain, this facets would
-get eliminated subsequently. The estimators used were ML, factor scores
-were used as indicators and the rotation was oblique (using Geomin).
-Model fit was determined based on the guide lines by Hu and Bentler
-(1999) as well as Beauducel and Wittmann (2005). Consequently, to
-consider a good fit of a proposed model, the Comparative Fit Index (CFI)
-should be at or over .95, the standardized root mean squared residual
-(SRMR) smaller than .08 and the root mean square error of approximation
-(RMSEA) smaller than .06.
+To confirm the structure of facets the EFAs delivered, multiple CFAs
+were calculated via Mplus. In a first step, measurement models were
+estimated for each of the facets. To obtain balance between the facets,
+the items were reduced to five per facet based on item content and
+loading pattern. In a second step, the estimations for the measurement
+models on facet levels were repeated via CFA. For both steps estimators
+were WLSMV (Weighted Least Squares adjusted for Means and Variances).
+Aim was to ensure an optimal breadth and sufficient reliability. In a
+final model, all five domain structural models were integrated using
+Exploratory Structural Equation Modeling (ESEM; Asparouhov \& Muthén,
+2009). Marsh et al. (2010) could show that ESEM fits personality data
+better and results in substantially more differentiated factors than it
+would using CFA, while using an EFA measurement model with rotations in
+a structural equation model. All facets were able to load on all
+domains. If there would show up facets that do not significantly load on
+the intended domain, this facets would get eliminated subsequently. The
+estimators used were ML, factor scores were used as indicators and the
+rotation was oblique (using Geomin). Model fit was determined based on
+the guide lines by Hu and Bentler (1999) as well as Beauducel and
+Wittmann (2005). Consequently, to consider a good fit of a proposed
+model, the Comparative Fit Index (CFI) should be at or over .95, the
+Standardized Root Mean Squared Residual (SRMR) smaller than .08 and the
+Root Mean Square Error of Approximation (RMSEA) smaller than .06.
 
 \hypertarget{criterion-validity-evidence}{%
 \subsubsection{Criterion validity
 evidence}\label{criterion-validity-evidence}}
 
 To examine the nomological structure of the facets and domains to
-external constructs like life satisfaction and education, correlations
-and multiple regression were computed.
+external constructs, correlations at the facet level were computed.
 
 \hypertarget{results}{%
 \subsection{2.2. Results}\label{results}}
@@ -622,13 +620,12 @@ facet})\textgreater{}
 
 \vspace{5mm}
 
-The exploratory structural equation model (ESEM) of the final model with
-all five domains fits approximately with CFI = .87, RMSEA = .072, SRMR =
-.036. As you can see in \emph{Table 4} nearly all facets load
-significantly on their intended domain. Some cross loadings can be found
-as they are plausible with ESEM procedures. However, in any case the
-number of cross loadings is high nor unconsistent with the facet
-content.
+The ESEM of the final model with all five domains fits approximately
+with CFI = .87, RMSEA = .072, SRMR = .036. As you can see in \emph{Table
+4} nearly all facets load significantly on their intended domain. Some
+cross loadings can be found as they are plausible with ESEM procedures.
+However, in any case the number of cross loadings is high or
+unconsistent with the facet content.
 
 \vspace{5mm}
 
@@ -788,15 +785,38 @@ a facet of Extraversion
 \hypertarget{discussion}{%
 \section{Discussion}\label{discussion}}
 
-We have presented an open access instrument for personality assessment
-within the Big Five framework, which showed evidences of factorial
-validity in two different cultures and maximized the space set of facets
-encompassed. Furthermore, evidences for external criteria validity were
-attained
+We have presented in this work an open-access instrument for personality
+assessment within the Big Five framework, which showed evidences of
+factorial validity in two different cultures and maximized the space set
+of facets encompassed. In addition, evidences for external criteria
+validity were attained.
 
-We cover all the \enquote{core} facets proposed by soto and john. We
-also cover all the facets proposed by the most influential Big Five
-measures as seen in table 1. In addition we included even more facets.
+The instrument covers all the \enquote{core} facets proposed by Soto and
+John (2009), either directly or indirectly. The Energy construct in
+Extraversion is literally covered by a three-item facet in our
+instrument, whereas the Assertiveness construct has been tapped by items
+belonging to the Wish for affiliation, Communicativeness and
+Conviviality facets. Altruism is directly reflected in a five-item
+facet, while the Compliance construct is reflected by our Good faith
+facet. The Order and Self-discipline constructs proposed by Soto and
+John (2009) are mirrored by dedicated facets in our instrument. The
+Anxiety and Depression constructs are mirrored by the facets Mental
+balance and Emotional robustness, respectively. For the Openess
+dimension, the Aesthetic contruct is covered by our facet Artistic
+interest, while the Ideas construct has been reflected by both the
+Open-mindedness and the Wish to analyze facets.
+
+The instrument also covers all facets proposed by the most influential
+Big Five measures as seen in \emph{Table 1}, athough with a few
+exceptions. For example the Patience facet proposed in the HEXACO model
+for the Agreeableness domain is not covered in our instrument.
+Nonetheless, Patience can be understood as forming the Self-discipline
+domain, specially with items such as \enquote{I rush into things} (See
+appendix A). In fact, Self-discipline has important cross-loadings with
+Agreeableness in both samples (\(\lambda\) = .256 in the USA sample and
+\(\lambda\) = .341 in the german sample).
+
+In addition we included even more facets.
 
 The evidences for reliability and structural validity are retained. Like
 most of the Big Five instruments, ours could not survive to the CFA
@@ -820,18 +840,12 @@ and facets become richer.
 
 \newpage
 
-Brick and Lewis (2014)
+Remove this page. This is used to include the tables' references into
+the bibliography.
 
-Gaughan, Miller, and Lynam (2012)
-
-Leone, Chirumbolo, and Desimoni (2012)
-
-Mcabee, Oswald, and Connelly (2014)
-
-Gaughan, Miller, Pryor, and Lynam (2009)
-
-Noftle and Shaver (2006)
-
+Brick and Lewis (2014); Gaughan, Miller, and Lynam (2012); Leone,
+Chirumbolo, and Desimoni (2012); Mcabee, Oswald, and Connelly (2014);
+Gaughan, Miller, Pryor, and Lynam (2009); Noftle and Shaver (2006);
 Bagby, Taylor, and Parker (1994); Schimmack, Furr, and Funder (1999);
 Wakabayashi, Baron-Cohen, and Wheelwright (2006); Shaver and Brennan
 (1992); Ruiz, Pincus, and Dickinson (2003); Mccrae, Kurtz, Yamagata, and
