@@ -2,7 +2,7 @@
 
 
 create.table3.5items <- function(){
-
+library(tidyverse)
 library(here)
 library(foreign)
 library(lavaan)

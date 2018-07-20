@@ -4,8 +4,10 @@ output:
   pdf_document
 header-includes: 
   - \usepackage{booktabs}
-
+  - \usepackage{caption}
 ---
+
+\captionsetup[table]{labelformat=empty}
 
 
 ```{r setup, include=F}
@@ -35,7 +37,7 @@ table1[is.na(table1)]<-" "
   #          footnote_as_chunk = T)
   # 
 
- kable(table1, "latex",longtable=T, align="l",linesep="",booktabs=T, caption="Influential instruments of the Big Five at the facet level")%>% 
+ kable(table1, "latex",longtable=T, align="l",linesep="",booktabs=T, caption="Table 1. Influential instruments of the Big Five at the facet level")%>% 
    column_spec(5, width = "18em", bold = F, italic = F) %>% 
    column_spec(1, width = "4em", bold = F, italic = F) %>% 
    column_spec(2, width = "4em", bold = F, italic = F) %>% 

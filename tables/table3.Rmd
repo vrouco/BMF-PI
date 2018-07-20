@@ -1,9 +1,11 @@
 ---
 title: " "
 output:
-  pdf_document: default
-  word_document: default
+  pdf_document:
+header-includes:
+- \usepackage{caption}
 ---
+\captionsetup[table]{labelformat=empty}
 
 \pagenumbering{gobble}
 
@@ -21,13 +23,22 @@ library(kableExtra)
 ```{r table3}
 setwd(here("/tables"))
 table3 <- read_csv("table3.csv")
+table3 <- table3[,-c(7,12)]
+colnames(table3) <- sub("_1","",colnames(table3))
+colnames(table3) <- sub("_2","",colnames(table3))
 
-# table3 <- 
-  kable(table3, "latex", align = "l", booktabs = T, linesep="", caption = "Model fit for each facet")%>%
+# table3 <- table3[table3$facets!="o8",]
+# table3 <- table3[table3$facets!="a5",]
+# table3 <- table3[table3$facets!="a4",]
+# table3 <- table3[table3$facets!="e2",]
+
+
+  kable(table3, "latex", align = "l", booktabs = T, linesep="", longtable=T,caption = "Table 3. Model fit for each facet")%>%
   kable_styling(latex_options = "scale_down") %>%
-  add_header_above(c(" " = 1, "Full items" = 5, "5 items" = 5, " " = 5)) %>%
-  add_header_above(c(" " = 1, "USA sample" = 10, "German sample" = 5)) %>% 
-    landscape()
+  add_header_above(c(" " = 1, "Full items" = 5, "5 items" = 4, " " = 4)) %>%
+  add_header_above(c(" " = 1, "USA sample" = 9, "German sample" = 4)) %>% 
+  landscape() %>% 
+  kable_styling(latex_options = "repeat_header")
 
 # setwd(here("tables"))
 # kable_as_image(table3, "table3.png")

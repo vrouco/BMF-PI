@@ -1,7 +1,11 @@
 ---
 title: ""
-output: pdf_document
+output:
+  pdf_document:
+header-includes:
+- \usepackage{caption}
 ---
+\captionsetup[table]{labelformat=empty}
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = F, message=F, warning=F)
@@ -22,14 +26,11 @@ mytable$Conscientiousness[7:15] <- paste("\\textbf{",mytable$Conscientiousness[7
 mytable$Extraversion[16:23] <- paste("\\textbf{",mytable$Extraversion[16:23], "}", sep="")
 mytable$Neuroticism[24:30] <- paste("\\textbf{",mytable$Neuroticism[24:30], "}", sep="")
 mytable$Openness[31:38] <- paste("\\textbf{",mytable$Openness[31:38], "}", sep="")
-colnames(mytable)[1]<-"facet"
+colnames(mytable)[1]<-"Facet"
 
 
-# kable(mytable, "latex", align = "l", booktabs = T, linesep="", 
-#       caption = "ESEM factor scores USA sample") %>% 
-#   text_spec(format="latex")
+# print(xtable(mytable, caption="ESEM factor scores USA sample"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top",sanitize.text.function=Hmisc::latexTranslate)
 
- # print(xtable(mytable, caption="Factor Loadings ESEM"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
-print(xtable(mytable, caption="ESEM factor scores USA sample"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top",sanitize.text.function=Hmisc::latexTranslate)
+kable(mytable, booktabs=T, escape=F, linesep="", align="l", caption = "Table 4. ESEM factor scores USA sample")
 ```
 

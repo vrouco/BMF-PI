@@ -26,9 +26,7 @@ mytable <- mytable[,c("paramHeader", "param", "new")]
 mytable <- mytable[1:190, ]#remove all information concerning factor correlations, intercepts, res. variances etc
 
 mytable <- spread(mytable, key="paramHeader", value="new")
-#there must be an error between NEURO.BY and OPEN.BY, they seem to be crossed
 
-mytable <- mytable[,c(1,2,3,4,6,5)]
 
 colnames(mytable) <- c("", "Agreeableness", "Conscientiousness", "Extraversion", "Neuroticism","Openness")
 
