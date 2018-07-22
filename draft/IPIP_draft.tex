@@ -99,14 +99,14 @@ Correspondence concerning this article should be addressed to Victor Rouco, Post
 \newcommand\LastLTentrywidth{1em}
 \newlength\longtablewidth
 \setlength{\longtablewidth}{1in}
-\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef1em{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
 
 
 \DeclareDelayedFloatFlavor{ThreePartTable}{table}
 \DeclareDelayedFloatFlavor{lltable}{table}
 \DeclareDelayedFloatFlavor*{longtable}{table}
 \makeatletter
-\renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
+\renewcommand{\efloat@iwrite}[1]{\immediate\protected@write\csname efloat@post#1\endcsname{}}
 \makeatother
 \usepackage{lineno}
 
@@ -383,6 +383,7 @@ This paradigm shift in clinical assessment of personality has led to the
 construction of the Personality Disorder Inventory (PID-5; Krueger,
 Derringer, Markon, Watson, \& Skodol, 2012), a 25-facet and
 five-dimension self-report inventory, with an informant-report version
+<<<<<<< HEAD
 (Markon, Quilty, Bagby, \& Krueger, 2013). These five dimensions mirror
 the Big Five domains, although with a focus on the maladaptative end of
 the continuum,: I) Detachment (Big Five's Introversion), II) Antagonism
@@ -392,6 +393,21 @@ Neuroticism) and V) Psychoticism (Absence of Big Five's Openness). The
 PID-5 has shown satisfying evidences of criterion validity
 (\ldots{}summary). However, the number of facets per domain on the PID-5
 is limited.
+=======
+(Markon, Quilty, Bagby, \& Krueger, 2013). The big five dimensions
+mirror the Big Five domains, although with a focus on the maladaptative
+end of the continuum,: I) Detachment (Big Five's Introversion), II)
+Antagonism (absence of Big Five's Agreeableness), III) Disinhibition
+(absence of Big Five's Conscientiousness), IV) Negative affect (Big
+Five's Neuroticism) and V) Psychoticism (Absence of Big Five's
+Openness). The PID-5 has shown satisfying evidences of criterion
+validity (\ldots{}summary). However, the limited number of facets on the
+PID-5 has already raised some concerns due to the low reliability when
+studying developmental phenomena of personality disorders
+({\textbf{???}}), and may also limit the capacity of portraying vivid
+personality profiles which are suitable for explanatory purposes in the
+clinical domain.
+>>>>>>> 37434ece83033c9050574af097f3017fe81635c8
 
 In line with what has been stated previously for academic achievement,
 the examination of facets may result in an enhancement of the
@@ -441,6 +457,7 @@ research which emphasizes the facet level of the Big Five.
 \section{2. Methods}\label{methods}}
 
 Two different studies are presented in this work. The first study uses a
+<<<<<<< HEAD
 sample drawn from the USA bachelor student population. The aim was to
 detect and confirm a model that maximizes the facet space below the Big
 Five domains. Exploratory factor analysis (EFA) was used to identify the
@@ -457,6 +474,26 @@ The second sample is a sample representative for the German speaking
 population of Germany, Austria and Switzerland. The aim for the second
 study was to replicate the structure found in study one, plus assess the
 degree of measurement invariance of the proposed model.
+=======
+sample drawn from a USA bachellor student population. The aim was to
+detect and confirm a measurement model that maximizes the facet space of
+the IPIP instrument. An Exploratory Factor Analysis (EFA) was used to
+identify the number of facets per domain. A Confirmatory Factor Analysis
+per facet was modelled in order to confirm the item - facet
+relationship. Finally, an Exploratory Strucutural Equation Model (ESEM)
+was fitted to integrate the measurement model of the facets with the
+dimensions. ESEM is a novel method which allows the researcher to use
+Structural Equation Modelling (SEM) without the need of imposing an
+independent cluster solution, as its common in the CFA (Confirmatory
+Factor Analysis) procedure. ESEM has gained reputation in the
+personality field, where the independent cluster model may not capture
+the complexity of the constructs measured (Marsh et al., 2010).
+
+The second sample was drawn again from a graduate student population,
+albeit this time based in Germany. The aim for the second study is to
+replicate the structure found in study one, plus assess the degree of
+measurement invariance of the proposed model.
+>>>>>>> 37434ece83033c9050574af097f3017fe81635c8
 
 \hypertarget{study-1---us-american-sample}{%
 \subsection{Study 1 - US-American
@@ -532,6 +569,7 @@ Exploratory Factor Analysis (EFA) was calculated for each domain via
 Mplus using a geomin rotation (Quelle) and a Maximum Likelihood
 estimator (ML). The decision for the preferred number of facets per
 domain was based partly on comparing model fits (CFI, RMSEA, SRMR). More
+<<<<<<< HEAD
 importantly though was the interpretability of the facet solution. To
 this end, facet solutions from other personality measures were looked
 and compared to the found facet structure. If there were important parts
@@ -541,6 +579,17 @@ added a posteriori.
 \hypertarget{cfa-and-esem-with-subsample-1}{%
 \subsubsection{CFA and ESEM with subsample
 1}\label{cfa-and-esem-with-subsample-1}}
+=======
+importantly though was the interpretability of the facet solution. Facet
+solutions of other personality measures were inspected and compared to
+the found facet structure. If there were important parts missing to
+present the domain with regards to content, new facets would be added a
+posteriori.
+
+\hypertarget{cfa-and-esem-with-subsample-2}{%
+\subsubsection{CFA and ESEM with subsample
+2}\label{cfa-and-esem-with-subsample-2}}
+>>>>>>> 37434ece83033c9050574af097f3017fe81635c8
 
 To confirm the structure of facets the EFAs delivered, multiple CFAs
 were calculated via Mplus. In a first step, measurement models were
@@ -551,6 +600,7 @@ models on facet levels were repeated via CFA. For both steps estimators
 were WLSMV (Weighted Least Squares adjusted for Means and Variances).
 Aim was to ensure an optimal breadth and sufficient reliability. In a
 final model, all five domain structural models were integrated using
+<<<<<<< HEAD
 ESEM (Asparouhov \& Muthén, 2009). Marsh et al. (2010) could show that
 ESEM fits personality data better and results in substantially more
 differentiated factors than CFA. All facets were allowed to load on all
@@ -565,6 +615,22 @@ over .95, the Standardized Root Mean Squared Residual (SRMR) smaller
 than .08 and the Root Mean Square Error of Approximation (RMSEA) smaller
 than .06. For the ESEM models we compared our results with the findings
 by Marsh et al. (2010).
+=======
+Exploratory Structural Equation Modeling (ESEM; Asparouhov \& Muthén,
+2009). Marsh et al. (2010) could show that ESEM fits personality data
+better and results in substantially more differentiated factors than it
+would using CFA, while using an EFA measurement model with rotations in
+a structural equation model. All facets were able to load on all
+domains. If there would show up facets that do not significantly load on
+the intended domain, this facets would get eliminated subsequently. The
+estimators used were ML, factor scores were used as indicators and the
+rotation was oblique (using Geomin). Model fit was determined based on
+the guide lines by Hu and Bentler (1999) as well as Beauducel and
+Wittmann (2005). Consequently, to consider a good fit of a proposed
+model, the Comparative Fit Index (CFI) should be at or over .95, the
+Standardized Root Mean Squared Residual (SRMR) smaller than .08 and the
+Root Mean Square Error of Approximation (RMSEA) smaller than .06.
+>>>>>>> 37434ece83033c9050574af097f3017fe81635c8
 
 \hypertarget{criterion-validity-evidence}{%
 \subsubsection{Criterion validity
@@ -572,8 +638,11 @@ evidence}\label{criterion-validity-evidence}}
 
 To examine the nomological structure of the facets and domains to
 external constructs, correlations at the facet level were computed.
+<<<<<<< HEAD
 
 Hypothesis!
+=======
+>>>>>>> 37434ece83033c9050574af097f3017fe81635c8
 
 \hypertarget{results}{%
 \subsection{Results}\label{results}}
@@ -644,11 +713,20 @@ facet})\textgreater{}
 
 \vspace{5mm}
 
+<<<<<<< HEAD
 The ESEM of the final model with all five domains yielded an acceptable
 fit (Marsh et al., 2010): CFI = .87, RMSEA = .072, SRMR = .036. As you
 can see in \emph{Table 4} nearly all facets loaded significantly on
 their intended domain. Some cross loadings emerged as is typical for
 ESEM procedures.
+=======
+The ESEM of the final model with all five domains fits approximately
+with CFI = .87, RMSEA = .072, SRMR = .036. As you can see in \emph{Table
+4} nearly all facets load significantly on their intended domain. Some
+cross loadings can be found as they are plausible with ESEM procedures.
+However, in any case the number of cross loadings is high or
+unconsistent with the facet content.
+>>>>>>> 37434ece83033c9050574af097f3017fe81635c8
 
 \vspace{5mm}
 
@@ -809,6 +887,7 @@ a facet of Extraversion
 We have presented in this work an open-access instrument for personality
 assessment within the Big Five framework, which showed evidences of
 factorial validity in two different cultures and maximized the space set
+<<<<<<< HEAD
 of facets encompassed. With a modest number of items (number) by
 comparison with the most influential Big Five inventories presented in
 \emph{Table 1}, we have reached to a large set of facets which mostly
@@ -832,6 +911,10 @@ set of facets to the Big Five factor solution has been solid enough,
 with both RMSEA not bigger than .08. The number of significant
 cross-loadings in the ESEM models has not been large either, advocating
 a content valid instrument.
+=======
+of facets encompassed. In addition, evidences for external criteria
+validity were attained.
+>>>>>>> 37434ece83033c9050574af097f3017fe81635c8
 
 The instrument covers all the \enquote{core} facets proposed by Soto and
 John (2009), either directly or indirectly. The Energy construct in
@@ -846,6 +929,7 @@ Anxiety and Depression constructs are mirrored by the facets Mental
 balance and Emotional robustness, respectively. For the Openess
 dimension, the Aesthetic contruct is covered by our facet Artistic
 interest, while the Ideas construct has been reflected by both the
+<<<<<<< HEAD
 Open-mindedness and the Wish to analyze facets. The two-per-facet
 components proposed by DeYoung et al. (2007) were also being tapped by
 the set of facets in our inventory.
@@ -874,6 +958,28 @@ the german sample).
 In addition we included even more facets.
 
 In addition, evidences for external criteria validity were attained.
+=======
+Open-mindedness and the Wish to analyze facets.
+
+The instrument also covers all facets proposed by the most influential
+Big Five measures as seen in \emph{Table 1}, athough with a few
+exceptions. For example the Patience facet proposed in the HEXACO model
+for the Agreeableness domain is not covered in our instrument.
+Nonetheless, Patience can be understood as forming the Self-discipline
+domain, specially with items such as \enquote{I rush into things} (See
+appendix A). In fact, Self-discipline has important cross-loadings with
+Agreeableness in both samples (\(\lambda\) = .256 in the USA sample and
+\(\lambda\) = .341 in the german sample).
+
+In addition we included even more facets.
+
+The evidences for reliability and structural validity are retained. Like
+most of the Big Five instruments, ours could not survive to the CFA
+independent cluster model. Even though ESEM has been used to provide
+structural validity evidence of personality measures recently. Here we
+show that the standards for a good ESEM model are met. Furthermore the
+structural validity is robust between two different cultures.
+>>>>>>> 37434ece83033c9050574af097f3017fe81635c8
 
 We have collected some criterion validity evidences. Like bla bla bla.
 Nonetheless the multi - facetted nature of the instrument makes
