@@ -34,7 +34,7 @@ m2hsn<-lm(hsgpa_num~age+sex+sumsN1+sumsN2+sumsN3+sumsN4+sumsN5+sumsN6+sumsN7, da
 
 
 #anova hsgpa (Vergleich sex+age vs. sex+age+einzelne Facetten jeder Dom?ne)
-anova(m1hs,m2hsa)  #signifikant-------NO. none is significant
+anova(m1hs,m2hsa)  #signifikant-------NO. none is significant. THEY become significant if nonsense obs removed dt <- dt[-which(dt$hsgpa_num < 0), ]
 anova(m1hs,m2hsc)  #signifikant
 anova(m1hs,m2hse)  #signifikant
 anova(m1hs,m2hso)  #signifikant
@@ -53,33 +53,33 @@ anova(m1hs,m3hs) #signifikant
 
 
 # R2 hsgpa Facetten (inkremt. Valid. Facetten einer Dom?ne zu age+sex) NONE is important
-# rm1hs <- summary.lm(m1hs)
-# r2m1hs<-rm1hs$"r.squared" 
-# r2m1hs
+rm1hs <- summary.lm(m1hs)
+r2m1hs<-rm1hs$"r.squared" 
+r2m1hs
 # 
-# rm3hs <- summary.lm(m3hs)
-# r2m3hs<-rm3hs$"r.squared" 
-# r2m3hs
+rm3hs <- summary.lm(m3hs)
+r2m3hs<-rm3hs$"r.squared" 
+r2m3hs
 # 
-# rm2hsa <- summary.lm(m2hsa)
-# r2m2hsa<-rm2hsa$"r.squared"
-# r2m2hsa
+rm2hsa <- summary.lm(m2hsa)
+r2m2hsa<-rm2hsa$"r.squared"
+r2m2hsa
 # 
-# rm2hsc <- summary.lm(m2hsc)
-# r2m2hsc<-rm2hsc$"r.squared"
-# r2m2hsc
+rm2hsc <- summary.lm(m2hsc)
+r2m2hsc<-rm2hsc$"r.squared"
+r2m2hsc
 # 
-# rm2hse <- summary.lm(m2hse)
-# r2m2hse<-rm2hse$"r.squared"
-# r2m2hse
+rm2hse <- summary.lm(m2hse)
+r2m2hse<-rm2hse$"r.squared"
+r2m2hse
 # 
-# rm2hso <- summary.lm(m2hso)
-# r2m2hso<-rm2hso$"r.squared"
-# r2m2hso
+rm2hso <- summary.lm(m2hso)
+r2m2hso<-rm2hso$"r.squared"
+r2m2hso
 # 
-# rm2hsn <- summary.lm(m2hsn)
-# r2m2hsn<-rm2hsn$"r.squared"
-# r2m2hsn
+rm2hsn <- summary.lm(m2hsn)
+r2m2hsn<-rm2hsn$"r.squared"
+r2m2hsn
 
 #Delta R? A Facetten
 r2m2hsa-r2m1hs
@@ -116,38 +116,42 @@ anova(m3hs,m3hse) #signifikant
 anova(m3hs,m3hso) #signifikant
 anova(m3hs,m3hsn) #signifikant
 
-
-# R? hsgpa Facetten (inkremt. Valid. zu age+sex+intelligence)
-# rm3hsa <- summary.lm(m3hsa)
-# r2m3hsa<-rm3hsa$"r.squared"
-# r2m3hsa
 # 
-# rm3hsc <- summary.lm(m3hsc)
-# r2m3hsc<-rm3hsc$"r.squared"
-# r2m3hsc
-# 
-# rm3hse <- summary.lm(m3hse)
-# r2m3hse<-rm3hse$"r.squared"
-# r2m3hse
-# 
-# rm3hso <- summary.lm(m3hso)
-# r2m3hso<-rm3hso$"r.squared"
-# r2m3hso
-# 
-# rm3hsn <- summary.lm(m3hsn)
-# r2m3hsn<-rm3hsn$"r.squared"
-# r2m3hsn
-# 
-# #Delta R? A Facetten
-# r2m3hsa-r2m3hs
-# #Delta R? C Facetten
-# r2m3hsc-r2m3hs
-# #Delta R? E Facetten
-# r2m3hse-r2m3hs
-# #Delta R? O Facetten
-# r2m3hso-r2m3hs
-# #Delta R? N Facetten
-# r2m3hsn-r2m3hs
+#R? hsgpa Facetten (inkremt. Valid. zu age+sex+intelligence)
+rm3hsa <- summary.lm(m3hsa)
+r2m3hsa<-rm3hsa$"r.squared"
+r2m3hsa
+#
+# # R? hsgpa Facetten (inkremt. Valid. zu age+sex+intelligence)
+rm3hsa <- summary.lm(m3hsa)
+r2m3hsa<-rm3hsa$"r.squared"
+r2m3hsa
+# # 
+rm3hsc <- summary.lm(m3hsc)
+r2m3hsc<-rm3hsc$"r.squared"
+r2m3hsc
+# # 
+rm3hse <- summary.lm(m3hse)# # r2m3hse<-rm3hse$"r.squared"
+r2m3hse
+#  
+rm3hso <- summary.lm(m3hso)
+r2m3hso<-rm3hso$"r.squared"
+r2m3hso
+# # 
+rm3hsn <- summary.lm(m3hsn)
+r2m3hsn<-rm3hsn$"r.squared"
+r2m3hsn
+# # 
+# # #Delta R? A Facetten
+r2m3hsa-r2m3hs
+# # #Delta R? C Facetten
+r2m3hsc-r2m3hs
+# # #Delta R? E Facetten
+r2m3hse-r2m3hs
+# # #Delta R? O Facetten
+r2m3hso-r2m3hs
+# # #Delta R? N Facetten
+r2m3hsn-r2m3hs
 
 
 #model 4 hsgpa
@@ -174,40 +178,40 @@ anova(m1hs,m4hsn)  #signifikant
 anova(m1hs,m4hs)   #signifikant
 
 # R? hsgpa Dom?nen (inkremt. Valid. einzelne Dom?nen zu age+sex)
-# rm4hsa <- summary.lm(m4hsa)
-# r2m4hsa<-rm4hsa$"r.squared"
-# r2m4hsa
+rm4hsa <- summary.lm(m4hsa)
+r2m4hsa<-rm4hsa$"r.squared"
+r2m4hsa
 # 
-# rm4hsc <- summary.lm(m4hsc)
-# r2m4hsc<-rm4hsc$"r.squared"
-# r2m4hsc
+rm4hsc <- summary.lm(m4hsc)
+r2m4hsc<-rm4hsc$"r.squared"
+r2m4hsc
 # 
-# rm4hse <- summary.lm(m4hse)
-# r2m4hse<-rm4hse$"r.squared"
-# r2m4hse
+rm4hse <- summary.lm(m4hse)
+r2m4hse<-rm4hse$"r.squared"
+r2m4hse
 # 
-# rm4hso <- summary.lm(m4hso)
-# r2m4hso<-rm4hso$"r.squared"
-# r2m4hso
+rm4hso <- summary.lm(m4hso)
+r2m4hso<-rm4hso$"r.squared"
+r2m4hso
 # 
-# rm4hsn <- summary.lm(m4hsn)
-# r2m4hsn<-rm4hsn$"r.squared"
-# r2m4hsn
+rm4hsn <- summary.lm(m4hsn)
+r2m4hsn<-rm4hsn$"r.squared"
+r2m4hsn
 # 
-# rm4hs <- summary.lm(m4hs)
-# r2m4hs<-rm4hs$"r.squared"
-# r2m4hs
+rm4hs <- summary.lm(m4hs)
+r2m4hs<-rm4hs$"r.squared"
+r2m4hs
 # 
 # #Delta R? A
-# r2m4hsa-r2m1hs
+r2m4hsa-r2m1hs
 # #Delta R? C
-# r2m4hsc-r2m1hs
+ r2m4hsc-r2m1hs
 # #Delta R? O
-# r2m4hso-r2m1hs
+ r2m4hso-r2m1hs
 # #Delta R? N
-# r2m4hsn-r2m1hs
+ r2m4hsn-r2m1hs
 # #Delta R? alle Dom?nen
-# r2m4hs-r2m1hs
+ r2m4hs-r2m1hs
 
 #model 5 hsgpa
 m5hs<-lm(hsgpa_num~age+sex+cog15fac1+sumsA+sumsC+sumsE+sumsO+sumsN, data=dt)

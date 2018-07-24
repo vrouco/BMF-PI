@@ -99,14 +99,14 @@ Correspondence concerning this article should be addressed to Victor Rouco, Post
 \newcommand\LastLTentrywidth{1em}
 \newlength\longtablewidth
 \setlength{\longtablewidth}{1in}
-\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef1em{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
 
 
 \DeclareDelayedFloatFlavor{ThreePartTable}{table}
 \DeclareDelayedFloatFlavor{lltable}{table}
 \DeclareDelayedFloatFlavor*{longtable}{table}
 \makeatletter
-\renewcommand{\efloat@iwrite}[1]{\immediate\protected@write\csname efloat@post#1\endcsname{}}
+\renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
 \makeatother
 \usepackage{lineno}
 
@@ -273,9 +273,9 @@ information regarding their psychometric properties.
 
 \vspace{5mm}
 
-As shown in table 1, there are different possibilities of facets forming
-the domains. However, there is still a degree of overlap between the
-facets covered by the different instruments. Soto and John (2009)
+As shown in \emph{Table 1}, there are different possibilities of facets
+forming the domains. However, there is still a degree of overlap between
+the facets covered by the different instruments. Soto and John (2009)
 inspected the convergences between the NEO-PI-R and the first version of
 the BFI, suggesting that two constructs per domain were measured at the
 facet level by both inventories. The constructs defined by Soto and John
@@ -296,11 +296,11 @@ Neuroticism facet defined by the NEO-PI-R and the IPIP-NEO-120, which is
 not intrinsically tapping at either Anxiety or Depression. The same
 authors asserted in a later work (Soto \& John, 2016) that the Big Five
 domains \emph{\enquote{can be conceptualized and assessed more broadly
-or more narrowly}}, they can either focus in a central facet or in a set
-of peripheral facets, depending the research interest.
+or more narrowly}}, either focusing in a central facet or in a set of
+peripheral facets, depending the research interest.
 
 The mid-level layer between domains and facets has also been explored by
-DeYoung, Quilty, and Peterson (2007). Their work have focused in the
+DeYoung, Quilty, and Peterson (2007). Their work has focused in the
 biological consistency of the NEO-PI-R set of facets, thereby proposing
 a two factor source of variance for each facet of the inventory. In line
 with their proposal, Agreeableness would be composed by
@@ -313,7 +313,7 @@ DeYoung et al. (2007) proposals have many points in common. Maybe the
 labels \emph{Volatility} and \emph{Withdrawal} for Neuroticism can be
 suspicious of a different content than \emph{Anxiety} and
 \emph{Depression}, but when inspected at the item level it is revealed
-that they are tapping the latter components respectively (DeYoung et al.
+that they are tapping the same components respectively (DeYoung et al.
 (2007); for item specification).
 
 The nomological network commonly assumed in Big Five questionnaires is
@@ -383,7 +383,6 @@ This paradigm shift in clinical assessment of personality has led to the
 construction of the Personality Disorder Inventory (PID-5; Krueger,
 Derringer, Markon, Watson, \& Skodol, 2012), a 25-facet and
 five-dimension self-report inventory, with an informant-report version
-<<<<<<< HEAD
 (Markon, Quilty, Bagby, \& Krueger, 2013). These five dimensions mirror
 the Big Five domains, although with a focus on the maladaptative end of
 the continuum,: I) Detachment (Big Five's Introversion), II) Antagonism
@@ -393,21 +392,6 @@ Neuroticism) and V) Psychoticism (Absence of Big Five's Openness). The
 PID-5 has shown satisfying evidences of criterion validity
 (\ldots{}summary). However, the number of facets per domain on the PID-5
 is limited.
-=======
-(Markon, Quilty, Bagby, \& Krueger, 2013). The big five dimensions
-mirror the Big Five domains, although with a focus on the maladaptative
-end of the continuum,: I) Detachment (Big Five's Introversion), II)
-Antagonism (absence of Big Five's Agreeableness), III) Disinhibition
-(absence of Big Five's Conscientiousness), IV) Negative affect (Big
-Five's Neuroticism) and V) Psychoticism (Absence of Big Five's
-Openness). The PID-5 has shown satisfying evidences of criterion
-validity (\ldots{}summary). However, the limited number of facets on the
-PID-5 has already raised some concerns due to the low reliability when
-studying developmental phenomena of personality disorders
-({\textbf{???}}), and may also limit the capacity of portraying vivid
-personality profiles which are suitable for explanatory purposes in the
-clinical domain.
->>>>>>> 37434ece83033c9050574af097f3017fe81635c8
 
 In line with what has been stated previously for academic achievement,
 the examination of facets may result in an enhancement of the
@@ -457,7 +441,6 @@ research which emphasizes the facet level of the Big Five.
 \section{2. Methods}\label{methods}}
 
 Two different studies are presented in this work. The first study uses a
-<<<<<<< HEAD
 sample drawn from the USA bachelor student population. The aim was to
 detect and confirm a model that maximizes the facet space below the Big
 Five domains. Exploratory factor analysis (EFA) was used to identify the
@@ -465,8 +448,7 @@ number of facets per domain. A confirmatory factor analysis (CFA) per
 facet was specified in order to confirm the item - facet relationship.
 Finally, an exploratory strucutural equation model (ESEM) was applied to
 test a full model in which the facets serve as indicators of the Big
-Five domains. integrate the measurement model of the facets with the
-dimensions. ESEM has gained reputation in the personality field, where
+Five domains. ESEM has gained reputation in the personality field, where
 the independent cluster model may not capture the complexity of the
 constructs measured (Marsh et al., 2010).
 
@@ -474,26 +456,6 @@ The second sample is a sample representative for the German speaking
 population of Germany, Austria and Switzerland. The aim for the second
 study was to replicate the structure found in study one, plus assess the
 degree of measurement invariance of the proposed model.
-=======
-sample drawn from a USA bachellor student population. The aim was to
-detect and confirm a measurement model that maximizes the facet space of
-the IPIP instrument. An Exploratory Factor Analysis (EFA) was used to
-identify the number of facets per domain. A Confirmatory Factor Analysis
-per facet was modelled in order to confirm the item - facet
-relationship. Finally, an Exploratory Strucutural Equation Model (ESEM)
-was fitted to integrate the measurement model of the facets with the
-dimensions. ESEM is a novel method which allows the researcher to use
-Structural Equation Modelling (SEM) without the need of imposing an
-independent cluster solution, as its common in the CFA (Confirmatory
-Factor Analysis) procedure. ESEM has gained reputation in the
-personality field, where the independent cluster model may not capture
-the complexity of the constructs measured (Marsh et al., 2010).
-
-The second sample was drawn again from a graduate student population,
-albeit this time based in Germany. The aim for the second study is to
-replicate the structure found in study one, plus assess the degree of
-measurement invariance of the proposed model.
->>>>>>> 37434ece83033c9050574af097f3017fe81635c8
 
 \hypertarget{study-1---us-american-sample}{%
 \subsection{Study 1 - US-American
@@ -527,17 +489,26 @@ asked to rate themselves on typical behaviors or reactions on a 5-point
 Likert scale, ranging from 1 (\enquote{Not all like me}) to 5
 (\enquote{Very much like me}).
 
-The item selection was part of a project and the procedure has been
-explained in detail in the appendix of a study by MacCann, Duckworth,
-and Roberts (2009). That study also contains part of the sample used
-here. However, the current data set contains more participants.
+The item selection was part of a different project and the procedure has
+been explained in detail in the appendix of a study by MacCann,
+Duckworth, and Roberts (2009). That study also contains part of the
+sample used here. However, the current data set contains more
+participants.
 
 \hypertarget{satisfaction-with-life-swl}{%
 \subsubsection{Satisfaction With Life
 (SWL)}\label{satisfaction-with-life-swl}}
 
 Measured with a 5 item composite defined in Diener, Emmons, Larsen, and
-Griffin (1985).
+Griffin (1985), answered in a 7 point Likert-type scale ranging from 1
+(\emph{strongly disagree}) to 7 (\emph{strongly agree}). The items are:
+a)\enquote{In most ways my life is close to ideal}, b) \enquote{The
+conditions of my life are excellent}, c) \enquote{I am satisfied with my
+life}, d) \enquote{So far I have gotten the important things in my
+life}, and e) \enquote{If I could live my life over, I would change
+almost nothing}. Psychometric properties have been reported excellent.
+(In which moment have SWLS been measured? just at the same time point
+than personality?)
 
 \hypertarget{gpa}{%
 \subsubsection{GPA}\label{gpa}}
@@ -569,7 +540,6 @@ Exploratory Factor Analysis (EFA) was calculated for each domain via
 Mplus using a geomin rotation (Quelle) and a Maximum Likelihood
 estimator (ML). The decision for the preferred number of facets per
 domain was based partly on comparing model fits (CFI, RMSEA, SRMR). More
-<<<<<<< HEAD
 importantly though was the interpretability of the facet solution. To
 this end, facet solutions from other personality measures were looked
 and compared to the found facet structure. If there were important parts
@@ -579,17 +549,6 @@ added a posteriori.
 \hypertarget{cfa-and-esem-with-subsample-1}{%
 \subsubsection{CFA and ESEM with subsample
 1}\label{cfa-and-esem-with-subsample-1}}
-=======
-importantly though was the interpretability of the facet solution. Facet
-solutions of other personality measures were inspected and compared to
-the found facet structure. If there were important parts missing to
-present the domain with regards to content, new facets would be added a
-posteriori.
-
-\hypertarget{cfa-and-esem-with-subsample-2}{%
-\subsubsection{CFA and ESEM with subsample
-2}\label{cfa-and-esem-with-subsample-2}}
->>>>>>> 37434ece83033c9050574af097f3017fe81635c8
 
 To confirm the structure of facets the EFAs delivered, multiple CFAs
 were calculated via Mplus. In a first step, measurement models were
@@ -600,7 +559,6 @@ models on facet levels were repeated via CFA. For both steps estimators
 were WLSMV (Weighted Least Squares adjusted for Means and Variances).
 Aim was to ensure an optimal breadth and sufficient reliability. In a
 final model, all five domain structural models were integrated using
-<<<<<<< HEAD
 ESEM (Asparouhov \& Muthén, 2009). Marsh et al. (2010) could show that
 ESEM fits personality data better and results in substantially more
 differentiated factors than CFA. All facets were allowed to load on all
@@ -615,34 +573,77 @@ over .95, the Standardized Root Mean Squared Residual (SRMR) smaller
 than .08 and the Root Mean Square Error of Approximation (RMSEA) smaller
 than .06. For the ESEM models we compared our results with the findings
 by Marsh et al. (2010).
-=======
-Exploratory Structural Equation Modeling (ESEM; Asparouhov \& Muthén,
-2009). Marsh et al. (2010) could show that ESEM fits personality data
-better and results in substantially more differentiated factors than it
-would using CFA, while using an EFA measurement model with rotations in
-a structural equation model. All facets were able to load on all
-domains. If there would show up facets that do not significantly load on
-the intended domain, this facets would get eliminated subsequently. The
-estimators used were ML, factor scores were used as indicators and the
-rotation was oblique (using Geomin). Model fit was determined based on
-the guide lines by Hu and Bentler (1999) as well as Beauducel and
-Wittmann (2005). Consequently, to consider a good fit of a proposed
-model, the Comparative Fit Index (CFI) should be at or over .95, the
-Standardized Root Mean Squared Residual (SRMR) smaller than .08 and the
-Root Mean Square Error of Approximation (RMSEA) smaller than .06.
->>>>>>> 37434ece83033c9050574af097f3017fe81635c8
 
 \hypertarget{criterion-validity-evidence}{%
 \subsubsection{Criterion validity
 evidence}\label{criterion-validity-evidence}}
 
 To examine the nomological structure of the facets and domains to
-external constructs, correlations at the facet level were computed.
-<<<<<<< HEAD
+external constructs, correlations at the facet level were computed. We
+describe here a set of hypothesis prompted by other's research in the
+interplay between personality and the external criteria used in this
+work.
 
-Hypothesis!
-=======
->>>>>>> 37434ece83033c9050574af097f3017fe81635c8
+First, let's examine the relation of personality with satisfaction with
+life. At the domain level, Neuroticism and Extraversion have been noted
+as the most prominent predictors of satisfaction with life. Their role
+in mediating the hedonic balance between personality and subjective
+satisfaction has been hypothesized as key for this relationship (Diener,
+Oishi, \& Lucas, 2003; Schimmack, Diener, \& Oishi, 2002). Schimmack,
+Oishi, Furr, and Funder (2004) found that analysis at the facet level
+outperform the analysis at the domain level. These authors assessed
+personality with NEO-PI-R and IPIP-NEO and found that the facets
+Depression and Positive emotions / Cheerfulness were the most important
+predictors of the SWLS. Correlations for Depression ranged \emph{r} =
+-57 to \emph{r} = -.49, and for Positive emotions / Cheerfulness
+\emph{r} = .51 to \emph{r} = .38 (both measured with the self-report
+version). These two facets were the only significant predictors in a
+stepwise regression analysis which included all the facets from
+Neuroticism and Extraversion. Together they explained between 49\% and
+60\% of the variance of SWLS. The relation of SWLS with facets from
+other domains were not inspected as the correlations at the domain level
+were not significant. In our instrument, the facets Confidence (N2) and
+Positive attitude (E4) are equivalent in content to Depression and
+Positive emotions / Cheerfulness of the NEO-PI-R and IPIP-NEO. We
+therefore hypothesize that such facets will correlate and predict
+satisfaction with life in a similar degree.
+
+Regarding academic performance, Conscientiousness has been reported as
+the most consistent personality predictor at the domain level. In the
+meta-analysis by O'Connor and Paunonen (2007) the corrected correlation
+between academic achievement and Conscientiousness was \emph{r} = .24.
+However, this relationship might not be linear according to other
+authors who reported inverted-U relations (Cucina \& Vasilopoulos,
+2005). Being the relationship between the other Big Five domains and
+academic achievement less clear, facet level analysis becomes important.
+Achievement-striving, Self-discipline and Dutifulness are the best
+predictors of academic performance under the Conscientiousness domain,
+according to the revision by O'Connor and Paunonen (2007). Its
+correlation coefficients range from \emph{r} = .15 to \emph{r} = .39,
+from \emph{r} = .18 to \emph{r} = .46, and from \emph{r} = .25 to
+\emph{r} = .46 respectively. Openness' facets yield unconclusive
+patterns at the domain level, as we pointed out in the introduction.
+Openness to ideas can be a facilitator towards better GPA, wih
+correlations being found \emph{r} = .22 in Dollinger and Orf (1991) and
+\emph{r} = .15 in Ziegler et al. (2010), although this finding has
+failed to be reproduced in some other research (Chamorro-Premuzic \&
+Furnham, 2003; De Fruyt \& Mervielde, 1996). Context dependent
+characteristics may be influencing this lack of replicability (Ziegler
+et al., 2014). In the other hand, Openness to fantasy has found to yield
+a negative relation to GPA \emph{r} = -.22 for men, whereas Aesthetics
+yielded a similar relationship with GPA for women \emph{r} = -.19 (De
+Fruyt \& Mervielde, 1996). Concerning Extraversion, gregariousness has
+been found to correlate negatively with academic achievement, with
+\emph{r} = -.20 (Chamorro-Premuzic \& Furnham, 2003); activity has
+yielded contratictory results, being positively correlated in the De
+Fruyt and Mervielde (1996) analysis (\emph{r} = .26) but negatively in
+the Chamorro-Premuzic and Furnham (2003) experiment \emph{r} = -.24.
+Results found for the Impulsivity and Anxiety facets of Neuroticism have
+been more clear, with correlation ranging from \emph{r} = -.14 to
+\emph{r} = -.26 for Impulsivity and \emph{r} = -.29 for Anxiety.
+Agreebleness' facets have failed to yield significant correlations with
+GPA, although some of them may be important for certain job performance
+(Ziegler et al., 2014)
 
 \hypertarget{results}{%
 \subsection{Results}\label{results}}
@@ -713,20 +714,11 @@ facet})\textgreater{}
 
 \vspace{5mm}
 
-<<<<<<< HEAD
 The ESEM of the final model with all five domains yielded an acceptable
 fit (Marsh et al., 2010): CFI = .87, RMSEA = .072, SRMR = .036. As you
 can see in \emph{Table 4} nearly all facets loaded significantly on
 their intended domain. Some cross loadings emerged as is typical for
 ESEM procedures.
-=======
-The ESEM of the final model with all five domains fits approximately
-with CFI = .87, RMSEA = .072, SRMR = .036. As you can see in \emph{Table
-4} nearly all facets load significantly on their intended domain. Some
-cross loadings can be found as they are plausible with ESEM procedures.
-However, in any case the number of cross loadings is high or
-unconsistent with the facet content.
->>>>>>> 37434ece83033c9050574af097f3017fe81635c8
 
 \vspace{5mm}
 
@@ -887,12 +879,10 @@ a facet of Extraversion
 We have presented in this work an open-access instrument for personality
 assessment within the Big Five framework, which showed evidences of
 factorial validity in two different cultures and maximized the space set
-<<<<<<< HEAD
-of facets encompassed. With a modest number of items (number) by
-comparison with the most influential Big Five inventories presented in
-\emph{Table 1}, we have reached to a large set of facets which mostly
-show a robust factorial validity in both studies, as shown in
-\emph{Table 3}.
+of facets encompassed. With a modest number of items (202) by comparison
+with the most influential Big Five inventories presented in \emph{Table
+1}, we have reached to a large set of facets which mostly show a robust
+factorial validity in both studies, as shown in \emph{Table 3}.
 
 The Big Five solution has been recognized as the most replicable model
 for personality inventories, reaching a hallmark of consensus in
@@ -907,14 +897,10 @@ idea of facets, or habits, being influenced by more than one domain can
 definitely make some sense. ESEM helps overcoming this assumption and
 provides a measure about how well the Big Five solution adjusts to the
 data. Using this procedure, the degree of integration of our proposed
-set of facets to the Big Five factor solution has been solid enough,
-with both RMSEA not bigger than .08. The number of significant
-cross-loadings in the ESEM models has not been large either, advocating
-a content valid instrument.
-=======
-of facets encompassed. In addition, evidences for external criteria
-validity were attained.
->>>>>>> 37434ece83033c9050574af097f3017fe81635c8
+set of facets to the Big Five factor solution has been solid enough
+according to the cut-off values proposed by Marsh et al. (2010). The
+number of significant cross-loadings in the ESEM models has not been
+large either, advocating a good discriminant validity.
 
 The instrument covers all the \enquote{core} facets proposed by Soto and
 John (2009), either directly or indirectly. The Energy construct in
@@ -929,7 +915,6 @@ Anxiety and Depression constructs are mirrored by the facets Mental
 balance and Emotional robustness, respectively. For the Openess
 dimension, the Aesthetic contruct is covered by our facet Artistic
 interest, while the Ideas construct has been reflected by both the
-<<<<<<< HEAD
 Open-mindedness and the Wish to analyze facets. The two-per-facet
 components proposed by DeYoung et al. (2007) were also being tapped by
 the set of facets in our inventory.
@@ -958,28 +943,6 @@ the german sample).
 In addition we included even more facets.
 
 In addition, evidences for external criteria validity were attained.
-=======
-Open-mindedness and the Wish to analyze facets.
-
-The instrument also covers all facets proposed by the most influential
-Big Five measures as seen in \emph{Table 1}, athough with a few
-exceptions. For example the Patience facet proposed in the HEXACO model
-for the Agreeableness domain is not covered in our instrument.
-Nonetheless, Patience can be understood as forming the Self-discipline
-domain, specially with items such as \enquote{I rush into things} (See
-appendix A). In fact, Self-discipline has important cross-loadings with
-Agreeableness in both samples (\(\lambda\) = .256 in the USA sample and
-\(\lambda\) = .341 in the german sample).
-
-In addition we included even more facets.
-
-The evidences for reliability and structural validity are retained. Like
-most of the Big Five instruments, ours could not survive to the CFA
-independent cluster model. Even though ESEM has been used to provide
-structural validity evidence of personality measures recently. Here we
-show that the standards for a good ESEM model are met. Furthermore the
-structural validity is robust between two different cultures.
->>>>>>> 37434ece83033c9050574af097f3017fe81635c8
 
 We have collected some criterion validity evidences. Like bla bla bla.
 Nonetheless the multi - facetted nature of the instrument makes
@@ -1073,6 +1036,11 @@ questionnaire realm. \emph{Journal of Consulting Psychology},
 \emph{20}(6), 411--418.
 doi:\href{https://doi.org/10.1037/h0047239}{10.1037/h0047239}
 
+\leavevmode\hypertarget{ref-Chamorro-Premuzic2003}{}%
+Chamorro-Premuzic, T., \& Furnham, A. (2003). Personality predicts
+academic performance: Evidence from two longitudinal university samples.
+doi:\href{https://doi.org/10.1016/S0092-6566(02)00578-0}{10.1016/S0092-6566(02)00578-0}
+
 \leavevmode\hypertarget{ref-Chen2007}{}%
 Chen, F. F. (2007). Sensitivity of goodness of fit indexes to lack of
 measurement invariance. \emph{Structural Equation Modeling},
@@ -1098,6 +1066,19 @@ personality. \emph{Personality Disorders and the Five-Factor Model of
 Personality.}, (January), 41--56.
 doi:\href{https://doi.org/10.1037/10140-003}{10.1037/10140-003}
 
+\leavevmode\hypertarget{ref-Cucina2005}{}%
+Cucina, J. M., \& Vasilopoulos, N. L. (2005). Nonlinear
+personality-performance relationships and the spurious moderating
+effects of traitedness. \emph{Journal of Personality}, \emph{73}(1),
+227--259.
+doi:\href{https://doi.org/10.1111/j.1467-6494.2004.00309.x}{10.1111/j.1467-6494.2004.00309.x}
+
+\leavevmode\hypertarget{ref-DeFruyt1996}{}%
+De Fruyt, F., \& Mervielde, I. (1996). Personality and interests as
+predictors of educational streaming and achievement. \emph{European
+Journal of Personality}, \emph{10}(5), 405--425.
+doi:\href{https://doi.org/10.1002/(SICI)1099-0984(199612)10:5\%3C405::AID-PER255\%3E3.0.CO;2-M}{10.1002/(SICI)1099-0984(199612)10:5\textless{}405::AID-PER255\textgreater{}3.0.CO;2-M}
+
 \leavevmode\hypertarget{ref-DeYoung2007}{}%
 DeYoung, C. G., Quilty, L. C., \& Peterson, J. B. (2007). Between Facets
 and Domains: 10 Aspects of the Big Five. \emph{Journal of Personality
@@ -1110,11 +1091,22 @@ Satisfaction With Life Scale. \emph{Journal of Personality},
 \emph{49}(1), 71--75.
 doi:\href{https://doi.org/10.1207/s15327752jpa4901}{10.1207/s15327752jpa4901}
 
+\leavevmode\hypertarget{ref-Diener2003}{}%
+Diener, E., Oishi, S., \& Lucas, R. E. (2003). Personality, culture, and
+subjective well-being.
+doi:\href{https://doi.org/10.1146/annurev.psych.54.101601.145056}{10.1146/annurev.psych.54.101601.145056}
+
 \leavevmode\hypertarget{ref-Digman1990}{}%
 Digman, J. M. (1990). Personality Structure: Emergence of the
 Five-Factor Model. \emph{Annual Review of Psychology}, \emph{41}(1),
 417--440.
 doi:\href{https://doi.org/10.1146/annurev.ps.41.020190.002221}{10.1146/annurev.ps.41.020190.002221}
+
+\leavevmode\hypertarget{ref-Dollinger1991}{}%
+Dollinger, S. J., \& Orf, L. A. (1991). Personality and performance in
+"personality": Conscientiousness and openness. \emph{Journal of Research
+in Personality}, \emph{25}(3), 276--284.
+doi:\href{https://doi.org/10.1016/0092-6566(91)90020-Q}{10.1016/0092-6566(91)90020-Q}
 
 \leavevmode\hypertarget{ref-Fiske1949}{}%
 Fiske, D. W. (1949). Consistency of the factorial structures of
@@ -1261,6 +1253,12 @@ doi:\href{https://doi.org/10.1016/j.jrp.2004.11.003}{10.1016/j.jrp.2004.11.003}
 Norman, W. T. (1967). 2800 Personality Trait Descriptors - Normative
 Operating Characteristics for a University Population, 1--279.
 
+\leavevmode\hypertarget{ref-OConnor2007}{}%
+O'Connor, M. C., \& Paunonen, S. V. (2007). Big Five personality
+predictors of post-secondary academic performance. \emph{Personality and
+Individual Differences}, \emph{43}(5), 971--990.
+doi:\href{https://doi.org/10.1016/j.paid.2007.03.017}{10.1016/j.paid.2007.03.017}
+
 \leavevmode\hypertarget{ref-OzerBenet2006}{}%
 Ozer, D. J., \& Benet-Martínez, V. (2006). Personality and the
 Prediction of Consequential Outcomes. \emph{Annual Review of
@@ -1317,9 +1315,23 @@ personality disorder empirical literature: A meta-analytic review.
 \emph{Clinical Psychology Review}, \emph{23}(8), 1055--1085.
 doi:\href{https://doi.org/10.1016/j.cpr.2002.09.001}{10.1016/j.cpr.2002.09.001}
 
+\leavevmode\hypertarget{ref-Schimmack2002}{}%
+Schimmack, U., Diener, E., \& Oishi, S. (2002). Life-satisfaction is a
+momentary judgment and a stable personality characteristic: The use of
+chronically accessible and stable sources. \emph{Journal of
+Personality}, \emph{70}(3), 345--384.
+doi:\href{https://doi.org/10.1111/1467-6494.05008}{10.1111/1467-6494.05008}
+
 \leavevmode\hypertarget{ref-Schimmack1999}{}%
 Schimmack, U., Furr, R. M., \& Funder, D. C. (1999). Personality and
 Life Satisfaction : A Facet-Level Analysis, 1062--1075.
+doi:\href{https://doi.org/10.1177/0146167204264292}{10.1177/0146167204264292}
+
+\leavevmode\hypertarget{ref-Schimmack2004}{}%
+Schimmack, U., Oishi, S., Furr, R. M., \& Funder, D. C. (2004).
+Personality and life satisfaction: A facet-level analysis.
+\emph{Personality and Social Psychology Bulletin}, \emph{30}(8),
+1062--1075.
 doi:\href{https://doi.org/10.1177/0146167204264292}{10.1177/0146167204264292}
 
 \leavevmode\hypertarget{ref-Seeboth2018}{}%
