@@ -1,4 +1,4 @@
-\documentclass[,man]{apa6}
+\documentclass[,man,floatsintext]{apa6}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -99,15 +99,9 @@ Correspondence concerning this article should be addressed to Victor Rouco, Post
 \newcommand\LastLTentrywidth{1em}
 \newlength\longtablewidth
 \setlength{\longtablewidth}{1in}
-\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef1em{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
 
 
-\DeclareDelayedFloatFlavor{ThreePartTable}{table}
-\DeclareDelayedFloatFlavor{lltable}{table}
-\DeclareDelayedFloatFlavor*{longtable}{table}
-\makeatletter
-\renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
-\makeatother
 \usepackage{lineno}
 
 \linenumbers
@@ -188,9 +182,7 @@ Odbert (1936) and still later Norman (1967), used English dictionaries
 for a systematic collection of all adjectives which could be related to
 human personality characteristics. Using exploratory factor analyses on
 self and other ratings, five broad factors could repeatedly be extracted
-from the data. These efforts were also succesfully replicated in
-different languages, such as in German (Klages,\ldots{}),
-Baumgartner,\ldots{}
+from the data.
 
 Cattell was one of the first researchers who systematically applied
 exploratory factor analysis in order to explore personality structure.
@@ -232,17 +224,17 @@ Intellect or Culture.
 
 One of the most important features of the Big Five is the fact that it
 could be replicated in different languages. Research is available in
-Japanese, Vietnamese, German, Spanish, Greek, (refs)\ldots{} This
-finding suggests that the way human beings construe personality is at
-some point universal and that its basic features are retained within the
-Big Five. Another essential characteristic relies on its hierarchical
-nature. The five domains are useful to retain the big picture of
-personality, maximize the situation consistency and reliably assess
-difficult subjects such as children. Nonetheless, each dimension is
-conceptualized as a latent construct formed by more specific narrow
-factors called facets, which in turn are useful to depict the impact of
-personality characteristics into specific behaviors and concrete life
-outcomes.
+Japanese, Vietnamese, German, Spanish, Greek, and many more (McCrae \&
+Costa, 1997; Schmitt et al., 2007). This finding suggests that the way
+human beings construe personality is at some point universal and that
+its basic features are retained within the Big Five. Another essential
+characteristic relies on its hierarchical nature. The five domains are
+useful to retain the big picture of personality, maximize the situation
+consistency and reliably assess difficult subjects such as children.
+Nonetheless, each dimension is conceptualized as a latent construct
+formed by more specific narrow factors called facets, which in turn are
+useful to depict the impact of personality characteristics into specific
+behaviors and concrete life outcomes.
 
 The Big Five has proven to be a valid theoretical and empirical model to
 predict relevant life outcomes. Research such as Ozer and Benet-Martínez
@@ -599,14 +591,14 @@ predictors of the SWLS. Correlations for Depression ranged \emph{r} =
 \emph{r} = .51 to \emph{r} = .38 (both measured with the self-report
 version). These two facets were the only significant predictors in a
 stepwise regression analysis which included all the facets from
-Neuroticism and Extraversion. Together they explained between 49\% and
-60\% of the variance of SWLS. The relation of SWLS with facets from
-other domains were not inspected as the correlations at the domain level
-were not significant. In our instrument, the facets Confidence (N2) and
-Positive attitude (E4) are equivalent in content to Depression and
-Positive emotions / Cheerfulness of the NEO-PI-R and IPIP-NEO. We
-therefore hypothesize that such facets will correlate and predict
-satisfaction with life in a similar degree.
+Neuroticism and Extraversion. Together they explained between 30\% of
+the variance of self reported life satisfaction. The relation of SWLS
+with facets from other domains were not inspected as the correlations at
+the domain level were not significant. In our instrument, the facets
+Confidence (N2) and Positive attitude (E4) are equivalent in content to
+Depression and Positive emotions / Cheerfulness of the NEO-PI-R and
+IPIP-NEO. We therefore hypothesize that such facets will correlate and
+predict satisfaction with life in a similar degree.
 
 Regarding academic performance, Conscientiousness has been reported as
 the most consistent personality predictor at the domain level. In the
@@ -643,7 +635,10 @@ been more clear, with correlation ranging from \emph{r} = -.14 to
 \emph{r} = -.26 for Impulsivity and \emph{r} = -.29 for Anxiety.
 Agreebleness' facets have failed to yield significant correlations with
 GPA, although some of them may be important for certain job performance
-(Ziegler et al., 2014)
+(Ziegler et al., 2014). Say something about Noftle Robins here.
+
+Absences from school was the behavioral variable chosen to be controlled
+in this study.
 
 \hypertarget{results}{%
 \subsection{Results}\label{results}}
@@ -715,8 +710,8 @@ facet})\textgreater{}
 \vspace{5mm}
 
 The ESEM of the final model with all five domains yielded an acceptable
-fit (Marsh et al., 2010): CFI = .87, RMSEA = .072, SRMR = .036. As you
-can see in \emph{Table 4} nearly all facets loaded significantly on
+fit (Marsh et al., 2010): CFI = .87, RMSEA = .072, SRMR = .036. As it
+can be seen in \emph{Table 4} nearly all facets loaded significantly on
 their intended domain. Some cross loadings emerged as is typical for
 ESEM procedures.
 
@@ -1227,6 +1222,11 @@ drinking in first-year college students. \emph{Personality and
 Individual Differences}, \emph{46}(2), 207--212.
 doi:\href{https://doi.org/10.1016/j.paid.2008.09.028}{10.1016/j.paid.2008.09.028}
 
+\leavevmode\hypertarget{ref-McCrae1997}{}%
+McCrae, R., \& Costa, P. (1997). Personality Trait Structure as a Human
+Universal* 1,* 2. \emph{American Psychologist}, \emph{52}(5), 509--516.
+doi:\href{https://doi.org/10.1037/0003-066X.52.5.509}{10.1037/0003-066X.52.5.509}
+
 \leavevmode\hypertarget{ref-Mccrae2011}{}%
 Mccrae, R. R., Kurtz, J. E., Yamagata, S., \& Terracciano, A. (2011).
 Internal consistency, retest reliability and their implications for
@@ -1333,6 +1333,14 @@ Personality and life satisfaction: A facet-level analysis.
 \emph{Personality and Social Psychology Bulletin}, \emph{30}(8),
 1062--1075.
 doi:\href{https://doi.org/10.1177/0146167204264292}{10.1177/0146167204264292}
+
+\leavevmode\hypertarget{ref-Schmitt2007}{}%
+Schmitt, D. P., Allik, J., McCrae, R. R., Benet-Martínez, V., Alcalay,
+L., Ault, L., \ldots{} Sharan, M. B. (2007). The geographic distribution
+of Big Five personality traits: Patterns and profiles of human
+self-description across 56 nations. \emph{Journal of Cross-Cultural
+Psychology}, \emph{38}(2), 173--212.
+doi:\href{https://doi.org/10.1177/0022022106297299}{10.1177/0022022106297299}
 
 \leavevmode\hypertarget{ref-Seeboth2018}{}%
 Seeboth, A., \& Mõttus, R. (2018). Successful explanations start with

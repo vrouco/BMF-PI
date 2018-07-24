@@ -34,13 +34,13 @@ wordcount         : "X"
 
 bibliography      : ["IPIP.bib"]
 
-figsintext        : no
+figsintext        : yes
 figurelist        : no
 tablelist         : yes 
 footnotelist      : no
 lineno            : yes
 mask              : no
-floatsintext      : no
+floatsintext      : yes
 class             : "man"
 
 header-includes:
@@ -50,6 +50,7 @@ header-includes:
    
 output: 
   papaja::apa6_pdf
+  
 ---
 ```{r setups, include=FALSE}
 knitr::opts_chunk$set(echo = F, message=F, warning=F)
@@ -70,6 +71,8 @@ library(Hmisc)  #for latexTranslate
 library(kableExtra)
 library(foreign)
 library(MplusAutomation)
+library(officer)
+library(flextable)
 
 
 options(xtable.floating = T, xtable.comment = FALSE)#figsintext yaml option buggy. change xtable floating instead
@@ -107,7 +110,7 @@ Over the last decades, the Five Factor Model as well as the Big Five model have 
 
 ## 1.2. A short history of the Big Five
 
-Francis Galton is credited as being the one who proposed the fundamental lexical hypothesis as a ground from where to describe interpersonal differences in personality. The hypothesis states that every apprehended characteristic in the realm of personality should have its place in the natural language, a corollary derived from this first statement is that the essential features must represent a unique word in the lexical universe of this language. @Galton1884 himself, and later @AllportOdbert1936 and still later @Norman1967, used English dictionaries for a systematic collection of all adjectives which could be related to human personality characteristics. Using exploratory factor analyses on self and other ratings, five broad factors could repeatedly be extracted from the data. These efforts were also succesfully replicated in different languages, such as in German (Klages,…), Baumgartner,… 
+Francis Galton is credited as being the one who proposed the fundamental lexical hypothesis as a ground from where to describe interpersonal differences in personality. The hypothesis states that every apprehended characteristic in the realm of personality should have its place in the natural language, a corollary derived from this first statement is that the essential features must represent a unique word in the lexical universe of this language. @Galton1884 himself, and later @AllportOdbert1936 and still later @Norman1967, used English dictionaries for a systematic collection of all adjectives which could be related to human personality characteristics. Using exploratory factor analyses on self and other ratings, five broad factors could repeatedly be extracted from the data.
 
 Cattell was one of the first researchers who systematically applied exploratory factor analysis in order to explore personality structure. He inspected the correlation structure of the items in the word lists of his predecessors, finding 16 oblique personality factors, including one factor specifically for intelligence, these factors form the 16-PF. These 16 factors were the primary factors in a hierarchical structure for Cattell (coetany to L.L. Thurstone and undoubtedly influenced by him). Cattell himself viewed personality as a hierarchical structure, containing three layers [@Cattell1956]. The second order factors resemble the Big Five dimensions [@Digman1990].
  
@@ -115,34 +118,34 @@ Different researchers followed Cattell in the study of dispositional traits of p
 
 A large number of studies have focused on the problem of personality structure resulting in a five factor solution [@Fiske1949; @Norman1967; @TupesChristal1961; @Borgatta1964]. Possibly the two most widely cited works relating to the foundations of the Big Five are those by @Goldberg2006 and @Costa1995. Goldberg can be seen as one of the first who extended research concerning the Big Five, while McRae and Costa‘s importance rests on popularizing the terminology (OCEAN) and the development of one of the most used tools to assess personality based on the Big Five: the NEO-PI. The Big Five dimensions are labeled as follows: I) Extraversion vs. Introversion. II) Agreeableness or Friendliness. III) Conscientiousness or Achievement or Will. IV) Emotional Stability vs. Neuroticism, and V) Openness or Intellect or Culture.
 
-One of the most important features of the Big Five is the fact that it could be replicated in different languages. Research is available in Japanese, Vietnamese, German, Spanish, Greek, (refs)… This finding suggests that the way human beings construe personality is at some point universal and that its basic features are retained within the Big Five. Another essential characteristic relies on its hierarchical nature. The five domains are useful to retain the big picture of personality, maximize the situation consistency and reliably assess difficult subjects such as children. Nonetheless, each dimension is conceptualized as a latent construct formed by more specific narrow factors called facets, which in turn are useful to depict the impact of personality characteristics into specific behaviors and concrete life outcomes. 
+One of the most important features of the Big Five is the fact that it could be replicated in different languages. Research is available in Japanese, Vietnamese, German, Spanish, Greek, and many more [@Schmitt2007; @McCrae1997]. This finding suggests that the way human beings construe personality is at some point universal and that its basic features are retained within the Big Five. Another essential characteristic relies on its hierarchical nature. The five domains are useful to retain the big picture of personality, maximize the situation consistency and reliably assess difficult subjects such as children. Nonetheless, each dimension is conceptualized as a latent construct formed by more specific narrow factors called facets, which in turn are useful to depict the impact of personality characteristics into specific behaviors and concrete life outcomes. 
 
 The Big Five has proven to be a valid theoretical and empirical model to predict relevant life outcomes. Research such as @OzerBenet2006 or @Roberts2007a has shown that scores for the Big Five dimensions (and their related facets) are able to explain outcomes such as academic and work performance, health, personality disorders, political attitudes and many more. The empirical findings linking Big Five measures to life outcomes have reinforced the concurrent validity of the test scores interpretations. At the same time, the broad nature of the domains has spurned research into the more fine-grained lower order structure of facets.
 
 ## 1.3. Facet Structures 
 
-There are a number of models that include a facet structure below the five broad domains. The most widely known model is the one suggested by @Costa1995, the NEO-PI-R model. Other popular models have been suggested for the Big Five Inventory 2 [BFI-2; @SotoJohn2016], the IPIP [@Goldberg2006], and the HEXACO model [@Lee2016], which assumes six broad domains. Table 1 gives an overview of these different models listing their facets per domain as well as some information regarding their psychometric properties. 
+There are a number of models that include a facet structure below the five broad domains. The most widely known model is the one suggested by @Costa1995, the NEO-PI-R model. Other popular models have been suggested for the Big Five Inventory 2 [BFI-2; @SotoJohn2016], the IPIP [@Goldberg2006], and the HEXACO model [@Lee2016], which assumes six broad domains. *Table 1* gives an overview of these different models listing their facets per domain as well as some information regarding their psychometric properties. 
 
 \vspace{5mm}
 
 < Table 1 >
 
-```{r, eval=F}
+```{r table1, eval=F}
 setwd(here("tables"))
 table1 <- read_excel("table1.xlsx")
-
-table1[is.na(table1)]<-""
-
 table1 <- table1[,-3]
+table1[is.na(table1)]<-" "
 
-kable(table1, "latex", align = "l", booktabs = T, linesep="", caption = "Different Big Five inventories", longtable=T) %>% 
-  column_spec(1, width = "5em", bold = F, italic = F) %>%
-  kable_styling(font_size = 7) %>% 
-  column_spec(2, width = "8em", bold = F, italic = F) %>% 
-  column_spec(3, width = "8em", bold = F, italic = F) %>% 
-  column_spec(4, width = "4em", bold = F, italic = F) %>% 
-  column_spec(5, width = "16em", bold = F, italic = F) %>% 
-  kable_styling(latex_options = "repeat_header")
+ kable(table1, "latex",longtable=T, align="l",linesep="",booktabs=T, caption="Table 1. Influential instruments of the Big Five at the facet level")%>% 
+   column_spec(5, width = "12em", bold = F, italic = F) %>% 
+   column_spec(1, width = "4em", bold = F, italic = F) %>% 
+   column_spec(2, width = "4em", bold = F, italic = F) %>% 
+   column_spec(3, width = "8em", bold = F, italic = F) %>% 
+   column_spec(4, width = "6em", bold = F, italic = F) %>% 
+   kable_styling(latex_options = "repeat_header")  %>% 
+   #kable_styling(full_width = T) %>% 
+  footnote(c("Reliability: Cronbach's alpha measures, retrieved from references in the reliability column", "Validity: criterion (correlation coefficient) and reference. The most important criterion per reference has been retrieved in the table, one per direct and one per inverse relations. $r$ > .20 to be included in the table"), threeparttable=T, escape=F) 
+  
   
 ```
 
@@ -165,8 +168,11 @@ and Openness by *Intellect* and *Openness*. Both @SotoJohn2009 and @DeYoung2007 
 
 The nomological network commonly assumed in Big Five questionnaires is drawn from nuances through facets to domains, from more specific to more general. Relying on domains to explain and predict behavior can benefit from ease of interpretability. However, predictions for specific contexts can be enhanced if a more specific set of traits is used. On the other hand, using nuances to predict behavior might yield even stronger predictive ability [@Seeboth2018], but as the number of predictors grows the interpretations become more complex. Facets are on a middle ground between nuances and domains, in a compromise between specificity and sensitivity in the bandwidth-fidelity dilemma. This narrow aggregation both satisfies the specificity of predictions to concrete situations and environments and also enhances the ease of interpretability when summarizing individual personality characteristics. 
 
-Furthermore, there is a large corpus of research which points towards facets as important life outcome predictors showing incremental validity to domains. For academic achievement, @Paunonen2001 showed that the facets achievement motivation and intellectual curiosity increased the variance accounted for in college students’ grades, above and beyond its respective dimensions: Conscientiousness and Openness to experience. Similarly, @Lounsbury2002 provided evidence regarding the facets work drive and aggression, which added an extra 12% of explained variance over the Big Five domains on 10th grade students’ GPA. @Ziegler2010 showed that better  college grades were associated with low gregariousness, excitement seeking and order as well as high activity, openness to ideas and openness to values. Often different facets within the same domain can have effects in opposite directions, partially canceling out the predictive ability when only paying attention to the domain score. This is the case for Openness to ideas vs. Openness to fantasy, as the former is related positively to academic achievement whereas the latter is related negatively (Ziegler, Bensch, Maas et al., 2014), resulting in a potential masking effect on the ability of Openness predicting the academic achievement.
+There is a large corpus of research which points towards facets as important life outcome predictors showing incremental validity to domains. We are going to summarize the main For academic achievement, @Paunonen2001 showed that the facets achievement motivation and intellectual curiosity increased the variance accounted for in college students’ grades, above and beyond its respective dimensions: Conscientiousness and Openness to experience. Similarly, @Lounsbury2002 provided evidence regarding the facets work drive and aggression, which added an extra 12% of explained variance over the Big Five domains on 10th grade students’ GPA. @Ziegler2010 showed that better  college grades were associated with low gregariousness, excitement seeking and order as well as high activity, openness to ideas and openness to values. Often different facets within the same domain can have effects in opposite directions, partially canceling out the predictive ability when only paying attention to the domain score. This is the case for Openness to ideas vs. Openness to fantasy, as the former is related positively to academic achievement whereas the latter is related negatively (Ziegler, Bensch, Maas et al., 2014), resulting in a potential masking effect on the ability of Openness predicting the academic achievement.
 
+Regarding academic performance, Conscientiousness has been reported as the most consistent personality predictor at the domain level. In the meta-analysis by @OConnor2007 the corrected correlation between academic achievement and Conscientiousness was *r* = .24. However, this relationship might not be linear according to other authors who reported inverted-U relations [@Cucina2005]. Being the relationship between the other Big Five domains and academic achievement less clear, facet level analysis becomes important. Achievement-striving, Self-discipline and Dutifulness are the best predictors of academic performance under the Conscientiousness domain, according to the revision by @OConnor2007. Its correlation coefficients range from *r* = .15 to *r* = .39, from *r* = .18 to *r* = .46, and from *r* = .25 to *r* = .46 respectively. Openness' facets yield unconclusive patterns at the domain level, as we pointed out in the introduction. Openness to ideas can be a facilitator towards better GPA, wih correlations being found *r* = .22 in @Dollinger1991 and *r* = .15 in @Ziegler2010, although this finding has failed to be reproduced in some other research [@Chamorro-Premuzic2003; @DeFruyt1996]. Context dependent characteristics may be influencing this lack of replicability [@Ziegler2014]. In the other hand, Openness to fantasy has found to yield a negative relation to GPA *r* = -.22 for men, whereas Aesthetics yielded a similar relationship with GPA for women *r* = -.19 [@DeFruyt1996]. Concerning Extraversion, gregariousness has been found to correlate negatively with academic achievement, with *r* = -.20 [@Chamorro-Premuzic2003]; activity has yielded contratictory results, being positively correlated in the @DeFruyt1996 analysis (*r* = .26) but negatively in the @Chamorro-Premuzic2003 experiment *r* = -.24. Results found for the Impulsivity and Anxiety facets of Neuroticism have been more clear, with correlation ranging from *r* = -.14 to *r* = -.26 for Impulsivity and *r* = -.29 for Anxiety. Agreebleness' facets have failed to yield significant correlations with GPA, although some of them may be important for certain job performance [@Ziegler2014]. Say something about Noftle Robins here.
+
+First, let's examine the relation of personality with satisfaction with life. At the domain level, Neuroticism and Extraversion have been noted as the most prominent predictors of satisfaction with life. Their role in mediating the hedonic balance between personality and subjective satisfaction has been hypothesized as key for this relationship [@Schimmack2002; @Diener2003]. @Schimmack2004 found that analysis at the facet level outperform the analysis at the domain level. These authors assessed personality with NEO-PI-R and IPIP-NEO and found that the facets Depression and Positive emotions / Cheerfulness were the most important predictors of the SWLS. Correlations for Depression ranged *r* = -57 to *r* = -.49, and for Positive emotions / Cheerfulness *r* = .51 to *r* = .38 (both measured with the self-report version). These two facets were the only significant predictors in a stepwise regression analysis which included all the facets from Neuroticism and Extraversion. Together they explained between 30% of the variance of self reported life satisfaction. The relation of SWLS with facets from other domains were not inspected as the correlations at the domain level were not significant. In our instrument, the facets Confidence (N2) and Positive attitude (E4) are equivalent in content to Depression and Positive emotions / Cheerfulness of the NEO-PI-R and IPIP-NEO. We therefore hypothesize that such facets will correlate and predict satisfaction with life in a similar degree.
 
 As described above, facet measures often yield scores that have stronger test-criterion correlations than their respective domain scores. However, facet scores have also been shown to be related to personality disorders. Thus, the combination of a higher fidelity along with the potential clinical relevance of facet scores might open up unique advantages for clinical research. 
 
@@ -233,7 +239,7 @@ To confirm the structure of facets the EFAs delivered, multiple CFAs were calcul
 ### Criterion validity evidence 
 To examine the nomological structure of the facets and domains to external constructs, correlations at the facet level were computed. We describe here a set of hypothesis prompted by other's research in the interplay between personality and the external criteria used in this work. 
 
-First, let's examine the relation of personality with satisfaction with life. At the domain level, Neuroticism and Extraversion have been noted as the most prominent predictors of satisfaction with life. Their role in mediating the hedonic balance between personality and subjective satisfaction has been hypothesized as key for this relationship [@Schimmack2002; @Diener2003]. @Schimmack2004 found that analysis at the facet level outperform the analysis at the domain level. These authors assessed personality with NEO-PI-R and IPIP-NEO and found that the facets Depression and Positive emotions / Cheerfulness were the most important predictors of the SWLS. Correlations for Depression ranged *r* = -57 to *r* = -.49, and for Positive emotions / Cheerfulness *r* = .51 to *r* = .38 (both measured with the self-report version). These two facets were the only significant predictors in a stepwise regression analysis which included all the facets from Neuroticism and Extraversion. Together they explained between 49% and 60% of the variance of SWLS. The relation of SWLS with facets from other domains were not inspected as the correlations at the domain level were not significant. In our instrument, the facets Confidence (N2) and Positive attitude (E4) are equivalent in content to Depression and Positive emotions / Cheerfulness of the NEO-PI-R and IPIP-NEO. We therefore hypothesize that such facets will correlate and predict satisfaction with life in a similar degree.
+First, let's examine the relation of personality with satisfaction with life. At the domain level, Neuroticism and Extraversion have been noted as the most prominent predictors of satisfaction with life. Their role in mediating the hedonic balance between personality and subjective satisfaction has been hypothesized as key for this relationship [@Schimmack2002; @Diener2003]. @Schimmack2004 found that analysis at the facet level outperform the analysis at the domain level. These authors assessed personality with NEO-PI-R and IPIP-NEO and found that the facets Depression and Positive emotions / Cheerfulness were the most important predictors of the SWLS. Correlations for Depression ranged *r* = -57 to *r* = -.49, and for Positive emotions / Cheerfulness *r* = .51 to *r* = .38 (both measured with the self-report version). These two facets were the only significant predictors in a stepwise regression analysis which included all the facets from Neuroticism and Extraversion. Together they explained between 30% of the variance of self reported life satisfaction. The relation of SWLS with facets from other domains were not inspected as the correlations at the domain level were not significant. In our instrument, the facets Confidence (N2) and Positive attitude (E4) are equivalent in content to Depression and Positive emotions / Cheerfulness of the NEO-PI-R and IPIP-NEO. We therefore hypothesize that such facets will correlate and predict satisfaction with life in a similar degree.
 
 Regarding academic performance, Conscientiousness has been reported as the most consistent personality predictor at the domain level. In the meta-analysis by @OConnor2007 the corrected correlation between academic achievement and Conscientiousness was *r* = .24. However, this relationship might not be linear according to other authors who reported inverted-U relations [@Cucina2005]. Being the relationship between the other Big Five domains and academic achievement less clear, facet level analysis becomes important. Achievement-striving, Self-discipline and Dutifulness are the best predictors of academic performance under the Conscientiousness domain, according to the revision by @OConnor2007. Its correlation coefficients range from *r* = .15 to *r* = .39, from *r* = .18 to *r* = .46, and from *r* = .25 to *r* = .46 respectively. Openness' facets yield unconclusive patterns at the domain level, as we pointed out in the introduction. Openness to ideas can be a facilitator towards better GPA, wih correlations being found *r* = .22 in @Dollinger1991 and *r* = .15 in @Ziegler2010, although this finding has failed to be reproduced in some other research [@Chamorro-Premuzic2003; @DeFruyt1996]. Context dependent characteristics may be influencing this lack of replicability [@Ziegler2014]. In the other hand, Openness to fantasy has found to yield a negative relation to GPA *r* = -.22 for men, whereas Aesthetics yielded a similar relationship with GPA for women *r* = -.19 [@DeFruyt1996]. Concerning Extraversion, gregariousness has been found to correlate negatively with academic achievement, with *r* = -.20 [@Chamorro-Premuzic2003]; activity has yielded contratictory results, being positively correlated in the @DeFruyt1996 analysis (*r* = .26) but negatively in the @Chamorro-Premuzic2003 experiment *r* = -.24. Results found for the Impulsivity and Anxiety facets of Neuroticism have been more clear, with correlation ranging from *r* = -.14 to *r* = -.26 for Impulsivity and *r* = -.29 for Anxiety. Agreebleness' facets have failed to yield significant correlations with GPA, although some of them may be important for certain job performance [@Ziegler2014]. Say something about Noftle Robins here.
 
@@ -252,7 +258,7 @@ To ensure the homogeneity of the facets and to reduce the risk of cross domain l
 ```{r table2, eval=F}
 setwd(here("tables"))
 table2 <- read_excel("table2.xlsx")
-kable(table2, format = "latex", align = "l", booktabs = T, caption="Results for the EFA on the Big Five domains")%>% 
+kable(table2, format = "latex", align = "l", booktabs = T, caption="Table 2. Results for the EFA on the Big Five domains")%>% 
   column_spec(1, width = "8em", bold = F, italic = F) %>% 
   column_spec(2, width = "8em", bold = F, italic = F)
 ```
@@ -283,22 +289,24 @@ All measurement models for the facets fitted well, results are summarized in *Ta
 \vspace{5mm}
 
 ```{r table3, eval=F}
-setwd(here("tables"))
+setwd(here("/tables"))
 table3 <- read_csv("table3.csv")
-colnames(table3) <- sub("_1", "", colnames(table3))
-colnames(table3) <- sub("_2", "", colnames(table3))
-table3 <- table3[,-12]
+table3 <- table3[,-c(7,12)]
+colnames(table3) <- sub("_1","",colnames(table3))
+colnames(table3) <- sub("_2","",colnames(table3))
 
-kable(table3, "latex", align = "l", booktabs = T, linesep="", caption = "Model fit for each facet")%>%
+
+  kable(table3, "latex", align = "l", booktabs = T, linesep="", longtable=T,caption = "Table 3. Model fit for each facet")%>%
   kable_styling(latex_options = "scale_down") %>%
-  add_header_above(c(" " = 1, "Full items" = 5, "5 items" = 9)) %>%
-  add_header_above(c(" " = 1, "USA sample" = 10, "German sample" = 4)) #%>% 
-  #kable_as_image()
+  add_header_above(c(" " = 1, "Full items" = 5, "5 items" = 4, " " = 4)) %>%
+  add_header_above(c(" " = 1, "USA sample" = 9, "German sample" = 4)) %>% 
+      landscape() %>% 
+  kable_styling(latex_options = "repeat_header")
 
 ```
 
 
-The ESEM of the final model with all five domains yielded an acceptable fit [@Marsh2010]: CFI = .87, RMSEA = .072, SRMR = .036. As you can see in *Table 4* nearly all facets loaded significantly on their intended domain. Some cross loadings emerged as is typical for ESEM procedures.
+The ESEM of the final model with all five domains yielded an acceptable fit [@Marsh2010]: CFI = .87, RMSEA = .072, SRMR = .036. As it can be seen in *Table 4* nearly all facets loaded significantly on their intended domain. Some cross loadings emerged as is typical for ESEM procedures.
 
 \vspace{5mm}
 
@@ -315,15 +323,13 @@ mytable$Conscientiousness[7:15] <- paste("\\textbf{",mytable$Conscientiousness[7
 mytable$Extraversion[16:23] <- paste("\\textbf{",mytable$Extraversion[16:23], "}", sep="")
 mytable$Neuroticism[24:30] <- paste("\\textbf{",mytable$Neuroticism[24:30], "}", sep="")
 mytable$Openness[31:38] <- paste("\\textbf{",mytable$Openness[31:38], "}", sep="")
-colnames(mytable)[1]<-"facet"
+colnames(mytable)[1]<-"Facet"
 
 
-# kable(mytable, "latex", align = "l", booktabs = T, linesep="", 
-#       caption = "ESEM factor scores USA sample") %>% 
-#   text_spec(format="latex")
+# print(xtable(mytable, caption="ESEM factor scores USA sample"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top",sanitize.text.function=Hmisc::latexTranslate)
 
- # print(xtable(mytable, caption="Factor Loadings ESEM"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top")
-print(xtable(mytable, caption="ESEM factor scores USA sample"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top",sanitize.text.function=Hmisc::latexTranslate)
+kable(mytable, booktabs=T, escape=F, linesep="", align="l", caption = "Table 4. ESEM factor scores USA sample")
+
 ```
 
 ### Criterion validity evidence
@@ -376,13 +382,18 @@ setwd(here("tables"))
 
 corsabrev <- read_csv("table5abrev.csv")
 
-corsabrev <- corsabrev[,-1]
-corsabrev$facets <- sub("sums","",corsabrev$facets)
+library(dplyr)
+corsabrev %>%
+  mutate_each(funs(cell_spec(., bold=ifelse(. >= .20 | . <= -.20, TRUE, FALSE))), -Facets) %>% 
+  kable("latex",escape=F, booktabs=T, linesep="", align="l",caption="Table 5. Criterion correlations at the facet level") %>% 
+  landscape(margin = "0cm") %>% 
+  footnote(c("SWLS: Satisfaction With Life Scale.",
+             "GPA: Grade Point Average, 'cc' = full academic career, 'univ' = university, 'hs'= High School.",
+             "SAT: Scholastic Assessment Test, 't' = total, 'r' = reading test, 'm' = math test, 'w' = writing and language test.",
+             "ACT: American College Testing, 't' = total, 'm' = math test, 'r' = reading test, 'w' = writing test, 's' = science test.",
+             "ABS: Absences from school (?), 2 = correlation with 2 absences, 4 = correlation with 4 absences.",
+             "Correlations above |.20| are shown in bold."), threeparttable=T, escape=F)
 
-print(xtable(corsabrev, caption="Criterion correlations"),
-      type="latex",include.rownames=F, size="\\fontsize{9.5pt}{9pt}\\selectfont",
-      caption.placement = "top", rotate.colnames = F,
-      sanitize.text.function=Hmisc::latexTranslate)
 
 ```
 
@@ -417,9 +428,13 @@ The measurement models of the American sample were replicated for the reduced nu
 ```{r table6, results="asis", eval=F}
 setwd(here("tables"))
 table6 <- read_csv("table6.csv")
-colnames(table6)[1]<-"facet"
-print(xtable(mytable, caption="ESEM factor scores German sample"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top",sanitize.text.function=Hmisc::latexTranslate)
+# print(xtable(table6, caption="ESEM factor scores German sample"),include.rownames=FALSE, size="\\fontsize{9.5pt}{9pt}\\selectfont", caption.placement = "top",sanitize.text.function=Hmisc::latexTranslate)
 
+colnames(table6)[1]<-"Facets"
+# table6 <- table6[,c(1,2,3,4,6,5)]
+# colnames(table6) <- c("Facets", "Agreeableness", "Conscientiousness", "Extraversion", "Neuroticism",
+#                       "Openness")
+kable(table6, booktabs=T, escape=F, linesep="", align="l", caption = "Table 6. ESEM factor scores German sample")
 ```
 \vspace{5mm}
 
