@@ -99,7 +99,7 @@ Correspondence concerning this article should be addressed to Victor Rouco, Post
 \newcommand\LastLTentrywidth{1em}
 \newlength\longtablewidth
 \setlength{\longtablewidth}{1in}
-\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef1em{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
 
 
 \usepackage{lineno}
@@ -224,8 +224,8 @@ Intellect or Culture.
 
 One of the most important features of the Big Five is the fact that it
 could be replicated in different languages. Research is available in
-Japanese, Vietnamese, German, Spanish, Greek, and many more (McCrae \&
-Costa, 1997; Schmitt et al., 2007). This finding suggests that the way
+Japanese, Vietnamese, German, Spanish, Greek, and many more
+({\textbf{???}}; {\textbf{???}}). This finding suggests that the way
 human beings construe personality is at some point universal and that
 its basic features are retained within the Big Five. Another essential
 characteristic relies on its hierarchical nature. The five domains are
@@ -255,9 +255,9 @@ five broad domains. The most widely known model is the one suggested by
 Costa and McCrae (1995), the NEO-PI-R model. Other popular models have
 been suggested for the Big Five Inventory 2 (BFI-2; Soto \& John, 2016),
 the IPIP (Goldberg et al., 2006), and the HEXACO model (Lee \& Ashton,
-2016), which assumes six broad domains. Table 1 gives an overview of
-these different models listing their facets per domain as well as some
-information regarding their psychometric properties.
+2016), which assumes six broad domains. \emph{Table 1} gives an overview
+of these different models listing their facets per domain as well as
+some information regarding their psychometric properties.
 
 \vspace{5mm}
 
@@ -323,26 +323,87 @@ concrete situations and environments and also enhances the ease of
 interpretability when summarizing individual personality
 characteristics.
 
-Furthermore, there is a large corpus of research which points towards
-facets as important life outcome predictors showing incremental validity
-to domains. For academic achievement, Paunonen and Ashton (2001) showed
-that the facets achievement motivation and intellectual curiosity
-increased the variance accounted for in college students' grades, above
-and beyond its respective dimensions: Conscientiousness and Openness to
-experience. Similarly, Lounsbury et al. (2002) provided evidence
-regarding the facets work drive and aggression, which added an extra
-12\% of explained variance over the Big Five domains on 10th grade
-students' GPA. Ziegler, Danay, Schölmerich, and Bühner (2010) showed
-that better college grades were associated with low gregariousness,
-excitement seeking and order as well as high activity, openness to ideas
-and openness to values. Often different facets within the same domain
-can have effects in opposite directions, partially canceling out the
-predictive ability when only paying attention to the domain score. This
-is the case for Openness to ideas vs.~Openness to fantasy, as the former
-is related positively to academic achievement whereas the latter is
-related negatively (Ziegler, Bensch, Maas et al., 2014), resulting in a
-potential masking effect on the ability of Openness predicting the
-academic achievement.
+There is a large corpus of research which points towards facets as
+important life outcome predictors showing incremental validity to
+domains. We are going to summarize the main For academic achievement,
+Paunonen and Ashton (2001) showed that the facets achievement motivation
+and intellectual curiosity increased the variance accounted for in
+college students' grades, above and beyond its respective dimensions:
+Conscientiousness and Openness to experience. Similarly, Lounsbury et
+al. (2002) provided evidence regarding the facets work drive and
+aggression, which added an extra 12\% of explained variance over the Big
+Five domains on 10th grade students' GPA. Ziegler, Danay, Schölmerich,
+and Bühner (2010) showed that better college grades were associated with
+low gregariousness, excitement seeking and order as well as high
+activity, openness to ideas and openness to values. Often different
+facets within the same domain can have effects in opposite directions,
+partially canceling out the predictive ability when only paying
+attention to the domain score. This is the case for Openness to ideas
+vs.~Openness to fantasy, as the former is related positively to academic
+achievement whereas the latter is related negatively (Ziegler, Bensch,
+Maas et al., 2014), resulting in a potential masking effect on the
+ability of Openness predicting the academic achievement.
+
+Regarding academic performance, Conscientiousness has been reported as
+the most consistent personality predictor at the domain level. In the
+meta-analysis by O'Connor and Paunonen (2007) the corrected correlation
+between academic achievement and Conscientiousness was \emph{r} = .24.
+However, this relationship might not be linear according to other
+authors who reported inverted-U relations (Cucina \& Vasilopoulos,
+2005). Being the relationship between the other Big Five domains and
+academic achievement less clear, facet level analysis becomes important.
+Achievement-striving, Self-discipline and Dutifulness are the best
+predictors of academic performance under the Conscientiousness domain,
+according to the revision by O'Connor and Paunonen (2007). Its
+correlation coefficients range from \emph{r} = .15 to \emph{r} = .39,
+from \emph{r} = .18 to \emph{r} = .46, and from \emph{r} = .25 to
+\emph{r} = .46 respectively. Openness' facets yield unconclusive
+patterns at the domain level, as we pointed out in the introduction.
+Openness to ideas can be a facilitator towards better GPA, wih
+correlations being found \emph{r} = .22 in Dollinger and Orf (1991) and
+\emph{r} = .15 in Ziegler et al. (2010), although this finding has
+failed to be reproduced in some other research (Chamorro-Premuzic \&
+Furnham, 2003; De Fruyt \& Mervielde, 1996). Context dependent
+characteristics may be influencing this lack of replicability (Ziegler
+et al., 2014). In the other hand, Openness to fantasy has found to yield
+a negative relation to GPA \emph{r} = -.22 for men, whereas Aesthetics
+yielded a similar relationship with GPA for women \emph{r} = -.19 (De
+Fruyt \& Mervielde, 1996). Concerning Extraversion, gregariousness has
+been found to correlate negatively with academic achievement, with
+\emph{r} = -.20 (Chamorro-Premuzic \& Furnham, 2003); activity has
+yielded contratictory results, being positively correlated in the De
+Fruyt and Mervielde (1996) analysis (\emph{r} = .26) but negatively in
+the Chamorro-Premuzic and Furnham (2003) experiment \emph{r} = -.24.
+Results found for the Impulsivity and Anxiety facets of Neuroticism have
+been more clear, with correlation ranging from \emph{r} = -.14 to
+\emph{r} = -.26 for Impulsivity and \emph{r} = -.29 for Anxiety.
+Agreebleness' facets have failed to yield significant correlations with
+GPA, although some of them may be important for certain job performance
+(Ziegler et al., 2014). Say something about Noftle Robins here.
+
+First, let's examine the relation of personality with satisfaction with
+life. At the domain level, Neuroticism and Extraversion have been noted
+as the most prominent predictors of satisfaction with life. Their role
+in mediating the hedonic balance between personality and subjective
+satisfaction has been hypothesized as key for this relationship (Diener,
+Oishi, \& Lucas, 2003; Schimmack, Diener, \& Oishi, 2002). Schimmack,
+Oishi, Furr, and Funder (2004) found that analysis at the facet level
+outperform the analysis at the domain level. These authors assessed
+personality with NEO-PI-R and IPIP-NEO and found that the facets
+Depression and Positive emotions / Cheerfulness were the most important
+predictors of the SWLS. Correlations for Depression ranged \emph{r} =
+-57 to \emph{r} = -.49, and for Positive emotions / Cheerfulness
+\emph{r} = .51 to \emph{r} = .38 (both measured with the self-report
+version). These two facets were the only significant predictors in a
+stepwise regression analysis which included all the facets from
+Neuroticism and Extraversion. Together they explained between 30\% of
+the variance of self reported life satisfaction. The relation of SWLS
+with facets from other domains were not inspected as the correlations at
+the domain level were not significant. In our instrument, the facets
+Confidence (N2) and Positive attitude (E4) are equivalent in content to
+Depression and Positive emotions / Cheerfulness of the NEO-PI-R and
+IPIP-NEO. We therefore hypothesize that such facets will correlate and
+predict satisfaction with life in a similar degree.
 
 As described above, facet measures often yield scores that have stronger
 test-criterion correlations than their respective domain scores.
@@ -580,25 +641,25 @@ First, let's examine the relation of personality with satisfaction with
 life. At the domain level, Neuroticism and Extraversion have been noted
 as the most prominent predictors of satisfaction with life. Their role
 in mediating the hedonic balance between personality and subjective
-satisfaction has been hypothesized as key for this relationship (Diener,
-Oishi, \& Lucas, 2003; Schimmack, Diener, \& Oishi, 2002). Schimmack,
-Oishi, Furr, and Funder (2004) found that analysis at the facet level
-outperform the analysis at the domain level. These authors assessed
-personality with NEO-PI-R and IPIP-NEO and found that the facets
-Depression and Positive emotions / Cheerfulness were the most important
-predictors of the SWLS. Correlations for Depression ranged \emph{r} =
--57 to \emph{r} = -.49, and for Positive emotions / Cheerfulness
-\emph{r} = .51 to \emph{r} = .38 (both measured with the self-report
-version). These two facets were the only significant predictors in a
-stepwise regression analysis which included all the facets from
-Neuroticism and Extraversion. Together they explained between 30\% of
-the variance of self reported life satisfaction. The relation of SWLS
-with facets from other domains were not inspected as the correlations at
-the domain level were not significant. In our instrument, the facets
-Confidence (N2) and Positive attitude (E4) are equivalent in content to
-Depression and Positive emotions / Cheerfulness of the NEO-PI-R and
-IPIP-NEO. We therefore hypothesize that such facets will correlate and
-predict satisfaction with life in a similar degree.
+satisfaction has been hypothesized as key for this relationship (Diener
+et al., 2003; Schimmack et al., 2002). Schimmack et al. (2004) found
+that analysis at the facet level outperform the analysis at the domain
+level. These authors assessed personality with NEO-PI-R and IPIP-NEO and
+found that the facets Depression and Positive emotions / Cheerfulness
+were the most important predictors of the SWLS. Correlations for
+Depression ranged \emph{r} = -57 to \emph{r} = -.49, and for Positive
+emotions / Cheerfulness \emph{r} = .51 to \emph{r} = .38 (both measured
+with the self-report version). These two facets were the only
+significant predictors in a stepwise regression analysis which included
+all the facets from Neuroticism and Extraversion. Together they
+explained between 30\% of the variance of self reported life
+satisfaction. The relation of SWLS with facets from other domains were
+not inspected as the correlations at the domain level were not
+significant. In our instrument, the facets Confidence (N2) and Positive
+attitude (E4) are equivalent in content to Depression and Positive
+emotions / Cheerfulness of the NEO-PI-R and IPIP-NEO. We therefore
+hypothesize that such facets will correlate and predict satisfaction
+with life in a similar degree.
 
 Regarding academic performance, Conscientiousness has been reported as
 the most consistent personality predictor at the domain level. In the
@@ -1222,11 +1283,6 @@ drinking in first-year college students. \emph{Personality and
 Individual Differences}, \emph{46}(2), 207--212.
 doi:\href{https://doi.org/10.1016/j.paid.2008.09.028}{10.1016/j.paid.2008.09.028}
 
-\leavevmode\hypertarget{ref-McCrae1997}{}%
-McCrae, R., \& Costa, P. (1997). Personality Trait Structure as a Human
-Universal* 1,* 2. \emph{American Psychologist}, \emph{52}(5), 509--516.
-doi:\href{https://doi.org/10.1037/0003-066X.52.5.509}{10.1037/0003-066X.52.5.509}
-
 \leavevmode\hypertarget{ref-Mccrae2011}{}%
 Mccrae, R. R., Kurtz, J. E., Yamagata, S., \& Terracciano, A. (2011).
 Internal consistency, retest reliability and their implications for
@@ -1333,14 +1389,6 @@ Personality and life satisfaction: A facet-level analysis.
 \emph{Personality and Social Psychology Bulletin}, \emph{30}(8),
 1062--1075.
 doi:\href{https://doi.org/10.1177/0146167204264292}{10.1177/0146167204264292}
-
-\leavevmode\hypertarget{ref-Schmitt2007}{}%
-Schmitt, D. P., Allik, J., McCrae, R. R., Benet-Martínez, V., Alcalay,
-L., Ault, L., \ldots{} Sharan, M. B. (2007). The geographic distribution
-of Big Five personality traits: Patterns and profiles of human
-self-description across 56 nations. \emph{Journal of Cross-Cultural
-Psychology}, \emph{38}(2), 173--212.
-doi:\href{https://doi.org/10.1177/0022022106297299}{10.1177/0022022106297299}
 
 \leavevmode\hypertarget{ref-Seeboth2018}{}%
 Seeboth, A., \& Mõttus, R. (2018). Successful explanations start with

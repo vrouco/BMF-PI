@@ -49,7 +49,7 @@ header-includes:
    - \usepackage{changepage}
    
 output: 
-  papaja::apa6_pdf
+  papaja::apa6_word
   
 ---
 ```{r setups, include=FALSE}
@@ -73,7 +73,7 @@ library(foreign)
 library(MplusAutomation)
 library(officer)
 library(flextable)
-
+library(pander)
 
 options(xtable.floating = T, xtable.comment = FALSE)#figsintext yaml option buggy. change xtable floating instead
 
@@ -146,6 +146,8 @@ table1[is.na(table1)]<-" "
    #kable_styling(full_width = T) %>% 
   footnote(c("Reliability: Cronbach's alpha measures, retrieved from references in the reliability column", "Validity: criterion (correlation coefficient) and reference. The most important criterion per reference has been retrieved in the table, one per direct and one per inverse relations. $r$ > .20 to be included in the table"), threeparttable=T, escape=F) 
   
+ 
+pandoc.table(table1, style="grid",split.cells= 5)
   
 ```
 
