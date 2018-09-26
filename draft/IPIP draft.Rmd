@@ -294,15 +294,15 @@ kable(table2, format = "latex", align = "l", booktabs = T, caption="Table 2. Res
 
 \vspace{5mm}
 
-According to the exploratory model, Agreeableness consists of eight facets after two facets were eliminated due to weakly loading and inconsistent items. The remaining facets were named Appreciation, Integrity, Low Competitiveness, Readiness to Give Feedback, Search for Support, Good Faith, Genuineness and Altruism. 
+According to the exploratory model, Agreeableness consists of eight facets after two facets were eliminated due to weakly loading and inconsistent items. The remaining facets were named *Appreciation*, *Integrity*, *Low competitiveness*, *Readiness to give feedback*, *Search for support*, *Good faith*, *Genuineness* and *Altruism*. 
 
-Conscientiousness consists of nine facets after one facet with item factor loadings less than .30 was excluded, they are: Dominance, Persistence, Self-discipline, Task planning, Goal orientation, Carefulness, Orderliness, Wish to work to capacity and Productivity. 
+Conscientiousness consists of nine facets after one facet with item factor loadings less than .30 was excluded, they are: *Dominance*, *Persistence*, *Self-discipline*, *Task planning*, *Goal orientation*, *Carefulness*, *Orderliness*, *Wish to work* (to capacity) and *Productivity*. 
 
-Extraversion is formed by nine facets. A new facet (Energy) was added in order to tap better the physical component of Extraversion, which was missing in the eight facet solution. The facets are Sociability, Readiness to take risks, Wish for affiliation, Positive attitude, Forcefulness, Communicativeness, Humor, Conviviality and Energy.
+Extraversion is formed by nine facets. A new facet (*Energy*) was added in order to tap better the physical component of Extraversion, which was missing in the eight facet solution. The facets are *Sociability*, *Readiness to take risks*, *Wish for affiliation*, *Positive attitude*, *Forcefulness*, *Communicativeness*, *Humor*, *Conviviality* and *Energy*.
 
-Neuroticism (interpreted here as emotional stability) consists of seven facets. One facet was dropped due to poor interpretability, and was therefore not included in the subsequent analyses. The final set of facets are named Equanimity, Confidence, Carefreeness, Mental balance, Drive, Emotional robustness and Self-attention.
+Neuroticism (interpreted here as emotional stability) consists of seven facets. One facet was dropped due to poor interpretability, and was therefore not included in the subsequent analyses. The final set of facets are named *Equanimity*, *Confidence*, *Carefreeness*, *Mental balance*, *Drive*, *Emotional robustness* and *Self-attention*.
 
-Openness to experience comprises nine facets. One facet was identified as a method factor and eliminated, because it solely contained negatively formulated items and no coherent underlying trait could be identified. Furthermore another facet (Intellect) was added, because the remaining facets lacked an intellectual content. The facets of Openness are named Creativity, Wish for variety, Open-mindedness, Interest in reading, Artistic interests, Wish to analyze, Willingness to learn, Sensitivity and Intellect.
+Openness to experience comprises nine facets. One facet was identified as a method factor and eliminated, because it solely contained negatively formulated items and no coherent underlying trait could be identified. Furthermore another facet (*Intellect*) was added, because the remaining facets lacked an intellectual content. The facets of Openness are named *Creativity*, *Wish for variety*, *Open-mindedness*, *Interest in reading*, *Artistic interests*, *Wish to analyze*, *Willingness to learn*, *Sensitivity* and *Intellect.*
 
 The items to each facet are listed in the appendix (A).
 
@@ -453,9 +453,10 @@ library(readxl)
 
 setwd(here("data/ETS_IPIP/Datensätze"))
 
-dt<-read_excel("ETS_regression.xlsx")
+dt <- read_excel("ETS_regression.xlsx")
 
-swl1 <- summary(lm(lifesat ~ sumsN2 + sumsE4, dt))
+swl1 <- summary(lm(scale(lifesat) ~ scale(sumsN) + scale(sumsE) +scale(sumsC) + scale(sumsA) +
+                                                                                    scale(sumsO), dt))
 
 swldt <- dt[,c(3:46, 54)]
 swl2 <- lm(lifesat ~. , swldt)
@@ -476,6 +477,22 @@ o <- dt[dt$hsgpa_num >=0,c(53,38:46)]
 owithsex <- o 
 owithsex$sex <- dt$sex[dt$hsgpa_num >= 0]
 ```
+
+* H1. SWL will be best predicted by the composites of Extraversion and Neuroticism. 
+    + H1.1. Adding the facets will significantly improve the predictions of personality on SWL. 
+    + H1.2. Particularly the facets *Confidence* (N2) and *Positive attitude* (E4) will behave similarly to those reported by @Schimmack2004. 
+* H2. Conscientiousness will be the strongest dimension when predicting academic achievement.
+    + H2.1. Openness will be related positively but moderately to academic achievement.
+    + H2.2. Facets will add about 10% of additional explained variance to dimensions when predicting academic achievement
+    
+* H3. Facets will improve the predictive power of dimensions when predicting school abseentism.
+
+To explore H1 we fitted a linear model that included the Big Five dimensions as predictors and SWL as citerion. To explore H1.1. we fitted a stepwise regression including the significant dimensions at the first and their related facets in the second step. H1.2. will be inspected adding N2 and E4 to the second step instead of the full set of facets. 
+
+H2 and H2.1. will be tested with a linear regression in which Conscientiousness and Openness will predict academic achievement. A stepwise regression will be used to test H2.2. Conscientiousness and Openness will be the first set of predictors and their respective facets will be entered in a second step, changes in $R^2$ will be inspected.
+
+H3 will also be tested with a stepwise regression in which the Big Five dimensions will be first entered and then the full set of facets.
+
 
 Our first hypothesis concerning external criteria involved *Confidence* (N2) and *Positive attitude* (E4), as the most important predictors of SWL. Our results, in line with @Schimmack2004, showed that both facets were the most salient predictors of the factor in a stepwise regresssion, and that they explained `r  round(swl1$r.squared, 2)`% of the factor. The final model reached with the stepwise procedure explained `r round(summary(swl2)$r.squared, 2)`% of the factor variance. N2 and E4 outperformed Neuroticism and Extraversion, who failed to be significant predictors in a stepwise model which included these four independent variables.
 
