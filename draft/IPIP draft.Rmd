@@ -265,7 +265,7 @@ Chronbach's $\alpha$ and McDonald's $\omega$ will be calculated for each facet t
 
 To examine the nomological structure of the facets and domains to external constructs, a set of linear models and correlations were fitted. We describe in this section the methods used to test the set of hypothesis described in the introduction. 
 
-To explore H1 we fitted a linear model that included the Big Five dimensions as predictors and SWL as citerion. To explore H1.1. we fitted a stepwise regression including the significant dimensions at the first and their related facets in the second step. H1.2. will be inspected adding N2 and E4 to the second step instead of the full set of facets. 
+To explore H1 we explored the correlation matrix between Big Five dimensions and SWL. To explore H1.1. we fitted a two-step regression including the full set of dimensions in the first step and a selection of facets following a stepwise procedure in the second step. H1.2. will be inspected adding only N2 and E4 to the second step instead of the full set of facets. 
 
 H2 and H2.1. will be tested with a linear regression in which Conscientiousness and Openness will predict academic achievement. A stepwise regression will be used to test H2.2. Conscientiousness and Openness will be the first set of predictors and their respective facets will be entered in a second step, changes in $R^2$ will be inspected.
 
@@ -454,9 +454,17 @@ library(readxl)
 setwd(here("data/ETS_IPIP/Datensätze"))
 
 dt <- read_excel("ETS_regression.xlsx")
-
-swl1 <- summary(lm(scale(lifesat) ~ scale(sumsN) + scale(sumsE) +scale(sumsC) + scale(sumsA) +
-                                                                                    scale(sumsO), dt))
+dth1 <- dt[,c(54, 47:51)]
+dth1.1 <- dt[,c(54, 5:51)]
+first <- lm(lifesat~sumsA+sumsC+sumsE+sumsN+sumsO, dth1.1)     
+dth1.11<-dt[,c(54,5:46)]
+set.facets <- step(lm(lifesat~.,dth1.11))
+second <- lm(lifesat ~ sumsA1 + sumsC1 + sumsC4 + sumsC6 + sumsC7 + sumsE2 + 
+    sumsE4 + sumsE9 + sumsN1 + sumsN2 + sumsN4 + sumsN5 + sumsO1 + 
+    sumsO2 + sumsO8 + sumsO9 , dth1.11)
+h1.1 <- anova(first, second)
+third <- lm(lifesat ~ sumsN+sumsE+sumsN2 + sumsE4, dt)
+h1.2 <- anova(first, third)
 
 swldt <- dt[,c(3:46, 54)]
 swl2 <- lm(lifesat ~. , swldt)
@@ -478,20 +486,23 @@ owithsex <- o
 owithsex$sex <- dt$sex[dt$hsgpa_num >= 0]
 ```
 
-* H1. SWL will be best predicted by the composites of Extraversion and Neuroticism. 
-    + H1.1. Adding the facets will significantly improve the predictions of personality on SWL. 
-    + H1.2. Particularly the facets *Confidence* (N2) and *Positive attitude* (E4) will behave similarly to those reported by @Schimmack2004. 
+
 * H2. Conscientiousness will be the strongest dimension when predicting academic achievement.
     + H2.1. Openness will be related positively but moderately to academic achievement.
     + H2.2. Facets will add about 10% of additional explained variance to dimensions when predicting academic achievement
     
 * H3. Facets will improve the predictive power of dimensions when predicting school abseentism.
 
-To explore H1 we fitted a linear model that included the Big Five dimensions as predictors and SWL as citerion. To explore H1.1. we fitted a stepwise regression including the significant dimensions at the first and their related facets in the second step. H1.2. will be inspected adding N2 and E4 to the second step instead of the full set of facets. 
 
 H2 and H2.1. will be tested with a linear regression in which Conscientiousness and Openness will predict academic achievement. A stepwise regression will be used to test H2.2. Conscientiousness and Openness will be the first set of predictors and their respective facets will be entered in a second step, changes in $R^2$ will be inspected.
 
 H3 will also be tested with a stepwise regression in which the Big Five dimensions will be first entered and then the full set of facets.
+
+Our first set of hypothesis tested how personality was related to SWL. Extraversion (*r* = `r round(cor(dth1$lifesat, dth1$sumsE),2)`) and Neuroticism (*r* = `r round(cor(dth1$lifesat, dth1$sumsN),2)`) were the dimensions with higher correlations with SWL. In H1.1, the model which included the facets outperformed the dimension model (*F* = `r round(1.1$F[2], 2)`, p < 0.001). The model resulted in a predictive gain of $\Delta R^2$ = `r round(summary(second)$r.squared - summary(first)$r.squared, 2)`. Adding N2 and E4 result in a predictive gain of $\Delta R^2$ = `r round(summary(third)$r.squared - summary(first)$r.squared, 2)`.
+
+Our second set of hypothesis 
+
+
 
 
 Our first hypothesis concerning external criteria involved *Confidence* (N2) and *Positive attitude* (E4), as the most important predictors of SWL. Our results, in line with @Schimmack2004, showed that both facets were the most salient predictors of the factor in a stepwise regresssion, and that they explained `r  round(swl1$r.squared, 2)`% of the factor. The final model reached with the stepwise procedure explained `r round(summary(swl2)$r.squared, 2)`% of the factor variance. N2 and E4 outperformed Neuroticism and Extraversion, who failed to be significant predictors in a stepwise model which included these four independent variables.
