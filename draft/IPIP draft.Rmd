@@ -51,6 +51,7 @@ header-includes:
 output: 
   papaja::apa6_word
   
+  
 ---
 ```{r setups, include=FALSE}
 knitr::opts_chunk$set(echo = F, message=F, warning=F)
@@ -468,7 +469,7 @@ h1.2 <- anova(first, third)
 
 dth2hs <- dt[dt$hsgpa_num >0, c(53, 5:51)]
 
-step(lm(hsgpa_num ~ sumsO + sumsE+sumsN+sumsA+sumsC, dth2hs))
+#step(lm(hsgpa_num ~ sumsO + sumsE+sumsN+sumsA+sumsC, dth2hs))
 firsth2 <- lm(hsgpa_num ~ sumsC+sumsO+sumsN+sumsE+sumsA, dth2hs)
 dth2hs2 <- dth2hs[,1:43]
 secondh2 <- lm(hsgpa_num ~., dth2hs2)
