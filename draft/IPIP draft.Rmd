@@ -489,13 +489,6 @@ h3 <- anova(firsth3,secondh3)
 ```
 
 
-    
-* H3. Facets will improve the predictive power of dimensions when predicting school abseentism.
-
-
-
-H3 will also be tested with a stepwise regression in which the Big Five dimensions will be first entered and then the full set of facets.
-
 Our first set of hypothesis tested how personality was related to SWL. Extraversion (*r* = `r round(cor(dth1$lifesat, dth1$sumsE),2)`) and Neuroticism (*r* = `r round(cor(dth1$lifesat, dth1$sumsN),2)`) were the dimensions with higher correlations with SWL. In H1.1, the model which included the facets outperformed the dimension model (*F* = `r round(h1.1$F[2], 2)`, p < 0.001). The model resulted in a predictive gain of $\Delta R^2$ = `r round(summary(second)$r.squared - summary(first)$r.squared, 2)`. Adding N2 and E4 result in a predictive gain of $\Delta R^2$ = `r round(summary(third)$r.squared - summary(first)$r.squared, 2)`.
 
 Our second set of hypothesis involves predictions to academic achievement. Conscientiousness correlated with academic achievement with *r* = `r  round(cor(dth2hs$hsgpa_num, dth2hs$sumsC),2)`, being the strongest correlation of all the set of dimensions. Openness correlated *r* = `r  round(cor(dth2hs$hsgpa_num, dth2hs$sumsO),2)` with the criterion. For H2.2, the model which included the facets again outperformed the dimensional model (*F* = `r round(h2$F[2], 2)`, p < 0.001), with a predictive gain of $\Delta R^2$ = `r round(summary(secondh2)$r.squared - summary(firsth2)$r.squared, 2)`.
@@ -576,11 +569,11 @@ kable(table6, booktabs=T, escape=F, linesep="", align="l", caption = "Table 6. E
 
 ### Results of MI
 For analyzing measurement invariance the latest facet model structure (with additional facets) was taken. The results are shown in Table 7.
-Configural measurement invariance could be shown for the facets *Appreciation of others*, *Superiority/Grandiosity*, *Need to be liked*, Crybabiness, Manipulation, Altruism (facets of Agreeableness), Perseverance, Task Planning, Goal-orientation/Achievement striving, Preferred Load, Procrastination (facets of Conscientiousness), Assertiveness, Sociability/Gregariousness, Activity (facets of Extraversion), Irritability, Self-serving Attention (facets of Neuroticism), Self-attributed Inginuity, Openness to actions and activities, Openmindedness/Judgement, Love of Learning, Openness to feelings and Intellect (facets of Openness).
+Configural measurement invariance could be shown for the facets *Appreciation of others*, *Superiority/Grandiosity*, *Need to be liked*, *Crybabiness*, *Manipulation*, *Altruism* (facets of Agreeableness), *Perseverance*, *Task Planning*, *Goal-orientation/Achievement striving*, *Preferred Load*, *Procrastination* (facets of Conscientiousness), *Assertiveness*, *Sociability/Gregariousness*, *Activity* (facets of Extraversion), *Irritability*, *Self-serving Attention* (facets of Neuroticism), *Self-attributed Inginuity*, *Openness to actions and activities*, *Openmindedness/Judgement*, *Love of Learning*, *Openness to feelings* and *Intellect* (facets of Openness).
 
-Factorial measurement invariance could be shown for the facets Meanness, Trust (facets of Agreeableness), Control of others, Lack of (Self-) Control, Deliberation/Caution, Lack of Tidiness/Order (facets of Conscientiousness), Sensation Seeking, Reclusiveness, Emotionality, Humor (facets of Extraversion), Depression, Anxiety, Self-assuredness, Lethargia, Sentimentality (facets of Neuroticism), Openness to reading, Openness to arts and Need for cognition (facets of Openness).
+Factorial measurement invariance could be shown for the facets *Meanness*, *Trust* (facets of Agreeableness), *Control of others*, *Lack of (Self-) Control*, *Deliberation/Caution*, *Lack of Tidiness/Order* (facets of Conscientiousness), *Sensation Seeking*, *Reclusiveness*, *Emotionality*, *Humor* (facets of Extraversion), *Depression*, *Anxiety*, *Self-assuredness*, *Lethargia*, *Sentimentality* (facets of Neuroticism), *Openness to reading*, *Openness to arts* and *Need for cognition* (facets of Openness).
 
-The only facet with strong factorial measurement invariance was Shyness, a facet of Extraversion
+The only facet with strong factorial measurement invariance was *Shyness*, a facet of Extraversion
 
 
 ```{r table7, eval=F}
@@ -611,7 +604,7 @@ The instrument presented in this work covers all the "core" facets proposed by @
 The instrument covers most of facets proposed by the most influential Big Five measures as seen in *Table 1*. The most salient differences are related to the HEXACO model, which entails a six factor solution with a slightly different theoretical conceptualization [@Lee2006]. Most notably 
 
 
-Although these facets are not being covered directly in our inventory, components of facets from distinct domains in our model retain a glimpse of the missing facets. This underlies the importance of allowing cross-loadings for trait personality data. Let's use the example of *Patience*, a facet proposed in the HEXACO model for the Agreeableness domain which is not covered in our instrument, nor in the other three Big Five inventories which have been revised. Although patience, there is a notion of a patient trait within the Self-discipline facet in the Conscientiousness domain, specially with items such as "I rush into things" or "I act impulsively when something is bothering me" (See appendix A). In fact, Self-discipline has important cross-loadings with Agreeableness in both samples ($\lambda$ = .256 in the USA sample and $\lambda$ = .341 in the german sample). 
+Although these facets are not being covered directly in our inventory, components of facets from distinct domains in our model retain a glimpse of the missing facets. This underlies the importance of allowing cross-loadings for trait personality data. Let's use the example of *Patience*, a facet proposed in the HEXACO model for the Agreeableness domain which is not covered in our instrument, nor in the other three Big Five inventories which have been revised. Although patience, there is a notion of a patient trait within the *Self-discipline* facet in the Conscientiousness domain, specially with items such as "I rush into things" or "I act impulsively when something is bothering me" (See appendix A). In fact, *Self-discipline* has important cross-loadings with Agreeableness in both samples ($\lambda$ = .256 in the USA sample and $\lambda$ = .341 in the german sample). 
 
 
 In addition we included even more facets.
