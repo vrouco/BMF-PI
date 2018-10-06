@@ -49,7 +49,7 @@ header-includes:
    - \usepackage{changepage}
    
 output: 
-  papaja::apa6_word
+  papaja::apa6_pdf
   
   
 ---
@@ -178,11 +178,11 @@ The nomological network commonly assumed in Big Five questionnaires is drawn fro
 Personality measured at the facet level has found to be a strong predictor of a large number of outcomes.
 Satisfaction with life (SWL) is one of them. Neuroticism and Extraversion were recognised as the most important personality dimensions in the prediction of subjective satisfaction [@Schimmack2002; @Diener2003]. Lately, @Schimmack2004 observed that the analysis at the facet level outperform the analysis at the domain level. They observed that *Depression* and *Positive Emotions* / *Cheerfulness* explained SWL above and beyond the dimensions they belong to, reaching to a 30% of explained variability of SWL. Correlations in the @Schimmack2004 study ranged in a longitudinal design from *r* = -.57 to *r* = -.49 for the first and from *r* = .51 to *r* = .38 for the second and third. 
 
-Another relevant outcome that has shown to be best predicted with personality at the facet level is academic achievement. The relation of Conscientiousness with academic performance has gained a stable empirical evidence, with correlations ranging from *r* = .20 to *r* = .45 depending in sample specifity [@DeFruyt1996; @Paunonen2001; @Watson2002; @Lievens2002; @Chamorro-Premuzic2003; @Noftle2007; @OConnor2007; @Poropat2009; @Poropat2014]. @DeFruyt1996 hypothesized that volitional facets of Conscientiousness would be more proned to exhibit strong relations with academic achievement. In this line, there is a collection of research which points at relations of GPA scores with facets such as *Achievement-striving* [@Watson2002 *r* = .39; @Chamorro-Premuzic2003; @OConnor2007 *r* ranging from .15 to .39] or *Work drive* [@Lounsbury2002, *r* = .12]. Nonetheless, also other Conscientiousness facets more related to duties or moral driveness have been found to predict significantly GPA scores, like *Self-discipline* [@Watson2002, *r* = .36; @OConnor2007, *r* ranging from  .18 to .25] or *Dutifulness* [@Chamorro-Premuzic2003; @OConnor2007, *r* ranging from .25 to .38]. 
+Another relevant outcome that has shown to be best predicted with personality at the facet level is academic achievement. The relation of Conscientiousness with academic performance has gained a stable empirical evidence, with correlations ranging from *r* = .20 to *r* = .45 depending in sample specifity [@DeFruyt1996; @Paunonen2001; @Watson2002; @Lievens2002; @Chamorro-Premuzic2003; @Noftle2007; @OConnor2007; @Poropat2009; @Poropat2014]. @DeFruyt1996 hypothesized that volitional facets of Conscientiousness would be more proned to exhibit strong relations with academic achievement. In this line, there is a collection of research which points at relations of GPA scores with facets such as *Achievement-striving* [@Watson2002, *r* = .39; @Chamorro-Premuzic2003; @OConnor2007, *r* ranging from .15 to .39] or *Work drive* [@Lounsbury2002, *r* = .12]. Nonetheless, also other Conscientiousness facets more related to duties or moral driveness have been found to predict significantly GPA scores, like *Self-discipline* [@Watson2002, *r* = .36; @OConnor2007, *r* ranging from  .18 to .25] or *Dutifulness* [@Chamorro-Premuzic2003; @OConnor2007, *r* ranging from .25 to .38]. 
 The relation of academic achievement with Openness has been more variant. Following the categories proposed by Costa & McCrae, students which showed both high Conscientiousness and high Openness would be considered "good students". Moreover, those who score high in Openness but not in Conscientiousness were labelled "dreamers" and their performance in academic test is less stable. Some studies found a significant relation between the Openness dimension and academic achievement [@Watson2002, *r* = .18; @Lievens2002, *r* = .09], while some others failed to replicate this findings [@Paunonen2001, *r* = -.04; @Chamorro-Premuzic2003]. Is within this dimension were facet level analysis may be hugely useful. @Paunonen2001 found that the Openness facet of *Understanding* correlates with academic achievement with a *r* = .23. @Noftle2007 identified a set of NEO-PI-R and HEXACO's Openness facets which predicted academic achievement (the HEXACO facets of *Aesthetic*, *Inquisitiveness*, *Creativity* and *Unconventionality*, plus the NEO-PI-R facets of *Fantasy*, *Aesthetics*, *Feelings* and *Ideas*). Oppositely, @Ziegler2014 found that *Openness to ideas* was related positively with work performance, while *Openness to fantasy* was related negatively, potentially masking the overall effect of Opennes over the working performance criterion. In this study we aim to get deep into the research question of which facets are involved in scholastic achievement, using a widely facetted inventory.
 Moreover, narrow level analysis seems to improve the predicitive power of personality on academic performance, adding about 10% of explained variance [@Ziegler2010; @OConnor2007; @Lounsbury2004].
 
-Likewise, personality has proven to be a powerful predictor of laboral and educational abseentism [@Chamorro-Premuzic2003; @Judge1997; @Salgado2002]. Research has highlighted the predictive power of personality test over the so-called integrity test when predicting absences [@Ones2003]. Again, most research has focused on the dimensional level, although some researchers suggested that personality assessed at a narrower level would improve the predictive ability of the models [@Salgado2002; @Lounsbury2004]. Nonetheless, few studies have explored this relationship to our knowledge, being @Lounsbury2004 and @Judge1997 the most prominent. @Judge1997 dreported no predictive gain when examining personality at the facet level for the NEO-PI-R composites of Extraversion and Conscientiousness, whereas @Lounsbury2004 found a modest predictive gain of *Work drive* over the Big Five dimensions. Therefore, and despite the conceptual expectation of facets maximizing the predictive ability of personality on abseentism, evidence has manifested in favour of a dimension level analysis. However, it can be arguable that more research needs to be done in this area, preferably using personality inventories which are broad at the facet level.
+Likewise, personality has proven to be a powerful predictor of laboral and educational abseentism [@Chamorro-Premuzic2003; @Judge1997; @Salgado2002]. Research has highlighted the predictive power of personality test over the so-called integrity test when predicting absences [@Ones2003]. Again, most research has focused on the dimensional level, although some researchers suggested that personality assessed at a narrower level would improve the predictive ability of the models [@Salgado2002; @Lounsbury2004]. Nonetheless, few studies have explored this relationship to our knowledge, being @Lounsbury2004 and @Judge1997 the most prominent attemps. @Judge1997 dreported no predictive gain when examining personality at the facet level for the NEO-PI-R composites of Extraversion and Conscientiousness, whereas @Lounsbury2004 found a modest predictive gain of *Work drive* over the Big Five dimensions. Therefore, and despite the conceptual expectation of facets maximizing the predictive ability of personality on abseentism, evidence has manifested in favour of a dimension level analysis. However, it can be arguable that more research needs to be done in this area, preferably using personality inventories which are broad at the facet level.
 
 As described above, facet measures often yield scores that have stronger test-criterion correlations than their respective domain scores. However, facet scores have also been shown to be related to personality disorders. Thus, the combination of a higher fidelity along with the potential clinical relevance of facet scores might open up unique advantages for clinical research. 
 
@@ -238,7 +238,7 @@ The item selection was part of a different project and the procedure has been ex
 Measured with a 5 item composite defined in @Diener1985, answered in a 7 point Likert-type scale ranging from 1 (*strongly disagree*) to 7 (*strongly agree*). The items are: a)"In most ways my life is close to ideal", b) "The conditions of my life are excellent", c) "I am satisfied with my life", d) "So far I have gotten the important things in my life", and e) "If I could live my life over, I would change almost nothing". Psychometric properties have been reported excellent. (In which moment have SWLS been measured? just at the same time point than personality?)
 
 ### GPA
-Grade Point Averages measured in high school, university, and in cc.
+Grade Point Averages measured in high school, university, and in cc (?).
 
 ### SAT
 
@@ -247,7 +247,7 @@ Grade Point Averages measured in high school, university, and in cc.
 
 
 ### Absences from class
-As a behavioral measure absence from class was asked to report from subjects. ABS2 ABS4 what are the differences?
+As a behavioral measure, absences from school attendance was asked to be reported. Absences were log transformed prior to be analyzed, following @Lounsbury2004. ABS2 ABS4 what are the differences?
 
 
 ## 2.1.3. Procedure
@@ -268,7 +268,7 @@ To examine the nomological structure of the facets and domains to external const
 
 To explore H1 we explored the correlation matrix between Big Five dimensions and SWL. To explore H1.1. we fitted a two-step regression including the full set of dimensions in the first step and a selection of facets following a stepwise procedure in the second step. H1.2. will be inspected adding only N2 and E4 to the second step instead of the full set of facets. 
 
-H2 and H2.1. will be tested by examining the correlation matrix of Conscientiousness and Openness with academic achievement. A stepwise regression will be used to test H2.2. Conscientiousness and Openness will be the first set of predictors and their respective facets will be entered in a second step, changes in $R^2$ will be inspected.
+H2 and H2.1. will be tested by examining the correlation matrix of Conscientiousness and Openness with academic achievement. A stepwise regression will be used to test H2.2. The dimensions will be the first set of predictors and the facets will be entered in a second step, changes in $R^2$ will be inspected. A final model with the significant predictors will be fitted afterwards.
 
 H3 will also be tested with a hierarchical regression in which the Big Five dimensions will be first entered and then a set of facets previously selected by stepwise regression from the full set.
 
@@ -459,7 +459,7 @@ dth1 <- dt[,c(54, 47:51)]
 dth1.1 <- dt[,c(54, 5:51)]
 first <- lm(lifesat~sumsA+sumsC+sumsE+sumsN+sumsO, dth1.1)     
 dth1.11<-dt[,c(54,5:46)]
-set.facets <- step(lm(lifesat~.,dth1.11))
+set.facets <- step(lm(lifesat~.,dth1.11), trace = 0)
 second <- lm(lifesat ~ sumsA1 + sumsC1 + sumsC4 + sumsC6 + sumsC7 + sumsE2 + 
     sumsE4 + sumsE9 + sumsN1 + sumsN2 + sumsN4 + sumsN5 + sumsO1 + 
     sumsO2 + sumsO8 + sumsO9 , dth1.11)
@@ -472,7 +472,16 @@ dth2hs <- dt[dt$hsgpa_num >0, c(53, 5:51)]
 #step(lm(hsgpa_num ~ sumsO + sumsE+sumsN+sumsA+sumsC, dth2hs))
 firsth2 <- lm(hsgpa_num ~ sumsC+sumsO+sumsN+sumsE+sumsA, dth2hs)
 dth2hs2 <- dth2hs[,1:43]
-secondh2 <- lm(hsgpa_num ~., dth2hs2)
+secondh2 <- step(lm(hsgpa_num ~., dth2hs2), trace = 0)
+secondh2 <- lm(hsgpa_num ~ sumsA4 + sumsA5 + sumsA7 + sumsA8 + sumsC1 + sumsC5 + 
+    sumsC9 + sumsE1 + sumsE4 + sumsE5 + sumsN2 + sumsN4 + sumsN6 + 
+    sumsO4 + sumsO7 + sumsO9, dth2hs2)
+controlh2 <- lm(hsgpa_num ~ sumsA4 + sumsA5 + sumsA7 + sumsA8 + sumsC1 + sumsC5 + 
+    sumsC9 + sumsE1 + sumsE4 + sumsE5 + sumsN2 + sumsN4 + sumsN6 + 
+    sumsO4 + sumsO7 + sumsO9 +sumsO+sumsA+sumsC+sumsN+sumsE, dth2hs)
+controlh2 <- lm(hsgpa_num ~  sumsA5 + sumsA7 + sumsC1 + sumsC5 + 
+    sumsC9 + sumsE1 + sumsE4+ sumsN6 + 
+    sumsO4 + sumsO7 + sumsO9, dth2hs)
 h2 <- anova(firsth2,secondh2)
 
 
@@ -482,19 +491,20 @@ dth3$abs <- log1p(dt$absences2)
 
 firsth3 <- lm(abs~sumsN+sumsO+sumsA+sumsC+sumsE, dth3)
 dth3.1 <- dth3[,-43:-47]
-facetsh3 <- step(lm(abs~., dth3.1))
+facetsh3 <- step(lm(abs~., dth3.1), trace=0)
 secondh3 <- lm(abs ~ sumsA1 + sumsA3 + sumsA7 + sumsC3 + sumsC5 + sumsC8 + sumsC9 + 
     sumsE1 + sumsE2 + sumsN1 + sumsN3 + sumsN5 + sumsO1 + sumsO2 + 
     sumsO3 + sumsO4 + sumsO5 + sumsO6, dth3.1)
+
 h3 <- anova(firsth3,secondh3)
 ```
 
 
-Our first set of hypothesis tested how personality was related to SWL. Extraversion (*r* = `r round(cor(dth1$lifesat, dth1$sumsE),2)`) and Neuroticism (*r* = `r round(cor(dth1$lifesat, dth1$sumsN),2)`) were the dimensions with higher correlations with SWL. In H1.1, the model which included the facets outperformed the dimension model (*F* = `r round(h1.1$F[2], 2)`, p < 0.001). The model resulted in a predictive gain of $\Delta R^2$ = `r round(summary(second)$r.squared - summary(first)$r.squared, 2)`. Adding N2 and E4 result in a predictive gain of $\Delta R^2$ = `r round(summary(third)$r.squared - summary(first)$r.squared, 2)`.
+Our first set of hypothesis tested how personality was related to SWL. Extraversion (*r* = `r round(cor(dth1$lifesat, dth1$sumsE),2)`) and Neuroticism (*r* = `r round(cor(dth1$lifesat, dth1$sumsN),2)`) were the dimensions with higher correlations with SWL. In H1.1, the model which included the facets outperformed the dimension model (*F* = `r round(h1.1$F[2], 2)`, p < 0.001). The model resulted in a predictive gain of $\Delta R^2$ = `r round(summary(second)$r.squared - summary(first)$r.squared, 2)`, with an adjusted $R^2$ for the full model of `r round(summary(second)$adj.r.squared, 2)`. Adding N2 and E4 result in a predictive gain of $\Delta R^2$ = `r round(summary(third)$r.squared - summary(first)$r.squared, 2)`. 
 
-Our second set of hypothesis involves predictions to academic achievement. Conscientiousness correlated with academic achievement with *r* = `r  round(cor(dth2hs$hsgpa_num, dth2hs$sumsC),2)`, being the strongest correlation of all the set of dimensions. Openness correlated *r* = `r  round(cor(dth2hs$hsgpa_num, dth2hs$sumsO),2)` with the criterion. For H2.2, the model which included the facets again outperformed the dimensional model (*F* = `r round(h2$F[2], 2)`, p < 0.001), with a predictive gain of $\Delta R^2$ = `r round(summary(secondh2)$r.squared - summary(firsth2)$r.squared, 2)`.
+Our second set of hypothesis involves predictions to academic achievement. Conscientiousness correlated with academic achievement with *r* = `r  round(cor(dth2hs$hsgpa_num, dth2hs$sumsC),2)`, being the strongest correlation of all the set of dimensions. Openness correlated *r* = `r  round(cor(dth2hs$hsgpa_num, dth2hs$sumsO),2)` with the criterion. For H2.2, the model which included the facets again outperformed the dimensional model (*F* = `r round(h2$F[2], 2)`, p < 0.001). The final model consisted of *Intellect* (O9), *Willingness to learn* (O7), *Interest in reading* (O4), *Emotional robustness* (N6), *Positive attitude* (E4), *Sociability* (E1), *Productivity* (C9), *Goal orientation* (C5), *Dominance* (C1), *Genuineness* (A7) and *Search for support* (A5). None of the dimensions were entered in the model as they failed to be significative. The final $R^2$ was `r round(summary(controlh2)$r.squared, 2)`.
 
-Our thirst set of hypothesis explored the relationship of personality with school absences. The facet level model outperformed the dimensional level (*F* = `r round(h3$F[2], 2)`, p < 0.001), $\Delta R^2$ = `r round(summary(secondh3)$r.squared - summary(firsth3)$r.squared, 2)`. 
+Our thirst set of hypothesis explored the relationship of personality with school absences. The facet level model outperformed the dimensional level (*F* = `r round(h3$F[2], 2)`, p < 0.001), $\Delta R^2$ = `r round(summary(secondh3)$r.squared - summary(firsth3)$r.squared, 2)`. The most important predictors were *Open mindedness* (O3), *Wish to analyze* (O6), *Interest in reading* (O4), *Equanimity* (N1) and *Genuineness* (A7) inversely and *Carefreeness* (N3) and *Low competitiveness* (A3) directly related to abseentism. The facet level model reached a 12.6% of explained variability of abseentism.
 
 
 
@@ -601,6 +611,9 @@ The Big Five solution has been recognized as the most replicable model for perso
 
 The instrument presented in this work covers all the "core" facets proposed by @SotoJohn2009, either directly or indirectly. The *Energy* construct in Extraversion is literally covered by a three-item facet in our instrument, whereas the *Assertiveness* construct has been tapped by items belonging to the *Wish for affiliation*, *Communicativeness* and *Conviviality* facets. *Altruism* is directly reflected in a five-item facet, while the *Compliance* construct is reflected by our *Good faith* facet. The *Order* and *Self-discipline* constructs proposed by @SotoJohn2009 are mirrored by dedicated facets in our instrument. The *Anxiety* and *Depression* constructs are mirrored by the facets *Mental balance* and *Emotional robustness*, respectively. For the *Openess* dimension, the *Aesthetic* contruct is covered by our facet *Artistic interest*, while the *Ideas* construct has been reflected by both the *Open-mindedness* and the *Wish to analyze* facets. The two-per-facet components proposed by @DeYoung2007 were also being tapped by the set of facets in our inventory.
 
+In addition, the instrument includes more facets that are usually out of the scope within the other big five inventories which were examined in this study. For instance, *Search for support* (A5) is absent in the big five inventories revised here and may take an important role in predicting many different important life outcomes, like mental disorder prognosis or academic development. Likewise, *Forcefulness* (E5) can be a good predictor of leadership behavior in human resources settings, a facet which is not clearly tapped in the other inventories. Not only new facets can be found in our inventory, but also more complex nuances of classic facets. *Appreciation* (A1) and *Good faith* (A6) are two sepparate facets in our instrument which suggest different approaches to the shared NEO-PI-R, IPIP-NEO-120 and NEO-PI-R's facet *Trust*. In the same vein, NEO-PI-R's *Deliberation*, BFI-2's *Organization* and IPIP-NEO's *Cautioness* may be included within two of our Conscientiousness facets: *Task planning* and *Carefulness*. This expansion of the facet structure opens big posibilities when predicting behavior based in personality, as has been introduced in the criterion validity section.
+
+We have tested different hypothesis which aim to replicate previous findings on the interplay between personality and SWL, academic performance and school abseentism. Overall, the instrument presented here has shown at least a similar predictive ability with its peers, finding even bigger associations with some outcomes. As stated in the introduction, @Schimmack2004 could explain 30% of the variability of SWL with a set of NEO-PI-R facets. We reached to a 38% with our instrument. Evidence regarding academic achievement was similarly attained. While a 10% increase has been reported in the literature in favor of a facet-level set of predictors, we have found a 12% increase in $R^2$ with our instrument. Absences from class could also be predicted with the facet structure of our instrument, explaining about 13% of the variability of the outcome and providing a novel set of facets which could be key in understanding this behavioral outcome. 
 
 The instrument covers most of facets proposed by the most influential Big Five measures as seen in *Table 1*. The most salient differences are related to the HEXACO model, which entails a six factor solution with a slightly different theoretical conceptualization [@Lee2006]. Most notably 
 
