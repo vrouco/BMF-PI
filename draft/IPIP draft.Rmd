@@ -49,7 +49,7 @@ header-includes:
    - \usepackage{changepage}
    
 output: 
-  papaja::apa6_word
+  papaja::apa6_pdf
   
   
 ---
