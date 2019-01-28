@@ -237,6 +237,7 @@ ctable[52,9] <- summary(lm(as.formula(paste("scale(dt$hsgpa_num)~",paste("scale(
                                                                         collapse="+", sep=""), sep=""))))$adj.r.squared
 
 
+
 #absences2
 
 for(i in 1:9){

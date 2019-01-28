@@ -1,3 +1,5 @@
+library(tidyverse)
+library(MplusAutomation)
 make.key <- function(){
 domains <- c("Agreeableness", "Conscientiousness", "Extraversion", "Neuroticism", "Openness")
 little <- c("agree", "con", "e", "n", "open")
@@ -50,4 +52,4 @@ return(key)
 }
 key <- make.key()
 
-setwd(here("/functions"))
+#setwd(here("/functions"))
