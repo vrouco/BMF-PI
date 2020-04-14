@@ -1,7 +1,7 @@
-setwd("/Users/cw/Dropbox/ETS_IPIP")
-#setwd("/Users/wehnerca/Dropbox/ETS_IPIP")
-library(xlsx)
-dt1<-read.xlsx("ETS.xlsx", sheetIndex=1)
+
+library(here)
+library(readxl)
+dt1<-read_excel(here("data/ETS_IPIP/dataset/ETS.xlsx"), sheet=1)
 
 #library(xlsx)
 #dat1<-read.xlsx("C:/Users/Annemarie/Dropbox/Arbeit/Diagnostik/Matthias/ETS.xlsx", sheetIndex=1)
