@@ -1,6 +1,6 @@
 library(here)
 library(readxl)
-setwd(here("data/ETS_IPIP/Datensätze"))
+setwd(here("data/ETS_IPIP/Dataset"))
 
 dt<-read_excel("ETS_regression.xlsx")
 
@@ -163,40 +163,40 @@ ctable[52,3] <- summary(lm(as.formula(paste("scale(dt$lifesat)~",paste("scale(dt
 
 #gpa_univ
 
-for(i in 1:9){
-  ctable[1+i,5]<-lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsO", seq(1,9), ")",
-                                                                collapse="+", sep=""), sep="")))$coefficients[1+i]}
-ctable[11,6] <- summary(lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsO", seq(1,9), ")",
-                                                                       collapse="+", sep=""), sep=""))))$adj.r.squared
-
-for(i in 1:9){
-  ctable[12+i,5]<-lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsC", seq(1,9), ")",
-                                                                 collapse="+", sep=""), sep="")))$coefficients[1+i]}
-ctable[22,6] <- summary(lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsC", seq(1,9), ")",
-                                                                       collapse="+", sep=""), sep=""))))$adj.r.squared
-
-for(i in 1:9){
-  ctable[23+i,5]<-lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsE", seq(1,9), ")",
-                                                                 collapse="+", sep=""), sep="")))$coefficients[1+i]}
-
-ctable[33,6] <- summary(lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsE", seq(1,9), ")",
-                                                                       collapse="+", sep=""), sep=""))))$adj.r.squared
-
-
-for(i in 1:8){
-  ctable[34+i,5]<-lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsA", seq(1,8), ")",
-                                                                 collapse="+", sep=""), sep="")))$coefficients[1+i]}
-
-ctable[43,6] <- summary(lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsA", seq(1,8), ")",
-                                                                       collapse="+", sep=""), sep=""))))$adj.r.squared
-
-
-for(i in 1:7){
-  ctable[44+i,5]<-lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsN", seq(1,7), ")",
-                                                                 collapse="+", sep=""), sep="")))$coefficients[1+i]}
-
-ctable[52,6] <- summary(lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsN", seq(1,7), ")",
-                                                                       collapse="+", sep=""), sep=""))))$adj.r.squared
+# for(i in 1:9){
+#   ctable[1+i,5]<-lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsO", seq(1,9), ")",
+#                                                                 collapse="+", sep=""), sep="")))$coefficients[1+i]}
+# ctable[11,6] <- summary(lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsO", seq(1,9), ")",
+#                                                                        collapse="+", sep=""), sep=""))))$adj.r.squared
+# 
+# for(i in 1:9){
+#   ctable[12+i,5]<-lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsC", seq(1,9), ")",
+#                                                                  collapse="+", sep=""), sep="")))$coefficients[1+i]}
+# ctable[22,6] <- summary(lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsC", seq(1,9), ")",
+#                                                                        collapse="+", sep=""), sep=""))))$adj.r.squared
+# 
+# for(i in 1:9){
+#   ctable[23+i,5]<-lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsE", seq(1,9), ")",
+#                                                                  collapse="+", sep=""), sep="")))$coefficients[1+i]}
+# 
+# ctable[33,6] <- summary(lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsE", seq(1,9), ")",
+#                                                                        collapse="+", sep=""), sep=""))))$adj.r.squared
+# 
+# 
+# for(i in 1:8){
+#   ctable[34+i,5]<-lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsA", seq(1,8), ")",
+#                                                                  collapse="+", sep=""), sep="")))$coefficients[1+i]}
+# 
+# ctable[43,6] <- summary(lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsA", seq(1,8), ")",
+#                                                                        collapse="+", sep=""), sep=""))))$adj.r.squared
+# 
+# 
+# for(i in 1:7){
+#   ctable[44+i,5]<-lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsN", seq(1,7), ")",
+#                                                                  collapse="+", sep=""), sep="")))$coefficients[1+i]}
+# 
+# ctable[52,6] <- summary(lm(as.formula(paste("scale(dt$gpa_univ)~",paste("scale(dt$sumsN", seq(1,7), ")",
+#                                                                        collapse="+", sep=""), sep=""))))$adj.r.squared
 
 
 #gpa_hs
@@ -313,7 +313,7 @@ ctable[52,15] <- summary(lm(as.formula(paste("scale(dt$absences2)~",paste("scale
                                                                           collapse="+", sep=""), sep=""))))$adj.r.squared
 
 
-ctable <- as.data.frame(lapply(ctable, round, 3))
+ctable <- as.data.frame(lapply(ctable, round, 2))
 
 rownames(ctable)<-c("Openness", paste("O", seq(1,9), sep=""), "Domain score1",
                     "Conscientiousness", paste("C", seq(1,9), sep=""), "Domain score2",
@@ -321,16 +321,17 @@ rownames(ctable)<-c("Openness", paste("O", seq(1,9), sep=""), "Domain score1",
                     "Agreeableness", paste("A", seq(1,8), sep=""), "Domain score4",
                     "Neuroticism", paste("N", seq(1,7), sep=""), "Domain score5")
 
+# 
+# ctable[,4]<-paste(ctable[,7],"/", ctable[,4], sep="")
+# ctable[,5]<-paste(ctable[,8],"/", ctable[,5], sep="")
+# ctable[,6]<-paste(ctable[,9],"/", ctable[,6], sep="")
+# 
+# ctable[,10]<-paste(ctable[,10],"/", ctable[,13], sep="")
+# ctable[,11]<-paste(ctable[,11],"/", ctable[,14], sep="")
+# ctable[,12]<-paste(ctable[,12],"/", ctable[,15], sep="")
 
-ctable[,4]<-paste(ctable[,7],"/", ctable[,4], sep="")
-ctable[,5]<-paste(ctable[,8],"/", ctable[,5], sep="")
-ctable[,6]<-paste(ctable[,9],"/", ctable[,6], sep="")
-
-ctable[,10]<-paste(ctable[,10],"/", ctable[,13], sep="")
-ctable[,11]<-paste(ctable[,11],"/", ctable[,14], sep="")
-ctable[,12]<-paste(ctable[,12],"/", ctable[,15], sep="")
-
-ctable <- ctable[,c(-7,-8,-9,-13,-14,-15)]
+ctable <- ctable[,c(-4,-5,-6,-13,-14,-15)]
 
 
-write.csv(ctable, paste(here("tables/"), "criterion table.csv", sep=""))
+
+write.csv(ctable, paste(here("tables/"), "criterion table round2 no uni.csv", sep=""))

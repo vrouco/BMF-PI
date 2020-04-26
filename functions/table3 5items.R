@@ -20,7 +20,8 @@ for(i in 1:5){
 setwd(here(paste("data/Sample_USA_EFA+CFA/CFA/", domains[i], sep="")))
 assign(domains[i], read.spss(list.files()[grep(".sav", list.files())], to.data.frame = T))
 assign(domains[i], as.data.frame(lapply(get(domains[i])[,grep(paste(little[i]), 
-                                                              colnames(get(domains[i])))], ordered)))}
+                                                              colnames(get(domains[i])))], ordered)))
+}
 colnames(Extraversion) <- sub("extra", "e", colnames(Extraversion))
 colnames(Neuroticism) <- sub("neuro", "n", colnames(Neuroticism))
 #agree[,grep("agre", colnames(agree))] <- lapply(agree[,grep("agre", colnames(agree))], ordered)
@@ -48,7 +49,8 @@ for(i in 1:5){
   
   
   for(j in 1:length(files.here)){
-    model <- mplus2lavaan(files.here[j], run = F)$model
+    model <- readModels(files.here[j]) #, run = F)$model
+    
     model <- tolower(model)
     tableformodel[j,3:7] <- round(fitMeasures(cfa(model, get(domains[i]), 
                                                   ordered=domains[i]), c("chisq", "df", "pvalue",

@@ -123,13 +123,7 @@ MISSING ARE ALL (-99);
 categorical are all;
 
 Model:
-appreci BY
-agree2
-agree72
-agree73
-agree4
-agree18
-;
+  appreci BY agree2 agree72 agree73 agree4 agree18;
 
 Savedata:
 file is a1.txt;

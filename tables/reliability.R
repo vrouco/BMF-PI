@@ -2,7 +2,7 @@ library(here)
 library(readxl)
 
 
-dt<-read_excel(here("data/ETS_IPIP/Datensätze/IPIP.xlsx"))
+dt<-read_excel(here("data/ETS_IPIP/Dataset/IPIP.xlsx"))
 items <- dt[,72:281]
 
 # source("keys facet abbrev.R")
@@ -46,9 +46,9 @@ for(i in 1:length(key)){
   facets.rel[i,3] <- as.numeric(omega(get(key[i]), 1)$omega.tot)
 }
 
-facets.rel[,2:3] <- as.data.frame(lapply(facets.rel[,2:3], round, 3))
+facets.rel[,2:3] <- as.data.frame(lapply(facets.rel[,2:3], round,2))
 
-write_csv(facets.rel, here("tables/facets reliability.csv"))
+#write_csv(facets.rel, here("tables/facets reliability.csv"))
 
 
 as.numeric(omega(get(key[1]), 1)$alpha)
@@ -59,9 +59,9 @@ alpha(get(key[31]), check.keys = T)
 
 dimension <- c("O", "C","E", "A", "N")
 
-for(i in 1:length(key)){
-  assign(key[i],items[,grep(key[i], colnames(items))])
-}
+# for(i in 1:length(key)){
+#   assign(key[i],items[,grep(key[i], colnames(items))])
+# }
 
 library(psych)
 
@@ -76,5 +76,9 @@ for(i in 1:length(key)){
 
 facets.rel[,2:3] <- as.data.frame(lapply(facets.rel[,2:3], round, 3))
 
-write_csv(facets.rel, here("tables/facets reliability.csv"))
-
+#write_csv(facets.rel, here("tables/facets reliability.csv"))
+rm(O1,O2,O3,O4,O5,O6,O7,O8,O9,
+   C1,C2,C3,C4,C5,C6,C7,C8,C9,
+   E1,E2,E3,E4,E5,E6,E7,E8,E9,
+   A1,A2,A3,A4,A5,A6,A7,A8,
+   N1,N2,N3,N4,N5,N6,N7)

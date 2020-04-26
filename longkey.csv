@@ -1,0 +1,203 @@
+;domain;facet;labels;facetlabel_Germantranslation;facetlabel_asinB5PS;esem;items
+1;a;a8;I think of others first.;altruism_nurturance;Altruism;-0.35;agree93
+2;a;a8;I let other people take the credit for my work.;altruism_nurturance;Altruism;-0.35;agree55
+3;a;a8;I try to respond with understanding when someone treats me badly.;altruism_nurturance;Altruism;-0.35;agree100
+4;a;a8;I return extra change when a cashier makes a mistake.;altruism_nurturance;Altruism;-0.35;agree75
+5;a;a1;I acknowledge others` accomplishments.;others;Appreciation;-0.35;agree2
+6;a;a1;I respect others` feelings.;others;Appreciation;-0.38;agree72
+7;a;a1;I respect others.;others;Appreciation;-0.38;agree73
+8;a;a1;I am a good listener.;others;Appreciation;-0.38;agree4
+9;a;a1;I am polite to strangers.;others;Appreciation;-0.38;agree18
+10;a;a5;I show my sadness.;crybabiness;Search for Support;nonsig;agree83
+11;a;a5;I show my fear.;crybabiness;Search for Support;nonsig;agree80
+12;a;a5;I show my anger.;crybabiness;Search for Support;nonsig;agree79
+13;a;a5;I tend to complain.;crybabiness;Search for Support;nonsig;agree92
+14;a;a5;I seek support.;crybabiness;Search for Support;nonsig;agree78
+15;a;a7;I lie to get myself out of trouble.;manipulation;Genuineness;0.64;agree56
+16;a;a7;I respect authority.;manipulation;Genuineness;0.64;agree71
+17;a;a7;I try to fool others.;manipulation;Genuineness;0.64;agree99
+18;a;a7;I find it easy to manipulate others.;manipulation;Genuineness;0.64;agree43
+19;a;a7;I use flattery to get ahead.;manipulation;Genuineness;0.64;agree103
+20;a;a2;I speak ill of others.;meanness;Integrity;0.64;agree84
+21;a;a2;I insult people.;meanness;Integrity;0.64;agree52
+22;a;a2;I do things out of revenge.;meanness;Integrity;0.64;agree36
+23;a;a2;I misuse power.;meanness;Integrity;0.64;agree67
+24;a;a2;I try to avoid doing favors for others.;meanness;Integrity;0.64;agree98
+25;a;a4;I do what others want me to do.;liked;Readiness to give feedback;nonsig;agree37
+26;a;a4;I want to be liked.;liked;Readiness to give feedback;nonsig;agree104
+27;a;a4;I change myself to suit others.;liked;Readiness to give feedback;nonsig;agree30
+28;a;a4;I am afraid of providing criticism.;liked;Readiness to give feedback;nonsig;agree6
+29;a;a4;I find it necessary to please the people who have power.;liked;Readiness to give feedback;nonsig;agree45
+30;a;a3;I would like to have more power than other people.;superiority_grandiosity;Low competitiveness;0.76;agree109
+31;a;a3;I want to control the conversation.;superiority_grandiosity;Low competitiveness;0.76;agree106
+32;a;a3;I tend to brag about my accomplishments.;superiority_grandiosity;Low competitiveness;0.76;agree91
+33;a;a3;I want to be told I am right.;superiority_grandiosity;Low competitiveness;0.76;agree105
+34;a;a3;I see other people as my competitors.;superiority_grandiosity;Low competitiveness;0.76;agree77
+35;a;a6;I trust what people say.;trust;Good Fatih;-0.23;agree97
+36;a;a6;I trust others.;trust;Good Fatih;-0.23;agree96
+37;a;a6;I believe that others have good intentions.;trust;Good Fatih;-0.23;agree25
+38;a;a6;I am good at working with a group.;trust;Good Fatih;-0.23;agree13
+39;a;a6;I feel like a loser if I compromise.;trust;Good Fatih;-0.23;agree39
+40;c;c1;I want to be in charge.;others;Dominance;0.27;con110
+41;c;c1;I try to lead others.;others;Dominance;0.27;con105
+42;c;c1;I demand perfection in others.;others;Dominance;0.27;con29
+43;c;c1;I try to outdo others.;others;Dominance;0.27;con106
+44;c;c1;I resist authority.;others;Dominance;0.27;con93
+45;c;c6;I choose my words with care.;deliberation;Carefulness;0.58;con25
+46;c;c6;I look at the facts.;deliberation;Carefulness;0.58;con68
+47;c;c6;I make careful choices.;deliberation;Carefulness;0.58;con73
+48;c;c6;I take precautions.;deliberation;Carefulness;0.58;con102
+49;c;c6;I avoid mistakes.;deliberation;Carefulness;0.58;con15
+50;c;c5;I accomplish a lot of work.;goal-orientation;Goal orientation;0.68;con1
+51;c;c5;I work hard.;goal-orientation;Goal orientation;0.68;con114
+52;c;c5;I am a goal-oriented person.;goal-orientation;Goal orientation;0.68;con4
+53;c;c5;I carry out my plans.;goal-orientation;Goal orientation;0.68;con23
+54;c;c5;I put little time and effort into my work.;goal-orientation;Goal orientation;0.68;con88
+55;c;c3;I am easily talked into doing silly things.;control;Self-discipline;-0.3;con10
+56;c;c3;I rush into things.;control;Self-discipline;-0.3;con94
+57;c;c3;I act impulsively when something is bothering me.;control;Self-discipline;-0.3;con2
+58;c;c3;I am easily distracted.;control;Self-discipline;-0.3;con9
+59;c;c3;I say inappropriate things.;control;Self-discipline;-0.3;con95
+60;c;c7;I leave a mess in my room.;tidiness;Orderliness;-0.46;con59
+61;c;c7;I often forget to put things back in their proper place.;tidiness;Orderliness;-0.46;con79
+62;c;c7;I am continually losing things.;tidiness;Orderliness;-0.46;con7
+63;c;c7;I can never find anything.;tidiness;Orderliness;-0.46;con21
+64;c;c7;I make a mess of things.;tidiness;Orderliness;-0.46;con71
+65;c;c2;I give up easily.;perserverance;Persistence;-0.32;con52
+66;c;c2;I never give up.;perserverance;Persistence;-0.32;con77
+67;c;c2;I am easily discouraged.;perserverance;Persistence;-0.32;con8
+68;c;c2;I like to take my time.;perserverance;Persistence;-0.32;con66
+69;c;c2;My interests change quickly.;perserverance;Persistence;-0.32;con116
+70;c;c8;I work too much.;load;Wish to work to capacity;0.35;con115
+71;c;c8;I have extra time on my hands.;load;Wish to work to capacity;0.35;con56
+72;c;c8;I am always busy.;load;Wish to work to capacity;0.35;con5
+73;c;c8;I have too many things to do.;load;Wish to work to capacity;0.35;con57
+74;c;c8;I am exacting in my work.;load;Wish to work to capacity;0.35;con11
+75;c;c9;I can manage many things at the same time.;procrastination;Productivity;0.4;con20
+76;c;c9;I start tasks right away.;procrastination;Productivity;0.4;con97
+77;c;c9;I can`t wait to get started on a project.;procrastination;Productivity;0.4;con22
+78;c;c9;I finish tasks quickly.;procrastination;Productivity;0.4;con45
+79;c;c9;I stop when work becomes too difficult.;procrastination;Productivity;0.4;con100
+80;c;c4;I do things according to a plan.;planning;Task planning;0.82;con37
+81;c;c4;I follow a schedule.;planning;Task planning;0.82;con46
+82;c;c4;I make plans and stick to them.;planning;Task planning;0.82;con75
+83;c;c4;I want things to proceed according to plan.;planning;Task planning;0.82;con109
+84;c;c4;I am always prepared.;planning;Task planning;0.82;con6
+85;e;e9;I maintain high energy throughout the day.;activity;Energy;0.49;extra238
+86;e;e9;I tire out quickly.;activity;Energy;0.49;extra311
+87;e;e9;I am usually active and full of energy.;activity;Energy;0.49;extra49
+88;e;e5;I automatically take charge.;assertiveness;Forcefulness;0.2;extra56
+89;e;e5;I do most of the talking.;assertiveness;Forcefulness;0.2;extra95
+90;e;e5;I know how to convince others.;assertiveness;Forcefulness;0.2;extra166
+91;e;e5;I like having authority over others.;assertiveness;Forcefulness;0.2;extra208
+92;e;e5;I challenge others` points of view.;assertiveness;Forcefulness;0.2;extra80
+93;e;e6;I talk a lot.;emotionality;Communicativeness;0.7;extra304
+94;e;e6;I like talking about myself.;emotionality;Communicativeness;0.7;extra216
+95;e;e6;I love to chat.;emotionality;Communicativeness;0.7;extra235
+96;e;e6;I disclose my intimate thoughts.;emotionality;Communicativeness;0.7;extra84
+97;e;e6;I easily share my feelings with others.;emotionality;Communicativeness;0.7;extra98
+98;e;e7;I am known for my sense of humor.;humor;Humor;0.29;extra34
+99;e;e7;I try to add some humor to whatever I do.;humor;Humor;0.29;extra315
+100;e;e7;I like to amuse others.;humor;Humor;0.29;extra219
+101;e;e7;I try to tease my friends out of their gloomy moods.;humor;Humor;0.29;extra322
+102;e;e7;I amuse myself easily.;humor;Humor;0.29;extra55
+103;e;e4;I look forward to each new day.;emotions;Positive attitude;0.55;extra229
+104;e;e4;I look at the bright side of life.;emotions;Positive attitude;0.55;extra228
+105;e;e4;I love life.;emotions;Positive attitude;0.55;extra233
+106;e;e4;I laugh a lot.;emotions;Positive attitude;0.55;extra182
+107;e;e4;I feel lucky most of the time.;emotions;Positive attitude;0.55;extra130
+108;e;e3;I prefer to be alone.;reclusiveness;Wish for affiliation;-0.69;extra257
+109;e;e3;I enjoy spending time by myself.;reclusiveness;Wish for affiliation;-0.69;extra118
+110;e;e3;I enjoy silence.;reclusiveness;Wish for affiliation;-0.69;extra112
+111;e;e3;I feel isolated from other people.;reclusiveness;Wish for affiliation;-0.69;extra125
+112;e;e3;I hold back my opinions.;reclusiveness;Wish for affiliation;-0.69;extra158
+113;e;e2;I seek danger.;seeking;Readiness to take risks;nonsig;extra280
+114;e;e2;I enjoy being reckless.;seeking;Readiness to take risks;nonsig;extra103
+115;e;e2;I avoid dangerous situations.;seeking;Readiness to take risks;nonsig;extra60
+116;e;e2;I act wild and crazy.;seeking;Readiness to take risks;nonsig;extra4
+117;e;e2;I like loud music.;seeking;Readiness to take risks;nonsig;extra214
+118;e;e1;I am quiet around strangers.;shyness;Sociability;-0.75;extra40
+119;e;e1;I start conversations.;shyness;Sociability;-0.75;extra294
+120;e;e1;I feel comfortable only with friends.;shyness;Sociability;-0.75;extra255
+121;e;e1;I feel comfortable around people.;shyness;Sociability;-0.75;extra124
+122;e;e1;I have difficulty showing affection.;shyness;Sociability;-0.75;extra142
+123;e;e8;I enjoy being part of a group.;gregariousness;Conviviality;0.74;extra99
+124;e;e8;I enjoy teamwork.;gregariousness;Conviviality;0.74;extra123
+125;e;e8;I am good at planning group activities.;gregariousness;Conviviality;0.74;extra29
+126;e;e8;I would enjoy a lot of social interaction.;gregariousness;Conviviality;0.74;extra341
+127;e;e8;I am good at getting people to like me.;gregariousness;Conviviality;0.74;extra28
+128;n;n3;I worry a lot.;anxiety;Carefreeness;0.76;neuro156
+129;n;n3;I often feel tense.;anxiety;Carefreeness;0.76;neuro121
+130;n;n3;I am filled with doubts about things.;anxiety;Carefreeness;0.76;neuro29
+131;n;n3;I worry about what people think of me.;anxiety;Carefreeness;0.76;neuro158
+132;n;n3;I feel fearful.;anxiety;Carefreeness;0.76;neuro59
+133;n;n2;I feel sad.;depression;Mental balance;0.54;neuro66
+134;n;n2;I think that my life is a failure.;depression;Mental balance;0.54;neuro152
+135;n;n2;I have a dark outlook on the future.;depression;Mental balance;0.54;neuro88
+136;n;n2;I feel lonely.;depression;Mental balance;0.54;neuro65
+137;n;n2;I feel desperate.;depression;Mental balance;0.54;neuro57
+138;n;n1;I get angry easily.;irritability;Equanimity;0.39;neuro71
+139;n;n1;I snap at people.;irritability;Equanimity;0.39;neuro147
+140;n;n1;I get annoyed at the slightest provocation.;irritability;Equanimity;0.39;neuro73
+141;n;n1;I shout or scream when I`m angry.;irritability;Equanimity;0.39;neuro144
+142;n;n1;I get upset if others change the way that I have arranged things.;irritability;Equanimity;0.39;neuro85
+143;n;n5;I feel it hard to get going.;lethargia;Drive;0.59;neuro61
+144;n;n5;I hardly know where my life is going.;lethargia;Drive;0.59;neuro87
+145;n;n5;I give up easily.;lethargia;Drive;0.59;neuro86
+146;n;n5;I let others discourage me.;lethargia;Drive;0.59;neuro111
+147;n;n5;I never spend more than I can afford.;lethargia;Drive;0.59;neuro117
+148;n;n4;I remain calm under pressure.;self-assuredness;Confidence;-0.41;neuro140
+149;n;n4;I can handle stress well.;self-assuredness;Confidence;-0.41;neuro38
+150;n;n4;I face danger confidently.;self-assuredness;Confidence;-0.41;neuro54
+151;n;n4;I readily overcome setbacks.;self-assuredness;Confidence;-0.41;neuro136
+152;n;n4;I adapt easily to new situations.;self-assuredness;Confidence;-0.41;neuro1
+153;n;n7;I need the approval of others.;attention;Self-attention;0.63;neuro116
+154;n;n7;I am preoccupied with myself.;attention;Self-attention;0.63;neuro32
+155;n;n7;I feel threatened easily.;attention;Self-attention;0.63;neuro69
+156;n;n6;I cry easily.;sentimentality;Emotional robustness;0.73;neuro47
+157;n;n6;I get overwhelmed by emotions.;sentimentality;Emotional robustness;0.73;neuro81
+158;n;n6;I need protection.;sentimentality;Emotional robustness;0.73;neuro114
+159;n;n6;I am easily hurt.;sentimentality;Emotional robustness;0.73;neuro24
+160;n;n6;I immediately feel sad when hearing of an unhappy event.;sentimentality;Emotional robustness;0.73;neuro102
+161;o;o7;I want to increase my knowledge.;learning;Willingness to learn;0.71;open148
+162;o;o7;I look forward to the opportunity to learn and grow.;learning;Willingness to learn;0.71;open97
+163;o;o7;I find the world a very interesting place.;learning;Willingness to learn;0.71;open64
+164;o;o7;I dislike learning.;learning;Willingness to learn;0.71;open40
+165;o;o7;I am thrilled when I learn something new.;learning;Willingness to learn;0.71;open15
+166;o;o6;I tend to analyze things.;cognition;Wish to analyze;0.78;open134
+167;o;o6;I like to speculate about things.;cognition;Wish to analyze;0.78;open93
+168;o;o6;I seek explanations of things.;cognition;Wish to analyze;0.78;open129
+169;o;o6;I love to reflect on things.;cognition;Wish to analyze;0.78;open104
+170;o;o6;I try to understand myself.;cognition;Wish to analyze;0.78;open145
+171;o;o3;I am valued by my friends for my good judgment.;judgement;Open-mindedness;0.77;open17
+172;o;o3;I am valued by others for my objectivity.;judgement;Open-mindedness;0.77;open18
+173;o;o3;I know how to apply my knowledge.;judgement;Open-mindedness;0.77;open77
+174;o;o3;I can see different points of view.;judgement;Open-mindedness;0.77;open32
+175;o;o3;I come up with alternatives.;judgement;Open-mindedness;0.77;open35
+176;o;o2;I like to visit new places.;activities;Wish for variety;0.42;open96
+177;o;o2;I like to travel.;activities;Wish for variety;0.42;open94
+178;o;o2;I am excited by many different activities.;activities;Wish for variety;0.42;open5
+179;o;o2;I have been creative during the last year.;activities;Wish for variety;0.42;open71
+180;o;o2;I like concerts.;activities;Wish for variety;0.42;open88
+181;o;o5;I appreciate all forms of art.;arts;Artistic interests;0.59;open19
+182;o;o5;I like art.;arts;Artistic interests;0.59;open87
+183;o;o5;I like poetry.;arts;Artistic interests;0.59;open89
+184;o;o5;I seldom notice the emotional aspects of paintings and pictures.;arts;Artistic interests;0.59;open130
+185;o;o5;I like to visit museums.;arts;Artistic interests;0.59;open95
+186;o;o8;I am open about my feelings.;feelings;Sensitiity;nonsig;open901
+187;o;o8;I rarely notice my emotional reactions.;feelings;Sensitiity;nonsig;open114
+188;o;o8;I find it hard to understand why people get emotional.;feelings;Sensitiity;nonsig;open61
+189;o;o8;I am open about myself to others.;feelings;Sensitiity;nonsig;open12
+190;o;o4;I read a lot.;reading;Interest in reading;0.54;open118
+191;o;o4;I like to read.;reading;Interest in reading;0.54;open91
+192;o;o4;I enjoy discussing books with others.;reading;Interest in reading;0.54;open46
+193;o;o4;I have read the great literary classics.;reading;Interest in reading;0.54;open75
+194;o;o4;I enjoy reading nonfiction.;reading;Interest in reading;0.54;open53
+195;o;o1;I do unexpected things.;ingenuity;Creativity;0.81;open43
+196;o;o1;I know that my ideas sometimes surprise people.;ingenuity;Creativity;0.81;open78
+197;o;o1;I pride myself on being original.;ingenuity;Creativity;0.81;open110
+198;o;o1;I ask questions that nobody else does.;ingenuity;Creativity;0.81;open20
+199;o;o1;I love to think up new ways of doing things.;ingenuity;Creativity;0.81;open105
+200;o;o9;I learn quickly.;Intellect;Intellect;0.62;open85
+201;o;o9;I am quick to understand things.;Intellect;Intellect;0.62;open111
+202;o;o9;I can handle a lot of information.;Intellect;Intellect;0.62;open30
