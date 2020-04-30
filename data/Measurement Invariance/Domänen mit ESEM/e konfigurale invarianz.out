@@ -1,6 +1,6 @@
-Mplus VERSION 7.1
+Mplus VERSION 5.1
 MUTHEN & MUTHEN
-09/18/2015   2:03 PM
+04/28/2020   1:08 PM
 
 INPUT INSTRUCTIONS
 
@@ -128,7 +128,6 @@ Number of groups                                                 2
 Number of observations
    Group US                                                    387
    Group GERMAN                                                361
-   Total sample size                                           748
 
 Number of dependent variables                                    8
 Number of independent variables                                  0
@@ -224,13 +223,7 @@ Minimum covariance coverage value   0.100
 
 
 
-THE MODEL ESTIMATION TERMINATED NORMALLY
-
-     THE STANDARD ERRORS OF THE MODEL PARAMETER ESTIMATES COULD NOT BE
-     COMPUTED.  THE MODEL MAY NOT BE IDENTIFIED.  CHECK YOUR MODEL.
-     PROBLEM INVOLVING PARAMETER 25.
-
-     THE CONDITION NUMBER IS      -0.939D-13.
+     NO CONVERGENCE.  NUMBER OF ITERATIONS EXCEEDED.
 
 
 
@@ -241,52 +234,14 @@ MODEL RESULTS
 Group US
 
  E        BY
-    E1                 0.645
-    E3                 0.372
-    E4                -0.438
-    E5                -0.451
-    E6                -0.561
-    E7                -0.483
-    E8                -0.512
-    E9                -0.361
-
- Means
-    E                  0.000
-
- Intercepts
-    E1                 0.001
-    E3                -0.004
-    E4                -0.011
-    E5                 0.003
-    E6                -0.001
-    E7                -0.004
-    E8                -0.002
-    E9                -0.005
-
- Variances
-    E                  0.653
-
- Residual Variances
-    E1                 0.186
-    E3                 0.360
-    E4                 0.389
-    E5                 0.438
-    E6                 0.239
-    E7                 0.328
-    E8                 0.410
-    E9                 0.559
-
-Group GERMAN
-
- E        BY
-    E1                 1.000
-    E3                 0.662
-    E4                -1.034
-    E5                -0.565
-    E6                -1.169
-    E7                -0.801
-    E8                -1.146
-    E9                -0.929
+    E1                -1.697
+    E3                -0.981
+    E4                 1.151
+    E5                 1.206
+    E6                 1.478
+    E7                 1.264
+    E8                 1.346
+    E9                 0.956
 
  Means
     E                  0.000
@@ -294,465 +249,67 @@ Group GERMAN
  Intercepts
     E1                 0.003
     E3                -0.001
-    E4                -0.014
-    E5                 0.000
-    E6                -0.003
-    E7                -0.013
-    E8                -0.003
-    E9                -0.003
-
- Variances
-    E                  0.175
-
- Residual Variances
-    E1                 0.105
-    E3                 0.397
-    E4                 0.280
-    E5                 0.209
-    E6                 0.303
-    E7                 0.326
-    E8                 0.148
-    E9                 0.319
-
-
-STANDARDIZED MODEL RESULTS
-
-                      StdYX
-                    Estimate
-
-Group US
-
- E        BY
-    E1                 0.771
-    E3                 0.448
-    E4                -0.493
-    E5                -0.482
-    E6                -0.680
-    E7                -0.563
-    E8                -0.543
-    E9                -0.363
-
- Means
-    E                  0.000
-
- Intercepts
-    E1                 0.002
-    E3                -0.006
-    E4                -0.015
-    E5                 0.004
-    E6                -0.001
+    E4                -0.011
+    E5                 0.002
+    E6                -0.002
     E7                -0.005
-    E8                -0.002
+    E8                -0.004
     E9                -0.006
 
  Variances
-    E                  1.000
+    E                  0.095
 
  Residual Variances
-    E1                 0.406
-    E3                 0.799
-    E4                 0.757
-    E5                 0.767
-    E6                 0.537
-    E7                 0.683
-    E8                 0.705
-    E9                 0.868
+    E1                 0.185
+    E3                 0.359
+    E4                 0.389
+    E5                 0.437
+    E6                 0.239
+    E7                 0.328
+    E8                 0.409
+    E9                 0.559
 
 Group GERMAN
 
  E        BY
-    E1                 0.791
-    E3                 0.402
-    E4                -0.632
-    E5                -0.459
-    E6                -0.664
-    E7                -0.506
-    E8                -0.780
-    E9                -0.567
+    E1                 1.000
+    E3               -76.705
+    E4               135.658
+    E5                64.169
+    E6               140.938
+    E7                99.477
+    E8               140.944
+    E9               115.785
 
  Means
     E                  0.000
 
  Intercepts
-    E1                 0.005
-    E3                -0.001
-    E4                -0.020
+    E1                 0.003
+    E3                 0.000
+    E4                -0.015
     E5                 0.000
-    E6                -0.004
-    E7                -0.019
+    E6                -0.002
+    E7                -0.014
     E8                -0.005
-    E9                -0.005
+    E9                -0.006
 
  Variances
-    E                  1.000
+    E                  0.000
 
  Residual Variances
-    E1                 0.375
-    E3                 0.838
-    E4                 0.600
-    E5                 0.789
-    E6                 0.560
-    E7                 0.744
-    E8                 0.391
-    E9                 0.679
-
-
-MODEL COMMAND WITH FINAL ESTIMATES USED AS STARTING VALUES
-
-     e BY e1;
-     e BY e3;
-     e BY e4;
-     e BY e5;
-     e BY e6;
-     e BY e7;
-     e BY e8;
-     e BY e9;
-
-  MODEL US:
-
-     e BY e1*0.64508;
-     e BY e3*0.37190;
-     e BY e4*-0.43765;
-     e BY e5*-0.45103;
-     e BY e6*-0.56138;
-     e BY e7*-0.48307;
-     e BY e8*-0.51189;
-     e BY e9*-0.36085;
-
-     [ e1*0.00136 ];
-     [ e3*-0.00405 ];
-     [ e4*-0.01098 ];
-     [ e5*0.00335 ];
-     [ e6*-0.00064 ];
-     [ e7*-0.00374 ];
-     [ e8*-0.00180 ];
-     [ e9*-0.00495 ];
-     [ e@0 ];
-
-     e1*0.18554;
-     e3*0.35952;
-     e4*0.38902;
-     e5*0.43809;
-     e6*0.23891;
-     e7*0.32784;
-     e8*0.41004;
-     e9*0.55906;
-     e*0.65348;
-
-  MODEL GERMAN:
-
-     e BY e1@1;
-     e BY e3*0.66192;
-     e BY e4*-1.03363;
-     e BY e5*-0.56542;
-     e BY e6*-1.16857;
-     e BY e7*-0.80095;
-     e BY e8*-1.14597;
-     e BY e9*-0.92948;
-
-     [ e1*0.00261 ];
-     [ e3*-0.00096 ];
-     [ e4*-0.01393 ];
-     [ e5*-0.00014 ];
-     [ e6*-0.00307 ];
-     [ e7*-0.01270 ];
-     [ e8*-0.00336 ];
-     [ e9*-0.00324 ];
-     [ e@0 ];
-
-     e1*0.10476;
-     e3*0.39727;
-     e4*0.28036;
-     e5*0.20896;
-     e6*0.30315;
-     e7*0.32588;
-     e8*0.14756;
-     e9*0.31874;
-     e*0.17465;
-
-
-
-TECHNICAL 1 OUTPUT
-
-
-     PARAMETER SPECIFICATION FOR US
-
-
-           NU
-              E1            E3            E4            E5            E6
-              ________      ________      ________      ________      ________
-      1           1             2             3             4             5
-
-
-           NU
-              E7            E8            E9
-              ________      ________      ________
-      1           6             7             8
-
-
-           LAMBDA
-              E
-              ________
- E1                 9
- E3                10
- E4                11
- E5                12
- E6                13
- E7                14
- E8                15
- E9                16
-
-
-           THETA
-              E1            E3            E4            E5            E6
-              ________      ________      ________      ________      ________
- E1                17
- E3                 0            18
- E4                 0             0            19
- E5                 0             0             0            20
- E6                 0             0             0             0            21
- E7                 0             0             0             0             0
- E8                 0             0             0             0             0
- E9                 0             0             0             0             0
-
-
-           THETA
-              E7            E8            E9
-              ________      ________      ________
- E7                22
- E8                 0            23
- E9                 0             0            24
-
-
-           ALPHA
-              E
-              ________
-      1           0
-
-
-           BETA
-              E
-              ________
- E                  0
-
-
-           PSI
-              E
-              ________
- E                 25
-
-
-     PARAMETER SPECIFICATION FOR GERMAN
-
-
-           NU
-              E1            E3            E4            E5            E6
-              ________      ________      ________      ________      ________
-      1          26            27            28            29            30
-
-
-           NU
-              E7            E8            E9
-              ________      ________      ________
-      1          31            32            33
-
-
-           LAMBDA
-              E
-              ________
- E1                 0
- E3                34
- E4                35
- E5                36
- E6                37
- E7                38
- E8                39
- E9                40
-
-
-           THETA
-              E1            E3            E4            E5            E6
-              ________      ________      ________      ________      ________
- E1                41
- E3                 0            42
- E4                 0             0            43
- E5                 0             0             0            44
- E6                 0             0             0             0            45
- E7                 0             0             0             0             0
- E8                 0             0             0             0             0
- E9                 0             0             0             0             0
-
-
-           THETA
-              E7            E8            E9
-              ________      ________      ________
- E7                46
- E8                 0            47
- E9                 0             0            48
-
-
-           ALPHA
-              E
-              ________
-      1           0
-
-
-           BETA
-              E
-              ________
- E                  0
-
-
-           PSI
-              E
-              ________
- E                 49
-
-
-     STARTING VALUES FOR US
-
-
-           NU
-              E1            E3            E4            E5            E6
-              ________      ________      ________      ________      ________
-      1         0.001        -0.004        -0.011         0.003        -0.001
-
-
-           NU
-              E7            E8            E9
-              ________      ________      ________
-      1        -0.004        -0.002        -0.005
-
-
-           LAMBDA
-              E
-              ________
- E1             0.528
- E3             0.276
- E4            -0.355
- E5            -0.371
- E6            -0.454
- E7            -0.366
- E8            -0.450
- E9            -0.289
-
-
-           THETA
-              E1            E3            E4            E5            E6
-              ________      ________      ________      ________      ________
- E1             0.229
- E3             0.000         0.226
- E4             0.000         0.000         0.258
- E5             0.000         0.000         0.000         0.286
- E6             0.000         0.000         0.000         0.000         0.223
- E7             0.000         0.000         0.000         0.000         0.000
- E8             0.000         0.000         0.000         0.000         0.000
- E9             0.000         0.000         0.000         0.000         0.000
-
-
-           THETA
-              E7            E8            E9
-              ________      ________      ________
- E7             0.241
- E8             0.000         0.291
- E9             0.000         0.000         0.323
-
-
-           ALPHA
-              E
-              ________
-      1         0.000
-
-
-           BETA
-              E
-              ________
- E              0.000
-
-
-           PSI
-              E
-              ________
- E              0.050
-
-
-     STARTING VALUES FOR GERMAN
-
-
-           NU
-              E1            E3            E4            E5            E6
-              ________      ________      ________      ________      ________
-      1         0.001        -0.004        -0.011         0.003        -0.001
-
-
-           NU
-              E7            E8            E9
-              ________      ________      ________
-      1        -0.004        -0.002        -0.005
-
-
-           LAMBDA
-              E
-              ________
- E1             1.000
- E3             0.657
- E4            -1.016
- E5            -0.518
- E6            -1.143
- E7            -0.734
- E8            -1.119
- E9            -0.885
-
-
-           THETA
-              E1            E3            E4            E5            E6
-              ________      ________      ________      ________      ________
- E1             0.229
- E3             0.000         0.226
- E4             0.000         0.000         0.258
- E5             0.000         0.000         0.000         0.286
- E6             0.000         0.000         0.000         0.000         0.223
- E7             0.000         0.000         0.000         0.000         0.000
- E8             0.000         0.000         0.000         0.000         0.000
- E9             0.000         0.000         0.000         0.000         0.000
-
-
-           THETA
-              E7            E8            E9
-              ________      ________      ________
- E7             0.241
- E8             0.000         0.291
- E9             0.000         0.000         0.323
-
-
-           ALPHA
-              E
-              ________
-      1         0.000
-
-
-           BETA
-              E
-              ________
- E              0.000
-
-
-           PSI
-              E
-              ________
- E              0.050
-
-
-DIAGRAM INFORMATION
-
-  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
-  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
-
-  Diagram output
-    f:\ipip paper\messinvarianz\domänen mit esem\e konfigurale invarianz.dgm
-
-     Beginning Time:  14:03:09
-        Ending Time:  14:03:10
+    E1                 0.282
+    E3                 0.416
+    E4                 0.253
+    E5                 0.211
+    E6                 0.315
+    E7                 0.319
+    E8                 0.154
+    E9                 0.314
+
+
+     Beginning Time:  13:08:48
+        Ending Time:  13:08:49
        Elapsed Time:  00:00:01
 
 
@@ -766,4 +323,4 @@ Fax: (310) 391-8971
 Web: www.StatModel.com
 Support: Support@StatModel.com
 
-Copyright (c) 1998-2013 Muthen & Muthen
+Copyright (c) 1998-2008 Muthen & Muthen
