@@ -68,8 +68,10 @@ make.crit.table<-function(criterion){
 
 
 
-
+key<-read.csv(here("longkey.csv"), sep=";")
 ls <- make.crit.table("lifesat")
+
+
 gpa <- make.crit.table("hsgpa_num")
 abs <- make.crit.table("final_abs")
 

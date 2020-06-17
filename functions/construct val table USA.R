@@ -13,7 +13,8 @@ create.table3.5items <- function(){
                     chisq = as.numeric(NA),
                     pval = as.numeric(NA),
                     cfi=as.numeric(NA),
-                    rmsea=as.numeric(NA))
+                    rmsea=as.numeric(NA),
+                    facetshort=as.character())
   
   for(i in 1:5){
     setwd(here(paste("data/Sample_USA_EFA+CFA/CFA/", domains[i], sep="")))
@@ -44,18 +45,20 @@ create.table3.5items <- function(){
                             df=NA,
                             pvalue=NA,
                             cfi=NA,
-                            rmsea=NA)
+                            rmsea=NA,
+                            facetshort=NA)
     
     
     for(j in 1:length(files.here)){
-      fit <- readModels(files.here[j])
+      fit.or <- readModels(files.here[j])
       
-      fit <- fit$summaries
-      tableformodel[j,3:7] <- c(round(fit$ChiSqM_Value,2), 
+      fit <- fit.or $summaries
+      tableformodel[j,3:8] <- c(round(fit$ChiSqM_Value,2), 
                                 fit$ChiSqM_DF, 
                                 round(fit$ChiSqM_PValue,2),
                                 round(fit$CFI,2),
-                                round(fit$RMSEA_Estimate,2))
+                                round(fit$RMSEA_Estimate,2),
+                                sub(".txt", "", fit.or$savedata_info$fileName))
       
       tableformodel[j,1] <- facets[j]
       
@@ -66,6 +69,7 @@ create.table3.5items <- function(){
     
     this.table <- tibble(facets=tableformodel$facets,
                          items=tableformodel$items,
+                         facetshort=tableformodel$facetshort,
                          chisq=tableformodel$chisq,
                          pvalue=tableformodel$pvalue,
                          cfi=tableformodel$cfi,
@@ -92,8 +96,11 @@ create.table3.5items <- function(){
 y <-create.table3.5items()
 
 source(here("functions/keys facet abbrev.R"))
+key <- read.csv(here("longkey.csv"), sep=";")
+key <- key[!duplicated(key$facet),]
 
-y<- merge(y, key, by="facets")
+y<- merge(y, key, by.x="facetshort", by.y="facet")
+y<-y[,c(8,11,3,4,5,6,1)]
 
 source(here("tables/reliability.R"))
 
@@ -101,14 +108,15 @@ source(here("tables/reliability.R"))
 facets.rel[,2:3]<-as.data.frame(lapply(facets.rel[,2:3], round, 2))
 facets.rel$facets <- tolower(facets.rel$facets)
 
-y<-merge(y, facets.rel, by.x= "abrev", by.y="facets")
+y<-merge(y, facets.rel, by.x= "facetshort", by.y="facets")
 
 source(here("functions/ESEM USA.R"))
 
-y<-merge(y, this.table, by.x= "abrev", by.y="param")
+y<-merge(y, this.table, by.x= "facetshort", by.y="param")
 
 colnames(y)[10]<-"ESEM"
+colnames(y)[3]<-"facet"
 
-crit.table<-y[,c("domains","facets", "alpha", "omega", "chisq", "pvalue", "cfi", "rmsea", "ESEM")]
+crit.table<-y[,c("domain","facet", "alpha", "omega", "chisq", "pvalue", "cfi", "rmsea", "ESEM")]
 
 #write.csv(crit.table, here("tables/construct validity and rel usa.csv"))
