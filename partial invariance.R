@@ -79,7 +79,7 @@ partial.scalar <- function(x){
   
   
   scalar.partial <- cfa(model=model, data=data, group="country", estimator="MLR", group.equal=c("loadings", "intercepts"),
-                        group.partial=paste(partial.mi$facet.short[i], "=~",compare.int(1)))
+                        group.partial=paste(compare.int(1), "~1"))
   
   fit.scalar.partial <- fitMeasures(scalar.partial)["cfi.scaled"]
   
@@ -93,8 +93,8 @@ partial.scalar <- function(x){
   }else{
     if(partial.mi$partial.scalar[i]==F){
       scalar.partial <- cfa(model=model, data=data, group="country", estimator="MLR", group.equal=c("loadings", "intercepts"),
-                            group.partial=c(paste(partial.mi$facet.short[i], "=~",compare.int(1)), 
-                                            paste(partial.mi$facet.short[i], "=~",compare.int(2))))
+                            group.partial=c(paste(compare.int(1), "~1"), 
+                                            paste(compare.int(2), "~1")))
       fit.scalar.partial <- fitMeasures(scalar.partial)["cfi.scaled"]
       
       partial.mi$partial.scalar[i] <- ifelse(fit.metric - fit.scalar.partial < 0.01, T, F)
