@@ -156,3 +156,6 @@ for(i in 1:length(partial.mi$facet)){
 
 
 
+metric.free <- sub(" ","",unlist(strsplit(x = partial.mi$partial.metric.params[which(!is.na(partial.mi$partial.metric.params))], split = ",")))
+key[which(key$items %in% metric.free), c("items","labels")]
+
