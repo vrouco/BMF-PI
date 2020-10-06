@@ -37,4 +37,10 @@ for(i in 1:5){
 
 fulldata <- rbind(fulldata, germandata)
 
+library(psych) # to solve an error in reverse coding two items from german sample
+
+fulldata[fulldata$country=="DE", c("con4","con88")] <- reverse.code(keys=c(-1,-1), fulldata[fulldata$country=="DE", c("con4","con88")])
+
+
+
 write.csv(x = fulldata, file = here::here("USA 2nd subsample and german joint item level.csv"))

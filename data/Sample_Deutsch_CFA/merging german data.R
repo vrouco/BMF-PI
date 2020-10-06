@@ -24,6 +24,7 @@ for(i in 1:5){
 prob <- read.table(here("data/Measurement Invariance/Domänen mit ESEM/factorscores_combined.txt"))
 prob <- prob[prob$V44==0,]
 
+
 target <- read.table(here("data/Sample_Deutsch_CFA/CFA/Extraversion/e1.txt"))
 target <- target$V6
 
