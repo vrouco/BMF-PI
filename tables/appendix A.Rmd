@@ -1,7 +1,8 @@
 ---
-title: "appendix A"
-output: 
-        pdf_document
+title: "Appendix 1. The Berlin Multi-Facet Personality Inventory"
+output:
+  word_document: default
+  pdf_document: default
 ---
 
 ```{r, echo=F, message=F, warning=FALSE, results="asis"}
@@ -11,11 +12,13 @@ library(tidyverse)
 library(kableExtra)
 setwd(here("tables"))
 key <- read_excel("appendix key.xlsx")
+key$Domain[27]<- "Emotional Stability"
+
 key$Domain<-ifelse(is.na(key$Domain), " ", key$Domain)
 # key <- sub("\n", "",key$Item)
 # strsplit(key$Item, "\n", fixed=T)
 mutate_all(key,linebreak) %>% 
   kable(booktabs = T, escape = F, longtable=T, align="l", 
-        linesep = '\\addlinespace', caption="Items of the new measure and their corresponding facets and domains")%>% 
+        linesep = '\\addlinespace', caption="Items of the BERLIN M-F PI and their corresponding facets and domains")%>% 
   kable_styling(latex_options = "repeat_header")
 ```
