@@ -40,6 +40,15 @@ for(i in 1:length(partial.mi$facet)){
   }
     
 }  
+<<<<<<< HEAD
+#   
+# write.csv(x = factor_scores, file=here::here("factor scores after invariance.csv"))
+# write.table(x = factor_scores, file=here::here("factor scores after invariance.txt"), na = "-999", row.names = F, col.names = F)
+# 
+# write.table(x = factor_scores[factor_scores$country=="USA",], file=here::here("factor scores USA after invariance.txt"), na = "-999", row.names = F, col.names = F)
+# write.table(x = factor_scores[factor_scores$country=="DE",], file=here::here("factor scores Germany after invariance.txt"), na = "-999", row.names = F, col.names = F)
+# 
+=======
   
 write.csv(x = factor_scores, file=here::here("factor scores after invariance.csv"))
 write.table(x = factor_scores, file=here::here("factor scores after invariance.txt"), na = "-999", row.names = F, col.names = F)
@@ -47,4 +56,5 @@ write.table(x = factor_scores, file=here::here("factor scores after invariance.t
 write.table(x = factor_scores[factor_scores$country=="USA",], file=here::here("factor scores USA after invariance.txt"), na = "-999", row.names = F, col.names = F)
 write.table(x = factor_scores[factor_scores$country=="DE",], file=here::here("factor scores Germany after invariance.txt"), na = "-999", row.names = F, col.names = F)
 
+>>>>>>> e79f6a47ba42af79b58c5a288fe150b06e5cad4d
 
