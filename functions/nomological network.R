@@ -12,8 +12,8 @@ dt$absences2[which(dt$absences2<0)] <- NA
 dt$absences4[which(dt$absences4<0)] <- NA
 
 
-remove <- c("sumsO8", "sumsA5", "sumsA4", "sumsE2")
-dt<-dt[,-which(colnames(dt) %in% remove)]
+# remove <- c("sumsO8", "sumsA5", "sumsA4", "sumsE2")
+# dt<-dt[,-which(colnames(dt) %in% remove)]
 
 
 dt$final_abs<-ifelse(is.na(dt$absences2), dt$absences4, dt$absences2)  #put together 2 and 4 year absences
@@ -21,10 +21,10 @@ dt$final_abs<-log1p(dt$final_abs)
 
 mydata<-dt
 
-colnames(mydata)[43:47]<-c("A","C","E","N","O")
-domains<-colnames(mydata)[43:47]
+colnames(mydata)[47:51]<-c("A","C","E","N","O")
+domains<-colnames(mydata)[47:51]
 
-mydata[,5:61] <- as.data.frame(lapply(dt[,5:61],scale)) #to get standardized betas
+mydata[,5:65] <- as.data.frame(lapply(dt[,5:65],scale)) #to get standardized betas
 
 
 ########in case we need other criterions
@@ -42,7 +42,8 @@ myrownames<-c(myrownames, this)
 perso<-mydata[,myrownames]
 
 make.crit.table<-function(criterion){
-  crit.table<-data.frame(matrix(nrow=length(colnames(mydata)[5:47]),
+
+  crit.table<-data.frame(matrix(nrow=length(colnames(mydata)[5:51]),
                                ncol=4))
 
   rownames(crit.table)<-myrownames

@@ -9,5 +9,5 @@ dt1$sex[dt1$sex==2]<-"Female"
 prop.table(table(dt1$sex))
 
 
-https://fil.email/fLgLAGaA
+
 

@@ -21,10 +21,10 @@ for(i in 1:length(key)){
 
 
 #dimensions
-O <- cbind(O1,O2,O3,O4,O5,O6,O7,O9)
+O <- cbind(O1,O2,O3,O4,O5,O6,O7,O8,O9)
 C <- cbind(C1,C2,C3,C4,C5,C6,C7,C8,C9)
-E <- cbind(E1,E3,E4,E5,E6,E7,E8,E9)
-A <- cbind(A1,A2,A3,A6,A7,A8)
+E <- cbind(E1,E2,E3,E4,E5,E6,E7,E8,E9)
+A <- cbind(A1,A2,A3,A4,A5,A6,A7,A8)
 N <- cbind(N1,N2,N3,N4,N5,N6,N7)
 
 library(MBESS)

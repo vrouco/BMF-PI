@@ -39,7 +39,7 @@ create.table3.5items <- function(){
       facets[j] <- sub("_5 items.inp", "", facets[j])
       facets[j] <- sub("_3 items.inp", "", facets[j])
     }
-    tableformodel <- tibble(facets=NA,
+    tableformodel <- data.frame(facets=NA,
                             items=NA,
                             chisq=NA,
                             df=NA,
@@ -53,7 +53,7 @@ create.table3.5items <- function(){
       fit.or <- readModels(files.here[j])
       
       fit <- fit.or $summaries
-      tableformodel[j,3:8] <- c(round(fit$ChiSqM_Value,2), 
+      tableformodel[j,3:8] <- cbind(round(fit$ChiSqM_Value,2), 
                                 fit$ChiSqM_DF, 
                                 round(fit$ChiSqM_PValue,2),
                                 round(fit$CFI,2),
