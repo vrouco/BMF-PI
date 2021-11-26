@@ -1,1 +1,2 @@
-# IPIP_git
+# The Berlin Multi-Facet Personality Inventory
+
