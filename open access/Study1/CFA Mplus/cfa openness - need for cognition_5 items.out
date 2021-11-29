@@ -1,0 +1,480 @@
+Mplus VERSION 7.1
+MUTHEN & MUTHEN
+06/02/2015   2:20 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  DATA:
+  FILE IS  "ARI Data 2009_Openness CFA Sample.txt";
+  Variable:
+  Names are
+  respid
+  open145
+  open42
+  open10
+  open15
+  open134
+  open900
+  open109
+  open88
+  open46
+  open1
+  open99
+  open11
+  open116
+  open4
+  open112
+  open40
+  open9
+  open13
+  open118
+  open121
+  open151
+  open90
+  open5
+  open87
+  open30
+  open146
+  open43
+  open139
+  open3
+  open48
+  open22
+  open125
+  open60
+  open32
+  open49
+  open12
+  open106
+  open96
+  open111
+  open130
+  open133
+  open19
+  open104
+  open135
+  open80
+  open143
+  open115
+  open59
+  open78
+  open75
+  open102
+  open107
+  open76
+  open94
+  open71
+  open7
+  open44
+  open21
+  open105
+  open18
+  open113
+  open148
+  open64
+  open50
+  open89
+  open110
+  open152
+  open129
+  open8
+  open53
+  open63
+  open66
+  open27
+  open83
+  open95
+  open70
+  open86
+  open85
+  open136
+  open16
+  open29
+  open25
+  open147
+  open144
+  open72
+  open140
+  open55
+  open61
+  open56
+  open58
+  open901
+  open37
+  open74
+  open91
+  open97
+  open93
+  open67
+  open20
+  open17
+  open127
+  open2
+  open124
+  open114
+  open6
+  open28
+  open92
+  open132
+  open77
+  open45
+  open31
+  open35
+  Filter
+  filter_
+  ;
+
+  USEVARIABLES ARE
+  open134
+  open93
+  open129
+  open104
+  open145
+  ;
+
+  MISSING ARE ALL (-99);
+  categorical are all;
+
+  Model:
+  nfcog by
+  open134
+  open93
+  open129
+  open104
+  open145
+  ;
+
+  Savedata:
+  file is o6.txt;
+  save = fscores;
+
+  Analysis:
+  ESTIMATOR IS WLSMV;
+
+  OUTPUT: STDYX MODINDICES(4);
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  2
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         361
+
+Number of dependent variables                                    5
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   OPEN134     OPEN93      OPEN129     OPEN104     OPEN145
+
+Continuous latent variables
+   NFCOG
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+
+Input data file(s)
+  ARI Data 2009_Openness CFA Sample.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              OPEN134       OPEN93        OPEN129       OPEN104       OPEN145
+              ________      ________      ________      ________      ________
+ OPEN134        1.000
+ OPEN93         1.000         1.000
+ OPEN129        1.000         1.000         1.000
+ OPEN104        1.000         1.000         1.000         1.000
+ OPEN145        1.000         1.000         1.000         1.000         1.000
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    OPEN134
+      Category 1    0.039       14.000
+      Category 2    0.064       23.000
+      Category 3    0.307      111.000
+      Category 4    0.277      100.000
+      Category 5    0.313      113.000
+    OPEN93
+      Category 1    0.030       11.000
+      Category 2    0.125       45.000
+      Category 3    0.366      132.000
+      Category 4    0.296      107.000
+      Category 5    0.183       66.000
+    OPEN129
+      Category 1    0.014        5.000
+      Category 2    0.058       21.000
+      Category 3    0.258       93.000
+      Category 4    0.402      145.000
+      Category 5    0.269       97.000
+    OPEN104
+      Category 1    0.025        9.000
+      Category 2    0.066       24.000
+      Category 3    0.296      107.000
+      Category 4    0.338      122.000
+      Category 5    0.274       99.000
+    OPEN145
+      Category 1    0.003        1.000
+      Category 2    0.006        2.000
+      Category 3    0.216       78.000
+      Category 4    0.418      151.000
+      Category 5    0.357      129.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       25
+
+Chi-Square Test of Model Fit
+
+          Value                             11.037*
+          Degrees of Freedom                     5
+          P-Value                           0.0507
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.058
+          90 Percent C.I.                    0.000  0.105
+          Probability RMSEA <= .05           0.330
+
+CFI/TLI
+
+          CFI                                0.994
+          TLI                                0.987
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            950.336
+          Degrees of Freedom                    10
+          P-Value                           0.0000
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              0.401
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ NFCOG    BY
+    OPEN134            1.000      0.000    999.000    999.000
+    OPEN93             0.710      0.062     11.413      0.000
+    OPEN129            0.958      0.068     14.010      0.000
+    OPEN104            0.883      0.069     12.815      0.000
+    OPEN145            0.847      0.071     11.941      0.000
+
+ Thresholds
+    OPEN134$1         -1.765      0.121    -14.596      0.000
+    OPEN134$2         -1.267      0.089    -14.187      0.000
+    OPEN134$3         -0.228      0.067     -3.418      0.001
+    OPEN134$4          0.487      0.069      7.074      0.000
+    OPEN93$1          -1.874      0.131    -14.278      0.000
+    OPEN93$2          -1.015      0.080    -12.697      0.000
+    OPEN93$3           0.052      0.066      0.789      0.430
+    OPEN93$4           0.905      0.077     11.783      0.000
+    OPEN129$1         -2.201      0.174    -12.655      0.000
+    OPEN129$2         -1.461      0.099    -14.735      0.000
+    OPEN129$3         -0.441      0.068     -6.451      0.000
+    OPEN129$4          0.617      0.071      8.720      0.000
+    OPEN104$1         -1.961      0.141    -13.935      0.000
+    OPEN104$2         -1.332      0.092    -14.427      0.000
+    OPEN104$3         -0.285      0.067     -4.258      0.000
+    OPEN104$4          0.600      0.070      8.515      0.000
+    OPEN145$1         -2.774      0.325     -8.538      0.000
+    OPEN145$2         -2.395      0.211    -11.361      0.000
+    OPEN145$3         -0.757      0.073    -10.331      0.000
+    OPEN145$4          0.366      0.068      5.409      0.000
+
+ Variances
+    NFCOG              0.558      0.053     10.470      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ NFCOG    BY
+    OPEN134            0.747      0.036     20.940      0.000
+    OPEN93             0.531      0.041     12.947      0.000
+    OPEN129            0.716      0.035     20.481      0.000
+    OPEN104            0.660      0.038     17.245      0.000
+    OPEN145            0.633      0.040     15.726      0.000
+
+ Thresholds
+    OPEN134$1         -1.765      0.121    -14.596      0.000
+    OPEN134$2         -1.267      0.089    -14.187      0.000
+    OPEN134$3         -0.228      0.067     -3.418      0.001
+    OPEN134$4          0.487      0.069      7.074      0.000
+    OPEN93$1          -1.874      0.131    -14.278      0.000
+    OPEN93$2          -1.015      0.080    -12.697      0.000
+    OPEN93$3           0.052      0.066      0.789      0.430
+    OPEN93$4           0.905      0.077     11.783      0.000
+    OPEN129$1         -2.201      0.174    -12.655      0.000
+    OPEN129$2         -1.461      0.099    -14.735      0.000
+    OPEN129$3         -0.441      0.068     -6.451      0.000
+    OPEN129$4          0.617      0.071      8.720      0.000
+    OPEN104$1         -1.961      0.141    -13.935      0.000
+    OPEN104$2         -1.332      0.092    -14.427      0.000
+    OPEN104$3         -0.285      0.067     -4.258      0.000
+    OPEN104$4          0.600      0.070      8.515      0.000
+    OPEN145$1         -2.774      0.325     -8.538      0.000
+    OPEN145$2         -2.395      0.211    -11.361      0.000
+    OPEN145$3         -0.757      0.073    -10.331      0.000
+    OPEN145$4          0.366      0.068      5.409      0.000
+
+ Variances
+    NFCOG              1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    OPEN134            0.558      0.053     10.470      0.000      0.442
+    OPEN93             0.282      0.043      6.473      0.000      0.718
+    OPEN129            0.512      0.050     10.240      0.000      0.488
+    OPEN104            0.435      0.050      8.623      0.000      0.565
+    OPEN145            0.401      0.051      7.863      0.000      0.599
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.378E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     4.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+No modification indices above the minimum value.
+
+
+
+SAMPLE STATISTICS FOR ESTIMATED FACTOR SCORES
+
+
+     SAMPLE STATISTICS
+
+
+           Means
+              NFCOG
+              ________
+ 1             -0.001
+
+
+           Covariances
+              NFCOG
+              ________
+ NFCOG          0.420
+
+
+           Correlations
+              NFCOG
+              ________
+ NFCOG          1.000
+
+
+SAVEDATA INFORMATION
+
+
+  Save file
+    o6.txt
+
+  Order and format of variables
+
+    OPEN134        F10.3
+    OPEN93         F10.3
+    OPEN129        F10.3
+    OPEN104        F10.3
+    OPEN145        F10.3
+    NFCOG          F10.3
+
+  Save file format
+    6F10.3
+
+  Save file record length    10000
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    f:\ipip paper\sample_usa\cfa\openness\5 items\cfa openness - need for cognition_5 items.dgm
+
+     Beginning Time:  14:20:30
+        Ending Time:  14:20:31
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

@@ -1,0 +1,489 @@
+Mplus VERSION 7.1
+MUTHEN & MUTHEN
+06/02/2015   2:12 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  DATA:
+  FILE IS  "ARI Data 2009_Neuroticism CFA sample.txt";
+  Variable:
+  Names are
+  respid
+  n40
+  n57
+  n28
+  n25
+  n53
+  n113
+  n44
+  n83
+  n51
+  n127
+  n61
+  n32
+  n156
+  n63
+  n118
+  n147
+  n46
+  n71
+  n49
+  n84
+  n104
+  n141
+  n128
+  n43
+  n119
+  n30
+  n38
+  n11
+  n16
+  n93
+  n102
+  n112
+  n136
+  n22
+  n131
+  n135
+  n8
+  n24
+  n54
+  n89
+  n158
+  n140
+  n96
+  n31
+  n111
+  n10
+  n152
+  n68
+  n77
+  n149
+  n100
+  n29
+  n125
+  n9
+  n14
+  n121
+  n13
+  n91
+  n122
+  n105
+  n115
+  n17
+  n80
+  n23
+  n148
+  n67
+  n5
+  n109
+  n34
+  n4
+  n120
+  n60
+  n124
+  n18
+  n137
+  n2
+  n65
+  n151
+  n117
+  n1
+  n37
+  n154
+  n87
+  n45
+  n86
+  n130
+  n110
+  n85
+  n143
+  n56
+  n36
+  n66
+  n134
+  n50
+  n114
+  n47
+  n52
+  n98
+  n15
+  n58
+  n70
+  n59
+  n75
+  n116
+  n35
+  n88
+  n79
+  n69
+  n82
+  n144
+  n157
+  n55
+  n138
+  n73
+  n33
+  n90
+  n107
+  n81
+  Filter
+  filter_
+  ;
+
+  USEVARIABLES ARE
+  n140
+  n38
+  n54
+  n136
+  n1
+  ;
+
+  MISSING ARE ALL (-99);
+  categorical are all;
+
+  Model:
+
+  selfass by	
+  n140
+  n38
+  n54
+  n136
+  n1
+  ;
+
+  Savedata:
+  file is n4.txt;
+  save = fscores;
+
+  Analysis:
+  ESTIMATOR IS WLSMV;
+
+  OUTPUT: STDYX MODINDICES(4)
+  ;
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  2
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         361
+
+Number of dependent variables                                    5
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   N140        N38         N54         N136        N1
+
+Continuous latent variables
+   SELFASS
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+
+Input data file(s)
+  ARI Data 2009_Neuroticism CFA sample.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              N140          N38           N54           N136          N1
+              ________      ________      ________      ________      ________
+ N140           1.000
+ N38            1.000         1.000
+ N54            1.000         1.000         1.000
+ N136           1.000         1.000         1.000         1.000
+ N1             1.000         1.000         1.000         1.000         1.000
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    N140
+      Category 1    0.022        8.000
+      Category 2    0.091       33.000
+      Category 3    0.346      125.000
+      Category 4    0.388      140.000
+      Category 5    0.152       55.000
+    N38
+      Category 1    0.039       14.000
+      Category 2    0.114       41.000
+      Category 3    0.352      127.000
+      Category 4    0.366      132.000
+      Category 5    0.130       47.000
+    N54
+      Category 1    0.047       17.000
+      Category 2    0.169       61.000
+      Category 3    0.366      132.000
+      Category 4    0.277      100.000
+      Category 5    0.141       51.000
+    N136
+      Category 1    0.039       14.000
+      Category 2    0.133       48.000
+      Category 3    0.438      158.000
+      Category 4    0.285      103.000
+      Category 5    0.105       38.000
+    N1
+      Category 1    0.019        7.000
+      Category 2    0.064       23.000
+      Category 3    0.382      138.000
+      Category 4    0.371      134.000
+      Category 5    0.163       59.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       25
+
+Chi-Square Test of Model Fit
+
+          Value                              8.201*
+          Degrees of Freedom                     5
+          P-Value                           0.1455
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.042
+          90 Percent C.I.                    0.000  0.092
+          Probability RMSEA <= .05           0.534
+
+CFI/TLI
+
+          CFI                                0.996
+          TLI                                0.992
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            812.202
+          Degrees of Freedom                    10
+          P-Value                           0.0000
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              0.381
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ SELFASS  BY
+    N140               1.000      0.000    999.000    999.000
+    N38                0.830      0.054     15.483      0.000
+    N54                0.771      0.048     16.162      0.000
+    N136               0.603      0.055     11.056      0.000
+    N1                 0.677      0.053     12.746      0.000
+
+ Thresholds
+    N140$1            -2.011      0.147    -13.707      0.000
+    N140$2            -1.208      0.087    -13.914      0.000
+    N140$3            -0.101      0.066     -1.526      0.127
+    N140$4             1.026      0.080     12.784      0.000
+    N38$1             -1.765      0.121    -14.596      0.000
+    N38$2             -1.026      0.080    -12.784      0.000
+    N38$3              0.010      0.066      0.158      0.875
+    N38$4              1.125      0.084     13.457      0.000
+    N54$1             -1.674      0.113    -14.758      0.000
+    N54$2             -0.786      0.074    -10.627      0.000
+    N54$3              0.206      0.066      3.103      0.002
+    N54$4              1.075      0.082     13.128      0.000
+    N136$1            -1.765      0.121    -14.596      0.000
+    N136$2            -0.947      0.078    -12.155      0.000
+    N136$3             0.278      0.067      4.153      0.000
+    N136$4             1.252      0.089     14.121      0.000
+    N1$1              -2.067      0.154    -13.429      0.000
+    N1$2              -1.385      0.095    -14.580      0.000
+    N1$3              -0.087      0.066     -1.316      0.188
+    N1$4               0.980      0.079     12.429      0.000
+
+ Variances
+    SELFASS            0.647      0.046     13.992      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ SELFASS  BY
+    N140               0.804      0.029     27.985      0.000
+    N38                0.668      0.033     19.949      0.000
+    N54                0.620      0.032     19.296      0.000
+    N136               0.485      0.041     11.905      0.000
+    N1                 0.544      0.037     14.669      0.000
+
+ Thresholds
+    N140$1            -2.011      0.147    -13.707      0.000
+    N140$2            -1.208      0.087    -13.914      0.000
+    N140$3            -0.101      0.066     -1.526      0.127
+    N140$4             1.026      0.080     12.784      0.000
+    N38$1             -1.765      0.121    -14.596      0.000
+    N38$2             -1.026      0.080    -12.784      0.000
+    N38$3              0.010      0.066      0.158      0.875
+    N38$4              1.125      0.084     13.457      0.000
+    N54$1             -1.674      0.113    -14.758      0.000
+    N54$2             -0.786      0.074    -10.627      0.000
+    N54$3              0.206      0.066      3.103      0.002
+    N54$4              1.075      0.082     13.128      0.000
+    N136$1            -1.765      0.121    -14.596      0.000
+    N136$2            -0.947      0.078    -12.155      0.000
+    N136$3             0.278      0.067      4.153      0.000
+    N136$4             1.252      0.089     14.121      0.000
+    N1$1              -2.067      0.154    -13.429      0.000
+    N1$2              -1.385      0.095    -14.580      0.000
+    N1$3              -0.087      0.066     -1.316      0.188
+    N1$4               0.980      0.079     12.429      0.000
+
+ Variances
+    SELFASS            1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    N140               0.647      0.046     13.992      0.000      0.353
+    N38                0.446      0.045      9.975      0.000      0.554
+    N54                0.384      0.040      9.648      0.000      0.616
+    N136               0.236      0.040      5.953      0.000      0.764
+    N1                 0.296      0.040      7.334      0.000      0.704
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.117E-01
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     4.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+No modification indices above the minimum value.
+
+
+
+SAMPLE STATISTICS FOR ESTIMATED FACTOR SCORES
+
+
+     SAMPLE STATISTICS
+
+
+           Means
+              SELFASS
+              ________
+ 1              0.001
+
+
+           Covariances
+              SELFASS
+              ________
+ SELFASS        0.497
+
+
+           Correlations
+              SELFASS
+              ________
+ SELFASS        1.000
+
+
+SAVEDATA INFORMATION
+
+
+  Save file
+    n4.txt
+
+  Order and format of variables
+
+    N140           F10.3
+    N38            F10.3
+    N54            F10.3
+    N136           F10.3
+    N1             F10.3
+    SELFASS        F10.3
+
+  Save file format
+    6F10.3
+
+  Save file record length    10000
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    f:\ipip paper\sample_usa\cfa\neuroticism\5 items\cfa neuroticism - self-assuredness_5 items.dgm
+
+     Beginning Time:  14:12:30
+        Ending Time:  14:12:30
+       Elapsed Time:  00:00:00
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

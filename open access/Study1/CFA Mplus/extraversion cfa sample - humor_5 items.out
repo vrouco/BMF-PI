@@ -1,0 +1,450 @@
+Mplus VERSION 7.1
+MUTHEN & MUTHEN
+06/02/2015   1:59 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  DATA:
+  FILE IS  "extraversion CFA Sample.txt";
+  Variable:
+  Names are
+  respid
+  e174
+  e327
+  e276
+  e197
+  e58
+  e294
+  e4
+  e166
+  e316
+  e131
+  e228
+  e98
+  e290
+  e288
+  e196
+  e32
+  e123
+  e102
+  e125
+  e112
+  e103
+  e60
+  e306
+  e182
+  e235
+  e40
+  e95
+  e19
+  e242
+  e259
+  e231
+  e164
+  e341
+  e245
+  e28
+  e217
+  e280
+  e238
+  e229
+  e56
+  e311
+  e80
+  e257
+  e49
+  e130
+  e304
+  e255
+  e286
+  e329
+  e24
+  e335
+  e83
+  e208
+  e260
+  e315
+  e29
+  e277
+  e31
+  e139
+  e220
+  e142
+  e34
+  e84
+  e216
+  e124
+  e274
+  e219
+  e57
+  e30
+  e158
+  e99
+  e214
+  e207
+  e132
+  e232
+  e241
+  e55
+  e322
+  e118
+  e233
+  e191
+  Filter
+  filter_
+  ;
+
+  USEVARIABLES ARE
+  e34
+  e315
+  e219
+  e322
+  e55
+  ;
+
+  categorical are all;
+  MISSING ARE ALL (-99);
+
+  Model:
+  humor  BY
+  e34
+  e315
+  e219
+  e322
+  e55
+  ;
+
+  savedata:
+  file is e7.txt;
+  save = fscores;
+
+  Analysis:
+  ESTIMATOR IS WLSMV;
+
+  OUTPUT: STDYX MODINDICES(1);
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  2
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         361
+
+Number of dependent variables                                    5
+Number of independent variables                                  0
+Number of continuous latent variables                            1
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   E34         E315        E219        E322        E55
+
+Continuous latent variables
+   HUMOR
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+
+Input data file(s)
+  extraversion CFA Sample.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              E34           E315          E219          E322          E55
+              ________      ________      ________      ________      ________
+ E34            1.000
+ E315           1.000         1.000
+ E219           1.000         1.000         1.000
+ E322           1.000         1.000         1.000         1.000
+ E55            1.000         1.000         1.000         1.000         1.000
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    E34
+      Category 1    0.042       15.000
+      Category 2    0.180       65.000
+      Category 3    0.288      104.000
+      Category 4    0.294      106.000
+      Category 5    0.197       71.000
+    E315
+      Category 1    0.014        5.000
+      Category 2    0.050       18.000
+      Category 3    0.238       86.000
+      Category 4    0.363      131.000
+      Category 5    0.335      121.000
+    E219
+      Category 1    0.008        3.000
+      Category 2    0.069       25.000
+      Category 3    0.191       69.000
+      Category 4    0.360      130.000
+      Category 5    0.371      134.000
+    E322
+      Category 1    0.064       23.000
+      Category 2    0.147       53.000
+      Category 3    0.310      112.000
+      Category 4    0.330      119.000
+      Category 5    0.150       54.000
+    E55
+      Category 1    0.030       11.000
+      Category 2    0.116       42.000
+      Category 3    0.283      102.000
+      Category 4    0.366      132.000
+      Category 5    0.205       74.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       25
+
+Chi-Square Test of Model Fit
+
+          Value                             18.772*
+          Degrees of Freedom                     5
+          P-Value                           0.0021
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.087
+          90 Percent C.I.                    0.048  0.131
+          Probability RMSEA <= .05           0.060
+
+CFI/TLI
+
+          CFI                                0.989
+          TLI                                0.979
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           1301.062
+          Degrees of Freedom                    10
+          P-Value                           0.0000
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              0.562
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ HUMOR    BY
+    E34                1.000      0.000    999.000    999.000
+    E315               1.149      0.063     18.357      0.000
+    E219               0.964      0.054     17.699      0.000
+    E322               0.770      0.057     13.436      0.000
+    E55                0.807      0.058     13.819      0.000
+
+ Thresholds
+    E34$1             -1.733      0.118    -14.664      0.000
+    E34$2             -0.767      0.074    -10.430      0.000
+    E34$3              0.024      0.066      0.368      0.713
+    E34$4              0.854      0.075     11.308      0.000
+    E315$1            -2.201      0.174    -12.655      0.000
+    E315$2            -1.524      0.103    -14.804      0.000
+    E315$3            -0.519      0.069     -7.487      0.000
+    E315$4             0.426      0.068      6.243      0.000
+    E219$1            -2.395      0.211    -11.361      0.000
+    E219$2            -1.422      0.097    -14.665      0.000
+    E219$3            -0.617      0.071     -8.720      0.000
+    E219$4             0.329      0.067      4.886      0.000
+    E322$1            -1.524      0.103    -14.804      0.000
+    E322$2            -0.805      0.074    -10.823      0.000
+    E322$3             0.052      0.066      0.789      0.430
+    E322$4             1.038      0.081     12.872      0.000
+    E55$1             -1.874      0.131    -14.278      0.000
+    E55$2             -1.050      0.081    -12.958      0.000
+    E55$3             -0.178      0.066     -2.683      0.007
+    E55$4              0.824      0.075     11.018      0.000
+
+ Variances
+    HUMOR              0.567      0.047     12.189      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ HUMOR    BY
+    E34                0.753      0.031     24.379      0.000
+    E315               0.865      0.027     32.200      0.000
+    E219               0.726      0.034     21.665      0.000
+    E322               0.579      0.038     15.165      0.000
+    E55                0.608      0.039     15.685      0.000
+
+ Thresholds
+    E34$1             -1.733      0.118    -14.664      0.000
+    E34$2             -0.767      0.074    -10.430      0.000
+    E34$3              0.024      0.066      0.368      0.713
+    E34$4              0.854      0.075     11.308      0.000
+    E315$1            -2.201      0.174    -12.655      0.000
+    E315$2            -1.524      0.103    -14.804      0.000
+    E315$3            -0.519      0.069     -7.487      0.000
+    E315$4             0.426      0.068      6.243      0.000
+    E219$1            -2.395      0.211    -11.361      0.000
+    E219$2            -1.422      0.097    -14.665      0.000
+    E219$3            -0.617      0.071     -8.720      0.000
+    E219$4             0.329      0.067      4.886      0.000
+    E322$1            -1.524      0.103    -14.804      0.000
+    E322$2            -0.805      0.074    -10.823      0.000
+    E322$3             0.052      0.066      0.789      0.430
+    E322$4             1.038      0.081     12.872      0.000
+    E55$1             -1.874      0.131    -14.278      0.000
+    E55$2             -1.050      0.081    -12.958      0.000
+    E55$3             -0.178      0.066     -2.683      0.007
+    E55$4              0.824      0.075     11.018      0.000
+
+ Variances
+    HUMOR              1.000      0.000    999.000    999.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    E34                0.567      0.047     12.189      0.000      0.433
+    E315               0.748      0.046     16.100      0.000      0.252
+    E219               0.527      0.049     10.832      0.000      0.473
+    E322               0.336      0.044      7.583      0.000      0.664
+    E55                0.369      0.047      7.843      0.000      0.631
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.499E-02
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     1.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+No modification indices above the minimum value.
+
+
+
+SAMPLE STATISTICS FOR ESTIMATED FACTOR SCORES
+
+
+     SAMPLE STATISTICS
+
+
+           Means
+              HUMOR
+              ________
+ 1             -0.013
+
+
+           Covariances
+              HUMOR
+              ________
+ HUMOR          0.438
+
+
+           Correlations
+              HUMOR
+              ________
+ HUMOR          1.000
+
+
+SAVEDATA INFORMATION
+
+
+  Save file
+    e7.txt
+
+  Order and format of variables
+
+    E34            F10.3
+    E315           F10.3
+    E219           F10.3
+    E322           F10.3
+    E55            F10.3
+    HUMOR          F10.3
+
+  Save file format
+    6F10.3
+
+  Save file record length    10000
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    f:\ipip paper\sample_usa\cfa\extraversion\5 items\extraversion cfa sample - humor_5 items.dgm
+
+     Beginning Time:  13:59:49
+        Ending Time:  13:59:50
+       Elapsed Time:  00:00:01
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen

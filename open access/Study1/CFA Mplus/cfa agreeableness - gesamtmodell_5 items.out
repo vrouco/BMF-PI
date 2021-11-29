@@ -1,0 +1,1691 @@
+Mplus VERSION 7.1
+MUTHEN & MUTHEN
+09/28/2015   4:25 PM
+
+INPUT INSTRUCTIONS
+
+  TITLE:
+
+  DATA:
+  FILE IS  "ARI Data 2009_Agreeableness CFA Sample.txt";
+  Variable:
+  Names are
+  respid
+  agree5
+  agree51
+  agree21
+  agree84
+  agree35
+  agree15
+  agree93
+  agree67
+  agree34
+  agree25
+  agree44
+  agree64
+  agree31
+  agree45
+  agree26
+  agree52
+  agree14
+  agree20
+  agree6
+  agree92
+  agree77
+  agree3
+  agree17
+  agree19
+  agree13
+  agree27
+  agree105
+  agree95
+  agree104
+  agree57
+  agree85
+  agree97
+  agree110
+  agree61
+  agree94
+  agree107
+  agree30
+  agree40
+  agree32
+  agree50
+  agree90
+  agree63
+  agree60
+  agree23
+  agree1
+  agree58
+  agree101
+  agree46
+  agree87
+  agree98
+  agree37
+  agree62
+  agree39
+  agree83
+  agree53
+  agree65
+  agree103
+  agree91
+  agree4
+  agree42
+  agree18
+  agree96
+  agree106
+  agree55
+  agree86
+  agree72
+  agree22
+  agree79
+  agree33
+  agree70
+  agree109
+  agree78
+  agree100
+  agree71
+  agree89
+  agree76
+  agree75
+  agree11
+  agree56
+  agree12
+  agree49
+  agree16
+  agree108
+  agree43
+  agree7
+  agree2
+  agree88
+  agree41
+  agree38
+  agree99
+  agree69
+  agree36
+  agree80
+  agree8
+  agree66
+  agree54
+  agree24
+  agree82
+  agree74
+  agree73
+  agree10
+  agree59
+  Filter
+  filter_
+  ;
+
+  USEVARIABLES ARE
+  agree2
+  agree72
+  agree73
+  agree4
+  agree18
+  agree84
+  agree52
+  agree36
+  agree67
+  agree98
+  agree109
+  agree106
+  agree91
+  agree105
+  agree77
+  agree37
+  agree104
+  agree30
+  agree6
+  agree45
+  agree83
+  agree80
+  agree79
+  agree92
+  agree78
+  agree97
+  agree96
+  agree25
+  agree13
+  agree39
+  agree56
+  agree71
+  agree99
+  agree43
+  agree103
+  agree93
+  agree55
+  agree100
+  agree75
+  ;
+
+
+  MISSING ARE ALL (-99);
+  categorical are all;
+
+  Model:
+
+  appreci BY
+  agree2
+  agree72
+  agree73
+  agree4
+  agree18
+  ;
+
+  mean BY
+  agree84
+  agree52
+  agree36
+  agree67
+  agree98
+  ;
+
+  super BY
+  agree109
+  agree106
+  agree91
+  agree105
+  agree77
+  ;
+
+  need BY
+  agree37
+  agree104
+  agree30
+  agree6
+  agree45
+  ;
+
+  crybabe BY
+  agree83
+  agree80
+  agree79
+  agree92
+  agree78
+  ;
+
+  trust BY
+  agree97
+  agree96
+  agree25
+  agree13
+  agree39
+  ;
+
+  manipul BY
+  agree56
+  agree71
+  agree99
+  agree43
+  agree103
+  ;
+
+  altruis BY
+  agree93
+  agree55
+  agree100
+  agree75
+  ;
+
+
+  Agree by appreci* mean@1 super need crybabe trust manipul altruis;
+  Agree@1;
+  mean@0;
+
+  Analysis:
+  ESTIMATOR IS WLSMV;
+
+  OUTPUT: STDYX MODINDICES(4);
+
+
+
+*** WARNING
+  Data set contains cases with missing on all variables.
+  These cases were not included in the analysis.
+  Number of cases with missing on all variables:  2
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         361
+
+Number of dependent variables                                   39
+Number of independent variables                                  0
+Number of continuous latent variables                            9
+
+Observed dependent variables
+
+  Binary and ordered categorical (ordinal)
+   AGREE2      AGREE72     AGREE73     AGREE4      AGREE18     AGREE84
+   AGREE52     AGREE36     AGREE67     AGREE98     AGREE109    AGREE106
+   AGREE91     AGREE105    AGREE77     AGREE37     AGREE104    AGREE30
+   AGREE6      AGREE45     AGREE83     AGREE80     AGREE79     AGREE92
+   AGREE78     AGREE97     AGREE96     AGREE25     AGREE13     AGREE39
+   AGREE56     AGREE71     AGREE99     AGREE43     AGREE103    AGREE93
+   AGREE55     AGREE100    AGREE75
+
+Continuous latent variables
+   APPRECI     MEAN        SUPER       NEED        CRYBABE     TRUST
+   MANIPUL     ALTRUIS     AGREE
+
+
+Estimator                                                    WLSMV
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Maximum number of iterations for H1                           2000
+Convergence criterion for H1                             0.100D-03
+Parameterization                                             DELTA
+
+Input data file(s)
+  ARI Data 2009_Agreeableness CFA Sample.txt
+
+Input data format  FREE
+
+
+SUMMARY OF DATA
+
+     Number of missing data patterns             1
+
+
+COVARIANCE COVERAGE OF DATA
+
+Minimum covariance coverage value   0.100
+
+
+     PROPORTION OF DATA PRESENT
+
+
+           Covariance Coverage
+              AGREE2        AGREE72       AGREE73       AGREE4        AGREE18
+              ________      ________      ________      ________      ________
+ AGREE2         1.000
+ AGREE72        1.000         1.000
+ AGREE73        1.000         1.000         1.000
+ AGREE4         1.000         1.000         1.000         1.000
+ AGREE18        1.000         1.000         1.000         1.000         1.000
+ AGREE84        1.000         1.000         1.000         1.000         1.000
+ AGREE52        1.000         1.000         1.000         1.000         1.000
+ AGREE36        1.000         1.000         1.000         1.000         1.000
+ AGREE67        1.000         1.000         1.000         1.000         1.000
+ AGREE98        1.000         1.000         1.000         1.000         1.000
+ AGREE109       1.000         1.000         1.000         1.000         1.000
+ AGREE106       1.000         1.000         1.000         1.000         1.000
+ AGREE91        1.000         1.000         1.000         1.000         1.000
+ AGREE105       1.000         1.000         1.000         1.000         1.000
+ AGREE77        1.000         1.000         1.000         1.000         1.000
+ AGREE37        1.000         1.000         1.000         1.000         1.000
+ AGREE104       1.000         1.000         1.000         1.000         1.000
+ AGREE30        1.000         1.000         1.000         1.000         1.000
+ AGREE6         1.000         1.000         1.000         1.000         1.000
+ AGREE45        1.000         1.000         1.000         1.000         1.000
+ AGREE83        1.000         1.000         1.000         1.000         1.000
+ AGREE80        1.000         1.000         1.000         1.000         1.000
+ AGREE79        1.000         1.000         1.000         1.000         1.000
+ AGREE92        1.000         1.000         1.000         1.000         1.000
+ AGREE78        1.000         1.000         1.000         1.000         1.000
+ AGREE97        1.000         1.000         1.000         1.000         1.000
+ AGREE96        1.000         1.000         1.000         1.000         1.000
+ AGREE25        1.000         1.000         1.000         1.000         1.000
+ AGREE13        1.000         1.000         1.000         1.000         1.000
+ AGREE39        1.000         1.000         1.000         1.000         1.000
+ AGREE56        1.000         1.000         1.000         1.000         1.000
+ AGREE71        1.000         1.000         1.000         1.000         1.000
+ AGREE99        1.000         1.000         1.000         1.000         1.000
+ AGREE43        1.000         1.000         1.000         1.000         1.000
+ AGREE103       1.000         1.000         1.000         1.000         1.000
+ AGREE93        1.000         1.000         1.000         1.000         1.000
+ AGREE55        1.000         1.000         1.000         1.000         1.000
+ AGREE100       1.000         1.000         1.000         1.000         1.000
+ AGREE75        1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              AGREE84       AGREE52       AGREE36       AGREE67       AGREE98
+              ________      ________      ________      ________      ________
+ AGREE84        1.000
+ AGREE52        1.000         1.000
+ AGREE36        1.000         1.000         1.000
+ AGREE67        1.000         1.000         1.000         1.000
+ AGREE98        1.000         1.000         1.000         1.000         1.000
+ AGREE109       1.000         1.000         1.000         1.000         1.000
+ AGREE106       1.000         1.000         1.000         1.000         1.000
+ AGREE91        1.000         1.000         1.000         1.000         1.000
+ AGREE105       1.000         1.000         1.000         1.000         1.000
+ AGREE77        1.000         1.000         1.000         1.000         1.000
+ AGREE37        1.000         1.000         1.000         1.000         1.000
+ AGREE104       1.000         1.000         1.000         1.000         1.000
+ AGREE30        1.000         1.000         1.000         1.000         1.000
+ AGREE6         1.000         1.000         1.000         1.000         1.000
+ AGREE45        1.000         1.000         1.000         1.000         1.000
+ AGREE83        1.000         1.000         1.000         1.000         1.000
+ AGREE80        1.000         1.000         1.000         1.000         1.000
+ AGREE79        1.000         1.000         1.000         1.000         1.000
+ AGREE92        1.000         1.000         1.000         1.000         1.000
+ AGREE78        1.000         1.000         1.000         1.000         1.000
+ AGREE97        1.000         1.000         1.000         1.000         1.000
+ AGREE96        1.000         1.000         1.000         1.000         1.000
+ AGREE25        1.000         1.000         1.000         1.000         1.000
+ AGREE13        1.000         1.000         1.000         1.000         1.000
+ AGREE39        1.000         1.000         1.000         1.000         1.000
+ AGREE56        1.000         1.000         1.000         1.000         1.000
+ AGREE71        1.000         1.000         1.000         1.000         1.000
+ AGREE99        1.000         1.000         1.000         1.000         1.000
+ AGREE43        1.000         1.000         1.000         1.000         1.000
+ AGREE103       1.000         1.000         1.000         1.000         1.000
+ AGREE93        1.000         1.000         1.000         1.000         1.000
+ AGREE55        1.000         1.000         1.000         1.000         1.000
+ AGREE100       1.000         1.000         1.000         1.000         1.000
+ AGREE75        1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              AGREE109      AGREE106      AGREE91       AGREE105      AGREE77
+              ________      ________      ________      ________      ________
+ AGREE109       1.000
+ AGREE106       1.000         1.000
+ AGREE91        1.000         1.000         1.000
+ AGREE105       1.000         1.000         1.000         1.000
+ AGREE77        1.000         1.000         1.000         1.000         1.000
+ AGREE37        1.000         1.000         1.000         1.000         1.000
+ AGREE104       1.000         1.000         1.000         1.000         1.000
+ AGREE30        1.000         1.000         1.000         1.000         1.000
+ AGREE6         1.000         1.000         1.000         1.000         1.000
+ AGREE45        1.000         1.000         1.000         1.000         1.000
+ AGREE83        1.000         1.000         1.000         1.000         1.000
+ AGREE80        1.000         1.000         1.000         1.000         1.000
+ AGREE79        1.000         1.000         1.000         1.000         1.000
+ AGREE92        1.000         1.000         1.000         1.000         1.000
+ AGREE78        1.000         1.000         1.000         1.000         1.000
+ AGREE97        1.000         1.000         1.000         1.000         1.000
+ AGREE96        1.000         1.000         1.000         1.000         1.000
+ AGREE25        1.000         1.000         1.000         1.000         1.000
+ AGREE13        1.000         1.000         1.000         1.000         1.000
+ AGREE39        1.000         1.000         1.000         1.000         1.000
+ AGREE56        1.000         1.000         1.000         1.000         1.000
+ AGREE71        1.000         1.000         1.000         1.000         1.000
+ AGREE99        1.000         1.000         1.000         1.000         1.000
+ AGREE43        1.000         1.000         1.000         1.000         1.000
+ AGREE103       1.000         1.000         1.000         1.000         1.000
+ AGREE93        1.000         1.000         1.000         1.000         1.000
+ AGREE55        1.000         1.000         1.000         1.000         1.000
+ AGREE100       1.000         1.000         1.000         1.000         1.000
+ AGREE75        1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              AGREE37       AGREE104      AGREE30       AGREE6        AGREE45
+              ________      ________      ________      ________      ________
+ AGREE37        1.000
+ AGREE104       1.000         1.000
+ AGREE30        1.000         1.000         1.000
+ AGREE6         1.000         1.000         1.000         1.000
+ AGREE45        1.000         1.000         1.000         1.000         1.000
+ AGREE83        1.000         1.000         1.000         1.000         1.000
+ AGREE80        1.000         1.000         1.000         1.000         1.000
+ AGREE79        1.000         1.000         1.000         1.000         1.000
+ AGREE92        1.000         1.000         1.000         1.000         1.000
+ AGREE78        1.000         1.000         1.000         1.000         1.000
+ AGREE97        1.000         1.000         1.000         1.000         1.000
+ AGREE96        1.000         1.000         1.000         1.000         1.000
+ AGREE25        1.000         1.000         1.000         1.000         1.000
+ AGREE13        1.000         1.000         1.000         1.000         1.000
+ AGREE39        1.000         1.000         1.000         1.000         1.000
+ AGREE56        1.000         1.000         1.000         1.000         1.000
+ AGREE71        1.000         1.000         1.000         1.000         1.000
+ AGREE99        1.000         1.000         1.000         1.000         1.000
+ AGREE43        1.000         1.000         1.000         1.000         1.000
+ AGREE103       1.000         1.000         1.000         1.000         1.000
+ AGREE93        1.000         1.000         1.000         1.000         1.000
+ AGREE55        1.000         1.000         1.000         1.000         1.000
+ AGREE100       1.000         1.000         1.000         1.000         1.000
+ AGREE75        1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              AGREE83       AGREE80       AGREE79       AGREE92       AGREE78
+              ________      ________      ________      ________      ________
+ AGREE83        1.000
+ AGREE80        1.000         1.000
+ AGREE79        1.000         1.000         1.000
+ AGREE92        1.000         1.000         1.000         1.000
+ AGREE78        1.000         1.000         1.000         1.000         1.000
+ AGREE97        1.000         1.000         1.000         1.000         1.000
+ AGREE96        1.000         1.000         1.000         1.000         1.000
+ AGREE25        1.000         1.000         1.000         1.000         1.000
+ AGREE13        1.000         1.000         1.000         1.000         1.000
+ AGREE39        1.000         1.000         1.000         1.000         1.000
+ AGREE56        1.000         1.000         1.000         1.000         1.000
+ AGREE71        1.000         1.000         1.000         1.000         1.000
+ AGREE99        1.000         1.000         1.000         1.000         1.000
+ AGREE43        1.000         1.000         1.000         1.000         1.000
+ AGREE103       1.000         1.000         1.000         1.000         1.000
+ AGREE93        1.000         1.000         1.000         1.000         1.000
+ AGREE55        1.000         1.000         1.000         1.000         1.000
+ AGREE100       1.000         1.000         1.000         1.000         1.000
+ AGREE75        1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              AGREE97       AGREE96       AGREE25       AGREE13       AGREE39
+              ________      ________      ________      ________      ________
+ AGREE97        1.000
+ AGREE96        1.000         1.000
+ AGREE25        1.000         1.000         1.000
+ AGREE13        1.000         1.000         1.000         1.000
+ AGREE39        1.000         1.000         1.000         1.000         1.000
+ AGREE56        1.000         1.000         1.000         1.000         1.000
+ AGREE71        1.000         1.000         1.000         1.000         1.000
+ AGREE99        1.000         1.000         1.000         1.000         1.000
+ AGREE43        1.000         1.000         1.000         1.000         1.000
+ AGREE103       1.000         1.000         1.000         1.000         1.000
+ AGREE93        1.000         1.000         1.000         1.000         1.000
+ AGREE55        1.000         1.000         1.000         1.000         1.000
+ AGREE100       1.000         1.000         1.000         1.000         1.000
+ AGREE75        1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              AGREE56       AGREE71       AGREE99       AGREE43       AGREE103
+              ________      ________      ________      ________      ________
+ AGREE56        1.000
+ AGREE71        1.000         1.000
+ AGREE99        1.000         1.000         1.000
+ AGREE43        1.000         1.000         1.000         1.000
+ AGREE103       1.000         1.000         1.000         1.000         1.000
+ AGREE93        1.000         1.000         1.000         1.000         1.000
+ AGREE55        1.000         1.000         1.000         1.000         1.000
+ AGREE100       1.000         1.000         1.000         1.000         1.000
+ AGREE75        1.000         1.000         1.000         1.000         1.000
+
+
+           Covariance Coverage
+              AGREE93       AGREE55       AGREE100      AGREE75
+              ________      ________      ________      ________
+ AGREE93        1.000
+ AGREE55        1.000         1.000
+ AGREE100       1.000         1.000         1.000
+ AGREE75        1.000         1.000         1.000         1.000
+
+
+UNIVARIATE PROPORTIONS AND COUNTS FOR CATEGORICAL VARIABLES
+
+    AGREE2
+      Category 1    0.006        2.000
+      Category 2    0.050       18.000
+      Category 3    0.177       64.000
+      Category 4    0.515      186.000
+      Category 5    0.252       91.000
+    AGREE72
+      Category 1    0.014        5.000
+      Category 2    0.033       12.000
+      Category 3    0.166       60.000
+      Category 4    0.460      166.000
+      Category 5    0.327      118.000
+    AGREE73
+      Category 1    0.006        2.000
+      Category 2    0.150       54.000
+      Category 3    0.454      164.000
+      Category 4    0.391      141.000
+    AGREE4
+      Category 1    0.006        2.000
+      Category 2    0.025        9.000
+      Category 3    0.177       64.000
+      Category 4    0.418      151.000
+      Category 5    0.374      135.000
+    AGREE18
+      Category 1    0.014        5.000
+      Category 2    0.033       12.000
+      Category 3    0.175       63.000
+      Category 4    0.357      129.000
+      Category 5    0.421      152.000
+    AGREE84
+      Category 1    0.266       96.000
+      Category 2    0.421      152.000
+      Category 3    0.260       94.000
+      Category 4    0.044       16.000
+      Category 5    0.008        3.000
+    AGREE52
+      Category 1    0.371      134.000
+      Category 2    0.368      133.000
+      Category 3    0.183       66.000
+      Category 4    0.061       22.000
+      Category 5    0.017        6.000
+    AGREE36
+      Category 1    0.338      122.000
+      Category 2    0.416      150.000
+      Category 3    0.158       57.000
+      Category 4    0.055       20.000
+      Category 5    0.033       12.000
+    AGREE67
+      Category 1    0.368      133.000
+      Category 2    0.416      150.000
+      Category 3    0.163       59.000
+      Category 4    0.044       16.000
+      Category 5    0.008        3.000
+    AGREE98
+      Category 1    0.299      108.000
+      Category 2    0.463      167.000
+      Category 3    0.177       64.000
+      Category 4    0.036       13.000
+      Category 5    0.025        9.000
+    AGREE109
+      Category 1    0.114       41.000
+      Category 2    0.327      118.000
+      Category 3    0.324      117.000
+      Category 4    0.141       51.000
+      Category 5    0.094       34.000
+    AGREE106
+      Category 1    0.066       24.000
+      Category 2    0.374      135.000
+      Category 3    0.380      137.000
+      Category 4    0.139       50.000
+      Category 5    0.042       15.000
+    AGREE91
+      Category 1    0.233       84.000
+      Category 2    0.363      131.000
+      Category 3    0.274       99.000
+      Category 4    0.091       33.000
+      Category 5    0.039       14.000
+    AGREE105
+      Category 1    0.053       19.000
+      Category 2    0.177       64.000
+      Category 3    0.396      143.000
+      Category 4    0.249       90.000
+      Category 5    0.125       45.000
+    AGREE77
+      Category 1    0.136       49.000
+      Category 2    0.241       87.000
+      Category 3    0.332      120.000
+      Category 4    0.194       70.000
+      Category 5    0.097       35.000
+    AGREE37
+      Category 1    0.091       33.000
+      Category 2    0.233       84.000
+      Category 3    0.454      164.000
+      Category 4    0.175       63.000
+      Category 5    0.047       17.000
+    AGREE104
+      Category 1    0.019        7.000
+      Category 2    0.072       26.000
+      Category 3    0.271       98.000
+      Category 4    0.374      135.000
+      Category 5    0.263       95.000
+    AGREE30
+      Category 1    0.163       59.000
+      Category 2    0.357      129.000
+      Category 3    0.271       98.000
+      Category 4    0.155       56.000
+      Category 5    0.053       19.000
+    AGREE6
+      Category 1    0.125       45.000
+      Category 2    0.357      129.000
+      Category 3    0.357      129.000
+      Category 4    0.122       44.000
+      Category 5    0.039       14.000
+    AGREE45
+      Category 1    0.058       21.000
+      Category 2    0.230       83.000
+      Category 3    0.416      150.000
+      Category 4    0.247       89.000
+      Category 5    0.050       18.000
+    AGREE83
+      Category 1    0.150       54.000
+      Category 2    0.335      121.000
+      Category 3    0.305      110.000
+      Category 4    0.169       61.000
+      Category 5    0.042       15.000
+    AGREE80
+      Category 1    0.260       94.000
+      Category 2    0.346      125.000
+      Category 3    0.260       94.000
+      Category 4    0.108       39.000
+      Category 5    0.025        9.000
+    AGREE79
+      Category 1    0.177       64.000
+      Category 2    0.352      127.000
+      Category 3    0.266       96.000
+      Category 4    0.158       57.000
+      Category 5    0.047       17.000
+    AGREE92
+      Category 1    0.130       47.000
+      Category 2    0.346      125.000
+      Category 3    0.363      131.000
+      Category 4    0.122       44.000
+      Category 5    0.039       14.000
+    AGREE78
+      Category 1    0.053       19.000
+      Category 2    0.166       60.000
+      Category 3    0.440      159.000
+      Category 4    0.244       88.000
+      Category 5    0.097       35.000
+    AGREE97
+      Category 1    0.047       17.000
+      Category 2    0.152       55.000
+      Category 3    0.385      139.000
+      Category 4    0.319      115.000
+      Category 5    0.097       35.000
+    AGREE96
+      Category 1    0.053       19.000
+      Category 2    0.158       57.000
+      Category 3    0.321      116.000
+      Category 4    0.324      117.000
+      Category 5    0.144       52.000
+    AGREE25
+      Category 1    0.025        9.000
+      Category 2    0.114       41.000
+      Category 3    0.335      121.000
+      Category 4    0.366      132.000
+      Category 5    0.161       58.000
+    AGREE13
+      Category 1    0.017        6.000
+      Category 2    0.061       22.000
+      Category 3    0.319      115.000
+      Category 4    0.368      133.000
+      Category 5    0.235       85.000
+    AGREE39
+      Category 1    0.194       70.000
+      Category 2    0.482      174.000
+      Category 3    0.194       70.000
+      Category 4    0.089       32.000
+      Category 5    0.042       15.000
+    AGREE56
+      Category 1    0.249       90.000
+      Category 2    0.355      128.000
+      Category 3    0.260       94.000
+      Category 4    0.102       37.000
+      Category 5    0.033       12.000
+    AGREE71
+      Category 1    0.019        7.000
+      Category 2    0.064       23.000
+      Category 3    0.241       87.000
+      Category 4    0.391      141.000
+      Category 5    0.285      103.000
+    AGREE99
+      Category 1    0.288      104.000
+      Category 2    0.429      155.000
+      Category 3    0.186       67.000
+      Category 4    0.078       28.000
+      Category 5    0.019        7.000
+    AGREE43
+      Category 1    0.152       55.000
+      Category 2    0.360      130.000
+      Category 3    0.269       97.000
+      Category 4    0.144       52.000
+      Category 5    0.075       27.000
+    AGREE103
+      Category 1    0.183       66.000
+      Category 2    0.377      136.000
+      Category 3    0.316      114.000
+      Category 4    0.083       30.000
+      Category 5    0.042       15.000
+    AGREE93
+      Category 1    0.014        5.000
+      Category 2    0.080       29.000
+      Category 3    0.407      147.000
+      Category 4    0.330      119.000
+      Category 5    0.169       61.000
+    AGREE55
+      Category 1    0.233       84.000
+      Category 2    0.429      155.000
+      Category 3    0.235       85.000
+      Category 4    0.086       31.000
+      Category 5    0.017        6.000
+    AGREE100
+      Category 1    0.066       24.000
+      Category 2    0.188       68.000
+      Category 3    0.391      141.000
+      Category 4    0.258       93.000
+      Category 5    0.097       35.000
+    AGREE75
+      Category 1    0.044       16.000
+      Category 2    0.136       49.000
+      Category 3    0.222       80.000
+      Category 4    0.255       92.000
+      Category 5    0.343      124.000
+
+
+
+THE MODEL ESTIMATION TERMINATED NORMALLY
+
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                      200
+
+Chi-Square Test of Model Fit
+
+          Value                           2992.431*
+          Degrees of Freedom                   696
+          P-Value                           0.0000
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.096
+          90 Percent C.I.                    0.092  0.099
+          Probability RMSEA <= .05           0.000
+
+CFI/TLI
+
+          CFI                                0.636
+          TLI                                0.613
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                           7051.815
+          Degrees of Freedom                   741
+          P-Value                           0.0000
+
+WRMR (Weighted Root Mean Square Residual)
+
+          Value                              2.406
+
+
+
+MODEL RESULTS
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ APPRECI  BY
+    AGREE2             1.000      0.000    999.000    999.000
+    AGREE72            1.190      0.071     16.727      0.000
+    AGREE73            1.157      0.081     14.281      0.000
+    AGREE4             0.933      0.076     12.325      0.000
+    AGREE18            0.834      0.075     11.177      0.000
+
+ MEAN     BY
+    AGREE84            1.000      0.000    999.000    999.000
+    AGREE52            0.771      0.026     29.572      0.000
+    AGREE36            0.650      0.035     18.763      0.000
+    AGREE67            0.669      0.033     20.220      0.000
+    AGREE98            0.525      0.039     13.338      0.000
+
+ SUPER    BY
+    AGREE109           1.000      0.000    999.000    999.000
+    AGREE106           0.940      0.077     12.256      0.000
+    AGREE91            1.002      0.091     10.996      0.000
+    AGREE105           0.891      0.079     11.231      0.000
+    AGREE77            0.990      0.082     12.046      0.000
+
+ NEED     BY
+    AGREE37            1.000      0.000    999.000    999.000
+    AGREE104          -0.455      0.375     -1.212      0.225
+    AGREE30            3.872      1.461      2.651      0.008
+    AGREE6             1.059      0.388      2.734      0.006
+    AGREE45            2.165      0.705      3.070      0.002
+
+ CRYBABE  BY
+    AGREE83            1.000      0.000    999.000    999.000
+    AGREE80            1.663      0.637      2.611      0.009
+    AGREE79            3.526      1.201      2.936      0.003
+    AGREE92            4.810      1.676      2.870      0.004
+    AGREE78           -0.145      0.394     -0.368      0.713
+
+ TRUST    BY
+    AGREE97            1.000      0.000    999.000    999.000
+    AGREE96            1.045      0.093     11.261      0.000
+    AGREE25            1.059      0.080     13.169      0.000
+    AGREE13            0.722      0.095      7.597      0.000
+    AGREE39           -0.603      0.089     -6.742      0.000
+
+ MANIPUL  BY
+    AGREE56            1.000      0.000    999.000    999.000
+    AGREE71           -0.974      0.091    -10.741      0.000
+    AGREE99            1.080      0.084     12.902      0.000
+    AGREE43            0.794      0.080      9.929      0.000
+    AGREE103           0.895      0.086     10.423      0.000
+
+ ALTRUIS  BY
+    AGREE93            1.000      0.000    999.000    999.000
+    AGREE55           -0.202      0.098     -2.051      0.040
+    AGREE100           0.535      0.096      5.583      0.000
+    AGREE75            0.987      0.103      9.586      0.000
+
+ AGREE    BY
+    APPRECI           -0.459      0.033    -13.728      0.000
+    MEAN               1.000      0.000    999.000    999.000
+    SUPER              0.416      0.034     12.230      0.000
+    NEED               0.076      0.029      2.665      0.008
+    CRYBABE            0.100      0.036      2.801      0.005
+    TRUST             -0.332      0.035     -9.435      0.000
+    MANIPUL            0.503      0.038     13.310      0.000
+    ALTRUIS           -0.473      0.038    -12.293      0.000
+
+ Thresholds
+    AGREE2$1          -2.540      0.247    -10.300      0.000
+    AGREE2$2          -1.595      0.108    -14.818      0.000
+    AGREE2$3          -0.730      0.073    -10.032      0.000
+    AGREE2$4           0.668      0.072      9.329      0.000
+    AGREE72$1         -2.201      0.174    -12.655      0.000
+    AGREE72$2         -1.674      0.113    -14.758      0.000
+    AGREE72$3         -0.795      0.074    -10.725      0.000
+    AGREE72$4          0.449      0.068      6.555      0.000
+    AGREE73$1         -2.540      0.247    -10.300      0.000
+    AGREE73$2         -1.015      0.080    -12.697      0.000
+    AGREE73$3          0.278      0.067      4.153      0.000
+    AGREE4$1          -2.540      0.247    -10.300      0.000
+    AGREE4$2          -1.874      0.131    -14.278      0.000
+    AGREE4$3          -0.814      0.075    -10.920      0.000
+    AGREE4$4           0.321      0.067      4.781      0.000
+    AGREE18$1         -2.201      0.174    -12.655      0.000
+    AGREE18$2         -1.674      0.113    -14.758      0.000
+    AGREE18$3         -0.767      0.074    -10.430      0.000
+    AGREE18$4          0.199      0.066      2.998      0.003
+    AGREE84$1         -0.625      0.071     -8.822      0.000
+    AGREE84$2          0.487      0.069      7.074      0.000
+    AGREE84$3          1.620      0.109     14.807      0.000
+    AGREE84$4          2.395      0.211     11.361      0.000
+    AGREE52$1         -0.329      0.067     -4.886      0.000
+    AGREE52$2          0.642      0.071      9.025      0.000
+    AGREE52$3          1.422      0.097     14.665      0.000
+    AGREE52$4          2.129      0.163     13.086      0.000
+    AGREE36$1         -0.418      0.068     -6.139      0.000
+    AGREE36$2          0.685      0.072      9.531      0.000
+    AGREE36$3          1.349      0.093     14.481      0.000
+    AGREE36$4          1.835      0.127     14.406      0.000
+    AGREE67$1         -0.336      0.067     -4.991      0.000
+    AGREE67$2          0.786      0.074     10.627      0.000
+    AGREE67$3          1.620      0.109     14.807      0.000
+    AGREE67$4          2.395      0.211     11.361      0.000
+    AGREE98$1         -0.527      0.069     -7.591      0.000
+    AGREE98$2          0.712      0.072      9.832      0.000
+    AGREE98$3          1.547      0.104     14.815      0.000
+    AGREE98$4          1.961      0.141     13.935      0.000
+    AGREE109$1        -1.208      0.087    -13.914      0.000
+    AGREE109$2        -0.150      0.066     -2.262      0.024
+    AGREE109$3         0.721      0.073      9.932      0.000
+    AGREE109$4         1.315      0.092     14.371      0.000
+    AGREE106$1        -1.503      0.102    -14.786      0.000
+    AGREE106$2        -0.150      0.066     -2.262      0.024
+    AGREE106$3         0.915      0.077     11.877      0.000
+    AGREE106$4         1.733      0.118     14.664      0.000
+    AGREE91$1         -0.730      0.073    -10.032      0.000
+    AGREE91$2          0.242      0.067      3.628      0.000
+    AGREE91$3          1.125      0.084     13.457      0.000
+    AGREE91$4          1.765      0.121     14.596      0.000
+    AGREE105$1        -1.620      0.109    -14.807      0.000
+    AGREE105$2        -0.739      0.073    -10.132      0.000
+    AGREE105$3         0.321      0.067      4.781      0.000
+    AGREE105$4         1.152      0.085     13.614      0.000
+    AGREE77$1         -1.100      0.083    -13.294      0.000
+    AGREE77$2         -0.314      0.067     -4.677      0.000
+    AGREE77$3          0.551      0.070      7.900      0.000
+    AGREE77$4          1.299      0.091     14.312      0.000
+    AGREE37$1         -1.332      0.092    -14.427      0.000
+    AGREE37$2         -0.456      0.069     -6.659      0.000
+    AGREE37$3          0.767      0.074     10.430      0.000
+    AGREE37$4          1.674      0.113     14.758      0.000
+    AGREE104$1        -2.067      0.154    -13.429      0.000
+    AGREE104$2        -1.332      0.092    -14.427      0.000
+    AGREE104$3        -0.351      0.067     -5.200      0.000
+    AGREE104$4         0.634      0.071      8.923      0.000
+    AGREE30$1         -0.980      0.079    -12.429      0.000
+    AGREE30$2          0.052      0.066      0.789      0.430
+    AGREE30$3          0.814      0.075     10.920      0.000
+    AGREE30$4          1.620      0.109     14.807      0.000
+    AGREE6$1          -1.152      0.085    -13.614      0.000
+    AGREE6$2          -0.045      0.066     -0.684      0.494
+    AGREE6$3           0.992      0.079     12.519      0.000
+    AGREE6$4           1.765      0.121     14.596      0.000
+    AGREE45$1         -1.570      0.106    -14.820      0.000
+    AGREE45$2         -0.559      0.070     -8.003      0.000
+    AGREE45$3          0.535      0.070      7.694      0.000
+    AGREE45$4          1.646      0.111     14.788      0.000
+    AGREE83$1         -1.038      0.081    -12.872      0.000
+    AGREE83$2         -0.038      0.066     -0.579      0.563
+    AGREE83$3          0.805      0.074     10.823      0.000
+    AGREE83$4          1.733      0.118     14.664      0.000
+    AGREE80$1         -0.642      0.071     -9.025      0.000
+    AGREE80$2          0.271      0.067      4.048      0.000
+    AGREE80$3          1.112      0.083     13.376      0.000
+    AGREE80$4          1.961      0.141     13.935      0.000
+    AGREE79$1         -0.926      0.077    -11.970      0.000
+    AGREE79$2          0.073      0.066      1.105      0.269
+    AGREE79$3          0.824      0.075     11.018      0.000
+    AGREE79$4          1.674      0.113     14.758      0.000
+    AGREE92$1         -1.125      0.084    -13.457      0.000
+    AGREE92$2         -0.059      0.066     -0.895      0.371
+    AGREE92$3          0.992      0.079     12.519      0.000
+    AGREE92$4          1.765      0.121     14.596      0.000
+    AGREE78$1         -1.620      0.109    -14.807      0.000
+    AGREE78$2         -0.776      0.074    -10.528      0.000
+    AGREE78$3          0.410      0.068      6.035      0.000
+    AGREE78$4          1.299      0.091     14.312      0.000
+    AGREE97$1         -1.674      0.113    -14.758      0.000
+    AGREE97$2         -0.844      0.075    -11.211      0.000
+    AGREE97$3          0.213      0.067      3.208      0.001
+    AGREE97$4          1.299      0.091     14.312      0.000
+    AGREE96$1         -1.620      0.109    -14.807      0.000
+    AGREE96$2         -0.805      0.074    -10.823      0.000
+    AGREE96$3          0.080      0.066      1.210      0.226
+    AGREE96$4          1.062      0.081     13.043      0.000
+    AGREE25$1         -1.961      0.141    -13.935      0.000
+    AGREE25$2         -1.087      0.082    -13.212      0.000
+    AGREE25$3         -0.066      0.066     -1.000      0.317
+    AGREE25$4          0.992      0.079     12.519      0.000
+    AGREE13$1         -2.129      0.163    -13.086      0.000
+    AGREE13$2         -1.422      0.097    -14.665      0.000
+    AGREE13$3         -0.263      0.067     -3.943      0.000
+    AGREE13$4          0.721      0.073      9.932      0.000
+    AGREE39$1         -0.864      0.076    -11.403      0.000
+    AGREE39$2          0.456      0.069      6.659      0.000
+    AGREE39$3          1.125      0.084     13.457      0.000
+    AGREE39$4          1.733      0.118     14.664      0.000
+    AGREE56$1         -0.677      0.072     -9.430      0.000
+    AGREE56$2          0.263      0.067      3.943      0.000
+    AGREE56$3          1.100      0.083     13.294      0.000
+    AGREE56$4          1.835      0.127     14.406      0.000
+    AGREE71$1         -2.067      0.154    -13.429      0.000
+    AGREE71$2         -1.385      0.095    -14.580      0.000
+    AGREE71$3         -0.456      0.069     -6.659      0.000
+    AGREE71$4          0.567      0.070      8.105      0.000
+    AGREE99$1         -0.559      0.070     -8.003      0.000
+    AGREE99$2          0.575      0.070      8.208      0.000
+    AGREE99$3          1.299      0.091     14.312      0.000
+    AGREE99$4          2.067      0.154     13.429      0.000
+    AGREE43$1         -1.026      0.080    -12.784      0.000
+    AGREE43$2          0.031      0.066      0.474      0.636
+    AGREE43$3          0.776      0.074     10.528      0.000
+    AGREE43$4          1.441      0.098     14.702      0.000
+    AGREE103$1        -0.905      0.077    -11.783      0.000
+    AGREE103$2         0.150      0.066      2.262      0.024
+    AGREE103$3         1.152      0.085     13.614      0.000
+    AGREE103$4         1.733      0.118     14.664      0.000
+    AGREE93$1         -2.201      0.174    -12.655      0.000
+    AGREE93$2         -1.315      0.092    -14.371      0.000
+    AGREE93$3          0.003      0.066      0.053      0.958
+    AGREE93$4          0.958      0.078     12.247      0.000
+    AGREE55$1         -0.730      0.073    -10.032      0.000
+    AGREE55$2          0.418      0.068      6.139      0.000
+    AGREE55$3          1.267      0.089     14.187      0.000
+    AGREE55$4          2.129      0.163     13.086      0.000
+    AGREE100$1        -1.503      0.102    -14.786      0.000
+    AGREE100$2        -0.659      0.071     -9.228      0.000
+    AGREE100$3         0.373      0.068      5.513      0.000
+    AGREE100$4         1.299      0.091     14.312      0.000
+    AGREE75$1         -1.703      0.116    -14.718      0.000
+    AGREE75$2         -0.915      0.077    -11.877      0.000
+    AGREE75$3         -0.249      0.067     -3.733      0.000
+    AGREE75$4          0.403      0.068      5.930      0.000
+
+ Variances
+    AGREE              1.000      0.000    999.000    999.000
+
+ Residual Variances
+    APPRECI            0.272      0.036      7.649      0.000
+    MEAN               0.000      0.000    999.000    999.000
+    SUPER              0.288      0.037      7.761      0.000
+    NEED               0.040      0.024      1.665      0.096
+    CRYBABE            0.019      0.013      1.466      0.143
+    TRUST              0.368      0.041      8.957      0.000
+    MANIPUL            0.129      0.024      5.433      0.000
+    ALTRUIS            0.173      0.042      4.125      0.000
+
+
+STANDARDIZED MODEL RESULTS
+
+
+STDYX Standardization
+
+                                                    Two-Tailed
+                    Estimate       S.E.  Est./S.E.    P-Value
+
+ APPRECI  BY
+    AGREE2             0.695      0.037     18.600      0.000
+    AGREE72            0.827      0.030     27.537      0.000
+    AGREE73            0.803      0.035     22.988      0.000
+    AGREE4             0.648      0.039     16.755      0.000
+    AGREE18            0.579      0.040     14.570      0.000
+
+ MEAN     BY
+    AGREE84            1.000      0.000    999.000    999.000
+    AGREE52            0.771      0.026     29.572      0.000
+    AGREE36            0.650      0.035     18.763      0.000
+    AGREE67            0.669      0.033     20.220      0.000
+    AGREE98            0.525      0.039     13.338      0.000
+
+ SUPER    BY
+    AGREE109           0.679      0.039     17.398      0.000
+    AGREE106           0.638      0.040     16.002      0.000
+    AGREE91            0.681      0.046     14.807      0.000
+    AGREE105           0.606      0.041     14.752      0.000
+    AGREE77            0.673      0.042     16.174      0.000
+
+ NEED     BY
+    AGREE37            0.214      0.065      3.275      0.001
+    AGREE104          -0.097      0.073     -1.327      0.184
+    AGREE30            0.829      0.111      7.500      0.000
+    AGREE6             0.227      0.072      3.165      0.002
+    AGREE45            0.463      0.065      7.079      0.000
+
+ CRYBABE  BY
+    AGREE83            0.171      0.058      2.933      0.003
+    AGREE80            0.284      0.060      4.765      0.000
+    AGREE79            0.602      0.051     11.835      0.000
+    AGREE92            0.821      0.058     14.048      0.000
+    AGREE78           -0.025      0.064     -0.386      0.700
+
+ TRUST    BY
+    AGREE97            0.692      0.036     19.110      0.000
+    AGREE96            0.723      0.042     17.337      0.000
+    AGREE25            0.733      0.041     17.771      0.000
+    AGREE13            0.499      0.059      8.500      0.000
+    AGREE39           -0.417      0.054     -7.667      0.000
+
+ MANIPUL  BY
+    AGREE56            0.618      0.039     15.927      0.000
+    AGREE71           -0.602      0.043    -14.023      0.000
+    AGREE99            0.668      0.038     17.656      0.000
+    AGREE43            0.491      0.042     11.746      0.000
+    AGREE103           0.553      0.042     13.041      0.000
+
+ ALTRUIS  BY
+    AGREE93            0.630      0.047     13.543      0.000
+    AGREE55           -0.127      0.061     -2.077      0.038
+    AGREE100           0.337      0.055      6.092      0.000
+    AGREE75            0.622      0.051     12.237      0.000
+
+ AGREE    BY
+    APPRECI           -0.661      0.032    -20.564      0.000
+    MEAN               1.000      0.000    999.000    999.000
+    SUPER              0.613      0.034     18.278      0.000
+    NEED               0.357      0.054      6.576      0.000
+    CRYBABE            0.584      0.051     11.453      0.000
+    TRUST             -0.480      0.042    -11.541      0.000
+    MANIPUL            0.814      0.030     27.188      0.000
+    ALTRUIS           -0.750      0.045    -16.574      0.000
+
+ Thresholds
+    AGREE2$1          -2.540      0.247    -10.300      0.000
+    AGREE2$2          -1.595      0.108    -14.818      0.000
+    AGREE2$3          -0.730      0.073    -10.032      0.000
+    AGREE2$4           0.668      0.072      9.329      0.000
+    AGREE72$1         -2.201      0.174    -12.655      0.000
+    AGREE72$2         -1.674      0.113    -14.758      0.000
+    AGREE72$3         -0.795      0.074    -10.725      0.000
+    AGREE72$4          0.449      0.068      6.555      0.000
+    AGREE73$1         -2.540      0.247    -10.300      0.000
+    AGREE73$2         -1.015      0.080    -12.697      0.000
+    AGREE73$3          0.278      0.067      4.153      0.000
+    AGREE4$1          -2.540      0.247    -10.300      0.000
+    AGREE4$2          -1.874      0.131    -14.278      0.000
+    AGREE4$3          -0.814      0.075    -10.920      0.000
+    AGREE4$4           0.321      0.067      4.781      0.000
+    AGREE18$1         -2.201      0.174    -12.655      0.000
+    AGREE18$2         -1.674      0.113    -14.758      0.000
+    AGREE18$3         -0.767      0.074    -10.430      0.000
+    AGREE18$4          0.199      0.066      2.998      0.003
+    AGREE84$1         -0.625      0.071     -8.822      0.000
+    AGREE84$2          0.487      0.069      7.074      0.000
+    AGREE84$3          1.620      0.109     14.807      0.000
+    AGREE84$4          2.395      0.211     11.361      0.000
+    AGREE52$1         -0.329      0.067     -4.886      0.000
+    AGREE52$2          0.642      0.071      9.025      0.000
+    AGREE52$3          1.422      0.097     14.665      0.000
+    AGREE52$4          2.129      0.163     13.086      0.000
+    AGREE36$1         -0.418      0.068     -6.139      0.000
+    AGREE36$2          0.685      0.072      9.531      0.000
+    AGREE36$3          1.349      0.093     14.481      0.000
+    AGREE36$4          1.835      0.127     14.406      0.000
+    AGREE67$1         -0.336      0.067     -4.991      0.000
+    AGREE67$2          0.786      0.074     10.627      0.000
+    AGREE67$3          1.620      0.109     14.807      0.000
+    AGREE67$4          2.395      0.211     11.361      0.000
+    AGREE98$1         -0.527      0.069     -7.591      0.000
+    AGREE98$2          0.712      0.072      9.832      0.000
+    AGREE98$3          1.547      0.104     14.815      0.000
+    AGREE98$4          1.961      0.141     13.935      0.000
+    AGREE109$1        -1.208      0.087    -13.914      0.000
+    AGREE109$2        -0.150      0.066     -2.262      0.024
+    AGREE109$3         0.721      0.073      9.932      0.000
+    AGREE109$4         1.315      0.092     14.371      0.000
+    AGREE106$1        -1.503      0.102    -14.786      0.000
+    AGREE106$2        -0.150      0.066     -2.262      0.024
+    AGREE106$3         0.915      0.077     11.877      0.000
+    AGREE106$4         1.733      0.118     14.664      0.000
+    AGREE91$1         -0.730      0.073    -10.032      0.000
+    AGREE91$2          0.242      0.067      3.628      0.000
+    AGREE91$3          1.125      0.084     13.457      0.000
+    AGREE91$4          1.765      0.121     14.596      0.000
+    AGREE105$1        -1.620      0.109    -14.807      0.000
+    AGREE105$2        -0.739      0.073    -10.132      0.000
+    AGREE105$3         0.321      0.067      4.781      0.000
+    AGREE105$4         1.152      0.085     13.614      0.000
+    AGREE77$1         -1.100      0.083    -13.294      0.000
+    AGREE77$2         -0.314      0.067     -4.677      0.000
+    AGREE77$3          0.551      0.070      7.900      0.000
+    AGREE77$4          1.299      0.091     14.312      0.000
+    AGREE37$1         -1.332      0.092    -14.427      0.000
+    AGREE37$2         -0.456      0.069     -6.659      0.000
+    AGREE37$3          0.767      0.074     10.430      0.000
+    AGREE37$4          1.674      0.113     14.758      0.000
+    AGREE104$1        -2.067      0.154    -13.429      0.000
+    AGREE104$2        -1.332      0.092    -14.427      0.000
+    AGREE104$3        -0.351      0.067     -5.200      0.000
+    AGREE104$4         0.634      0.071      8.923      0.000
+    AGREE30$1         -0.980      0.079    -12.429      0.000
+    AGREE30$2          0.052      0.066      0.789      0.430
+    AGREE30$3          0.814      0.075     10.920      0.000
+    AGREE30$4          1.620      0.109     14.807      0.000
+    AGREE6$1          -1.152      0.085    -13.614      0.000
+    AGREE6$2          -0.045      0.066     -0.684      0.494
+    AGREE6$3           0.992      0.079     12.519      0.000
+    AGREE6$4           1.765      0.121     14.596      0.000
+    AGREE45$1         -1.570      0.106    -14.820      0.000
+    AGREE45$2         -0.559      0.070     -8.003      0.000
+    AGREE45$3          0.535      0.070      7.694      0.000
+    AGREE45$4          1.646      0.111     14.788      0.000
+    AGREE83$1         -1.038      0.081    -12.872      0.000
+    AGREE83$2         -0.038      0.066     -0.579      0.563
+    AGREE83$3          0.805      0.074     10.823      0.000
+    AGREE83$4          1.733      0.118     14.664      0.000
+    AGREE80$1         -0.642      0.071     -9.025      0.000
+    AGREE80$2          0.271      0.067      4.048      0.000
+    AGREE80$3          1.112      0.083     13.376      0.000
+    AGREE80$4          1.961      0.141     13.935      0.000
+    AGREE79$1         -0.926      0.077    -11.970      0.000
+    AGREE79$2          0.073      0.066      1.105      0.269
+    AGREE79$3          0.824      0.075     11.018      0.000
+    AGREE79$4          1.674      0.113     14.758      0.000
+    AGREE92$1         -1.125      0.084    -13.457      0.000
+    AGREE92$2         -0.059      0.066     -0.895      0.371
+    AGREE92$3          0.992      0.079     12.519      0.000
+    AGREE92$4          1.765      0.121     14.596      0.000
+    AGREE78$1         -1.620      0.109    -14.807      0.000
+    AGREE78$2         -0.776      0.074    -10.528      0.000
+    AGREE78$3          0.410      0.068      6.035      0.000
+    AGREE78$4          1.299      0.091     14.312      0.000
+    AGREE97$1         -1.674      0.113    -14.758      0.000
+    AGREE97$2         -0.844      0.075    -11.211      0.000
+    AGREE97$3          0.213      0.067      3.208      0.001
+    AGREE97$4          1.299      0.091     14.312      0.000
+    AGREE96$1         -1.620      0.109    -14.807      0.000
+    AGREE96$2         -0.805      0.074    -10.823      0.000
+    AGREE96$3          0.080      0.066      1.210      0.226
+    AGREE96$4          1.062      0.081     13.043      0.000
+    AGREE25$1         -1.961      0.141    -13.935      0.000
+    AGREE25$2         -1.087      0.082    -13.212      0.000
+    AGREE25$3         -0.066      0.066     -1.000      0.317
+    AGREE25$4          0.992      0.079     12.519      0.000
+    AGREE13$1         -2.129      0.163    -13.086      0.000
+    AGREE13$2         -1.422      0.097    -14.665      0.000
+    AGREE13$3         -0.263      0.067     -3.943      0.000
+    AGREE13$4          0.721      0.073      9.932      0.000
+    AGREE39$1         -0.864      0.076    -11.403      0.000
+    AGREE39$2          0.456      0.069      6.659      0.000
+    AGREE39$3          1.125      0.084     13.457      0.000
+    AGREE39$4          1.733      0.118     14.664      0.000
+    AGREE56$1         -0.677      0.072     -9.430      0.000
+    AGREE56$2          0.263      0.067      3.943      0.000
+    AGREE56$3          1.100      0.083     13.294      0.000
+    AGREE56$4          1.835      0.127     14.406      0.000
+    AGREE71$1         -2.067      0.154    -13.429      0.000
+    AGREE71$2         -1.385      0.095    -14.580      0.000
+    AGREE71$3         -0.456      0.069     -6.659      0.000
+    AGREE71$4          0.567      0.070      8.105      0.000
+    AGREE99$1         -0.559      0.070     -8.003      0.000
+    AGREE99$2          0.575      0.070      8.208      0.000
+    AGREE99$3          1.299      0.091     14.312      0.000
+    AGREE99$4          2.067      0.154     13.429      0.000
+    AGREE43$1         -1.026      0.080    -12.784      0.000
+    AGREE43$2          0.031      0.066      0.474      0.636
+    AGREE43$3          0.776      0.074     10.528      0.000
+    AGREE43$4          1.441      0.098     14.702      0.000
+    AGREE103$1        -0.905      0.077    -11.783      0.000
+    AGREE103$2         0.150      0.066      2.262      0.024
+    AGREE103$3         1.152      0.085     13.614      0.000
+    AGREE103$4         1.733      0.118     14.664      0.000
+    AGREE93$1         -2.201      0.174    -12.655      0.000
+    AGREE93$2         -1.315      0.092    -14.371      0.000
+    AGREE93$3          0.003      0.066      0.053      0.958
+    AGREE93$4          0.958      0.078     12.247      0.000
+    AGREE55$1         -0.730      0.073    -10.032      0.000
+    AGREE55$2          0.418      0.068      6.139      0.000
+    AGREE55$3          1.267      0.089     14.187      0.000
+    AGREE55$4          2.129      0.163     13.086      0.000
+    AGREE100$1        -1.503      0.102    -14.786      0.000
+    AGREE100$2        -0.659      0.071     -9.228      0.000
+    AGREE100$3         0.373      0.068      5.513      0.000
+    AGREE100$4         1.299      0.091     14.312      0.000
+    AGREE75$1         -1.703      0.116    -14.718      0.000
+    AGREE75$2         -0.915      0.077    -11.877      0.000
+    AGREE75$3         -0.249      0.067     -3.733      0.000
+    AGREE75$4          0.403      0.068      5.930      0.000
+
+ Variances
+    AGREE              1.000      0.000    999.000    999.000
+
+ Residual Variances
+    APPRECI            0.563      0.042     13.263      0.000
+    MEAN               0.000    999.000    999.000    999.000
+    SUPER              0.625      0.041     15.212      0.000
+    NEED               0.872      0.039     22.495      0.000
+    CRYBABE            0.659      0.060     11.069      0.000
+    TRUST              0.770      0.040     19.269      0.000
+    MANIPUL            0.338      0.049      6.925      0.000
+    ALTRUIS            0.437      0.068      6.429      0.000
+
+
+R-SQUARE
+
+    Observed                                        Two-Tailed   Residual
+    Variable        Estimate       S.E.  Est./S.E.    P-Value    Variance
+
+    AGREE2             0.482      0.052      9.300      0.000      0.518
+    AGREE72            0.683      0.050     13.768      0.000      0.317
+    AGREE73            0.645      0.056     11.494      0.000      0.355
+    AGREE4             0.420      0.050      8.378      0.000      0.580
+    AGREE18            0.335      0.046      7.285      0.000      0.665
+    AGREE84            1.000      0.000    999.000    999.000      0.000
+    AGREE52            0.594      0.040     14.786      0.000      0.406
+    AGREE36            0.422      0.045      9.381      0.000      0.578
+    AGREE67            0.447      0.044     10.110      0.000      0.553
+    AGREE98            0.276      0.041      6.669      0.000      0.724
+    AGREE109           0.462      0.053      8.699      0.000      0.538
+    AGREE106           0.408      0.051      8.001      0.000      0.592
+    AGREE91            0.464      0.063      7.403      0.000      0.536
+    AGREE105           0.367      0.050      7.376      0.000      0.633
+    AGREE77            0.453      0.056      8.087      0.000      0.547
+    AGREE37            0.046      0.028      1.637      0.102      0.954
+    AGREE104           0.009      0.014      0.664      0.507      0.991
+    AGREE30            0.687      0.183      3.750      0.000      0.313
+    AGREE6             0.051      0.033      1.583      0.114      0.949
+    AGREE45            0.215      0.061      3.539      0.000      0.785
+    AGREE83            0.029      0.020      1.467      0.142      0.971
+    AGREE80            0.081      0.034      2.382      0.017      0.919
+    AGREE79            0.363      0.061      5.917      0.000      0.637
+    AGREE92            0.675      0.096      7.024      0.000      0.325
+    AGREE78            0.001      0.003      0.193      0.847      0.999
+    AGREE97            0.479      0.050      9.555      0.000      0.521
+    AGREE96            0.522      0.060      8.668      0.000      0.478
+    AGREE25            0.537      0.060      8.886      0.000      0.463
+    AGREE13            0.249      0.059      4.250      0.000      0.751
+    AGREE39            0.174      0.045      3.833      0.000      0.826
+    AGREE56            0.382      0.048      7.963      0.000      0.618
+    AGREE71            0.362      0.052      7.012      0.000      0.638
+    AGREE99            0.446      0.050      8.828      0.000      0.554
+    AGREE43            0.241      0.041      5.873      0.000      0.759
+    AGREE103           0.306      0.047      6.521      0.000      0.694
+    AGREE93            0.397      0.059      6.771      0.000      0.603
+    AGREE55            0.016      0.016      1.039      0.299      0.984
+    AGREE100           0.113      0.037      3.046      0.002      0.887
+    AGREE75            0.386      0.063      6.118      0.000      0.614
+
+     Latent                                         Two-Tailed
+    Variable        Estimate       S.E.  Est./S.E.    P-Value
+
+    APPRECI            0.437      0.042     10.282      0.000
+    MEAN               1.000    999.000    999.000    999.000
+    SUPER              0.375      0.041      9.139      0.000
+    NEED               0.128      0.039      3.288      0.001
+    CRYBABE            0.341      0.060      5.726      0.000
+    TRUST              0.230      0.040      5.770      0.000
+    MANIPUL            0.662      0.049     13.594      0.000
+    ALTRUIS            0.563      0.068      8.287      0.000
+
+
+QUALITY OF NUMERICAL RESULTS
+
+     Condition Number for the Information Matrix              0.162E-04
+       (ratio of smallest to largest eigenvalue)
+
+
+MODEL MODIFICATION INDICES
+
+NOTE:  Modification indices for direct effects of observed dependent variables
+regressed on covariates and residual covariances among observed dependent
+variables may not be included.  To include these, request MODINDICES (ALL).
+
+Minimum M.I. value for printing the modification index     4.000
+
+                                   M.I.     E.P.C.  Std E.P.C.  StdYX E.P.C.
+
+BY Statements
+
+APPRECI  BY AGREE84              248.538     0.767      0.533        0.533
+APPRECI  BY AGREE36                4.619     0.270      0.188        0.188
+APPRECI  BY AGREE98               45.994    -0.789     -0.548       -0.548
+APPRECI  BY AGREE109              10.085     0.287      0.199        0.199
+APPRECI  BY AGREE106              15.534     0.354      0.246        0.246
+APPRECI  BY AGREE91                6.912    -0.243     -0.169       -0.169
+APPRECI  BY AGREE105              29.928     0.494      0.343        0.343
+APPRECI  BY AGREE37               33.334     0.382      0.265        0.265
+APPRECI  BY AGREE104              97.707     0.655      0.455        0.455
+APPRECI  BY AGREE83               26.343     0.459      0.319        0.319
+APPRECI  BY AGREE80                6.334     0.235      0.163        0.163
+APPRECI  BY AGREE78               49.994     0.617      0.429        0.429
+APPRECI  BY AGREE97                4.842    -0.170     -0.118       -0.118
+APPRECI  BY AGREE25               40.086     0.487      0.338        0.338
+APPRECI  BY AGREE13               65.861     0.572      0.397        0.397
+APPRECI  BY AGREE39               52.351    -0.529     -0.368       -0.368
+APPRECI  BY AGREE71               43.432     0.696      0.483        0.483
+APPRECI  BY AGREE43               15.318     0.460      0.319        0.319
+APPRECI  BY AGREE103               6.421     0.282      0.196        0.196
+APPRECI  BY AGREE93               42.484     0.742      0.515        0.515
+APPRECI  BY AGREE55                4.457    -0.240     -0.166       -0.166
+APPRECI  BY AGREE100              11.884     0.392      0.272        0.272
+APPRECI  BY AGREE75                8.831     0.377      0.262        0.262
+MEAN     BY AGREE73                5.520    -0.201     -0.201       -0.201
+MEAN     BY AGREE4                 8.670     0.231      0.231        0.231
+MEAN     BY AGREE84              264.957    -0.457     -0.457       -0.457
+MEAN     BY AGREE106               7.661    -0.204     -0.204       -0.204
+MEAN     BY AGREE91               23.951     0.381      0.381        0.381
+MEAN     BY AGREE37               18.569    -0.185     -0.185       -0.185
+MEAN     BY AGREE104              68.388    -0.366     -0.366       -0.366
+MEAN     BY AGREE6                 4.644    -0.097     -0.097       -0.097
+MEAN     BY AGREE83               34.749    -0.419     -0.419       -0.419
+MEAN     BY AGREE80                7.521    -0.215     -0.215       -0.215
+MEAN     BY AGREE92               33.026     1.421      1.421        1.421
+MEAN     BY AGREE78               50.652    -0.525     -0.525       -0.525
+MEAN     BY AGREE97               45.971     0.392      0.392        0.392
+MEAN     BY AGREE96               44.237     0.397      0.397        0.397
+MEAN     BY AGREE25               10.167    -0.186     -0.186       -0.186
+MEAN     BY AGREE13               25.606    -0.261     -0.261       -0.261
+MEAN     BY AGREE39               80.768     0.462      0.462        0.462
+MEAN     BY AGREE71               18.159    -0.856     -0.856       -0.856
+MEAN     BY AGREE55               16.615     0.616      0.616        0.616
+MEAN     BY AGREE100               4.862     0.394      0.394        0.394
+SUPER    BY AGREE72               12.243     0.341      0.232        0.232
+SUPER    BY AGREE4                17.749     0.408      0.277        0.277
+SUPER    BY AGREE18               12.123     0.334      0.227        0.227
+SUPER    BY AGREE84              210.577    -0.750     -0.510       -0.510
+SUPER    BY AGREE52                7.054     0.325      0.221        0.221
+SUPER    BY AGREE36                4.135     0.242      0.164        0.164
+SUPER    BY AGREE67               16.819     0.484      0.329        0.329
+SUPER    BY AGREE37                4.225    -0.144     -0.097       -0.097
+SUPER    BY AGREE104              13.274    -0.261     -0.178       -0.178
+SUPER    BY AGREE30                7.035     0.293      0.199        0.199
+SUPER    BY AGREE45               35.539     0.543      0.369        0.369
+SUPER    BY AGREE83                7.903    -0.254     -0.172       -0.172
+SUPER    BY AGREE79               10.948     0.371      0.252        0.252
+SUPER    BY AGREE92               11.009     0.373      0.253        0.253
+SUPER    BY AGREE78                5.146    -0.211     -0.143       -0.143
+SUPER    BY AGREE97               54.597     0.611      0.415        0.415
+SUPER    BY AGREE96               60.869     0.657      0.446        0.446
+SUPER    BY AGREE39               87.867     0.694      0.471        0.471
+SUPER    BY AGREE56                6.591     0.282      0.192        0.192
+SUPER    BY AGREE71                4.137     0.235      0.160        0.160
+SUPER    BY AGREE99                9.412     0.342      0.232        0.232
+SUPER    BY AGREE43               34.147     0.622      0.423        0.423
+SUPER    BY AGREE103              44.918     0.670      0.455        0.455
+SUPER    BY AGREE93                4.485     0.263      0.179        0.179
+SUPER    BY AGREE100              26.411     0.583      0.396        0.396
+NEED     BY AGREE4                 4.565     0.766      0.164        0.164
+NEED     BY AGREE84              122.177    -2.827     -0.605       -0.605
+NEED     BY AGREE67                7.633     1.077      0.231        0.231
+NEED     BY AGREE91                7.929     0.984      0.211        0.211
+NEED     BY AGREE77                7.831     0.944      0.202        0.202
+NEED     BY AGREE80               19.569     1.420      0.304        0.304
+NEED     BY AGREE92                6.324     0.889      0.190        0.190
+NEED     BY AGREE97               59.440     2.453      0.525        0.525
+NEED     BY AGREE96               46.770     2.305      0.493        0.493
+NEED     BY AGREE13                4.194    -0.643     -0.138       -0.138
+NEED     BY AGREE39               35.756     1.896      0.406        0.406
+NEED     BY AGREE71               16.408     1.542      0.330        0.330
+NEED     BY AGREE103              13.594     1.283      0.275        0.275
+NEED     BY AGREE93                7.558     1.064      0.228        0.228
+NEED     BY AGREE55               17.576     1.479      0.317        0.317
+NEED     BY AGREE100              11.398     1.199      0.257        0.257
+CRYBABE  BY AGREE4                 8.845     1.354      0.231        0.231
+CRYBABE  BY AGREE84              191.939    -3.184     -0.544       -0.544
+CRYBABE  BY AGREE36                8.372     1.687      0.288        0.288
+CRYBABE  BY AGREE91               19.304     1.972      0.337        0.337
+CRYBABE  BY AGREE105               4.301     0.843      0.144        0.144
+CRYBABE  BY AGREE104              29.593    -1.859     -0.318       -0.318
+CRYBABE  BY AGREE97               36.698     2.361      0.403        0.403
+CRYBABE  BY AGREE96               47.520     2.743      0.468        0.468
+CRYBABE  BY AGREE13               10.041    -1.141     -0.195       -0.195
+CRYBABE  BY AGREE39               55.113     2.697      0.461        0.461
+CRYBABE  BY AGREE55               11.799     1.862      0.318        0.318
+TRUST    BY AGREE2                17.930     0.363      0.251        0.251
+TRUST    BY AGREE72               55.485     0.607      0.420        0.420
+TRUST    BY AGREE73               21.445     0.427      0.295        0.295
+TRUST    BY AGREE4                 8.713     0.254      0.176        0.176
+TRUST    BY AGREE18                4.079     0.178      0.123        0.123
+TRUST    BY AGREE84              211.530     0.868      0.601        0.601
+TRUST    BY AGREE106              15.736     0.338      0.234        0.234
+TRUST    BY AGREE105              16.331     0.348      0.241        0.241
+TRUST    BY AGREE37               49.232     0.485      0.335        0.335
+TRUST    BY AGREE104             107.994     0.709      0.490        0.490
+TRUST    BY AGREE30               12.209     0.333      0.230        0.230
+TRUST    BY AGREE6                 9.155     0.221      0.153        0.153
+TRUST    BY AGREE45               12.607     0.303      0.209        0.209
+TRUST    BY AGREE83               31.119     0.470      0.325        0.325
+TRUST    BY AGREE80               29.410     0.468      0.324        0.324
+TRUST    BY AGREE78               47.789     0.564      0.391        0.391
+TRUST    BY AGREE56                7.460     0.279      0.193        0.193
+TRUST    BY AGREE71               26.397     0.485      0.336        0.336
+TRUST    BY AGREE99                4.396     0.218      0.151        0.151
+TRUST    BY AGREE103              19.229     0.427      0.296        0.296
+TRUST    BY AGREE93               37.094     0.541      0.374        0.374
+TRUST    BY AGREE100              14.754     0.344      0.238        0.238
+MANIPUL  BY AGREE73                6.880    -0.336     -0.208       -0.208
+MANIPUL  BY AGREE4                 8.392     0.355      0.219        0.219
+MANIPUL  BY AGREE84              268.325    -0.829     -0.512       -0.512
+MANIPUL  BY AGREE36                8.135     0.755      0.467        0.467
+MANIPUL  BY AGREE91               35.669     0.709      0.438        0.438
+MANIPUL  BY AGREE37               12.798    -0.270     -0.167       -0.167
+MANIPUL  BY AGREE104              52.683    -0.561     -0.347       -0.347
+MANIPUL  BY AGREE6                 5.738    -0.189     -0.117       -0.117
+MANIPUL  BY AGREE83               36.575    -0.698     -0.431       -0.431
+MANIPUL  BY AGREE80                6.274    -0.310     -0.192       -0.192
+MANIPUL  BY AGREE92               17.334     0.990      0.612        0.612
+MANIPUL  BY AGREE78               39.579    -0.746     -0.461       -0.461
+MANIPUL  BY AGREE97               45.090     0.655      0.405        0.405
+MANIPUL  BY AGREE96               46.774     0.684      0.423        0.423
+MANIPUL  BY AGREE25                6.713    -0.258     -0.160       -0.160
+MANIPUL  BY AGREE13               20.275    -0.398     -0.246       -0.246
+MANIPUL  BY AGREE39               76.798     0.767      0.474        0.474
+MANIPUL  BY AGREE93                7.267     0.714      0.441        0.441
+MANIPUL  BY AGREE55               12.309     0.663      0.410        0.410
+MANIPUL  BY AGREE100               4.666     0.442      0.273        0.273
+ALTRUIS  BY AGREE2                 9.556     0.410      0.258        0.258
+ALTRUIS  BY AGREE73               12.794     0.504      0.318        0.318
+ALTRUIS  BY AGREE84              272.109     0.914      0.575        0.575
+ALTRUIS  BY AGREE98                4.675    -0.606     -0.382       -0.382
+ALTRUIS  BY AGREE106              11.116     0.432      0.272        0.272
+ALTRUIS  BY AGREE91               12.654    -0.474     -0.298       -0.298
+ALTRUIS  BY AGREE105               7.044     0.343      0.216        0.216
+ALTRUIS  BY AGREE37               26.054     0.416      0.262        0.262
+ALTRUIS  BY AGREE104              66.533     0.691      0.435        0.435
+ALTRUIS  BY AGREE6                 6.893     0.220      0.139        0.139
+ALTRUIS  BY AGREE83               28.649     0.668      0.421        0.421
+ALTRUIS  BY AGREE80                8.290     0.392      0.247        0.247
+ALTRUIS  BY AGREE78               54.142     0.939      0.591        0.591
+ALTRUIS  BY AGREE97               30.461    -0.579     -0.365       -0.365
+ALTRUIS  BY AGREE96               24.292    -0.530     -0.334       -0.334
+ALTRUIS  BY AGREE25               24.713     0.511      0.322        0.322
+ALTRUIS  BY AGREE13               32.926     0.539      0.339        0.339
+ALTRUIS  BY AGREE39               63.995    -0.762     -0.480       -0.480
+ALTRUIS  BY AGREE71               13.737     0.808      0.509        0.509
+ALTRUIS  BY AGREE43                7.755     0.616      0.388        0.388
+AGREE    BY AGREE73                5.520    -0.201     -0.201       -0.201
+AGREE    BY AGREE4                 8.670     0.231      0.231        0.231
+AGREE    BY AGREE84              264.957    -0.457     -0.457       -0.457
+AGREE    BY AGREE106               7.661    -0.204     -0.204       -0.204
+AGREE    BY AGREE91               23.951     0.381      0.381        0.381
+AGREE    BY AGREE37               18.569    -0.185     -0.185       -0.185
+AGREE    BY AGREE104              68.388    -0.366     -0.366       -0.366
+AGREE    BY AGREE6                 4.644    -0.097     -0.097       -0.097
+AGREE    BY AGREE83               34.749    -0.419     -0.419       -0.419
+AGREE    BY AGREE80                7.521    -0.215     -0.215       -0.215
+AGREE    BY AGREE92               33.026     1.421      1.421        1.421
+AGREE    BY AGREE78               50.652    -0.525     -0.525       -0.525
+AGREE    BY AGREE97               45.971     0.392      0.392        0.392
+AGREE    BY AGREE96               44.237     0.397      0.397        0.397
+AGREE    BY AGREE25               10.167    -0.186     -0.186       -0.186
+AGREE    BY AGREE13               25.606    -0.261     -0.261       -0.261
+AGREE    BY AGREE39               80.768     0.462      0.462        0.462
+AGREE    BY AGREE71               18.159    -0.856     -0.856       -0.856
+AGREE    BY AGREE55               16.615     0.616      0.616        0.616
+AGREE    BY AGREE100               4.862     0.394      0.394        0.394
+
+ON/BY Statements
+
+APPRECI  ON SUPER    /
+SUPER    BY APPRECI               56.438     0.461      0.451        0.451
+APPRECI  ON NEED     /
+NEED     BY APPRECI                8.444     0.536      0.165        0.165
+APPRECI  ON CRYBABE  /
+CRYBABE  BY APPRECI               10.822     0.991      0.244        0.244
+APPRECI  ON TRUST    /
+TRUST    BY APPRECI              156.379     0.584      0.582        0.582
+APPRECI  ON ALTRUIS  /
+ALTRUIS  BY APPRECI               70.751     1.106      1.003        1.003
+MEAN     ON APPRECI  /
+APPRECI  BY MEAN                 227.652     0.728      0.506        0.506
+MEAN     ON MEAN     /
+MEAN     BY MEAN                 264.957    -0.457     -0.457       -0.457
+MEAN     ON SUPER    /
+SUPER    BY MEAN                 144.713    -0.610     -0.414       -0.414
+MEAN     ON NEED     /
+NEED     BY MEAN                  76.147    -1.943     -0.416       -0.416
+MEAN     ON CRYBABE  /
+CRYBABE  BY MEAN                 151.649    -2.772     -0.473       -0.473
+MEAN     ON TRUST    /
+TRUST    BY MEAN                 168.848     0.699      0.483        0.483
+MEAN     ON MANIPUL  /
+MANIPUL  BY MEAN                 261.771    -0.835     -0.516       -0.516
+MEAN     ON ALTRUIS  /
+ALTRUIS  BY MEAN                 270.797     0.913      0.575        0.575
+MEAN     ON AGREE    /
+AGREE    BY MEAN                 264.957    -0.457     -0.457       -0.457
+SUPER    ON APPRECI  /
+APPRECI  BY SUPER                 56.438     0.489      0.500        0.500
+SUPER    ON NEED     /
+NEED     BY SUPER                 25.925     0.936      0.295        0.295
+SUPER    ON CRYBABE  /
+CRYBABE  BY SUPER                 13.019     1.040      0.262        0.262
+SUPER    ON TRUST    /
+TRUST    BY SUPER                 38.198     0.305      0.311        0.311
+SUPER    ON MANIPUL  /
+MANIPUL  BY SUPER                 72.271     1.158      1.054        1.054
+SUPER    ON ALTRUIS  /
+ALTRUIS  BY SUPER                 12.010     0.494      0.458        0.458
+NEED     ON APPRECI  /
+APPRECI  BY NEED                   8.444     0.079      0.256        0.256
+NEED     ON SUPER    /
+SUPER    BY NEED                  25.924     0.130      0.412        0.412
+NEED     ON CRYBABE  /
+CRYBABE  BY NEED                   6.079     0.305      0.243        0.243
+NEED     ON TRUST    /
+TRUST    BY NEED                  41.887     0.136      0.439        0.439
+NEED     ON ALTRUIS  /
+ALTRUIS  BY NEED                   5.301     0.140      0.411        0.411
+CRYBABE  ON APPRECI  /
+APPRECI  BY CRYBABE               10.822     0.070      0.285        0.285
+CRYBABE  ON SUPER    /
+SUPER    BY CRYBABE               13.019     0.069      0.276        0.276
+CRYBABE  ON NEED     /
+NEED     BY CRYBABE                6.079     0.146      0.184        0.184
+CRYBABE  ON TRUST    /
+TRUST    BY CRYBABE               11.631     0.055      0.224        0.224
+TRUST    ON APPRECI  /
+APPRECI  BY TRUST                156.379     0.792      0.795        0.795
+TRUST    ON SUPER    /
+SUPER    BY TRUST                 38.198     0.390      0.383        0.383
+TRUST    ON NEED     /
+NEED     BY TRUST                 41.887     1.252      0.387        0.387
+TRUST    ON CRYBABE  /
+CRYBABE  BY TRUST                 11.631     1.058      0.261        0.261
+TRUST    ON MANIPUL  /
+MANIPUL  BY TRUST                  5.447     0.348      0.311        0.311
+TRUST    ON ALTRUIS  /
+ALTRUIS  BY TRUST                 38.785     0.854      0.778        0.778
+MANIPUL  ON SUPER    /
+SUPER    BY MANIPUL               72.271     0.518      0.569        0.569
+MANIPUL  ON TRUST    /
+TRUST    BY MANIPUL                5.447     0.122      0.136        0.136
+ALTRUIS  ON APPRECI  /
+APPRECI  BY ALTRUIS               70.751     0.705      0.778        0.778
+ALTRUIS  ON SUPER    /
+SUPER    BY ALTRUIS               12.010     0.297      0.320        0.320
+ALTRUIS  ON NEED     /
+NEED     BY ALTRUIS                5.301     0.606      0.206        0.206
+ALTRUIS  ON TRUST    /
+TRUST    BY ALTRUIS               38.785     0.402      0.441        0.441
+AGREE    ON APPRECI  /
+APPRECI  BY AGREE                264.957     0.997      0.692        0.692
+AGREE    ON MEAN     /
+MEAN     BY AGREE                264.957    -0.457     -0.457       -0.457
+AGREE    ON SUPER    /
+SUPER    BY AGREE                264.956    -1.099     -0.747       -0.747
+AGREE    ON NEED     /
+NEED     BY AGREE                264.958    -5.984     -1.281       -1.281
+AGREE    ON CRYBABE  /
+CRYBABE  BY AGREE                264.957    -4.588     -0.783       -0.783
+AGREE    ON TRUST    /
+TRUST    BY AGREE                264.956     1.377      0.953        0.953
+AGREE    ON MANIPUL  /
+MANIPUL  BY AGREE                264.957    -0.909     -0.562       -0.562
+AGREE    ON ALTRUIS  /
+ALTRUIS  BY AGREE                264.957     0.968      0.610        0.610
+AGREE    ON AGREE    /
+AGREE    BY AGREE                264.957    -0.457     -0.457       -0.457
+
+WITH Statements
+
+MEAN     WITH APPRECI             21.259     0.123    999.000      999.000
+SUPER    WITH APPRECI             56.438     0.133      0.475        0.475
+NEED     WITH APPRECI              8.444     0.021      0.206        0.206
+NEED     WITH SUPER               25.924     0.037      0.348        0.348
+CRYBABE  WITH APPRECI             10.822     0.019      0.264        0.264
+CRYBABE  WITH SUPER               13.019     0.020      0.269        0.269
+CRYBABE  WITH NEED                 6.079     0.006      0.211        0.211
+TRUST    WITH APPRECI            156.379     0.215      0.680        0.680
+TRUST    WITH MEAN                14.378     0.107    999.000      999.000
+TRUST    WITH SUPER               38.198     0.112      0.345        0.345
+TRUST    WITH NEED                41.887     0.050      0.412        0.412
+TRUST    WITH CRYBABE             11.631     0.020      0.242        0.242
+MANIPUL  WITH MEAN                22.850    -0.134    999.000      999.000
+MANIPUL  WITH SUPER               72.271     0.149      0.774        0.774
+MANIPUL  WITH TRUST                5.447     0.045      0.206        0.206
+ALTRUIS  WITH APPRECI             70.751     0.192      0.883        0.883
+ALTRUIS  WITH MEAN                24.654     0.185    999.000      999.000
+ALTRUIS  WITH SUPER               12.010     0.086      0.383        0.383
+ALTRUIS  WITH NEED                 5.301     0.024      0.291        0.291
+ALTRUIS  WITH TRUST               38.785     0.148      0.586        0.586
+AGREE    WITH MEAN               264.957    -0.457    999.000      999.000
+
+Variances/Residual Variances
+
+MEAN                              70.376    -0.417     -0.417       -0.417
+AGREE                            264.957    -0.915     -0.915       -0.915
+
+
+DIAGRAM INFORMATION
+
+  Use View Diagram under the Diagram menu in the Mplus Editor to view the diagram.
+  If running Mplus from the Mplus Diagrammer, the diagram opens automatically.
+
+  Diagram output
+    f:\ipip paper\sample_usa\cfa\agreeableness\cfa mit 5 items\cfa agreeableness - gesamtmodell_5 it
+
+     Beginning Time:  16:25:54
+        Ending Time:  16:26:29
+       Elapsed Time:  00:00:35
+
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2013 Muthen & Muthen
